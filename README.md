@@ -1,11 +1,11 @@
-#Pathfinder App
+#RPG App
 ##(name to be decided)
 
 #Warning! for the time being code will be refactored unsparingly. When this reaches an alpha release we will stick to naming conventions etc.
 
 This is an app we are making for our third year project in the Bachelor of Information Technology at Southern Institute of Technology, New Zealand.
 The group working on this is called "Real Standard Studios"
-We aim to have a working replacement for all paper and books used by the average player in the [pathfinder RPG](http://paizo.com/pathfinderRPG/) by the end of 2014
+We aim to have a working replacement for all paper and books used by the average player in the [pathfinder RPG](http://paizo.com/pathfinderRPG/) by the end of 2014 with the ability to have RPG rule systems moved in and out as data modules
 
 ## Contents
 
