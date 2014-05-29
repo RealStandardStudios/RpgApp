@@ -4,6 +4,10 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import window.Interface;
 
+/**
+ * @author Real Standard Studios - Matthew Meehan
+ *
+ */
 public class application extends Application {
 
 	@Override

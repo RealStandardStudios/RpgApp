@@ -8,6 +8,10 @@ import javafx.scene.Node;
 import javafx.scene.layout.BorderPane;
 import window.Interface;
 
+/**
+ * @author Real Standard Studios - Matthew Meehan
+ *
+ */
 public class RootLayoutController {
 	private Interface ui;
 	

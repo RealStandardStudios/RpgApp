@@ -15,6 +15,10 @@ import view.RootLayoutController;
 
 import com.sun.istack.internal.logging.Logger;
 
+/**
+ * @author Real Standard Studios - Matthew Meehan
+ * Loads and Initializes the main program
+ */
 public class Interface extends Gui {
 	private RootLayoutController rootLayoutController;
 	

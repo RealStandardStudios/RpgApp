@@ -4,6 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import jefXif.WindowController;
 
+/**
+ * @author Real Standard Studios - Matthew Meehan
+ *
+ */
 public class OtherCharacterController extends WindowController {
 
 	@FXML
