@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.SkillsController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
+    <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" prefHeight="672.0000999999975" prefWidth="1072.0" text="Skills">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane fx:id="gPaneSkills" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefHeight="642.9998779296875" prefWidth="1068.0">
+              <children>
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Skill" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                  <font>
+                    <Font name="System Bold" size="12.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Ability" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Total" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Ranks" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" prefWidth="38.0" text="Ability Mod" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Misc" wrapText="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Misc" wrapText="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="30.0" text="Class" wrapText="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Skill" wrapText="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Ability" wrapText="true" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Total" wrapText="true" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Ranks" wrapText="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" prefWidth="38.0" text="Ability Mod" wrapText="true" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Misc" wrapText="true" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxWidth="1.7976931348623157E308" text="Misc" wrapText="true" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="30.0" text="Class" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill1_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill2_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill3_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill4_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill5_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill6_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill7_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill8_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill9_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill10_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill11_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill12_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill13_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill14_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill15_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill16_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill17_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill18_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill19_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="chkClassSkill20_1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="20.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill1_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill2_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill3_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill4_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill5_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Knowledge: Geography" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill6_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Knowlege (Geography)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill7_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Knowledge: Water Plane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill8_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Knowledge: Ancient Elven Nobility" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill9_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill10_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill11_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill12_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill13_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill14_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill15_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill16_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill17_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill18_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill19_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkill20_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility1_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility2_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility3_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility4_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility5_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility6_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility7_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility8_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility9_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility10_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility11_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility12_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility13_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility14_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility15_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility16_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility17_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility18_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility19_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillAbility20_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal1_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal2_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal3_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal4_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal5_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal6_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal7_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal8_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal9_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal10_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal11_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal12_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal13_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal14_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal15_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal16_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal17_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal18_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal19_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSkillTotal20_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" minWidth="10.0" prefWidth="190.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" minWidth="10.0" prefWidth="190.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+      <font>
+        <Font name="System Bold" size="14.0" />
+      </font>
+    </TitledPane>
+  </children>
+</AnchorPane>

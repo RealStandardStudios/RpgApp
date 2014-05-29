@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.CharacterFluffController">
+	<children>
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
+		<Separator layoutX="261.0" layoutY="53.0" orientation="VERTICAL" prefHeight="42.0" />
+		<Separator layoutX="18.0" layoutY="53.0" prefWidth="509.0" />
+		<Separator layoutX="18.0" layoutY="95.0" prefWidth="509.0" />
+		<Separator layoutX="18.0" layoutY="136.0" prefWidth="509.0" />
+		<Separator layoutX="18.0" layoutY="176.0" prefWidth="509.0" />
+		<Separator layoutX="18.0" layoutY="213.0" prefWidth="509.0" />
+		<Separator layoutX="16.0" layoutY="253.0" prefWidth="509.0" />
+		<Label fx:id="lblGender" alignment="CENTER_LEFT" layoutX="271.0" layoutY="57.0" prefHeight="30.0" prefWidth="110.0" text="Gender:" textAlignment="LEFT" wrapText="false">
+			<font>
+				<Font name="System Bold" size="18.0" fx:id="x1" />
+			</font>
+		</Label>
+		<Label fx:id="lblCharName" alignment="CENTER_LEFT" contentDisplay="LEFT" font="$x1" layoutX="14.0" layoutY="17.0" prefHeight="30.0" prefWidth="150.0" text="Character Name:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblRace" alignment="CENTER_LEFT" font="$x1" layoutX="14.0" layoutY="57.0" prefHeight="30.0" prefWidth="110.0" text="Race:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblAlignment" alignment="CENTER_LEFT" font="$x1" layoutX="14.0" layoutY="182.0" prefHeight="30.0" prefWidth="110.0" text="Alignment:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblDeities" alignment="CENTER_LEFT" font="$x1" layoutX="14.0" layoutY="222.0" prefHeight="30.0" prefWidth="110.0" text="Deities:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblSize" alignment="CENTER_LEFT" font="$x1" layoutX="592.0" layoutY="404.0" prefHeight="30.0" prefWidth="110.0" text="Size:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblHeight" alignment="CENTER_LEFT" font="$x1" layoutX="592.0" layoutY="445.0" prefHeight="30.0" prefWidth="110.0" text="Height:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblCharNameText" layoutX="176.0" layoutY="17.0" prefHeight="30.0" prefWidth="337.0" text="name" textAlignment="LEFT" wrapText="false">
+			<font>
+				<Font size="18.0" fx:id="x2" />
+			</font>
+		</Label>
+		<Label fx:id="lblGenderText" font="$x2" layoutX="390.0" layoutY="57.0" prefHeight="30.0" prefWidth="120.0" text="gender" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblHomelandText" font="$x2" layoutX="135.0" layoutY="140.0" prefHeight="30.0" prefWidth="376.0" text="homeland" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblBackgroundTest" font="$x2" layoutX="135.0" layoutY="98.0" prefHeight="30.0" prefWidth="376.0" text="background" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblAgeText" font="$x2" layoutX="961.0" layoutY="404.0" prefHeight="30.0" prefWidth="110.0" text="age" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblWeightText" font="$x2" layoutX="961.0" layoutY="445.0" prefHeight="30.0" prefWidth="110.0" text="weight" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblHomeland" alignment="CENTER_LEFT" font="$x1" layoutX="14.0" layoutY="139.0" prefHeight="30.0" prefWidth="110.0" text="Homeland:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblBackground" alignment="CENTER_LEFT" font="$x1" layoutX="14.0" layoutY="98.0" prefHeight="30.0" prefWidth="110.0" text="Background:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblAge" alignment="CENTER_LEFT" font="$x1" layoutX="851.0" layoutY="404.0" prefHeight="30.0" prefWidth="110.0" text="Age:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblWeight" alignment="CENTER_LEFT" font="$x1" layoutX="851.0" layoutY="445.0" prefHeight="30.0" prefWidth="110.0" text="Weight:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblEye" alignment="CENTER_LEFT" font="$x1" layoutX="851.0" layoutY="488.0" prefHeight="30.0" prefWidth="110.0" text="Eye colour:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblEyeText" alignment="CENTER_LEFT" font="$x2" layoutX="961.0" layoutY="488.0" prefHeight="30.0" prefWidth="110.0" text="colour" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblHair" alignment="CENTER_LEFT" font="$x1" layoutX="592.0" layoutY="488.0" prefHeight="30.0" prefWidth="110.0" text="Hair:" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblRaceText" font="$x2" layoutX="135.0" layoutY="57.0" prefHeight="30.0" prefWidth="120.0" text="race" textAlignment="LEFT" wrapText="false" />
+		<Label id="lblAlignText" fx:id="lblAlignmentText" font="$x2" layoutX="135.0" layoutY="182.0" prefHeight="30.0" prefWidth="376.0" text="alignment" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblDeitiesText" font="$x2" layoutX="135.0" layoutY="222.0" prefHeight="30.0" prefWidth="376.0" text="deities" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblSizeText" font="$x2" layoutX="702.0" layoutY="404.0" prefHeight="30.0" prefWidth="110.0" text="size" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblHeightText" font="$x2" layoutX="702.0" layoutY="445.0" prefHeight="30.0" prefWidth="110.0" text="height" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblHairText" font="$x2" layoutX="702.0" layoutY="488.0" prefHeight="30.0" prefWidth="110.0" text="hair" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblLanguagesText" font="$x2" layoutX="135.0" layoutY="256.0" prefHeight="30.0" prefWidth="376.0" text="languages" textAlignment="LEFT" wrapText="false" />
+		<Label fx:id="lblLanguages" alignment="CENTER_LEFT" font="$x1" layoutX="14.0" layoutY="256.0" prefHeight="30.0" prefWidth="110.0" text="Languages:" textAlignment="LEFT" wrapText="false" />
+		<TitledPane fx:id="paneClasses" animated="false" collapsible="false" expanded="true" layoutX="14.0" layoutY="374.0" prefHeight="312.0" prefWidth="513.0" text="Classes">
+			<content>
+				<AnchorPane id="Content" minHeight="0.0" minWidth="0.0" opacity="1.0" prefHeight="180.0" prefWidth="200.0">
+					<children>
+						<Label fx:id="lblFavored" alignment="TOP_LEFT" font="$x1" layoutX="14.0" layoutY="6.0" text="Favored Class:" />
+						<Label fx:id="lblFavoredText" alignment="TOP_LEFT" font="$x2" layoutX="147.0" layoutY="6.0" prefWidth="125.0" text="class" />
+						<Label alignment="TOP_LEFT" font="$x1" layoutX="14.0" layoutY="30.0" text="Archetype:" />
+						<Separator layoutX="287.0" layoutY="0.0" orientation="VERTICAL" prefHeight="286.0" />
+						<Label fx:id="lblExp" alignment="TOP_LEFT" font="$x1" layoutX="303.0" layoutY="6.0" text="Experience:" />
+						<Label fx:id="lblExpText" alignment="TOP_LEFT" font="$x2" layoutX="410.0" layoutY="6.0" prefWidth="85.0" text="numbers" />
+						<Label fx:id="lblExpNext" alignment="TOP_LEFT" font="$x1" layoutX="303.0" layoutY="30.0" text="Next Level:" />
+						<Label alignment="TOP_LEFT" font="$x2" layoutX="147.0" layoutY="30.0" prefWidth="125.0" text="archetype" />
+						<Separator layoutX="14.0" layoutY="63.0" prefWidth="481.0" />
+						<Label fx:id="lblExpNextText" alignment="TOP_LEFT" font="$x2" layoutX="410.0" layoutY="30.0" prefWidth="85.0" text="numbers" />
+						<Label fx:id="lblClasses" alignment="TOP_LEFT" font="$x1" layoutX="14.0" layoutY="75.0" prefWidth="258.0" text="Classes:" />
+						<Label fx:id="lblLevels" alignment="TOP_LEFT" font="$x1" layoutX="303.0" layoutY="75.0" prefWidth="192.0" text="Levels:" />
+						<Label fx:id="lblClass" font="$x2" layoutX="14.0" layoutY="108.0" prefWidth="258.0" text="class" />
+						<Label id="lblLvl" fx:id="lblLevel" font="$x2" layoutX="303.0" layoutY="108.0" text="numbers" />
+					</children>
+				</AnchorPane>
+			</content>
+		</TitledPane>
+		<Button layoutX="961.0" layoutY="656.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Change Details" />
+		<ImageView fx:id="imgCharacter" fitHeight="338.25" fitWidth="451.0" layoutX="635.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+		<Separator layoutX="635.0" layoutY="373.0" prefWidth="451.0" />
+		<Separator layoutX="14.0" layoutY="293.0" prefWidth="499.0" />
+		<Separator layoutX="819.0" layoutY="407.0" orientation="VERTICAL" prefHeight="114.0" />
+		<Separator layoutX="550.0" layoutY="439.0" prefWidth="509.0" />
+		<Separator layoutX="546.0" layoutY="482.0" prefWidth="509.0" />
+		<Label layoutX="812.0" layoutY="587.0" text="loads &amp; lift here" />
+	</children>
+</AnchorPane>

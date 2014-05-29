@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.FeatsController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
+    <TitledPane fx:id="paneRaceFeatures" animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" minWidth="383.0" prefHeight="330.0" prefWidth="530.0" text="Race Features">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="505.0">
+          <children>
+            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="76.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="108.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="138.0" prefHeight="25.0" prefWidth="506.0" />
+          </children>
+        </AnchorPane>
+      </content>
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x1" />
+      </font>
+    </TitledPane>
+    <TitledPane fx:id="paneFeats" animated="false" collapsible="false" font="$x1" layoutX="558.0" layoutY="14.0" prefHeight="400.0" prefWidth="530.0" text="Feats">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="42.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="75.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="107.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="137.0" prefHeight="25.0" prefWidth="506.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="paneClassFeatures" animated="false" font="$x1" layoutX="14.0" layoutY="356.0" prefHeight="330.0" prefWidth="530.0" text="Class Features">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="76.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="108.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="138.0" prefHeight="25.0" prefWidth="506.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="paneTraits" animated="false" collapsible="false" font="$x1" layoutX="558.0" layoutY="425.0" prefHeight="259.0" prefWidth="530.0" text="Traits">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="73.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="105.0" prefHeight="25.0" prefWidth="506.0" />
+            <TextField layoutX="10.0" layoutY="135.0" prefHeight="25.0" prefWidth="506.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

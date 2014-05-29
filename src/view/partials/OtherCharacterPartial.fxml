@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.OtherCharacterController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
+    <Accordion layoutX="41.0" layoutY="33.0">
+      <panes>
+        <TitledPane animated="false" prefHeight="97.0" prefWidth="374.0" text="No Other Characters">
+          <font>
+            <Font size="15.0" />
+          </font>
+        </TitledPane>
+      </panes>
+    </Accordion>
+    <Button layoutX="41.0" layoutY="646.0" mnemonicParsing="false" text="Load Other Character">
+      <font>
+        <Font name="System Bold" size="15.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button font="$x1" layoutX="228.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleNewCharacterAction" text="New Character" />
+  </children>
+</AnchorPane>

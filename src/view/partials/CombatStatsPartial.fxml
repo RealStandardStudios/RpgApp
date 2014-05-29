@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.CombatStatsController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
+    <TitledPane fx:id="paneAbilities" animated="false" collapsible="false" layoutX="16.0" layoutY="14.0" prefHeight="336.0" prefWidth="532.0" text="Abilities">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane fx:id="gridPaneAbilities" alignment="TOP_LEFT" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefHeight="301.0" prefWidth="528.0">
+              <children>
+                <Label fx:id="lblAbility" alignment="CENTER" minHeight="8.0" prefHeight="27.0" prefWidth="-1.0" text="Ability" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+                  <font>
+                    <Font name="System Bold" size="12.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label fx:id="lblAbilityTotal" alignment="CENTER" font="$x1" minHeight="8.0" prefHeight="27.0" prefWidth="-1.0" text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblAbilityMod" alignment="CENTER" font="$x1" minHeight="8.0" prefHeight="27.0" prefWidth="-1.0" text="Modifier" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblAbilityBase" alignment="CENTER" font="$x1" minHeight="8.0" prefHeight="27.0" prefWidth="-1.0" text="Base" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblAbilityEnh" alignment="CENTER" font="$x1" minHeight="8.0" prefHeight="27.0" prefWidth="-1.0" text="Enhancement" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblAbilityMisc" alignment="CENTER" font="$x1" minHeight="8.0" prefHeight="27.0" prefWidth="-1.0" text="Misc" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblStr" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="28.0" prefWidth="110.0" text="Strength (STR)" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label fx:id="lblDex" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="28.0" prefWidth="110.0" text="Dexterity (DEX)" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Label fx:id="lblCon" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="28.0" prefWidth="110.0" text="Constitution (CON)" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label fx:id="lblInt" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="28.0" prefWidth="110.0" text="Intelligence (INT)" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <Label fx:id="lblWis" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="28.0" prefWidth="110.0" text="Wisdom (WIS)" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <Label fx:id="lblCha" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="28.0" prefWidth="110.0" text="Charisma (CHA)" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtStrTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtStrMod" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtStrBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtStrEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtStrMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblDexTotal" fx:id="txtDexTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="lblConTotal" fx:id="txtConTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="lblIntTotal" fx:id="txtIntTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtWisTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField id="lblChaTotal" fx:id="txtChaTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtDexMod" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtConMod" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtIntMod" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtWisMod" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtChaMod" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtDexBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtConBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtIntBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtWisBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtChaBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtDexEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtConEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtIntEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtWisEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtChaEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtDexMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtConMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtIntMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtWisMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtChaMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints fillWidth="true" halignment="CENTER" hgrow="SOMETIMES" maxWidth="-1.0" minWidth="-Infinity" percentWidth="-1.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x2" />
+      </font>
+    </TitledPane>
+    <TitledPane fx:id="paneSaves" animated="false" collapsible="false" font="$x2" layoutX="554.0" layoutY="14.0" prefHeight="230.0" prefWidth="536.0" text="Saving Throws">
+      <content>
+        <AnchorPane id="Content" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="531.0">
+          <children>
+            <GridPane fx:id="gridPaneSaving" gridLinesVisible="false" layoutX="0.0" layoutY="-1.0" prefHeight="168.0" prefWidth="528.0">
+              <children>
+                <Label fx:id="lblSave" alignment="CENTER" font="$x1" prefHeight="42.0" prefWidth="114.0" text="Save" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label id="lblTotal" fx:id="lblSaveTotal" alignment="CENTER" font="$x1" prefHeight="42.0" prefWidth="114.0" text="Total" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label id="lblClassBase" fx:id="lblSaveBase" alignment="CENTER" font="$x1" prefHeight="42.0" prefWidth="114.0" text="Class Base" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Label fx:id="lblSaveAbility" alignment="CENTER" font="$x1" prefHeight="42.0" prefWidth="114.0" text="Ability" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Label fx:id="lblSaveEnh" alignment="CENTER" font="$x1" prefHeight="42.0" prefWidth="114.0" text="Enhancement" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Label fx:id="lblSaveMisc" alignment="CENTER" font="$x1" prefHeight="42.0" prefWidth="114.0" text="Misc" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Label fx:id="lblFort" prefHeight="42.000099999997474" prefWidth="100.0" text="Fortitude (FORT) [Constitution]" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label fx:id="lblRef" prefHeight="42.000099999997474" prefWidth="100.0" text="Reflex (REF) [Dexterity]" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Label fx:id="lblWill" prefHeight="42.000099999997474" prefWidth="100.0" text="Will (WILL) [Wisdom]" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtFortTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtFortBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtFortAbility" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtFortEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtFortMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtRefTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtRefBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtRefAbility" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtRefEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtRefMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtWillTotal" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtWillBase" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtWillAbility" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtWillEnh" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="lblStrTotal" fx:id="txtWillMisc" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label fx:id="lblDR" font="$x2" layoutX="10.0" layoutY="170.0" text="Damage Reduction (DR):" />
+            <Label fx:id="lblSR" font="$x2" layoutX="282.0" layoutY="170.0" text="Spell Resistance (SR):" />
+            <TextField fx:id="txtDR" layoutX="180.0" layoutY="170.0" prefHeight="25.0" prefWidth="60.0" />
+            <TextField fx:id="txtSR" layoutX="452.0" layoutY="170.0" prefHeight="25.0" prefWidth="60.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane id="paneHPAtkDef" animated="false" collapsible="false" font="$x2" layoutX="19.0" layoutY="360.0" prefHeight="330.0" prefWidth="1068.0" text="Hit Points, Attacks and Defense">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="646.0" prefWidth="528.0">
+          <children>
+            <GridPane fx:id="gridPaneAC" gridLinesVisible="false" layoutX="0.0" layoutY="81.0" prefHeight="220.0" prefWidth="608.0">
+              <children>
+                <Label fx:id="lblCombatStatsAC" alignment="CENTER_LEFT" font="$x2" prefWidth="45.0" text="AC" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label fx:id="lblCombatStatsTouchAC" alignment="CENTER_LEFT" font="$x2" prefWidth="45.0" text="Touch AC" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                <Label fx:id="lblCombatStatsFFAC" alignment="CENTER_LEFT" font="$x2" maxHeight="-1.0" prefHeight="64.0" prefWidth="50.0" text="Flat- Footed AC" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACTotal" alignment="CENTER" font="$x1" text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACArmor" font="$x1" text="Armor" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACShield" font="$x1" text="Shield" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACDex" font="$x1" text="DEX" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACSize" font="$x1" text="Size" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACDodge" font="$x1" text="Dodge" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACNatural" font="$x1" text="Natural" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACDeflect" font="$x1" text="Deflect" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACEnh" font="$x1" text="Enhance" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblACMisc" font="$x1" text="Misc" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACTotal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACArmor" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACShield" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACDex" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACSize" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACDodge" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACNatural" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACDeflect" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACEnh" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtACMisc" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACTotal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="txt" fx:id="txtTouchACArmor" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACShield" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACDex" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACSize" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACDodge" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACNatural" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACDeflect" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACEnh" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtTouchACMisc" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACTotal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="txtFFArmor" fx:id="txtFFACArmor" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACShield" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACDex" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACSize" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACDodge" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACNatural" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACDeflect" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACEnh" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtFFACMisc" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="50.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label fx:id="lblArmorClass" font="$x1" prefWidth="45.0" text="Armor Class" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="gridPaneHP" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefWidth="608.0">
+              <children>
+                <Label fx:id="lblCombatStatsHP" font="$x2" prefHeight="35.0" text="Hit Points (HP):" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtCombatStatsCurrentHP" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtCombatStatsMaxHP" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label fx:id="lblCombatStatsCurrentHP" font="$x1" labelFor="$txtCombatStatsCurrentHP" text="Current" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblCombatStatsMaxHP" font="$x1" labelFor="$txtCombatStatsMaxHP" text="Max" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtHitDice" maxHeight="-1.0" maxWidth="-Infinity" prefHeight="30.0" prefWidth="81.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label fx:id="lblHitDice" font="$x2" prefHeight="35.0" text="Class Hit Dice:" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtCombatStatsNLD" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label fx:id="lblCombatStatsNLD" font="$x1" prefWidth="70.0" text="Non-Lethal Damage" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblCombatStatsDamage" font="$x1" text="Damage" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtCombatStatsDamage" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="120.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="gridPaneInit" gridLinesVisible="false" layoutX="616.0" layoutY="0.0" prefWidth="447.0">
+              <children>
+                <Label fx:id="lblCombatStatsInit" font="$x2" text="Initiative:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label fx:id="lblInitTotal" font="$x1" text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="LblInitDex" font="$x1" text="DEX" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblInitMisc1" font="$x1" text="Misc" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblInitMisc2" font="$x1" text="Misc" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <TextField fx:id="txtInitTotal" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtInitDex" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtInitMisc1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtInitMisc2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Separator layoutX="613.0" layoutY="0.0" orientation="VERTICAL" prefHeight="299.0" />
+            <Separator layoutX="4.0" layoutY="75.0" minHeight="0.0" prefHeight="0.0" prefWidth="1059.0" />
+            <GridPane id="gridPaneAttack" gridLinesVisible="false" layoutX="620.0" layoutY="85.0" prefHeight="135.0" prefWidth="443.0">
+              <children>
+                <Label id="lblCombatStatsMelee" font="$x2" prefWidth="60.0" text="Melee:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label id="lblCombatStatsRanged" font="$x2" prefWidth="60.0" text="Ranged:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Label id="lblCombatStatsCMB" font="$x2" prefWidth="60.0" text="CMB:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModTotal" font="$x1" text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label id="lblAttackModBAB" font="$x1" prefWidth="80.0" text="Base Attack Bonus (BAB)" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label id="lblAttackModAbility" font="$x1" text="Ability" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label id="lblAttackModSize" font="$x1" text="Size" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label id="lblAttackModMisc" font="$x1" text="Misc" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <TextField id="txtAttackModTotal" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblMeleeBAB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblMeleeAbility" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="lblMeleeSize" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtMeleeMisc" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtRangedTotal" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="txtRangedBAB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="txtRangedAbility" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="txtRangedSize" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="txtRangedMisc" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <TextField id="txtCMBTotal" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="txtCMBBAB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="txtCMBAbility" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="txtCMBSize" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <TextField id="txtCMBMisc" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="55.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label font="$x1" text="Attack Modifiers" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="115.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="false" layoutX="620.0" layoutY="214.0" prefHeight="81.0" prefWidth="443.0">
+              <children>
+                <Label id="lblAttackModCMD" font="$x2" maxWidth="-Infinity" prefWidth="60.0" text="CMD:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModTotal2" font="$x1" text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModBAB2" font="$x1" text="BAB" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModStr" font="$x1" text="STR" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModDex" font="$x1" text="DEX" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModSize2" font="$x1" text="Size" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label id="lblAttackModMisc2" font="$x1" text="Misc" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtCMDTotal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" prefHeight="30.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtCMDBAB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" prefHeight="30.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtCMDStr" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" prefHeight="30.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtCMDDex" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" prefHeight="30.0" prefWidth="50.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtCMDSize" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" prefHeight="30.0" prefWidth="50.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField id="txtCMDMisc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" prefHeight="30.0" prefWidth="50.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="107.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="85.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="paneSpeeds" animated="false" collapsible="false" contentDisplay="LEFT" font="$x2" graphicTextGap="4.0" layoutX="554.0" layoutY="252.0" prefHeight="98.0" prefWidth="536.0" text="Speeds (ft)">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane id="gridpaneSpeeds" fx:id="gridPaneSpeed" gridLinesVisible="false" layoutX="0.0" layoutY="2.0" maxHeight="-1.0" prefHeight="69.0" prefWidth="532.0">
+              <children>
+                <Label fx:id="lblSpeedArmor" font="$x1" text="With Armor" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblSpeedSwim" font="$x1" text="Swim" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblSpeedClimb" font="$x1" text="Climb" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblSpeedFly" font="$x1" text="Fly" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblSpeedBurrow" font="$x1" text="Burrow" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblSpeedModifier" font="$x1" text="Modifiers" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <Label fx:id="lblSpeedBase" font="$x1" text="Base" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedBase" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedArmor" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedSwim" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedClimb" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedFly" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedBurrow" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextField fx:id="txtSpeedModifiers" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>
