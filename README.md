@@ -23,6 +23,7 @@ We aim to have a working replacement for all paper and books used by the average
 - Auto calculates need actions for each weapon such as swapping weapons etc
 - Roll required number of dice for each action
 - When inputting a field or skill have the relevant information showen
+
 Targeting all Java-SE enabled desktop systems
 
 #Future Goals
