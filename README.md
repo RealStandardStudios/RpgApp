@@ -23,6 +23,7 @@ We aim to have a working replacement for all paper and books used by the average
 - Auto calculates need actions for each weapon such as swapping weapons etc
 - Roll required number of dice for each action
 - When inputting a field or skill have the relevant information showen
+Targeting all Java-SE enabled desktop systems
 
 #Future Goals
 - Link players with each other using bluetooth or similar wireless technology
@@ -37,5 +38,4 @@ We aim to have a working replacement for all paper and books used by the average
 - An android tablet version
   - Let Game masters schedule games and have these games pushed to users google calendars
 
-
-Targeting all Java-SE enabled desktop systems
+Targeting Android version 4.0.3 (API version 15) and higher, this allows us to use more modern features and reach 78.6 of all android users.
