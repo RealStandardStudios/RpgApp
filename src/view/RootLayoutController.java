@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.layout.BorderPane;
+import jefXif.WindowController;
 import window.Interface;
 
 /**
@@ -15,42 +16,42 @@ import window.Interface;
 public class RootLayoutController {
 	private Interface ui;
 	
-	private HashMap<String, Node> windowPartials;
+	private HashMap<String, WindowController> windowPartials;
 	
 	@FXML
 	private BorderPane rootLayout;
 	
 	@FXML
 	private void handleCharacterAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("CharacterFluff"));
+		SwapWindow(windowPartials.get("CharacterFluff").getNode());
 	}
 	@FXML
 	private void handleCombatStatsAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("CombatStats"));
+		SwapWindow(windowPartials.get("CombatStats").getNode());
 	}
 	@FXML
 	private void handleSpellsAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("Spells"));
+		SwapWindow(windowPartials.get("Spells").getNode());
 	}
 	@FXML
 	private void handleInventoryAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("Inventory"));
+		SwapWindow(windowPartials.get("Inventory").getNode());
 	}
 	@FXML
 	private void handleCombatAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("Combat"));
+		SwapWindow(windowPartials.get("Combat").getNode());
 	}
 	@FXML
 	private void handleFeatsAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("Feats"));
+		SwapWindow(windowPartials.get("Feats").getNode());
 	}
 	@FXML
 	private void handleSkillsAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("Skills"));
+		SwapWindow(windowPartials.get("Skills").getNode());
 	}
 	@FXML
 	private void handleOtherCharacterAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("OtherCharacter"));
+		SwapWindow(windowPartials.get("OtherCharacter").getNode());
 	}
 	
 	private void SwapWindow(Node node) {
@@ -65,7 +66,7 @@ public class RootLayoutController {
 		this.ui = ui;
 	}
 	
-	public void setWindowPartials(HashMap<String, Node>windowPartials) {
+	public void setWindowPartials(HashMap<String, WindowController>windowPartials) {
 		this.windowPartials = windowPartials;
 	}
 }

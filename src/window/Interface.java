@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import jefXif.Gui;
+import jefXif.WindowController;
 import view.RootLayoutController;
 
 import com.sun.istack.internal.logging.Logger;
@@ -52,12 +53,12 @@ public class Interface extends Gui {
 
 	@Override
 	public void loadPartials() throws IOException {
-		HashMap<String, Node> windowPartials = new HashMap<>();
+		HashMap<String, WindowController> windowPartials = new HashMap<>();
 		String[] Windows = { "CharacterFluff", "Combat", "CombatStats",
 				"Feats", "Inventory", "NewCharacter", "OtherCharacter",
 				"Skills", "Spells"};
 		for (String string : Windows) {
-			windowPartials.put(string, loadPartial(string));
+			windowPartials.put(string, loadPartial(string, this));
 		}
 		rootLayoutController.setWindowPartials(windowPartials);
 	}
@@ -75,5 +76,11 @@ public class Interface extends Gui {
 		} catch (IOException e) {
 			Logger.getLogger(this.getClass()).log(Level.SEVERE, null, e);
 		}
+	}
+
+	@Override
+	public void loadData() {
+		// This is where we will load in the data for the character
+		
 	}
 }
