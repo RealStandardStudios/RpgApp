@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.logging.Level;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
