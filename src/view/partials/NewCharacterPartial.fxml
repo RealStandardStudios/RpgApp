@@ -27,7 +27,7 @@
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -38,32 +38,32 @@
                            <children>
                               <Label text="Strength (STR)" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <GridPane.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
                               <Label text="Dexterity (DEX)" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <GridPane.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
                               <Label text="Constitution (CON)" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <GridPane.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
                               <Label text="Intelligence (INT)" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <GridPane.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
                               <Label text="Wisdom (WIS)" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                  <GridPane.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
                               <Label text="Charisma (CHA)" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                  <GridPane.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
@@ -94,8 +94,8 @@
                               <Label fx:id="lblBaseWis" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                               <Label fx:id="lblBaseCha" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Base" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Label alignment="CENTER" text="Mod" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Label alignment="CENTER" text="Racial" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Label alignment="CENTER" text="Modifier" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Label alignment="CENTER" text="Racial Bonus" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Misc" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
@@ -115,19 +115,6 @@
                               <Label alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                 <children>
-                                    <Label text="Points Remaining:">
-                                       <opaqueInsets>
-                                          <Insets />
-                                       </opaqueInsets>
-                                       <HBox.margin>
-                                          <Insets left="15.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <Label fx:id="lblPointsRemaining" text="Label" />
-                                 </children>
-                              </HBox>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
                                     <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -152,6 +139,16 @@
                                     <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼" />
                                  </children>
                               </VBox>
+                              <Label text="Points Remaining:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblPointsRemaining" text="Label">
+                                 <GridPane.margin>
+                                    <Insets left="140.0" />
+                                 </GridPane.margin>
+                              </Label>
                            </children>
                         </GridPane>
                      </children></AnchorPane>
@@ -166,30 +163,22 @@
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" valignment="CENTER" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
-                                 <children>
-                                    <Label text="Race:">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </Label>
-                                    <ComboBox promptText="What is your character's Race?" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </padding>
-                              </HBox>
+                              <ComboBox fx:id="comboRace" promptText="What is your character's Race?" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="100.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
                               <Accordion GridPane.rowIndex="1">
                                 <panes>
                                   <TitledPane animated="false" text="Profile">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.topAnchor="80.0">
+                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
                                                   <columns>
                                                     <TableColumn maxWidth="2000.0" prefWidth="75.0" text="Attribute" />
                                                     <TableColumn prefWidth="75.0" text="Description" />
@@ -207,7 +196,7 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="500.0" prefWidth="1098.0">
+                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                   <columns>
                                                     <TableColumn maxWidth="2000.0" prefWidth="75.0" text="Attribute" />
                                                     <TableColumn prefWidth="75.0" text="Description" />
@@ -222,6 +211,11 @@
                                   </TitledPane>
                                 </panes>
                               </Accordion>
+                              <Label text="Race:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
                            </children>
                         </GridPane>
                      </children></AnchorPane>
@@ -231,28 +225,20 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <GridPane prefHeight="601.0" prefWidth="1100.0">
+                        <GridPane prefHeight="601.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
-                                 <children>
-                                    <Label text="Class:">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </Label>
-                                    <ComboBox promptText="What is your character's Class?" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </padding>
-                              </HBox>
+                              <ComboBox fx:id="comboClass" promptText="What is your character's Class?" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="100.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
                               <Accordion GridPane.rowIndex="1">
                                  <panes>
                                     <TitledPane animated="false" text="Details">
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.topAnchor="80.0">
+                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
@@ -261,7 +247,6 @@
                                                       <TableColumn prefWidth="75.0" text="Description" />
                                                    </columns>
                                                 </TableView>
-                                                <Label text="Description here" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>
@@ -270,24 +255,24 @@
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="500.0" prefWidth="1098.0">
+                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
                                                    <columns>
                                                       <TableColumn maxWidth="2000.0" prefWidth="75.0" text="Attribute" />
                                                       <TableColumn prefWidth="75.0" text="Description" />
                                                    </columns>
-                                                   <columnResizePolicy>
-                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                                   </columnResizePolicy>
                                                 </TableView>
                                              </children>
                                           </AnchorPane>
                                        </content>
                                     </TitledPane>
                                     <TitledPane animated="false" text="Features">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="500.0" prefWidth="1098.0">
+                                                <TableView prefHeight="500.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
@@ -298,16 +283,21 @@
                                                 </TableView>
                                              </children>
                                           </AnchorPane>
-                                      </content>
+                                       </content>
                                     </TitledPane>
                                  </panes>
                               </Accordion>
+                              <Label text="Class:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" valignment="CENTER" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                         </GridPane>
@@ -318,64 +308,154 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <GridPane prefWidth="1100.0">
+                        <GridPane gridLinesVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
+                              <Label fx:id="lblRanksRemaining" text="Label" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="140.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Ranks Remaining:" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
                               <Label alignment="CENTER" text="Ranks" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Class Skill?" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Racial Bonus" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Ability" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                 <children>
-                                    <Label text="Points Remaining:">
-                                       <opaqueInsets>
-                                          <Insets />
-                                       </opaqueInsets>
-                                       <HBox.margin>
-                                          <Insets left="15.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <Label fx:id="lblPointsRemaining1" text="Label" />
-                                 </children>
-                              </HBox>
                               <Label alignment="CENTER" text="Misc" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                              <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                                 <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                  <AnchorPane>
                                        <children>
-                                          <GridPane prefHeight="185.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                          <GridPane gridLinesVisible="true" prefHeight="2800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Label text="Acrobatics" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                             
+                                                <Label text="Acrobatics" wrapText="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="15.0" />
+                                                      <Insets left="20.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1">
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <children>
-                                                      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                                      <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                      <Button fx:id="btnIncreaseAcrobatics" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin></Button>
+                                                      <Button fx:id="btnDecreaseAcrobatics" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
                                                       </Button>
                                                    </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
                                                 </VBox>
-                                                <Label fx:id="lblBaseCha11" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                                <Label alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                                <Label alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                                <Label alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                                <Label alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRanksAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Appraise" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseAppraise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseAppraise" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Bluff" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseBluff" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseBluff" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksBluff" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassBluff" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialBluff" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityBluff" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscBluff" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                
                                              </children>
                                              <columnConstraints>
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" prefWidth="250.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
                                              </columnConstraints>
                                              <rowConstraints>
-                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                
+                                                
                                              </rowConstraints>
                                           </GridPane>
                                        </children>
@@ -384,17 +464,17 @@
                               </ScrollPane>
                            </children>
                            <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                         </GridPane>
                      </children></AnchorPane>
