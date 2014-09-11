@@ -308,7 +308,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <GridPane gridLinesVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <Label fx:id="lblRanksRemaining" text="Label" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                  <GridPane.margin>
@@ -332,7 +332,7 @@
                                 <content>
                                   <AnchorPane>
                                        <children>
-                                          <GridPane gridLinesVisible="true" prefHeight="2800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <GridPane layoutY="2.0" prefHeight="2800.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
                                              <children>
                                              
                                                 <Label text="Acrobatics" wrapText="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
@@ -408,6 +408,802 @@
                                                 <Label fx:id="lblAbilityBluff" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblMiscBluff" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                                                 
+                                                <Label text="Climb" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseClimb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseClimb" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksClimb" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassClimb" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialClimb" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityClimb" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscClimb" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Craft" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecCraft" promptText="Enter specialty if applicable" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseCraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseCraft" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksCraft" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassCraft" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialCraft" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityCraft" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscCraft" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Diplomacy" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseDiplomacy" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseDiplomacy" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Disable Device" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseDisableDevice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseDisableDevice" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Disguise" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseDisguise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseDisguise" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Escape Artist" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseEscapeArtist" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseEscapeArtist" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Fly" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseFly" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseFly" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksFly" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassFly" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialFly" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityFly" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscFly" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Handle Animal" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseHandleAnimal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseHandleAnimal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Heal" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseHeal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseHeal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksHeal" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassHeal" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialHeal" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityHeal" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscHeal" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Intimidate" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseIntimidate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseIntimidate" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Arcana)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeArcana" promptText="Enter specialty if applicable" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeArcana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeArcana" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Dungeoneering)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeDungeoneering" promptText="Enter specialty if applicable" GridPane.rowIndex="14" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeDungeoneering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeDungeoneering" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Engineering)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeEngineering" promptText="Enter specialty if applicable" GridPane.rowIndex="15" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeEngineering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeEngineering" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Geography)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeGeography" promptText="Enter specialty if applicable" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeGeography" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeGeography" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (History)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeHistory" promptText="Enter specialty if applicable" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeHistory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeHistory" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Local)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeLocal" promptText="Enter specialty if applicable" GridPane.rowIndex="18" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeLocal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeLocal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Nature)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeNature" promptText="Enter specialty if applicable" GridPane.rowIndex="19" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeNature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeNature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Nobility)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeNobility" promptText="Enter specialty if applicable" GridPane.rowIndex="20" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeNobility" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeNobility" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Planes)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="21" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgePlanes" promptText="Enter specialty if applicable" GridPane.rowIndex="21" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgePlanes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgePlanes" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Knowledge (Religion)" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="22" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecKnowledgeReligion" promptText="Enter specialty if applicable" GridPane.rowIndex="22" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseKnowledgeReligion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseKnowledgeReligion" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Linguistics" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="23" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseLinguistics" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseLinguistics" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Perception" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="24" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreasePerception" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreasePerception" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksPerception" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassPerception" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialPerception" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityPerception" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscPerception" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Perform" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="25" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreasePerform" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreasePerform" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksPerform" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassPerform" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialPerform" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityPerform" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscPerform" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Profession" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="26" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                   <TextField fx:id="txtSpecProfession" promptText="Enter specialty if applicable" GridPane.rowIndex="26" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseProfession" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseProfession" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksProfession" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassProfession" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialProfession" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityProfession" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscProfession" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Ride" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="27" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseRide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseRide" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksRide" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassRide" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialRide" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityRide" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscRide" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Sense Motive" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="28" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseSenseMotive" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseSenseMotive" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilitySenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Sleight of Hand" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="29" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseSleightOfHand" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseSleightOfHand" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilitySleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Spellcraft" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="30" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseSpellcraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseSpellcraft" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilitySpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Stealth" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="31" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseStealth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseStealth" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksStealth" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassStealth" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialStealth" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityStealth" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscStealth" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Survival" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="32" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseSurvival" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseSurvival" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilitySurvival" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Swim" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="33" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseSwim" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseSwim" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksSwim" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassSwim" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialSwim" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilitySwim" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscSwim" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
+                                                
+                                                <Label text="Use Magic Device" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="34" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" />
+                                                   </GridPane.margin></Label>
+                                                <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="btnIncreaseUseMagicDevice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▲" />
+                                                      <Button fx:id="btnDecreaseUseMagicDevice" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </VBox>
+                                                <Label fx:id="lblRanksUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblClassUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblRacialUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblAbilityUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
+                                                <Label fx:id="lblMiscUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
+                                                                                                
                                              </children>
                                              <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" prefWidth="250.0" />
@@ -419,7 +1215,6 @@
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
                                              </columnConstraints>
                                              <rowConstraints>
-                                                <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
                                                 <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
                                                 <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
                                                 <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
@@ -595,12 +1390,12 @@
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <TextField promptText="Describe your character's hair" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <TextField GridPane.columnIndex="3" GridPane.rowIndex="5">
+                              <TextField promptText="Describe your character's eyes" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
