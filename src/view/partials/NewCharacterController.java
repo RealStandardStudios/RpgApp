@@ -3,6 +3,7 @@ package view.partials;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.stage.Stage;
 import jefXif.DialogController;
 import jefXif.WindowController;
@@ -139,7 +140,177 @@ public class NewCharacterController extends DialogController {
 		}
 
 	}
+	
 
+	
+	@FXML
+	void handleUseMagicDeviceIncrease() {
+		lblRanksUseMagicDevice.setText(""
+				+ (Integer.parseInt(lblRanksUseMagicDevice.getText()) + 1));
+	}
+
+	@FXML
+	void handleUseMagicDeviceDecrease() {
+		lblRanksUseMagicDevice.setText(""
+				+ (Integer.parseInt(lblRanksUseMagicDevice.getText()) - 1));
+	}
+	
+	@FXML
+	void handleSwimIncrease() {
+		lblRanksSwim.setText(""
+				+ (Integer.parseInt(lblRanksSwim.getText()) + 1));
+	}
+
+	@FXML
+	void handleSwimDecrease() {
+		lblRanksSwim.setText(""
+				+ (Integer.parseInt(lblRanksSwim.getText()) - 1));
+	}
+	
+	@FXML
+	void handleSurvivalIncrease() {
+		lblRanksSurvival.setText(""
+				+ (Integer.parseInt(lblRanksSurvival.getText()) + 1));
+	}
+
+	@FXML
+	void handleSurvivalDecrease() {
+		lblRanksSurvival.setText(""
+				+ (Integer.parseInt(lblRanksSurvival.getText()) - 1));
+	}
+	
+	@FXML
+	void handleStealthIncrease() {
+		lblRanksStealth.setText(""
+				+ (Integer.parseInt(lblRanksStealth.getText()) + 1));
+	}
+
+	@FXML
+	void handleStealthDecrease() {
+		lblRanksStealth.setText(""
+				+ (Integer.parseInt(lblRanksStealth.getText()) - 1));
+	}
+	
+	@FXML
+	void handleSpellcraftIncrease() {
+		lblRanksSpellcraft.setText(""
+				+ (Integer.parseInt(lblRanksSpellcraft.getText()) + 1));
+	}
+
+	@FXML
+	void handleSpellcraftDecrease() {
+		lblRanksSpellcraft.setText(""
+				+ (Integer.parseInt(lblRanksSpellcraft.getText()) - 1));
+	}
+	
+	@FXML
+	void handleSleightOfHandIncrease() {
+		lblRanksSleightOfHand.setText(""
+				+ (Integer.parseInt(lblRanksSleightOfHand.getText()) + 1));
+	}
+
+	@FXML
+	void handleSleightOfHandDecrease() {
+		lblRanksSleightOfHand.setText(""
+				+ (Integer.parseInt(lblRanksSleightOfHand.getText()) - 1));
+	}
+	
+	@FXML
+	void handleSenseMotiveIncrease() {
+		lblRanksSenseMotive.setText(""
+				+ (Integer.parseInt(lblRanksSenseMotive.getText()) + 1));
+	}
+
+	@FXML
+	void handleSenseMotiveDecrease() {
+		lblRanksSenseMotive.setText(""
+				+ (Integer.parseInt(lblRanksSenseMotive.getText()) - 1));
+	}
+	
+	@FXML
+	void handleRideIncrease() {
+		lblRanksRide.setText(""
+				+ (Integer.parseInt(lblRanksRide.getText()) + 1));
+	}
+
+	@FXML
+	void handleRideDecrease() {
+		lblRanksRide.setText(""
+				+ (Integer.parseInt(lblRanksRide.getText()) - 1));
+	}
+	
+	@FXML
+	void handleProfessionIncrease() {
+		lblRanksProfession.setText(""
+				+ (Integer.parseInt(lblRanksProfession.getText()) + 1));
+	}
+
+	@FXML
+	void handleProfessionDecrease() {
+		lblRanksProfession.setText(""
+				+ (Integer.parseInt(lblRanksProfession.getText()) - 1));
+	}
+	
+	@FXML
+	void handlePerformIncrease() {
+		lblRanksPerform.setText(""
+				+ (Integer.parseInt(lblRanksPerform.getText()) + 1));
+	}
+
+	@FXML
+	void handlePerformDecrease() {
+		lblRanksPerform.setText(""
+				+ (Integer.parseInt(lblRanksPerform.getText()) - 1));
+	}
+	
+	@FXML
+	void handlePerceptionIncrease() {
+		lblRanksPerception.setText(""
+				+ (Integer.parseInt(lblRanksPerception.getText()) + 1));
+	}
+
+	@FXML
+	void handlePerceptionDecrease() {
+		lblRanksPerception.setText(""
+				+ (Integer.parseInt(lblRanksPerception.getText()) - 1));
+	}
+	
+	@FXML
+	void handleLinguisticsIncrease() {
+		lblRanksLinguistics.setText(""
+				+ (Integer.parseInt(lblRanksLinguistics.getText()) + 1));
+	}
+
+	@FXML
+	void handleLinguisticsDecrease() {
+		lblRanksLinguistics.setText(""
+				+ (Integer.parseInt(lblRanksLinguistics.getText()) - 1));
+	}
+	
+	@FXML
+	void handleKnowledgeReligionIncrease() {
+		lblRanksKnowledgeReligion.setText(""
+				+ (Integer.parseInt(lblRanksKnowledgeReligion.getText()) + 1));
+	}
+
+	@FXML
+	void handleKnowledgeReligionDecrease() {
+		lblRanksKnowledgeReligion.setText(""
+				+ (Integer.parseInt(lblRanksKnowledgeReligion.getText()) - 1));
+	}
+	
+	@FXML
+	void handleKnowledgePlanesIncrease() {
+		lblRanksKnowledgePlanes.setText(""
+				+ (Integer.parseInt(lblRanksKnowledgePlanes.getText()) + 1));
+	}
+
+	@FXML
+	void handleKnowledgePlanesDecrease() {
+		lblRanksKnowledgePlanes.setText(""
+				+ (Integer.parseInt(lblRanksKnowledgePlanes.getText()) - 1));
+	}
+	
 	@FXML
 	void handleKnowledgeNobilityIncrease() {
 		lblRanksKnowledgeNobility.setText(""
@@ -389,13 +560,13 @@ public class NewCharacterController extends DialogController {
 	@FXML
 	void handleAcrobaticsIncrease() {
 		lblRanksAcrobatics.setText(""
-				+ (Integer.parseInt(lblBaseStr.getText()) + 1));
+				+ (Integer.parseInt(lblRanksAcrobatics.getText()) + 1));
 	}
 
 	@FXML
 	void handleAcrobaticsDecrease() {
 		lblRanksAcrobatics.setText(""
-				+ (Integer.parseInt(lblBaseStr.getText()) - 1));
+				+ (Integer.parseInt(lblRanksAcrobatics.getText()) - 1));
 	}
 
 	@FXML
