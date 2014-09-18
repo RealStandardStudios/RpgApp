@@ -1400,7 +1400,7 @@
                                     <Insets left="20.0" top="20.0" />
                                  </GridPane.margin>
                               </HBox>
-                              <Button fx:id="btnRemoveFeat1" mnemonicParsing="false" text="Remove Selected" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                              <Button fx:id="btnRemoveItem" mnemonicParsing="false" text="Remove Selected" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets top="60.0" />
                                  </GridPane.margin>
@@ -1411,17 +1411,17 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <TableView fx:id="tableWeapons" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columns>
-                                                      <TableColumn prefWidth="-1.0" text="Name" />
-                                                      <TableColumn prefWidth="-1.0" text="Cost" />
-                                                      <TableColumn prefWidth="-1.0" text="Dmg (S)" />
-                                                      <TableColumn prefWidth="-1.0" text="Dmg (M)" />
-                                                      <TableColumn prefWidth="-1.0" text="Critical" />
-                                                      <TableColumn prefWidth="-1.0" text="Range" />
-                                                      <TableColumn prefWidth="-1.0" text="Weight" />
-                                                      <TableColumn prefWidth="-1.0" text="Type" />
-                                                      <TableColumn prefWidth="-1.0" text="Special" />
+                                                      <TableColumn fx:id="columnWeaponName" prefWidth="-1.0" text="Name" />
+                                                      <TableColumn fx:id="columnWeaponCost" prefWidth="-1.0" text="Cost" />
+                                                      <TableColumn fx:id="columnWeaponDmgS" prefWidth="-1.0" text="Dmg (S)" />
+                                                      <TableColumn fx:id="columnWeaponDmgM" prefWidth="-1.0" text="Dmg (M)" />
+                                                      <TableColumn fx:id="columnWeaponCrit" prefWidth="-1.0" text="Critical" />
+                                                      <TableColumn fx:id="columnWeaponRange" prefWidth="-1.0" text="Range" />
+                                                      <TableColumn fx:id="columnWeaponWeight" prefWidth="-1.0" text="Weight" />
+                                                      <TableColumn fx:id="columnWeaponType" prefWidth="-1.0" text="Type" />
+                                                      <TableColumn fx:id="columnWeaponSpec" prefWidth="-1.0" text="Special" />
                                                    </columns>
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -1434,20 +1434,20 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <TableView fx:id="tableArmor" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
                                                    <columns>
-                                                      <TableColumn prefWidth="-1.0" text="Name" />
-                                                      <TableColumn prefWidth="-1.0" text="Cost" />
-                                                      <TableColumn prefWidth="-1.0" text="Armor/Shield Bonus" />
-                                                      <TableColumn prefWidth="-1.0" text="Max DEX Bonus" />
-                                                      <TableColumn prefWidth="-1.0" text="Armor Check Penalty" />
-                                                      <TableColumn prefWidth="-1.0" text="Arcane Spell Failure Chance" />
-                                                      <TableColumn prefWidth="-1.0" text="Speed 30ft" />
-                                                      <TableColumn prefWidth="-1.0" text="Speed 20ft" />
-                                                      <TableColumn prefWidth="-1.0" text="Weight" />
+                                                      <TableColumn fx:id="columnArmorName" prefWidth="-1.0" text="Name" />
+                                                      <TableColumn fx:id="columnArmorCost" prefWidth="-1.0" text="Cost" />
+                                                      <TableColumn fx:id="columnArmorBonus" prefWidth="-1.0" text="Armor/Shield Bonus" />
+                                                      <TableColumn fx:id="columnArmorMaxDex" prefWidth="-1.0" text="Max DEX Bonus" />
+                                                      <TableColumn fx:id="columnArmorCheckPenalty" prefWidth="-1.0" text="Armor Check Penalty" />
+                                                      <TableColumn fx:id="columnArmorSpellFailure" prefWidth="-1.0" text="Arcane Spell Failure Chance" />
+                                                      <TableColumn fx:id="columnArmorSpeed30" prefWidth="-1.0" text="Speed 30ft" />
+                                                      <TableColumn fx:id="columnArmorSpeed20" prefWidth="-1.0" text="Speed 20ft" />
+                                                      <TableColumn fx:id="columnArmorWeight" prefWidth="-1.0" text="Weight" />
                                                    </columns>
                                                 </TableView>
                                              </children></AnchorPane>
@@ -1457,14 +1457,14 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <TableView fx:id="tableGoods" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
                                                    <columns>
-                                                      <TableColumn prefWidth="-1.0" text="Name" />
-                                                      <TableColumn prefWidth="-1.0" text="Cost" />
-                                                      <TableColumn prefWidth="-1.0" text="Weight" />
+                                                      <TableColumn fx:id="columnGoodsName" prefWidth="-1.0" text="Name" />
+                                                      <TableColumn fx:id="columnGoodsCost" prefWidth="-1.0" text="Cost" />
+                                                      <TableColumn fx:id="columnGoodsWeight" prefWidth="-1.0" text="Weight" />
                                                    </columns>
                                                 </TableView>
                                              </children></AnchorPane>
@@ -1481,13 +1481,13 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <TableView fx:id="tableCharWeapons" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
                                                    <columns>
-                                                      <TableColumn prefWidth="160.50000154972076" text="Name" />
-                                                      <TableColumn prefWidth="88.99999237060547" text="Quantity" />
+                                                      <TableColumn fx:id="columnCharWeaponsName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharWeaponsQuantity" prefWidth="88.99999237060547" text="Quantity" />
                                                    </columns>
                                                 </TableView>
                                              </children></AnchorPane>
@@ -1497,13 +1497,13 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <TableView fx:id="tableCharArmor" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
                                                    <columns>
-                                                      <TableColumn prefWidth="160.50000154972076" text="Name" />
-                                                      <TableColumn prefWidth="88.99999237060547" text="Quantity" />
+                                                      <TableColumn fx:id="columnCharArmorName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharArmorQuantity" prefWidth="88.99999237060547" text="Quantity" />
                                                    </columns>
                                                 </TableView>
                                              </children></AnchorPane>
@@ -1513,13 +1513,13 @@
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TableView prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <TableView fx:id="tableCharGoods" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <columnResizePolicy>
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy>
                                                    <columns>
-                                                      <TableColumn prefWidth="160.50000154972076" text="Name" />
-                                                      <TableColumn prefWidth="88.99999237060547" text="Quantity" />
+                                                      <TableColumn fx:id="columnCharGoodsName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharGoodsQuantity" prefWidth="88.99999237060547" text="Quantity" />
                                                    </columns>
                                                 </TableView>
                                              </children></AnchorPane>
@@ -1540,7 +1540,7 @@
                                     <Insets top="5.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Button fx:id="btnRemoveFeat11" mnemonicParsing="false" text="Add Selected" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                              <Button fx:id="btnAddItem" mnemonicParsing="false" text="Add Selected" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets top="60.0" />
                                  </GridPane.margin>
@@ -1552,7 +1552,7 @@
                                           <Insets left="20.0" top="20.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label fx:id="lblStartingWealthValue1" text="heaps as bae" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                    <Label fx:id="lblGoldRemainingValue" text="heaps as bae" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                                        <GridPane.margin>
                                           <Insets left="140.0" top="20.0" />
                                        </GridPane.margin>
@@ -1569,7 +1569,7 @@
                                           <Insets left="20.0" top="20.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label fx:id="lblStartingWealthValue11" text="much" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                    <Label fx:id="lblWeightValue" text="much" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                                        <GridPane.margin>
                                           <Insets left="140.0" top="20.0" />
                                        </GridPane.margin>
@@ -1619,7 +1619,7 @@
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField promptText="What is your character's name?" GridPane.columnIndex="1">
+                              <TextField fx:id="txtCharName" promptText="What is your character's name?" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
@@ -1629,7 +1629,7 @@
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField promptText="Where is your character from?" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <TextField fx:id="txtCharHomeland" promptText="Where is your character from?" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
@@ -1649,22 +1649,22 @@
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField promptText="What is your character's gender?" GridPane.columnIndex="3">
+                              <TextField fx:id="txtCharGender" promptText="What is your character's gender?" GridPane.columnIndex="3">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <TextField promptText="What is your character's age?" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <TextField fx:id="txtCharAge" promptText="What is your character's age?" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <TextField promptText="What is your character's height?" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <TextField fx:id="txtCharHeight" promptText="What is your character's height?" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <TextField promptText="What is your character's weight?" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <TextField fx:id="txtCharWeight" promptText="What is your character's weight?" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
@@ -1694,7 +1694,7 @@
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField promptText="What deities does your character worship?" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="txtCharDeities" promptText="What deities does your character worship?" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
@@ -1704,7 +1704,7 @@
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Languages known here" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="lblLanguagesKnown" text="Languages known here" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <Label text="Alignment:" GridPane.rowIndex="6" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets left="10.0" top="20.0" />
@@ -1741,17 +1741,17 @@
                                     <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
-                              <TextArea maxWidth="1.7976931348623157E308" promptText="What is your character's background?" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                              <TextArea fx:id="txtaCharBackground" maxWidth="1.7976931348623157E308" promptText="What is your character's background?" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
                               </TextArea>
-                              <TextArea prefHeight="200.0" promptText="Describe your character's appearance" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2">
+                              <TextArea fx:id="txtaCharAppearance" prefHeight="200.0" promptText="Describe your character's appearance" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
                               </TextArea>
-                              <TextArea prefHeight="200.0" promptText="Describe your character's personality" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                              <TextArea fx:id="txtaCharPersonality" prefHeight="200.0" promptText="Describe your character's personality" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <GridPane.margin>
                                     <Insets right="10.0" />
                                  </GridPane.margin>
