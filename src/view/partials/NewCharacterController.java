@@ -3,17 +3,108 @@ package view.partials;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.stage.Stage;
 import jefXif.DialogController;
-import jefXif.WindowController;
+import pathfinder.data.Attributes.Ability;
+import pathfinder.data.Attributes.AbilityName;
+import pathfinder.data.Character.Character;
 
 /**
  * @author Real Standard Studios - Matthew Meehan
  *
  */
 public class NewCharacterController extends DialogController {
-
+	
+	//region abilityModForAbtributes
+	
+	@FXML
+	Label lblAbilityAcrobatics;
+	@FXML
+	Label lblAbilityAppraise;
+	@FXML
+	Label lblAbilityBluff;
+	@FXML
+	Label lblAbilityClimb;
+	@FXML
+	Label lblAbilityCraft;
+	@FXML
+	Label lblAbilityDiplomacy;
+	@FXML
+	Label lblAbilityDisableDevice;
+	@FXML
+	Label lblAbilityDisguise;
+	@FXML
+	Label lblAbilityEscapeArtist;
+	@FXML
+	Label lblAbilityFly;
+	@FXML
+	Label lblAbilityHandleAnimal;
+	@FXML
+	Label lblAbilityHeal;
+	@FXML
+	Label lblAbilityIntimidate;
+	@FXML
+	Label lblAbilityKnowledgeArcana;
+	@FXML
+	Label lblAbilityKnowledgeDungeoneering;
+	@FXML
+	Label lblAbilityKnowledgeEngineering;
+	@FXML
+	Label lblAbilityKnowledgeGeography;
+	@FXML
+	Label lblAbilityKnowledgeHistory;
+	@FXML
+	Label lblAbilityKnowledgeLocal;
+	@FXML
+	Label lblAbilityKnowledgeNature;
+	@FXML
+	Label lblAbilityKnowledgeNobility;
+	@FXML
+	Label lblAbilityKnowledgePlanes;
+	@FXML
+	Label lblAbilityKnowledgeReligion;
+	@FXML
+	Label lblAbilityLinguistics;
+	@FXML
+	Label lblAbilityPerception;
+	@FXML
+	Label lblAbilityPerform;
+	@FXML
+	Label lblAbilityProfession;
+	@FXML
+	Label lblAbilityRide;
+	@FXML
+	Label lblAbilitySenseMotive;
+	@FXML
+	Label lblAbilitySleightOfHand;
+	@FXML
+	Label lblAbilitySpellcraft;
+	@FXML
+	Label lblAbilityStealth;
+	@FXML
+	Label lblAbilitySurvival;
+	@FXML
+	Label lblAbilitySwim;
+	@FXML
+	Label lblAbilityUseMagicDevice;
+	
+	//endregion
+	
+	//region AbilityMods
+	@FXML
+	Label lblStrMod;
+	@FXML
+	Label lblDexMod;
+	@FXML
+	Label lblConMod;
+	@FXML
+	Label lblIntMod;
+	@FXML
+	Label lblWisMod;
+	@FXML
+	Label lblChaMod;
+	//endregion
+	
+	//region Attributes
 	@FXML
 	Label lblBaseStr;
 	@FXML
@@ -26,8 +117,48 @@ public class NewCharacterController extends DialogController {
 	Label lblBaseWis;
 	@FXML
 	Label lblBaseCha;
-	// first tab base abtributes
-
+	
+	@FXML
+	Label lblTotalStr;
+	@FXML
+	Label lblTotalDex;
+	@FXML
+	Label lblTotalCon;
+	@FXML
+	Label lblTotalInt;
+	@FXML
+	Label lblTotalWis;
+	@FXML
+	Label lblTotalCha;
+	
+	@FXML
+	Label lblRacialBonusStr;
+	@FXML
+	Label lblRacialBonusDex;
+	@FXML
+	Label lblRacialBonusCon;
+	@FXML
+	Label lblRacialBonusInt;
+	@FXML
+	Label lblRacialBonusWis;
+	@FXML
+	Label lblRacialBonusCha;
+	
+	@FXML
+	Label lblMiscStr;
+	@FXML
+	Label lblMiscDex;
+	@FXML
+	Label lblMiscCon;
+	@FXML
+	Label lblMiscInt;
+	@FXML
+	Label lblMiscWis;
+	@FXML
+	Label lblMiscCha;
+	//endregion
+	
+	//region skills
 	@FXML
 	Label lblRanksAcrobatics;
 	@FXML
@@ -99,27 +230,43 @@ public class NewCharacterController extends DialogController {
 	@FXML
 	Label lblRanksUseMagicDevice;
 	Label[] skillLabels;
+	//endregion
 
-	// Skills
-
-	int baseStr, baseDex, baseCon, baseInt, baseWis, baseCha;
+	Character newCharacter;
 
 	@Override
 	public void initialize() {
-		baseStr = 10;
-		baseDex = 10;
-		baseCon = 10;
-		baseInt = 10;
-		baseWis = 10;
-		baseCha = 10;
+		newCharacter = new Character();
+		
+		//make HashMap<SkillName,Skill> of all the skills
+		
+		newCharacter.setStrength(new Ability(AbilityName.Strength, 10));
+		newCharacter.setDexterity(new Ability(AbilityName.Dexterity, 10));
+		newCharacter.setConstitution(new Ability(AbilityName.Dexterity, 10));
+		newCharacter.setIntelligence(new Ability(AbilityName.Intelligence, 10));
+		newCharacter.setWisdom(new Ability(AbilityName.Wisdom, 10));
+		newCharacter.setCharisma(new Ability(AbilityName.Charisma, 10));
 
-		lblBaseStr.setText("" + baseStr);
-		lblBaseDex.setText("" + baseDex);
-		lblBaseCon.setText("" + baseCon);
-		lblBaseInt.setText("" + baseInt);
-		lblBaseWis.setText("" + baseWis);
-		lblBaseCha.setText("" + baseCha);
-
+		lblBaseStr.setText("" + newCharacter.getStrength().getValue());
+		lblBaseDex.setText("" + newCharacter.getDexterity().getValue());
+		lblBaseCon.setText("" + newCharacter.getConstitution().getValue());
+		lblBaseInt.setText("" + newCharacter.getIntelligence().getValue());
+		lblBaseWis.setText("" + newCharacter.getWisdom().getValue());
+		lblBaseCha.setText("" + newCharacter.getCharisma().getValue());
+		
+		//region SetAbility Mod
+		Label[] abilityModLabels = new Label[]
+				{
+				lblStrMod, lblDexMod, lblConMod, lblIntMod, lblWisMod, lblChaMod
+				};
+		int tempCount = 0;
+		for (Label label : abilityModLabels)
+		{
+			label.setText(newCharacter.getAbilities()[tempCount].getModifier() + "");
+		}
+		//endregion
+		//sets the default ability mod
+		
 		skillLabels = new Label[] { lblRanksAcrobatics, lblRanksAppraise,
 				lblRanksBluff, lblRanksClimb, lblRanksClimb, lblRanksCraft,
 				lblRanksDiplomacy, lblRanksDisableDevice, lblRanksDisguise,
@@ -138,11 +285,159 @@ public class NewCharacterController extends DialogController {
 		for (Label label : skillLabels) {
 			label.setText("0");
 		}
+		
+		setTotalStr();
+		setTotalDex();
+		setTotalCon();
+		setTotalInt();
+		setTotalWis();
+		setTotalCha();
 
 	}
 	
-
 	
+	//region abilitySetupForSkills
+	void setAbilityAcrobatics()
+	{
+		lblAbilityAcrobatics.setText("" +newCharacter.getDexterity().getModifier());
+	}
+	void setAbilityAppraise()
+	{
+		lblAbilityAppraise.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityBluff()
+	{
+		lblAbilityBluff.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	void setAbilityClimb()
+	{
+		lblAbilityClimb.setText("" + newCharacter.getStrength().getModifier());
+	}
+	void setAbilityDiplomacy()
+	{
+		lblAbilityDiplomacy.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	void setAbilityDisableDevice()
+	{
+		lblAbilityDisableDevice.setText("" + newCharacter.getDexterity().getModifier());
+	}
+	void setAbilityDisguise()
+	{
+		lblAbilityDisguise.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	void setAbilityEscapeArtist()
+	{
+		lblAbilityEscapeArtist.setText("" + newCharacter.getDexterity().getModifier());
+	}
+	void setAbilityFly()
+	{
+		lblAbilityFly.setText("" + newCharacter.getDexterity().getModifier());
+	}
+	void setAbilityHandleAnimal()
+	{
+		lblAbilityHandleAnimal.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	void setAbilityHeal()
+	{
+		lblAbilityHeal.setText("" + newCharacter.getWisdom().getModifier());
+	}
+	void setAbilityIntimidate()
+	{
+		lblAbilityIntimidate.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	void setAbilityKnowledgeArcana()
+	{
+		lblAbilityKnowledgeArcana.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeDungeoneering()
+	{
+		lblAbilityKnowledgeDungeoneering.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeEngineering()
+	{
+		lblAbilityKnowledgeEngineering.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeGeography()
+	{
+		lblAbilityKnowledgeGeography.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeHistory()
+	{
+		lblAbilityKnowledgeHistory.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeLocal()
+	{
+		lblAbilityKnowledgeLocal.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeNature()
+	{
+		lblAbilityKnowledgeNature.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeNobility()
+	{
+		lblAbilityKnowledgeNobility.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgePlanes()
+	{
+		lblAbilityKnowledgeNobility.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityKnowledgeReligion()
+	{
+		lblAbilityKnowledgeReligion.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityLinguistics()
+	{
+		lblAbilityLinguistics.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityPerception()
+	{
+		lblAbilityPerception.setText("" + newCharacter.getWisdom().getModifier());
+	}
+	void setAbilityPerform()
+	{
+		lblAbilityPerform.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	void setAbilityProfession()
+	{
+		lblAbilityProfession.setText("" + newCharacter.getWisdom().getModifier());
+	}
+	void setAbilityRide()
+	{
+		lblAbilityRide.setText("" + newCharacter.getDexterity().getModifier());
+	}
+	void setAbilitySenseMotive()
+	{
+		lblAbilitySenseMotive.setText("" + newCharacter.getWisdom().getModifier());
+	}
+	void setAbilitySleightOfHand()
+	{
+		lblAbilityRide.setText("" + newCharacter.getDexterity().getModifier());
+	}
+	void setAbilitySpellcraft()
+	{
+		lblAbilitySpellcraft.setText("" + newCharacter.getIntelligence().getModifier());
+	}
+	void setAbilityStealth()
+	{
+		lblAbilityStealth.setText("" + newCharacter.getDexterity().getModifier());
+	}
+	void setAbilitySurvival()
+	{
+		lblAbilitySurvival.setText("" + newCharacter.getWisdom().getModifier());
+	}
+	void setAbilitySwim()
+	{
+		lblAbilitySwim.setText("" + newCharacter.getStrength().getModifier());
+	}
+	void setAbilityUseMagicDevice()
+	{
+		lblAbilityUseMagicDevice.setText("" + newCharacter.getCharisma().getModifier());
+	}
+	
+	
+	//endregion
+	
+	//region handleSkills
 	@FXML
 	void handleUseMagicDeviceIncrease() {
 		lblRanksUseMagicDevice.setText(""
@@ -568,78 +863,145 @@ public class NewCharacterController extends DialogController {
 		lblRanksAcrobatics.setText(""
 				+ (Integer.parseInt(lblRanksAcrobatics.getText()) - 1));
 	}
+	//endregion
 
+	//region setTotals
+	
+	void setTotalStr()
+	{
+		lblTotalStr.setText("" + (newCharacter.getStrength().getValue() + Integer.parseInt(lblRacialBonusStr.getText()) 
+				+ Integer.parseInt(lblMiscStr.getText())));
+	}
+	
+	void setTotalDex()
+	{
+		lblTotalDex.setText("" + (newCharacter.getDexterity().getValue() + Integer.parseInt(lblRacialBonusDex.getText()) 
+				+ Integer.parseInt(lblMiscDex.getText())));
+	}
+	
+	void setTotalCon()
+	{
+		lblTotalCon.setText("" + (newCharacter.getConstitution().getValue() + Integer.parseInt(lblRacialBonusCon.getText()) 
+				+ Integer.parseInt(lblMiscCon.getText())));
+	}
+	
+	void setTotalInt()
+	{
+		lblTotalInt.setText("" + (newCharacter.getIntelligence().getValue() + Integer.parseInt(lblRacialBonusInt.getText()) 
+				+ Integer.parseInt(lblMiscInt.getText())));
+	}
+	
+	void setTotalWis()
+	{
+		lblTotalWis.setText("" + (newCharacter.getWisdom().getValue() + Integer.parseInt(lblRacialBonusWis.getText()) 
+				+ Integer.parseInt(lblMiscWis.getText())));
+	}
+	
+	void setTotalCha()
+	{
+		lblTotalCha.setText("" + (newCharacter.getCharisma().getValue() + Integer.parseInt(lblRacialBonusCha.getText()) 
+				+ Integer.parseInt(lblMiscCha.getText())));
+	}
+	
+	//endregion
+	
+	//region AbilityScore
 	@FXML
 	void handleStrIncrease() {
-		baseStr++;
-		lblBaseStr.setText("" + baseStr);
+		newCharacter.getStrength().increaseValue();
+		lblBaseStr.setText("" + newCharacter.getStrength().getValue());
+		lblStrMod.setText("" + newCharacter.getStrength().getModifier());
+		setTotalStr();
 	}
 
 	@FXML
 	void handleStrDecrease() {
-		baseStr--;
-		lblBaseStr.setText("" + baseStr);
+		newCharacter.getStrength().decreaseValue();
+		lblBaseStr.setText("" + newCharacter.getStrength().getValue());
+		lblStrMod.setText("" + newCharacter.getStrength().getModifier());
+		setTotalStr();
 	}
 
 	@FXML
 	void handleDexIncrease() {
-		baseDex++;
-		lblBaseDex.setText("" + baseDex);
+		newCharacter.getDexterity().increaseValue();
+		lblBaseDex.setText("" + newCharacter.getDexterity().getValue());
+		lblDexMod.setText("" + newCharacter.getDexterity().getModifier());
+		setTotalDex();
 	}
 
 	@FXML
 	void handleDexDecrease() {
-		baseDex--;
-		lblBaseDex.setText("" + baseDex);
+		newCharacter.getDexterity().decreaseValue();
+		lblBaseDex.setText("" + newCharacter.getDexterity().getValue());
+		lblDexMod.setText("" + newCharacter.getDexterity().getModifier());
+		setTotalDex();
 	}
 
 	@FXML
 	void handleConIncrease() {
-		baseCon++;
-		lblBaseCon.setText("" + baseCon);
+		newCharacter.getConstitution().increaseValue();
+		lblBaseCon.setText("" + newCharacter.getConstitution().getValue());
+		lblConMod.setText("" + newCharacter.getConstitution().getModifier());
+		setTotalCon();
 	}
 
 	@FXML
 	void handleConDecrease() {
-		baseCon--;
-		lblBaseCon.setText("" + baseCon);
+		newCharacter.getConstitution().decreaseValue();
+		lblBaseCon.setText("" + newCharacter.getConstitution().getValue());
+		lblConMod.setText("" + newCharacter.getConstitution().getModifier());
+		setTotalCon();
 	}
 
 	@FXML
 	void handleIntIncrease() {
-		baseInt++;
-		lblBaseInt.setText("" + baseInt);
+		newCharacter.getIntelligence().increaseValue();
+		lblBaseInt.setText("" + newCharacter.getIntelligence().getValue());
+		lblConMod.setText("" + newCharacter.getIntelligence().getModifier());
+		setTotalInt();
 	}
 
 	@FXML
 	void handleIntDecrease() {
-		baseInt--;
-		lblBaseInt.setText("" + baseInt);
+		newCharacter.getIntelligence().decreaseValue();
+		lblBaseInt.setText("" + newCharacter.getIntelligence().getValue());
+		lblConMod.setText("" + newCharacter.getIntelligence().getModifier());
+		setTotalInt();
 	}
 
 	@FXML
 	void handleWisIncrease() {
-		baseWis++;
-		lblBaseWis.setText("" + baseWis);
+		newCharacter.getWisdom().increaseValue();
+		lblBaseWis.setText("" + newCharacter.getWisdom().getValue());
+		lblConMod.setText("" + newCharacter.getWisdom().getModifier());
+		setTotalWis();
 	}
 
 	@FXML
 	void handleWisDecrease() {
-		baseWis--;
-		lblBaseWis.setText("" + baseWis);
+		newCharacter.getWisdom().decreaseValue();
+		lblBaseWis.setText("" + newCharacter.getWisdom().getValue());
+		lblConMod.setText("" + newCharacter.getWisdom().getModifier());
+		setTotalWis();
 	}
 
 	@FXML
 	void handleChaIncrease() {
-		baseCha++;
-		lblBaseCha.setText("" + baseCha);
+		newCharacter.getCharisma().increaseValue();
+		lblBaseCha.setText("" + newCharacter.getCharisma().getValue());
+		lblConMod.setText("" + newCharacter.getCharisma().getModifier());
+		setTotalCha();
 	}
 
 	@FXML
 	void handleChaDecrease() {
-		baseCha--;
-		lblBaseCha.setText("" + baseCha);
+		newCharacter.getCharisma().decreaseValue();
+		lblBaseCha.setText("" + newCharacter.getCharisma().getValue());
+		lblConMod.setText("" + newCharacter.getCharisma().getModifier());
+		setTotalCha();
 	}
+	//endregion
 
 	@Override
 	public void handleOkay(ActionEvent event) {
