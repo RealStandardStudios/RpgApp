@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import org.controlsfx.dialog.Dialogs;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -23,10 +25,14 @@ import pathfinder.data.Character.Character;
  */
 public class NewCharacterController extends DialogController implements DataFileReader{
 	
-	ArrayList<Feat> feats = new ArrayList<Feat>();
+	ObservableList<Feat> feats = FXCollections.observableArrayList();
 	
 	@FXML
-	ComboBox comboFeat; 
+	ComboBox<Feat> comboFeat; 
+	@FXML
+	Label lblFeatName;
+	@FXML
+	Label lblFeatDescription;
 	
 	//region abilityModForAbtributes
 	
@@ -309,7 +315,7 @@ public class NewCharacterController extends DialogController implements DataFile
 		
 		readFeats();
 		
-		//comboFeat.setItems();
+		comboFeat.setItems(feats);
 	}
 	
 	void readFeats()
@@ -317,7 +323,7 @@ public class NewCharacterController extends DialogController implements DataFile
 		File file = new File(this.getClass().getResource("").getPath()+"../../../../PathfinderData/data");
 		File featsFile = new File(file.getPath()+"\\Feats.fdf");
 		try {
-			feats = readDataFile(featsFile, Feat.class);
+			feats.setAll(readDataFile(featsFile, Feat.class));
 		} catch (IOException e) {
 			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
 			e.printStackTrace();
