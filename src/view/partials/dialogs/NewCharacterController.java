@@ -446,7 +446,7 @@ public class NewCharacterController extends DialogController implements DataFile
 
 	void readFeats()
 	{
-		File file = new File(this.getClass().getResource("").getPath()+"../../../../PathfinderData/data");
+		File file = new File(this.getClass().getResource("").getPath()+programRoot+"PathfinderData/data");
 		File featsFile = new File(file.getPath()+"\\Feats.fdf");
 		try {
 			feats.setAll(readDataFile(featsFile, Feat.class));
