@@ -54,7 +54,7 @@ public class Interface extends Gui {
 	public void loadPartials() throws IOException {
 		HashMap<String, WindowController> windowPartials = new HashMap<>();
 		String[] Windows = { "CharacterFluff", "Combat", "CombatStats",
-				"Feats", "Inventory", "NewCharacter", "OtherCharacter",
+				"Feats", "Inventory", "OtherCharacter",
 				"Skills", "Spells"};
 		for (String string : Windows) {
 			windowPartials.put(string, loadPartial(string, this));

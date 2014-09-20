@@ -2,6 +2,7 @@ package view.partials;
 
 import java.io.IOException;
 
+import view.partials.dialogs.NewCharacterController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +29,7 @@ public class OtherCharacterController extends WindowController {
 		try
 		{
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(this.getClass().getResource("NewCharacterPartial.fxml"));
+			loader.setLocation(this.getClass().getResource("dialogs/NewCharacterDialog.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 	
 	        // Create the dialog Stage.

@@ -1,23 +1,29 @@
-package view.partials;
+package view.partials.dialogs;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-
-import org.controlsfx.dialog.Dialogs;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import jefXif.DataFileReader;
 import jefXif.DialogController;
+
+import org.controlsfx.dialog.Dialogs;
+
 import pathfinder.data.Feat;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Character.Character;
+import pathfinder.data.Items.Armor;
+import pathfinder.data.Items.Goods;
+import pathfinder.data.Items.Weapon;
 
 /**
  * @author Real Standard Studios - Matthew Meehan
@@ -26,6 +32,8 @@ import pathfinder.data.Character.Character;
 public class NewCharacterController extends DialogController implements DataFileReader{
 	
 	ObservableList<Feat> feats = FXCollections.observableArrayList();
+	final String programRoot = "../../../../../";
+	
 	
 	@FXML
 	ComboBox<Feat> comboFeat; 
@@ -251,7 +259,123 @@ public class NewCharacterController extends DialogController implements DataFile
 	Label lblRanksUseMagicDevice;
 	Label[] skillLabels;
 	//endregion
-
+	
+	//region Equipment
+	
+		//Weapon table
+	@FXML
+	private TableView<Weapon> tableWeapons;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponName;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponType;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponCost;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponDmgS;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponDmgM;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponCrit;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponRange;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponWeight;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnWeaponSpecial;
+	
+		//Armor table
+	@FXML
+	private TableView<Armor> tableArmor;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorName;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorType;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorCost;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorBonus;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorMaxDex;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorCheckPenalty;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorSpellFailure;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorSpeed30;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorSpeed20;
+	
+	@FXML
+	private TableColumn<Armor, String> columnArmorWeight;
+	
+		//Goods table
+	@FXML
+	private TableView<Goods> tableGoods;
+	
+	@FXML
+	private TableColumn<Goods, String> columnGoodsName;
+	
+	@FXML
+	private TableColumn<Goods, String> columnGoodsCost;
+	
+	@FXML
+	private TableColumn<Goods, String> columnGoodsWeight;
+	
+		//Labels and buttons
+	@FXML
+	Label lblStartingWealthValue;
+	
+	@FXML
+	Button btnRollStartingWealth;
+	
+	@FXML
+	Label lblGoldRemainingValue;
+	
+	@FXML
+	Label lblWeightValue;
+	
+	@FXML
+	Button btnAddItem;
+	
+	@FXML
+	Button btnRemoveItem;
+	
+	//endregion
+	
+	private ObservableList<Weapon> obsListWeapons = FXCollections.observableArrayList();
+	private ObservableList<Weapon> getObsListWeapons() {
+		return obsListWeapons;
+	}
+	
+	private ObservableList<Armor> obsListArmor = FXCollections.observableArrayList();
+	private ObservableList<Armor> getObsListArmor() {
+		return obsListArmor;
+	}
+	
+	private ObservableList<Goods> obsListGoods = FXCollections.observableArrayList();
+	private ObservableList<Goods> getObsListGoods() {
+		return obsListGoods;
+	}
+	
 	Character newCharacter;
 
 	@Override
@@ -313,11 +437,13 @@ public class NewCharacterController extends DialogController implements DataFile
 		setTotalWis();
 		setTotalCha();
 		
+		//Equipment
+		
 		readFeats();
 		
 		comboFeat.setItems(feats);
 	}
-	
+
 	void readFeats()
 	{
 		File file = new File(this.getClass().getResource("").getPath()+"../../../../PathfinderData/data");
