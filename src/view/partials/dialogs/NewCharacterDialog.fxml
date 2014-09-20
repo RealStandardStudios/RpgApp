@@ -1290,7 +1290,7 @@
                      <children>
                         <GridPane hgap="10.0" prefHeight="601.0" prefWidth="1100.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ComboBox fx:id="comboFeat" minWidth="220.0" promptText="Choose a Feat" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP">
+                              <ComboBox fx:id="comboFeat" minWidth="220.0" onAction="#handleSelectFeat" promptText="Choose a Feat" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets left="100.0" top="20.0" />
                                  </GridPane.margin>

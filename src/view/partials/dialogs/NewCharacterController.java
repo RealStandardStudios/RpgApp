@@ -36,7 +36,9 @@ public class NewCharacterController extends DialogController implements DataFile
 	
 	
 	@FXML
-	ComboBox<Feat> comboFeat; 
+	ComboBox<Feat> comboFeat;
+	@FXML 
+	TableColumn<Feat, String> columnFeatPrereq;
 	@FXML
 	Label lblFeatName;
 	@FXML
@@ -443,7 +445,17 @@ public class NewCharacterController extends DialogController implements DataFile
 		
 		comboFeat.setItems(feats);
 	}
+	
+	@FXML
+	void handleSelectFeat()
+	{
+		 Feat feat = comboFeat.getValue();
+		 lblFeatName.setText(feat.getName());
+		 lblFeatDescription.setText(feat.getBenefit());
+		 columnFeatPrereq.setCellValueFactory(cellData->cellData.getValue().getPrerequisite().Name);
+	}
 
+	
 	void readFeats()
 	{
 		File file = new File(this.getClass().getResource("").getPath()+programRoot+"PathfinderData/data");
