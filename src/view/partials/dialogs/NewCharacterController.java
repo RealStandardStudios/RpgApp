@@ -40,6 +40,8 @@ public class NewCharacterController extends DialogController implements DataFile
 	@FXML 
 	TableColumn<Feat, String> columnFeatPrereq;
 	@FXML
+	TableView<Feat> tableFeat;
+	@FXML
 	Label lblFeatName;
 	@FXML
 	Label lblFeatDescription;
@@ -452,7 +454,10 @@ public class NewCharacterController extends DialogController implements DataFile
 		 Feat feat = comboFeat.getValue();
 		 lblFeatName.setText(feat.getName());
 		 lblFeatDescription.setText(feat.getBenefit());
+		 //set tableFeat to the list 
+		 //tableFeat.setItems();
 		 columnFeatPrereq.setCellValueFactory(cellData->cellData.getValue().getPrerequisite().Name);
+		 
 	}
 
 	
