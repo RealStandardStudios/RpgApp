@@ -312,7 +312,7 @@
                      </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Skills">
+            <Tab onSelectionChanged="#handleSkillAbilityScores" text="Skills">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -334,7 +334,7 @@
                               <Label alignment="CENTER" text="Ranks" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Class Skill?" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Racial Bonus" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Label alignment="CENTER" text="Ability" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Label alignment="CENTER" text="Ability Modifier" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER" text="Misc" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                                 <content>

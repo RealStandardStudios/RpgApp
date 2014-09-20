@@ -1,14 +1,24 @@
 package view.partials;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import jefXif.DataFileReader;
 import jefXif.DialogController;
+
+import org.controlsfx.dialog.Dialogs;
+
+import pathfinder.data.Feat;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Character.Character;
@@ -20,7 +30,12 @@ import pathfinder.data.Items.Weapon;
  * @author Real Standard Studios - Matthew Meehan
  *
  */
-public class NewCharacterController extends DialogController {
+public class NewCharacterController extends DialogController implements DataFileReader{
+	
+	ArrayList<Feat> feats = new ArrayList<Feat>();
+	
+	@FXML
+	ComboBox comboFeat; 
 	
 	//region abilityModForAbtributes
 	
@@ -418,146 +433,205 @@ public class NewCharacterController extends DialogController {
 		setTotalCha();
 		
 		//Equipment
-
+		
+		readFeats();
+		
+		//comboFeat.setItems();
+	}
+	
+	void readFeats()
+	{
+		File file = new File(this.getClass().getResource("").getPath()+"../../../../PathfinderData/data");
+		File featsFile = new File(file.getPath()+"\\Feats.fdf");
+		try {
+			feats = readDataFile(featsFile, Feat.class);
+		} catch (IOException e) {
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
+			e.printStackTrace();
+		}
+	}
+	
+	@FXML
+	void handleSkillAbilityScores()
+	{
+		setAbilityAcrobatics();
+		setAbilityAppraise();
+		setAbilityBluff();
+		setAbilityClimb();
+		setAbilityCraft();
+		setAbilityDiplomacy();
+		setAbilityDisableDevice();
+		setAbilityDisguise();
+		setAbilityEscapeArtist();
+		setAbilityFly();
+		setAbilityHandleAnimal();
+		setAbilityHeal();
+		setAbilityIntimidate();
+		setAbilityKnowledgeArcana();
+		setAbilityKnowledgeDungeoneering();
+		setAbilityKnowledgeEngineering();
+		setAbilityKnowledgeGeography();
+		setAbilityKnowledgeHistory();
+		setAbilityKnowledgeLocal();
+		setAbilityKnowledgeNature();
+		setAbilityKnowledgeNobility();
+		setAbilityKnowledgePlanes();
+		setAbilityKnowledgeReligion();
+		setAbilityLinguistics();
+		setAbilityPerception();
+		setAbilityPerform();
+		setAbilityProfession();
+		setAbilityRide();
+		setAbilitySenseMotive();
+		setAbilitySleightOfHand();
+		setAbilitySpellcraft();
+		setAbilityStealth();
+		setAbilitySurvival();
+		setAbilitySwim();
+		setAbilityUseMagicDevice();
 	}
 	
 	
 	//region abilitySetupForSkills
 	void setAbilityAcrobatics()
 	{
-		lblAbilityAcrobatics.setText("" +newCharacter.getDexterity().getModifier());
+		lblAbilityAcrobatics.setText("Dex: " +newCharacter.getDexterity().getModifier());
 	}
 	void setAbilityAppraise()
 	{
-		lblAbilityAppraise.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityAppraise.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityBluff()
 	{
-		lblAbilityBluff.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityBluff.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	void setAbilityClimb()
 	{
-		lblAbilityClimb.setText("" + newCharacter.getStrength().getModifier());
+		lblAbilityClimb.setText("Str: " + newCharacter.getStrength().getModifier());
+	}
+	void setAbilityCraft()
+	{
+		lblAbilityCraft.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityDiplomacy()
 	{
-		lblAbilityDiplomacy.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityDiplomacy.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	void setAbilityDisableDevice()
 	{
-		lblAbilityDisableDevice.setText("" + newCharacter.getDexterity().getModifier());
+		lblAbilityDisableDevice.setText("Dex: " + newCharacter.getDexterity().getModifier());
 	}
 	void setAbilityDisguise()
 	{
-		lblAbilityDisguise.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityDisguise.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	void setAbilityEscapeArtist()
 	{
-		lblAbilityEscapeArtist.setText("" + newCharacter.getDexterity().getModifier());
+		lblAbilityEscapeArtist.setText("Dex: " + newCharacter.getDexterity().getModifier());
 	}
 	void setAbilityFly()
 	{
-		lblAbilityFly.setText("" + newCharacter.getDexterity().getModifier());
+		lblAbilityFly.setText("Dex: " + newCharacter.getDexterity().getModifier());
 	}
 	void setAbilityHandleAnimal()
 	{
-		lblAbilityHandleAnimal.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityHandleAnimal.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	void setAbilityHeal()
 	{
-		lblAbilityHeal.setText("" + newCharacter.getWisdom().getModifier());
+		lblAbilityHeal.setText("Wis: " + newCharacter.getWisdom().getModifier());
 	}
 	void setAbilityIntimidate()
 	{
-		lblAbilityIntimidate.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityIntimidate.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	void setAbilityKnowledgeArcana()
 	{
-		lblAbilityKnowledgeArcana.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeArcana.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeDungeoneering()
 	{
-		lblAbilityKnowledgeDungeoneering.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeDungeoneering.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeEngineering()
 	{
-		lblAbilityKnowledgeEngineering.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeEngineering.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeGeography()
 	{
-		lblAbilityKnowledgeGeography.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeGeography.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeHistory()
 	{
-		lblAbilityKnowledgeHistory.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeHistory.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeLocal()
 	{
-		lblAbilityKnowledgeLocal.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeLocal.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeNature()
 	{
-		lblAbilityKnowledgeNature.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeNature.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeNobility()
 	{
-		lblAbilityKnowledgeNobility.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeNobility.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgePlanes()
 	{
-		lblAbilityKnowledgeNobility.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgePlanes.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityKnowledgeReligion()
 	{
-		lblAbilityKnowledgeReligion.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityKnowledgeReligion.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityLinguistics()
 	{
-		lblAbilityLinguistics.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilityLinguistics.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityPerception()
 	{
-		lblAbilityPerception.setText("" + newCharacter.getWisdom().getModifier());
+		lblAbilityPerception.setText("Wis: " + newCharacter.getWisdom().getModifier());
 	}
 	void setAbilityPerform()
 	{
-		lblAbilityPerform.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityPerform.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	void setAbilityProfession()
 	{
-		lblAbilityProfession.setText("" + newCharacter.getWisdom().getModifier());
+		lblAbilityProfession.setText("Wis: " + newCharacter.getWisdom().getModifier());
 	}
 	void setAbilityRide()
 	{
-		lblAbilityRide.setText("" + newCharacter.getDexterity().getModifier());
+		lblAbilityRide.setText("Dex: " + newCharacter.getDexterity().getModifier());
 	}
 	void setAbilitySenseMotive()
 	{
-		lblAbilitySenseMotive.setText("" + newCharacter.getWisdom().getModifier());
+		lblAbilitySenseMotive.setText("Wis: " + newCharacter.getWisdom().getModifier());
 	}
 	void setAbilitySleightOfHand()
 	{
-		lblAbilityRide.setText("" + newCharacter.getDexterity().getModifier());
+		lblAbilitySleightOfHand.setText("Dex; " + newCharacter.getDexterity().getModifier());
 	}
 	void setAbilitySpellcraft()
 	{
-		lblAbilitySpellcraft.setText("" + newCharacter.getIntelligence().getModifier());
+		lblAbilitySpellcraft.setText("Int: " + newCharacter.getIntelligence().getModifier());
 	}
 	void setAbilityStealth()
 	{
-		lblAbilityStealth.setText("" + newCharacter.getDexterity().getModifier());
+		lblAbilityStealth.setText("Dex: " + newCharacter.getDexterity().getModifier());
 	}
 	void setAbilitySurvival()
 	{
-		lblAbilitySurvival.setText("" + newCharacter.getWisdom().getModifier());
+		lblAbilitySurvival.setText("Wis: " + newCharacter.getWisdom().getModifier());
 	}
 	void setAbilitySwim()
 	{
-		lblAbilitySwim.setText("" + newCharacter.getStrength().getModifier());
+		lblAbilitySwim.setText("Str: " + newCharacter.getStrength().getModifier());
 	}
 	void setAbilityUseMagicDevice()
 	{
-		lblAbilityUseMagicDevice.setText("" + newCharacter.getCharisma().getModifier());
+		lblAbilityUseMagicDevice.setText("Cha: " + newCharacter.getCharisma().getModifier());
 	}
 	
 	
@@ -1084,7 +1158,7 @@ public class NewCharacterController extends DialogController {
 	void handleIntIncrease() {
 		newCharacter.getIntelligence().increaseValue();
 		lblBaseInt.setText("" + newCharacter.getIntelligence().getValue());
-		lblConMod.setText("" + newCharacter.getIntelligence().getModifier());
+		lblIntMod.setText("" + newCharacter.getIntelligence().getModifier());
 		setTotalInt();
 	}
 
@@ -1092,7 +1166,7 @@ public class NewCharacterController extends DialogController {
 	void handleIntDecrease() {
 		newCharacter.getIntelligence().decreaseValue();
 		lblBaseInt.setText("" + newCharacter.getIntelligence().getValue());
-		lblConMod.setText("" + newCharacter.getIntelligence().getModifier());
+		lblIntMod.setText("" + newCharacter.getIntelligence().getModifier());
 		setTotalInt();
 	}
 
@@ -1100,7 +1174,7 @@ public class NewCharacterController extends DialogController {
 	void handleWisIncrease() {
 		newCharacter.getWisdom().increaseValue();
 		lblBaseWis.setText("" + newCharacter.getWisdom().getValue());
-		lblConMod.setText("" + newCharacter.getWisdom().getModifier());
+		lblWisMod.setText("" + newCharacter.getWisdom().getModifier());
 		setTotalWis();
 	}
 
@@ -1108,7 +1182,7 @@ public class NewCharacterController extends DialogController {
 	void handleWisDecrease() {
 		newCharacter.getWisdom().decreaseValue();
 		lblBaseWis.setText("" + newCharacter.getWisdom().getValue());
-		lblConMod.setText("" + newCharacter.getWisdom().getModifier());
+		lblWisMod.setText("" + newCharacter.getWisdom().getModifier());
 		setTotalWis();
 	}
 
@@ -1116,7 +1190,7 @@ public class NewCharacterController extends DialogController {
 	void handleChaIncrease() {
 		newCharacter.getCharisma().increaseValue();
 		lblBaseCha.setText("" + newCharacter.getCharisma().getValue());
-		lblConMod.setText("" + newCharacter.getCharisma().getModifier());
+		lblChaMod.setText("" + newCharacter.getCharisma().getModifier());
 		setTotalCha();
 	}
 
@@ -1124,7 +1198,7 @@ public class NewCharacterController extends DialogController {
 	void handleChaDecrease() {
 		newCharacter.getCharisma().decreaseValue();
 		lblBaseCha.setText("" + newCharacter.getCharisma().getValue());
-		lblConMod.setText("" + newCharacter.getCharisma().getModifier());
+		lblChaMod.setText("" + newCharacter.getCharisma().getModifier());
 		setTotalCha();
 	}
 	//endregion
