@@ -357,20 +357,11 @@ public class NewCharacterController extends DialogController implements DataFile
 	
 	//endregion
 	
-	private ObservableList<Weapon> obsListWeapons = FXCollections.observableArrayList();
-	private ObservableList<Weapon> getObsListWeapons() {
-		return obsListWeapons;
-	}
+	private ObservableList<Weapon> obsListWeapons;
 	
-	private ObservableList<Armor> obsListArmor = FXCollections.observableArrayList();
-	private ObservableList<Armor> getObsListArmor() {
-		return obsListArmor;
-	}
+	private ObservableList<Armor> obsListArmor;
 	
-	private ObservableList<Goods> obsListGoods = FXCollections.observableArrayList();
-	private ObservableList<Goods> getObsListGoods() {
-		return obsListGoods;
-	}
+	private ObservableList<Goods> obsListGoods;
 	
 	Character newCharacter;
 
@@ -434,6 +425,8 @@ public class NewCharacterController extends DialogController implements DataFile
 		setTotalCha();
 		
 		//Equipment
+		columnWeaponName.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
+		tableWeapons.setItems(obsListWeapons);
 		
 		readFeats();
 		
@@ -446,6 +439,22 @@ public class NewCharacterController extends DialogController implements DataFile
 		File featsFile = new File(file.getPath()+"\\Feats.fdf");
 		try {
 			feats = readDataFile(featsFile, Feat.class);
+		} catch (IOException e) {
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
+			e.printStackTrace();
+		}
+	}
+	
+	void readItems()
+	{
+		File file = new File(this.getClass().getResource("").getPath()+programRoot+"PathfinderData/data");
+		File weaponsFile = new File(file.getPath()+"\\Weapons.idf");
+		File armorFile = new File(file.getPath()+"\\Armors.idf");
+		File goodsFile = new File(file.getPath()+"\\GoodsAndServices.idf");
+		try {
+			obsListWeapons = FXCollections.observableArrayList(readDataFile(weaponsFile, Weapon.class));
+			obsListArmor = FXCollections.observableArrayList(readDataFile(armorFile, Armor.class));
+			obsListGoods = FXCollections.observableArrayList(readDataFile(goodsFile, Goods.class));
 		} catch (IOException e) {
 			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
 			e.printStackTrace();
