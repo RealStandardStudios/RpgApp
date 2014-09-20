@@ -1,5 +1,8 @@
 package view.partials.dialogs.partials;
 
+import java.io.File;
+import java.io.IOException;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -7,6 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+
+import org.controlsfx.dialog.Dialogs;
+
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Weapon;
@@ -133,6 +139,22 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	public void setData() {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	void readItems()
+	{
+		File file = new File(this.getClass().getResource("").getPath()+programRoot+"PathfinderData/data");
+		File weaponsFile = new File(file.getPath()+"\\Weapons.idf");
+		File armorFile = new File(file.getPath()+"\\Armors.idf");
+		File goodsFile = new File(file.getPath()+"\\GoodsAndServices.idf");
+		try {
+			obsListWeapons = FXCollections.observableArrayList(readDataFile(weaponsFile, Weapon.class));
+			obsListArmor = FXCollections.observableArrayList(readDataFile(armorFile, Armor.class));
+			obsListGoods = FXCollections.observableArrayList(readDataFile(goodsFile, Goods.class));
+		} catch (IOException e) {
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
+			e.printStackTrace();
+		}
 	}
 
 }
