@@ -6,11 +6,12 @@ import java.util.HashMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import jefXif.DialogController;
 import jefXif.Gui;
-import jefXif.PartialLoader;
 import jefXif.WindowController;
+import jefXif.interfaces.PartialLoader;
 
 import org.controlsfx.dialog.Dialogs;
 
@@ -48,6 +49,9 @@ public class NewCharacterController extends DialogController implements PartialL
 	
 	//endregion
 	
+	@FXML
+	TabPane tpTabs;
+	
 	Character newCharacter;
 
 	@Override
@@ -76,12 +80,14 @@ public class NewCharacterController extends DialogController implements PartialL
 	
 	@FXML
 	public void handleBack(ActionEvent event) {
-		
+		if(tpTabs.getSelectionModel().selectedIndexProperty().get()>0)
+			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()-1);
 	}
 	
 	@FXML
 	public void handleNext(ActionEvent event) {
-		
+		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<6)
+			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()+1);
 	}
 
 	public void loadPartials() {

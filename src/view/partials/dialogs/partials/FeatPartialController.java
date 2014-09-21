@@ -2,6 +2,8 @@ package view.partials.dialogs.partials;
 
 import java.io.File;
 
+import org.controlsfx.dialog.Dialogs;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,7 +36,7 @@ public class FeatPartialController extends NewCharacterPartialController {
 		try {
 			feats.setAll(readDataFile(featsFile, Feat.class));
 		} catch (Exception e) {
-			//Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
 			e.printStackTrace();
 		}
 	}
