@@ -40,146 +40,9 @@
                   <Insets top="60.0" />
                </GridPane.margin>
             </Button>
-            <Accordion GridPane.rowIndex="1">
-               <panes>
-                  <TitledPane animated="false" text="Weapons">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="tableWeapons" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                                 <columns>
-                                    <TableColumn fx:id="columnWeaponName" prefWidth="-1.0" text="Name" />
-                                    <TableColumn fx:id="columnWeaponType" prefWidth="-1.0" text="Type" />
-                                    <TableColumn fx:id="columnWeaponCost" prefWidth="-1.0" text="Cost" />
-                                    <TableColumn fx:id="columnWeaponDmgS" prefWidth="-1.0" text="Dmg (S)" />
-                                    <TableColumn fx:id="columnWeaponDmgM" prefWidth="-1.0" text="Dmg (M)" />
-                                    <TableColumn fx:id="columnWeaponCrit" prefWidth="-1.0" text="Critical" />
-                                    <TableColumn fx:id="columnWeaponRange" prefWidth="-1.0" text="Range" />
-                                    <TableColumn fx:id="columnWeaponWeight" prefWidth="-1.0" text="Weight" />
-                                    <TableColumn fx:id="columnWeaponSpecial" prefWidth="-1.0" text="Special" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
-                  <TitledPane animated="false" text="Armor">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="tableArmor" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                                 <columns>
-                                    <TableColumn fx:id="columnArmorName" prefWidth="-1.0" text="Name" />
-                                    <TableColumn fx:id="columnArmorType" prefWidth="75.0" text="Type" />
-                                    <TableColumn fx:id="columnArmorCost" prefWidth="-1.0" text="Cost" />
-                                    <TableColumn fx:id="columnArmorBonus" prefWidth="-1.0" text="Armor/Shield Bonus" />
-                                    <TableColumn fx:id="columnArmorMaxDex" prefWidth="-1.0" text="Max DEX Bonus" />
-                                    <TableColumn fx:id="columnArmorCheckPenalty" prefWidth="-1.0" text="Armor Check Penalty" />
-                                    <TableColumn fx:id="columnArmorSpellFailure" prefWidth="-1.0" text="Arcane Spell Failure Chance" />
-                                    <TableColumn fx:id="columnArmorSpeed30" prefWidth="-1.0" text="Speed 30ft" />
-                                    <TableColumn fx:id="columnArmorSpeed20" prefWidth="-1.0" text="Speed 20ft" />
-                                    <TableColumn fx:id="columnArmorWeight" prefWidth="-1.0" text="Weight" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
-                  <TitledPane animated="false" text="Basic Goods and Services">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="tableGoods" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                                 <columns>
-                                    <TableColumn fx:id="columnGoodsName" prefWidth="-1.0" text="Name" />
-                                    <TableColumn fx:id="columnGoodsCost" prefWidth="-1.0" text="Cost" />
-                                    <TableColumn fx:id="columnGoodsWeight" prefWidth="-1.0" text="Weight" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
-               </panes>
-               <GridPane.margin>
-                  <Insets top="30.0" />
-               </GridPane.margin>
-            </Accordion>
-            <Accordion GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <panes>
-                  <TitledPane animated="false" text="Weapons">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="tableCharWeapons" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                                 <columns>
-                                    <TableColumn fx:id="columnCharWeaponsName" prefWidth="160.50000154972076" text="Name" />
-                                    <TableColumn fx:id="columnCharWeaponsQuantity" prefWidth="88.99999237060547" text="Quantity" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
-                  <TitledPane animated="false" text="Armor">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="tableCharArmor" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                                 <columns>
-                                    <TableColumn fx:id="columnCharArmorName" prefWidth="160.50000154972076" text="Name" />
-                                    <TableColumn fx:id="columnCharArmorQuantity" prefWidth="88.99999237060547" text="Quantity" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
-                  <TitledPane animated="false" text="Basic Goods and Services">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="tableCharGoods" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                                 <columns>
-                                    <TableColumn fx:id="columnCharGoodsName" prefWidth="160.50000154972076" text="Name" />
-                                    <TableColumn fx:id="columnCharGoodsQuantity" prefWidth="88.99999237060547" text="Quantity" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
-               </panes>
-               <GridPane.margin>
-                  <Insets top="30.0" />
-               </GridPane.margin>
-            </Accordion>
             <Label text="Available Items" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="20.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Character Inventory" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets top="5.0" />
                </GridPane.margin>
             </Label>
             <Button fx:id="btnAddItem" mnemonicParsing="false" text="Add Selected" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
@@ -221,6 +84,153 @@
                   <Insets top="20.0" />
                </GridPane.margin>
             </HBox>
+            <Accordion GridPane.columnSpan="2" GridPane.rowIndex="1">
+              <panes>
+                <TitledPane animated="false" text="Available Items">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Accordion prefHeight="440.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <panes>
+                                    <TitledPane animated="false" text="Weapons">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableWeapons" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="columnWeaponName" editable="false" prefWidth="-1.0" text="Name" />
+                                                      <TableColumn fx:id="columnWeaponType" editable="false" prefWidth="-1.0" text="Type" />
+                                                      <TableColumn fx:id="columnWeaponCost" editable="false" prefWidth="-1.0" text="Cost" />
+                                                      <TableColumn fx:id="columnWeaponDmgS" editable="false" prefWidth="-1.0" text="Damage (S)" />
+                                                      <TableColumn fx:id="columnWeaponDmgM" editable="false" prefWidth="-1.0" text="Damage (M)" />
+                                                      <TableColumn fx:id="columnWeaponCrit" editable="false" prefWidth="-1.0" text="Critical" />
+                                                      <TableColumn fx:id="columnWeaponDmgType" editable="false" prefWidth="-1.0" text="Damage Type" />
+                                                      <TableColumn fx:id="columnWeaponRange" editable="false" prefWidth="-1.0" text="Range" />
+                                                      <TableColumn fx:id="columnWeaponWeight" editable="false" prefWidth="-1.0" text="Weight" />
+                                                      <TableColumn fx:id="columnWeaponSpecial" editable="false" prefWidth="-1.0" text="Special" />
+                                                   </columns>
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" text="Armor">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableArmor" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="columnArmorName" prefWidth="-1.0" text="Name" />
+                                                      <TableColumn fx:id="columnArmorType" prefWidth="75.0" text="Type" />
+                                                      <TableColumn fx:id="columnArmorCost" prefWidth="-1.0" text="Cost" />
+                                                      <TableColumn fx:id="columnArmorBonus" prefWidth="-1.0" text="Armor/Shield Bonus" />
+                                                      <TableColumn fx:id="columnArmorMaxDex" prefWidth="-1.0" text="Max DEX Bonus" />
+                                                      <TableColumn fx:id="columnArmorCheckPenalty" prefWidth="-1.0" text="Armor Check Penalty" />
+                                                      <TableColumn fx:id="columnArmorSpellFailure" prefWidth="-1.0" text="Arcane Spell Failure Chance" />
+                                                      <TableColumn fx:id="columnArmorSpeed30" prefWidth="-1.0" text="Speed 30ft" />
+                                                      <TableColumn fx:id="columnArmorSpeed20" prefWidth="-1.0" text="Speed 20ft" />
+                                                      <TableColumn fx:id="columnArmorWeight" prefWidth="-1.0" text="Weight" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" text="Basic Goods and Services">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableGoods" prefHeight="385.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="columnGoodsName" prefWidth="-1.0" text="Name" />
+                                                      <TableColumn fx:id="columnGoodsCost" prefWidth="-1.0" text="Cost" />
+                                                      <TableColumn fx:id="columnGoodsWeight" prefWidth="-1.0" text="Weight" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                 </panes>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Character Inventory">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Accordion prefHeight="440.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <panes>
+                                    <TitledPane animated="false" text="Weapons">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableCharWeapons" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="columnCharWeaponsName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharWeaponsQuantity" prefWidth="88.99999237060547" text="Quantity" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" text="Armor">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableCharArmor" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="columnCharArmorName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharArmorQuantity" prefWidth="88.99999237060547" text="Quantity" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" text="Basic Goods and Services">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableCharGoods" prefHeight="385.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="columnCharGoodsName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharGoodsQuantity" prefWidth="88.99999237060547" text="Quantity" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                 </panes>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
