@@ -128,7 +128,18 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	
 	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
+		// Set observable list of weapons into the weapons table
+		tableWeapons.setItems(obsListWeapons);
+		// Set the columns
+		columnWeaponName.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
+		columnWeaponType.setCellValueFactory(cellData -> cellData.getValue().getTypeProperty());
+		columnWeaponCost.setCellValueFactory(cellData -> cellData.getValue().getCostProperty());
+		columnWeaponDmgS.setCellValueFactory(cellData -> cellData.getValue().getDmgSProperty());
+		columnWeaponDmgM.setCellValueFactory(cellData -> cellData.getValue().getDmgMProperty());
+		columnWeaponCrit.setCellValueFactory(cellData -> cellData.getValue().getCritProperty());
+		columnWeaponRange.setCellValueFactory(cellData -> cellData.getValue().getRangeProperty());
+		columnWeaponWeight.setCellValueFactory(cellData -> cellData.getValue().getWeightProperty());
+		columnWeaponSpecial.setCellValueFactory(cellData -> cellData.getValue().getSpecialProperty());
 
 	}
 
