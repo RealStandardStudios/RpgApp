@@ -70,7 +70,6 @@ public class NewCharacterController extends DialogController implements PartialL
 		WindowController controller = loader.getController();
 		controller.setInterface(ui);
 		controller.setNode(partial);
-		((NewCharacterPartialController)controller).setCharacter(newCharacter); 
 		return controller;
 	}
 
@@ -121,5 +120,9 @@ public class NewCharacterController extends DialogController implements PartialL
 		apProfile.getChildren().setAll(partials.get(partialNames[4]).getNode());
 		apRace.getChildren().setAll(partials.get(partialNames[5]).getNode());
 		apSkills.getChildren().setAll(partials.get(partialNames[6]).getNode());		
+	}
+
+	public Character getCharacter() {
+		return this.newCharacter;
 	}
 }
