@@ -7,7 +7,6 @@ import view.partials.dialogs.NewCharacterController;
 
 public abstract class NewCharacterPartialController extends WindowController implements DataFileReader {
 	private NewCharacterController parentWindow;
-	private Character character;
 	
 	public final String programRoot = "../../../../../../";
 	
@@ -16,22 +15,14 @@ public abstract class NewCharacterPartialController extends WindowController imp
 	 */
 	public abstract void setData();
 	
-	public abstract Object getData();
+	public void getData() {
+	}
 		
 	/**
 	 * @return the character
 	 */
 	public Character getCharacter() {
-		return character;
-	}
-
-
-	/**
-	 * @param character the character to set
-	 */
-	public void setCharacter(Character character) {
-		this.character = character;
-		setData();
+		return parentWindow.getCharacter();
 	}
 
 	/**

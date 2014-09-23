@@ -43,9 +43,14 @@
                 <AnchorPane fx:id="apEquipment" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Profile">
+            <Tab onSelectionChanged="#handleProfileSetup" text="Profile">
               <content>
                 <AnchorPane fx:id="apProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#handleSummaryLabelSetup" text="Summary">
+              <content>
+                <AnchorPane fx:id="apSummary" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
         </tabs>

@@ -91,7 +91,7 @@ public class RacePartialController extends NewCharacterPartialController {
 	}
 
 	@Override
-	public Object getData() {
-		return selectedRace;
+	public void getData() {
+		this.getCharacter().setRace(selectedRace);
 	}
 }

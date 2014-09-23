@@ -32,7 +32,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	
 	public final String programRoot = "../../../../../";
 	String[] partialNames = new String[] {
-		"AbilityScores","Class","Equipment","Feat","Profile","Race","Skills"
+		"AbilityScores","Class","Equipment","Feat","Profile","Race","Skills","Summary"
 	};
 	
 	HashMap<String,NewCharacterPartialController> partials;
@@ -52,7 +52,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	AnchorPane apEquipment;
 	@FXML
 	AnchorPane apProfile;
-	
+	@FXML
+	AnchorPane apSummary;
 	//endregion
 	
 	@FXML
@@ -60,10 +61,14 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	
 	Character newCharacter;
 	
+	
+	public NewCharacterController() {
+		newCharacter = new Character();
+	}
 
 	@Override
 	public void initialize() {
-		newCharacter = new Character();
+		
 	}
 	
 	@Override
@@ -72,23 +77,55 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		loader.setLocation(this.getClass().getResource("partials/" + name + "Partial.fxml"));
 		
 		AnchorPane partial = loader.load();
-		WindowController controller = loader.getController();
+		NewCharacterPartialController controller = loader.getController();
 		controller.setInterface(ui);
 		controller.setNode(partial);
-		((NewCharacterPartialController)controller).setCharacter(newCharacter); 
+		controller.setParentWindow(this);
 		return controller;
 	}
 
 	@FXML
 	void handleSkillLabelSetup()
 	{
-		partials.get("Skills").setData();
+		try {
+			partials.get("Skills").setData();
+		}
+		catch(Exception e) {
+			
+		}
 	}
 	
 	@FXML
 	void handleAbilityLabelSetup()
 	{
-		if(partials != null) partials.get("AbilityScores").setData();
+		try {
+			partials.get("AbilityScores").setData();
+		}
+		catch(Exception e) {
+			
+		}
+	}
+	
+	@FXML
+	void handleSummaryLabelSetup()
+	{
+		try {
+			partials.get("Summary").setData();
+		}
+		catch(Exception e) {
+			
+		}
+	}
+	
+	@FXML
+	void handleProfileSetup()
+	{
+		try {
+			partials.get("Profile").setData();
+		}
+		catch(Exception e) {
+			
+		}
 	}
 	
 	@Override
@@ -105,30 +142,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	
 	@FXML
 	public void handleNext(ActionEvent event) {
-		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<6)
+		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<partialNames.length-1)
 			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()+1);
-		String selectedTab = tpTabs.getSelectionModel().getSelectedItem().tabPaneProperty().get().getId();
-		switch (selectedTab) {
-		case "Class":
-			newCharacter.setClasses(new Class[]{(Class) partials.get(selectedTab).getData()});
-			break;
-		case "Race":
-			newCharacter.setRace((Race) partials.get(selectedTab).getData());
-			for (AbilityEffect e : newCharacter.getRace().getRacialModifiers()) {
-				newCharacter.getEffects().add(e);
-			}
-			break;
-		case "Feat":
-			ObservableList<Feat> feats = (ObservableList<Feat>) partials.get(selectedTab).getData();
-			newCharacter.setFeats(feats.toArray(new Feat[]{}));
-			break;
-		case "Skills":
-			ArrayList<Skill> skills = (ArrayList<Skill>) partials.get(selectedTab).getData();
-			newCharacter.setSkills(skills.toArray(new Skill[]{}));
-			break;
-		default:
-			break;
-		}
 	}
 
 	public void loadPartials() {
@@ -141,12 +156,18 @@ public class NewCharacterController extends DialogController implements jefXif.i
 				e.printStackTrace();
 			}
 		}
+		partials.get(partialNames[0]).setData();
 		apAbilityScores.getChildren().setAll(partials.get(partialNames[0]).getNode());
 		apClass.getChildren().setAll(partials.get(partialNames[1]).getNode());
 		apEquipment.getChildren().setAll(partials.get(partialNames[2]).getNode());
 		apFeats.getChildren().setAll(partials.get(partialNames[3]).getNode());
 		apProfile.getChildren().setAll(partials.get(partialNames[4]).getNode());
 		apRace.getChildren().setAll(partials.get(partialNames[5]).getNode());
-		apSkills.getChildren().setAll(partials.get(partialNames[6]).getNode());		
+		apSkills.getChildren().setAll(partials.get(partialNames[6]).getNode());
+		apSummary.getChildren().setAll(partials.get(partialNames[7]).getNode());
+	}
+
+	public Character getCharacter() {
+		return this.newCharacter;
 	}
 }

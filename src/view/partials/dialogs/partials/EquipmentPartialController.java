@@ -401,9 +401,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
 
 	@Override
-	public Object getData() {
-		// TODO Auto-generated method stub
-		return null;
+	public void getData() {
+		
 	}
 
 }
