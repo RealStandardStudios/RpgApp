@@ -1,9 +1,11 @@
 package view.partials.dialogs.partials;
 
-import pathfinder.data.Attributes.Ability;
-import pathfinder.data.Attributes.AbilityName;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import pathfinder.data.Attributes.Ability;
+import pathfinder.data.Attributes.AbilityName;
+import pathfinder.data.Effects.AbilityEffect;
+import pathfinder.data.Effects.Effect;
 
 public class AbilityScoresPartialController extends
 		NewCharacterPartialController {
@@ -73,11 +75,13 @@ public class AbilityScoresPartialController extends
 	@FXML
 	Label lblMiscCha;
 
+	boolean firstRun = true;
+
 	// endregion
-	
+
 	@Override
 	public void initialize() {
-		
+
 	}
 
 	// region Set Labels
@@ -216,10 +220,57 @@ public class AbilityScoresPartialController extends
 		getCharacter().getCharisma().decreaseValue();
 		setChaLabels();
 	}
+
 	// endregion
 
 	@Override
 	public void setData() {
+		if (firstRun) {
+			firstRun = false;
+			firstTimeRun();
+		}
+		setUpRacialBonus();
+
+		// endregion
+	}
+
+	void setUpRacialBonus() {
+		for (Effect e : getCharacter().getEffects()) {
+			System.out.println(e.getClass().toString());
+			if (e.getClass().toString() == "class pathfinder.data.Effects.AbilityEffect") {
+				switch (((AbilityEffect) e).getAbilityName()) {
+				case Strength:
+					lblRacialBonusStr.setText("" + e.getValue());
+					break;
+
+				case Constitution:
+					lblRacialBonusCon.setText("" + e.getValue());
+					break;
+
+				case Dexterity:
+					lblRacialBonusDex.setText("" + e.getValue());
+					break;
+
+				case Charisma:
+					lblRacialBonusCha.setText("" + e.getValue());
+					break;
+
+				case Intelligence:
+					lblRacialBonusInt.setText("" + e.getValue());
+					break;
+
+				case Wisdom:
+					lblRacialBonusWis.setText("" + e.getValue());
+					break;
+
+				default:
+					break;
+				}
+			}
+		}
+	}
+
+	void firstTimeRun() {
 		getCharacter().setStrength(new Ability(AbilityName.Strength, 10));
 		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 10));
 		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 10));
@@ -243,7 +294,6 @@ public class AbilityScoresPartialController extends
 			label.setText(getCharacter().getAbilities()[tempCount]
 					.getModifier() + "");
 		}
-		// endregion
 	}
 
 	@Override

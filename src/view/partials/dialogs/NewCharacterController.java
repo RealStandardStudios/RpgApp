@@ -1,8 +1,10 @@
 package view.partials.dialogs;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +13,14 @@ import javafx.scene.layout.AnchorPane;
 import jefXif.DialogController;
 import jefXif.Gui;
 import jefXif.WindowController;
-import jefXif.interfaces.PartialLoader;
 
 import org.controlsfx.dialog.Dialogs;
 
+import pathfinder.data.Feat;
+import pathfinder.data.Skill;
 import pathfinder.data.Character.Character;
 import pathfinder.data.Classes.Class;
+import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Races.Race;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
@@ -24,7 +28,7 @@ import view.partials.dialogs.partials.NewCharacterPartialController;
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
-public class NewCharacterController extends DialogController implements PartialLoader{
+public class NewCharacterController extends DialogController implements jefXif.interfaces.PartialLoader{
 	
 	public final String programRoot = "../../../../../";
 	String[] partialNames = new String[] {
@@ -55,6 +59,7 @@ public class NewCharacterController extends DialogController implements PartialL
 	TabPane tpTabs;
 	
 	Character newCharacter;
+	
 
 	@Override
 	public void initialize() {
@@ -73,6 +78,18 @@ public class NewCharacterController extends DialogController implements PartialL
 		return controller;
 	}
 
+	@FXML
+	void handleSkillLabelSetup()
+	{
+		partials.get("Skills").setData();
+	}
+	
+	@FXML
+	void handleAbilityLabelSetup()
+	{
+		if(partials != null) partials.get("AbilityScores").setData();
+	}
+	
 	@Override
 	public void handleOkay(ActionEvent event) {
 		// TODO Auto-generated method stub
@@ -96,8 +113,18 @@ public class NewCharacterController extends DialogController implements PartialL
 			break;
 		case "Race":
 			newCharacter.setRace((Race) partials.get(selectedTab).getData());
+			for (AbilityEffect e : newCharacter.getRace().getRacialModifiers()) {
+				newCharacter.getEffects().add(e);
+			}
 			break;
-
+		case "Feat":
+			ObservableList<Feat> feats = (ObservableList<Feat>) partials.get(selectedTab).getData();
+			newCharacter.setFeats(feats.toArray(new Feat[]{}));
+			break;
+		case "Skills":
+			ArrayList<Skill> skills = (ArrayList<Skill>) partials.get(selectedTab).getData();
+			newCharacter.setSkills(skills.toArray(new Skill[]{}));
+			break;
 		default:
 			break;
 		}
