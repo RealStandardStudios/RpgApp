@@ -38,7 +38,7 @@
                 <AnchorPane fx:id="apFeats" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Equipment">
+            <Tab onSelectionChanged="#handleEquipmentSetup" text="Equipment">
               <content>
                 <AnchorPane fx:id="apEquipment" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>

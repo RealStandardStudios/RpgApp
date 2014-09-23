@@ -3,8 +3,6 @@ package view.partials.dialogs.partials;
 import java.io.File;
 import java.util.Random;
 
-import javax.xml.stream.events.StartDocument;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

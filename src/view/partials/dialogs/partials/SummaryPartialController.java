@@ -1,16 +1,15 @@
 package view.partials.dialogs.partials;
 
+import java.util.ArrayList;
+
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import pathfinder.data.Skill;
-import pathfinder.data.Character.Character;
 
 public class SummaryPartialController extends NewCharacterPartialController {
-	
-	Character newCharacter;
 	
 	//region FXML elements
 	
@@ -108,6 +107,9 @@ public class SummaryPartialController extends NewCharacterPartialController {
 		//set fluff labels
 		lblClass.setText(getCharacter().getClasses()[0].getName());
 		lblRace.setText(getCharacter().getRace().getName());
+		lblAge.setText(getCharacter().getFluff().get("Age"));
+		lblGender.setText(getCharacter().getFluff().get("Gender"));
+		lblWeight.setText(getCharacter().getFluff().get("Weight"));
 		
 		//set ability Labels
 		lblStrScore.setText(""+getCharacter().getStrength().getValue());
@@ -126,9 +128,20 @@ public class SummaryPartialController extends NewCharacterPartialController {
 		//set Speed Labels
 		
 		//set Defense Labels
+		lblArmorClass.setText(Integer.toString(getCharacter().getArmorClass()));
+		lblInitiative.setText(getCharacter().getDexterity().getModifier().get().toString());
+		lblBaseAttackBonus.setText(getCharacter().getBabString());
+		lblFortitude.setText(Integer.toString(getCharacter().getFortitude().getTotal()));
+		lblReflex.setText(Integer.toString(getCharacter().getReflex().getTotal()));
+		lblWill.setText(Integer.toString(getCharacter().getWill().getTotal()));
 		
 		//set TableSkills
-		tableSkills.setItems(FXCollections.observableArrayList(getCharacter().getSkills()));
+		ArrayList<Skill> skills = new ArrayList<Skill>();
+		for (Skill skill : getCharacter().getSkills()) {
+			skills.add(skill);
+		}
+		System.out.println(skills.size());
+		tableSkills.setItems(FXCollections.observableArrayList(FXCollections.observableArrayList(skills)));
 	}
 
 	@Override
