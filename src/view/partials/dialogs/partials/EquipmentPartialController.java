@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,11 +20,11 @@ import pathfinder.data.Items.Weapon;
 
 public class EquipmentPartialController extends NewCharacterPartialController {
 
-	//region Equipment
+	//region Items Available Table annotations
 	
-		//Weapon table
+		//Weapons available table
 	@FXML
-	private TableView<Weapon> tableWeapons;
+	private TableView<Weapon> tableWeaponsAvailable;
 	
 	@FXML
 	private TableColumn<Weapon, String> columnWeaponName;
@@ -55,9 +56,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<Weapon, String> columnWeaponSpecial;
 	
-		//Armor table
+		//Armor available table
 	@FXML
-	private TableView<Armor> tableArmor;
+	private TableView<Armor> tableArmorAvailable;
 	
 	@FXML
 	private TableColumn<Armor, String> columnArmorName;
@@ -89,9 +90,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<Armor, String> columnArmorWeight;
 	
-		//Goods table
+		//Goods available table
 	@FXML
-	private TableView<Goods> tableGoods;
+	private TableView<Goods> tableGoodsAvailable;
 	
 	@FXML
 	private TableColumn<Goods, String> columnGoodsName;
@@ -101,6 +102,42 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	
 	@FXML
 	private TableColumn<Goods, String> columnGoodsWeight;
+	
+	//endregion Items available
+	
+	//region Character Items Table annotations
+	
+		//Character Weapons Table
+	@FXML
+	private TableView<Weapon> tableWeaponsCharacter;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponName;
+	
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponQuantity;
+	
+		//Character Armor Table
+	@FXML
+	private TableView<Armor> tableArmorCharacter;
+
+	@FXML
+	private TableColumn<Weapon, String> columnCharArmorName;
+
+	@FXML
+	private TableColumn<Weapon, String> columnCharArmorQuantity;
+	
+		//Character Goods Table
+	@FXML
+	private TableView<Weapon> tableGoodsCharacter;
+
+	@FXML
+	private TableColumn<Weapon, String> columnCharGoodsName;
+
+	@FXML
+	private TableColumn<Weapon, String> columnCharGoodsQuantity;
+	
+	//end region
 	
 		//Labels and buttons
 	@FXML
@@ -134,7 +171,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		readItems();
 		
 		// Set observable list of weapons into the weapons table
-		tableWeapons.setItems(obsListWeapons);
+		tableWeaponsAvailable.setItems(obsListWeapons);
 		// Set the columns
 		columnWeaponName.setCellValueFactory(cellData -> cellData.getValue().Name);
 		columnWeaponType.setCellValueFactory(cellData -> cellData.getValue().WeaponType);
@@ -148,7 +185,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		columnWeaponSpecial.setCellValueFactory(cellData -> cellData.getValue().Special);
 		
 		// Armor
-		tableArmor.setItems(obsListArmor);
+		tableArmorAvailable.setItems(obsListArmor);
 		columnArmorName.setCellValueFactory(cellData -> cellData.getValue().Name);
 		columnArmorType.setCellValueFactory(cellData -> cellData.getValue().ArmorType);
 		columnArmorCost.setCellValueFactory(cellData -> cellData.getValue().Cost);
@@ -161,7 +198,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		columnArmorWeight.setCellValueFactory(cellData -> cellData.getValue().Weight);
 		
 		// Goods
-		tableGoods.setItems(obsListGoods);
+		tableGoodsAvailable.setItems(obsListGoods);
 		columnGoodsName.setCellValueFactory(cellData -> cellData.getValue().Name);
 		columnGoodsCost.setCellValueFactory(cellData -> cellData.getValue().Cost);
 		columnGoodsWeight.setCellValueFactory(cellData -> cellData.getValue().Weight);
@@ -176,8 +213,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		
 	}
 	
-	void readItems()
-	{
+	void readItems() {
 		File file = new File(this.getClass().getResource("").getPath()+programRoot+"PathfinderData/data");
 		File weaponsFile = new File(file.getPath()+"\\Weapons.idf");
 		File armorFile = new File(file.getPath()+"\\Armors.idf");
@@ -190,6 +226,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
 			e.printStackTrace();
 		}
+	}
+	
+	private void handleSelectItem(ActionEvent event) {
+		String source = event.getSource().getClass().toString();
+		System.out.println(source);
 	}
 
 }

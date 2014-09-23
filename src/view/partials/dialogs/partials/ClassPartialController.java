@@ -14,7 +14,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TableView.ResizeFeatures;
 
 import org.controlsfx.dialog.Dialogs;
 
@@ -25,6 +24,12 @@ import pathfinder.data.Classes.Objects.LevelTable.MonkLevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
 
 public class ClassPartialController extends NewCharacterPartialController {
+
+	Class selectedClass;
+	
+	public Class getSelectedClass() {
+		return selectedClass;
+	}
 
 	// region Class FXML fields
 	@FXML
@@ -449,7 +454,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private void handleChangedClass(ActionEvent event) {
-		Class selectedClass = cboClasses.getSelectionModel().getSelectedItem();
+		selectedClass = cboClasses.getSelectionModel().getSelectedItem();
 		accClass.setExpandedPane(accClass.getPanes().get(0));
 		lblAlignments.setText(selectedClass.getAlignments());
 		lblArmorProf.setText(selectedClass.getArmorProfsToString());
