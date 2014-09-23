@@ -1,6 +1,7 @@
 package view.partials.dialogs.partials;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Random;
 
 import javafx.collections.FXCollections;
@@ -14,7 +15,9 @@ import javafx.scene.control.TableView;
 
 import org.controlsfx.dialog.Dialogs;
 
+import pathfinder.data.Character.Inventory;
 import pathfinder.data.Items.Armor;
+import pathfinder.data.Items.Consumables;
 import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Weapon;
@@ -199,12 +202,12 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				.selectedItemProperty()
 				.addListener(
 						(observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
-		tableGoodsAvailable
-				.getSelectionModel()
-				.selectedItemProperty()
-				.addListener(
-						(observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
-
+//		tableGoodsAvailable
+//				.getSelectionModel()
+//				.selectedItemProperty()
+//				.addListener(
+//						(observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
+		
 		tableWeaponsCharacter
 				.getSelectionModel()
 				.selectedItemProperty()
@@ -448,7 +451,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@Override
 	public void getData() {
-
+		getCharacter().setInventory(new Inventory(obsChosenArmor, obsListWeapons, new ArrayList<Consumables>(), obsChosenArmor, obsChosenWeapons));
 	}
 
 }

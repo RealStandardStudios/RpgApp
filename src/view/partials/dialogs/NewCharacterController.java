@@ -86,7 +86,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			partials.get("Race").getData();
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -97,7 +97,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			partials.get("AbilityScores").setData();
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -106,10 +106,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	{
 		try {
 			partials.get("Skills").getData();
+			partials.get("Profile").getData();
 			partials.get("Summary").setData();
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -119,11 +120,13 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		try {
 			partials.get("Profile").setData();
 			
+			//get all the stuff ready for summary
+			partials.get("Equipment").getData();
 			partials.get("Class").getData();
 			partials.get("Race").getData();
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -137,7 +140,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			partials.get("Race").getData();
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	

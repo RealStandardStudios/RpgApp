@@ -128,6 +128,7 @@ public class SummaryPartialController extends NewCharacterPartialController {
 		//set Speed Labels
 		
 		//set Defense Labels
+		getCharacter().setArmorClass(0, 0);
 		lblArmorClass.setText(Integer.toString(getCharacter().getArmorClass()));
 		lblInitiative.setText(getCharacter().getDexterity().getModifier().get().toString());
 		lblBaseAttackBonus.setText(getCharacter().getBabString());
@@ -140,7 +141,6 @@ public class SummaryPartialController extends NewCharacterPartialController {
 		for (Skill skill : getCharacter().getSkills()) {
 			skills.add(skill);
 		}
-		System.out.println(skills.size());
 		tableSkills.setItems(FXCollections.observableArrayList(FXCollections.observableArrayList(skills)));
 	}
 

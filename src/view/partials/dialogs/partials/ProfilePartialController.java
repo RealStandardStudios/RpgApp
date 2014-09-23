@@ -30,6 +30,8 @@ public class ProfilePartialController extends NewCharacterPartialController {
 	TextArea txtaCharAppearance;
 	@FXML
 	TextArea txtaCharPersonality;
+	@FXML
+	TextField txtCharGender;
 	//endregion
 	
 	@Override
@@ -50,6 +52,7 @@ public class ProfilePartialController extends NewCharacterPartialController {
 		fluff.put("HomeLand", txtCharHomeLand.getText());
 		fluff.put("Background", txtaCharBackground.getText());
 		fluff.put("Deities", txtCharDeities.getText());
+		fluff.put("Gender", txtCharGender.getText());
 		fluff.put("Age", txtCharAge.getText());
 		fluff.put("Height", txtCharHeight.getText());
 		fluff.put("Weight", txtCharWeight.getText());

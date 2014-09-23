@@ -299,32 +299,32 @@
                   <Label text="Fortitude" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
                   <Label text="Reflex" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
                   <Label text="Will" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-                  <Label text="10" GridPane.columnIndex="8" GridPane.halignment="CENTER">
+                  <Label fx:id="lblArmorClass" text="10" GridPane.columnIndex="8" GridPane.halignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="lblInitiative" text="0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="2" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                  <Label fx:id="lblBaseAttackBonus" text="2" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="0" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                  <Label fx:id="lblFortitude" text="0" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="0" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                  <Label fx:id="lblReflex" text="0" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="0" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                  <Label fx:id="lblWill" text="0" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                      <font>
                         <Font size="18.0" />
                      </font>
