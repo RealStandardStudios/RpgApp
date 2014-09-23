@@ -3,6 +3,7 @@ package view.partials.dialogs;
 import java.io.IOException;
 import java.util.HashMap;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +15,7 @@ import jefXif.WindowController;
 
 import org.controlsfx.dialog.Dialogs;
 
+import pathfinder.data.Feat;
 import pathfinder.data.Character.Character;
 import pathfinder.data.Classes.Class;
 import pathfinder.data.Races.Race;
@@ -104,7 +106,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		case "Race":
 			newCharacter.setRace((Race) partials.get(selectedTab).getData());
 			break;
-
+		case "Feat":
+			ObservableList<Feat> feats = (ObservableList<Feat>) partials.get(selectedTab).getData();
+			newCharacter.setFeats(feats.toArray(new Feat[]{}));
 		default:
 			break;
 		}

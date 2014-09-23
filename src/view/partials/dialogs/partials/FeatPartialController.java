@@ -97,7 +97,6 @@ public class FeatPartialController extends NewCharacterPartialController {
 
 	@Override
 	public Object getData() {
-		// TODO Auto-generated method stub
-		return null;
+		return addedFeats;
 	}
 }

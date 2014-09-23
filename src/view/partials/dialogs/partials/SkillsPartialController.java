@@ -1,7 +1,11 @@
 package view.partials.dialogs.partials;
 
+import java.util.ArrayList;
+
+import pathfinder.data.Skill;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import pathfinder.data.Attributes.AbilityName;
 
 public class SkillsPartialController extends NewCharacterPartialController {
 	
@@ -329,6 +333,48 @@ public class SkillsPartialController extends NewCharacterPartialController {
 		
 	}
 	
+	public ArrayList<Skill> addSkillsToCharacter()
+	{
+		ArrayList<Skill> skills = new ArrayList<Skill>();
+
+		skills.add(new Skill(Integer.parseInt(lblRanksAcrobatics.getText()), AbilityName.Dexterity, "Acrobatics", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksAppraise.getText()), AbilityName.Intelligence, "Appraise", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksBluff.getText()), AbilityName.Charisma, "Bluff", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksClimb.getText()), AbilityName.Strength, "Craft", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksCraft.getText()), AbilityName.Intelligence, "Craft", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksDiplomacy.getText())	, AbilityName.Charisma, "Diplomacy", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksDisableDevice.getText()), AbilityName.Dexterity, "Disable Device", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksDisguise.getText()), AbilityName.Charisma, "Disguise", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksEscapeArtist.getText()), AbilityName.Dexterity, "Escape Artist", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksFly.getText()), AbilityName.Dexterity, "Fly", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksHandleAnimal.getText()), AbilityName.Charisma, "Handle Animal", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksHeal.getText()), AbilityName.Wisdom, "Heal", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksIntimidate.getText()), AbilityName.Charisma, "Intimidate", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeArcana.getText()), AbilityName.Intelligence, "Knowledge Arcana", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeDungeoneering.getText()), AbilityName.Intelligence, "Knowledge Dungeoneering", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeEngineering.getText()), AbilityName.Intelligence, "Knowledge Engineering", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeGeography.getText()), AbilityName.Intelligence, "Knowledge Geography", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeHistory.getText()), AbilityName.Intelligence, "Knowledge History", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeLocal.getText()), AbilityName.Intelligence, "Knowledge Local", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeNature.getText()), AbilityName.Intelligence, "Knowledge Nature", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeNobility.getText()), AbilityName.Intelligence, "Knowledge Nobility", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgePlanes.getText()), AbilityName.Intelligence, "Knowledge Planes", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksKnowledgeReligion.getText()), AbilityName.Intelligence, "Knowledge Religion", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksLinguistics.getText()), AbilityName.Intelligence, "Linguistics", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksPerception.getText()), AbilityName.Wisdom, "Perception", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksPerform.getText()), AbilityName.Charisma, "Perform", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksProfession.getText()), AbilityName.Wisdom, "Profession", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksRide.getText()), AbilityName.Dexterity, "Ride", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksSenseMotive.getText()), AbilityName.Wisdom, "Sense Motive", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksSleightOfHand.getText()), AbilityName.Dexterity, "Sleight of Hand", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksSpellcraft.getText()), AbilityName.Intelligence, "Spellcraft", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksStealth.getText()), AbilityName.Dexterity, "Stealth", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksSurvival.getText()), AbilityName.Wisdom, "Survival", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksSwim.getText()), AbilityName.Dexterity, "Swim", false, null));
+		skills.add(new Skill(Integer.parseInt(lblRanksUseMagicDevice.getText()), AbilityName.Charisma, "Use Magic Device", false, null));
+		
+		return skills;
+	}
 	
 	//region abilitySetupForSkills
 	void setAbilityAcrobatics()
