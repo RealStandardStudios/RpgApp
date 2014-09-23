@@ -160,6 +160,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	Button btnRemoveItem;
 
 	// endregion
+
 	Item itemToAdd;
 	Item itemToRemove;
 
@@ -180,6 +181,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	private ObservableList<Goods> obsChosenGoods = FXCollections
 			.observableArrayList();
+
+	Integer totalWeight = 0;
+	Integer goldRemaining = 0;
 
 	@Override
 	public void initialize() {
@@ -295,9 +299,12 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		// columnCharGoodsQuantity - this might not always be 1
 
 		// endregion
-		
+
 		lblStartingWealthValue.setText("Click Roll");
-		
+		lblGoldRemainingValue.setText("Roll starting wealth first");
+
+		lblWeightValue.setText(totalWeight.toString());
+
 	}
 
 	@Override
@@ -361,6 +368,37 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			default:
 				break;
 			}
+			totalWeight = 0;
+			
+			for (Item i : obsChosenWeapons) {
+				String[] weight = i.Weight.get().split(" ");
+				totalWeight += Integer.parseInt(weight[0]);
+				lblWeightValue.setText(totalWeight.toString());
+				
+				String[] cost = i.Cost.get().split(" ");
+				goldRemaining -= Integer.parseInt(cost[0]);
+				lblGoldRemainingValue.setText(goldRemaining.toString());
+			}
+			
+			for (Item i : obsChosenArmor) {
+				String[] weight = i.Weight.get().split(" ");
+				totalWeight+= Integer.parseInt(weight[0]);
+				lblWeightValue.setText(totalWeight.toString());
+				
+				String[] cost = i.Cost.get().split(" ");
+				goldRemaining -= Integer.parseInt(cost[0]);
+				lblGoldRemainingValue.setText(goldRemaining.toString());
+			}
+			
+			for (Item i : obsChosenGoods) {
+				String[] weight = i.Weight.get().split(" ");
+				totalWeight+= Integer.parseInt(weight[0]);
+				lblWeightValue.setText(totalWeight.toString());
+				
+				String[] cost = i.Cost.get().split(" ");
+				goldRemaining -= Integer.parseInt(cost[0]);
+				lblGoldRemainingValue.setText(goldRemaining.toString());
+			}
 
 			itemToAdd = null;
 		}
@@ -369,6 +407,16 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	@FXML
 	private void handleRemoveFromCharacter(ActionEvent event) {
 		if (itemToRemove != null) {
+			
+			String[] weight = itemToRemove.Weight.get().split(" ");
+			totalWeight -= Integer.parseInt(weight[0]);			
+			lblWeightValue.setText(totalWeight.toString());
+			
+			String[] cost = itemToRemove.Cost.get().split(" ");
+			goldRemaining += Integer.parseInt(cost[0]);
+			lblGoldRemainingValue.setText(goldRemaining.toString());
+			
+			
 			switch (itemToRemove.getClass().toString()) {
 			case "class pathfinder.data.Items.Weapon":
 				obsChosenWeapons.remove((Weapon) itemToRemove);
@@ -382,25 +430,25 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				obsChosenGoods.remove((Goods) itemToRemove);
 				break;
 			}
-
-			itemToRemove = null;
 		}
 	}
-	
+
 	@FXML
 	private void handleRollStartingWealth() {
-		int startingWealthD6 = getCharacter().getClasses()[0].getStartingWealthD6();
+		int startingWealthD6 = getCharacter().getClasses()[0]
+				.getStartingWealthD6();
 		Random rnd = new Random();
 		int min = startingWealthD6;
 		int max = startingWealthD6 * 6;
-		Integer wealth = (rnd.nextInt(max - min) + min) * 10;
-		
-		lblStartingWealthValue.setText(wealth.toString());
+		Integer startingWealth = (rnd.nextInt(max - min) + min) * 10;
+
+		lblStartingWealthValue.setText(startingWealth.toString());
+		lblGoldRemainingValue.setText(startingWealth.toString());
 	}
 
 	@Override
 	public void getData() {
-		
+
 	}
 
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -14,6 +15,9 @@
                <GridPane.margin>
                   <Insets left="20.0" top="20.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Label>
             <Label fx:id="lblStartingWealthValue" text="oh ok" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
@@ -22,6 +26,9 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Label>
             <Button fx:id="btnRollStartingWealth" mnemonicParsing="false" onAction="#handleRollStartingWealth" text="Roll" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
@@ -30,11 +37,17 @@
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Button>
             <Button fx:id="btnRemoveItem" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleRemoveFromCharacter" prefWidth="180.0" text="Remove Item from Character" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets left="620.0" top="60.0" />
+                  <Insets left="640.0" top="60.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Button>
             <Label text="Available Items" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <GridPane.margin>
@@ -45,26 +58,41 @@
                <GridPane.margin>
                   <Insets left="420.0" top="60.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Button>
             <Label text="Gold Pieces Remaining:" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="20.0" top="60.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Label>
             <Label fx:id="lblGoldRemainingValue" text="heaps as bae" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="170.0" top="60.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Label>
             <Label text="Total Weight of Equipment (lbs):" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="420.0" top="20.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Label>
             <Label fx:id="lblWeightValue" text="much" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets left="620.0" top="20.0" />
+                  <Insets left="640.0" top="20.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </Label>
             <Accordion GridPane.columnSpan="2" GridPane.rowIndex="1">
               <panes>
@@ -98,6 +126,9 @@
                                              </children>
                                           </AnchorPane>
                                        </content>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
                                     </TitledPane>
                                     <TitledPane animated="false" text="Armor">
                                        <content>
@@ -123,6 +154,9 @@
                                              </children>
                                           </AnchorPane>
                                        </content>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
                                     </TitledPane>
                                     <TitledPane animated="false" text="Basic Goods and Services">
                                        <content>
@@ -141,12 +175,18 @@
                                              </children>
                                           </AnchorPane>
                                        </content>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
                                     </TitledPane>
                                  </panes>
                               </Accordion>
                            </children>
                         </AnchorPane>
                   </content>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                 </TitledPane>
                 <TitledPane animated="false" text="Character Inventory">
                   <content>
@@ -210,6 +250,9 @@
                            </children>
                         </AnchorPane>
                   </content>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                 </TitledPane>
               </panes>
             </Accordion>
