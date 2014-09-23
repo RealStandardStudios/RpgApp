@@ -28,7 +28,7 @@
                 <AnchorPane fx:id="apClass" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab onSelectionChanged="#handleSetAbilitys" text="Skills">
+            <Tab onSelectionChanged="#handleSkillLabelSetup" text="Skills">
               <content>
                 <AnchorPane fx:id="apSkills" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="200.0" />
               </content>

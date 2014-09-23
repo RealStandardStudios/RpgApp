@@ -16,7 +16,6 @@ import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Character.Character;
 import view.partials.dialogs.partials.NewCharacterPartialController;
-import view.partials.dialogs.partials.SkillsPartialController;
 
 /**
  * 
@@ -30,7 +29,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	};
 	
 	HashMap<String,NewCharacterPartialController> partials;
-	public SkillsPartialController skillController;
 	
 	//region tab Panes
 	@FXML
@@ -71,17 +69,13 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		controller.setInterface(ui);
 		controller.setNode(partial);
 		((NewCharacterPartialController)controller).setCharacter(newCharacter); 
-		if(name == "Skills")
-		{
-			skillController = (SkillsPartialController) controller;
-		}
 		return controller;
 	}
 
 	@FXML
-	void handleSetAbilitys()
+	void handleSkillLabelSetup()
 	{
-		skillController.handleSkillAbilityScores();
+		partials.get("Skills").setData();
 	}
 	
 	@Override
