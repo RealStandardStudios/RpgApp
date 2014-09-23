@@ -81,7 +81,7 @@ public class AbilityScoresPartialController extends
 
 	@Override
 	public void initialize() {
-
+		
 	}
 
 	// region Set Labels

@@ -60,10 +60,14 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	
 	Character newCharacter;
 	
+	
+	public NewCharacterController() {
+		newCharacter = new Character();
+	}
 
 	@Override
 	public void initialize() {
-		newCharacter = new Character();
+		
 	}
 	
 	@Override
@@ -72,22 +76,33 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		loader.setLocation(this.getClass().getResource("partials/" + name + "Partial.fxml"));
 		
 		AnchorPane partial = loader.load();
-		WindowController controller = loader.getController();
+		NewCharacterPartialController controller = loader.getController();
 		controller.setInterface(ui);
 		controller.setNode(partial);
+		controller.setParentWindow(this);
 		return controller;
 	}
 
 	@FXML
 	void handleSkillLabelSetup()
 	{
-		partials.get("Skills").setData();
+		try {
+			partials.get("Skills").setData();
+		}
+		catch(Exception e) {
+			
+		}
 	}
 	
 	@FXML
 	void handleAbilityLabelSetup()
 	{
-		if(partials != null) partials.get("AbilityScores").setData();
+		try {
+			partials.get("AbilityScores").setData();
+		}
+		catch(Exception e) {
+			
+		}
 	}
 	
 	@Override
@@ -140,6 +155,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 				e.printStackTrace();
 			}
 		}
+		partials.get(partialNames[0]).setData();
 		apAbilityScores.getChildren().setAll(partials.get(partialNames[0]).getNode());
 		apClass.getChildren().setAll(partials.get(partialNames[1]).getNode());
 		apEquipment.getChildren().setAll(partials.get(partialNames[2]).getNode());

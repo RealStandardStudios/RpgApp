@@ -45,7 +45,6 @@ public class OtherCharacterController extends WindowController {
 	        controller.setDialogStage(dialogStage);
 	        controller.setInterface(getInterface());
 	        controller.loadPartials();
-	        //controller.setArmor((MagicArmor)item);
 	
 	        // Show the dialog and wait until the user closes it
 	        dialogStage.showAndWait();
