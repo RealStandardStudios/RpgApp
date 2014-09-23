@@ -14,7 +14,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TableView.ResizeFeatures;
 
 import org.controlsfx.dialog.Dialogs;
 
@@ -25,7 +24,9 @@ import pathfinder.data.Classes.Objects.LevelTable.MonkLevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
 
 public class ClassPartialController extends NewCharacterPartialController {
-
+	
+	Class selectedClass;
+	
 	// region Class FXML fields
 	@FXML
 	ComboBox<Class> cboClasses;
@@ -504,6 +505,11 @@ public class ClassPartialController extends NewCharacterPartialController {
 		
 		tableFeatures.setItems(selectedClass.getFeatures());
 		//need to resize row according to the length of the description field some how
+	}
+
+	@Override
+	public Object getData() {
+		return selectedClass;
 	}
 
 }

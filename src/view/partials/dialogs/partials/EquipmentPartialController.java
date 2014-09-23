@@ -1,7 +1,6 @@
 package view.partials.dialogs.partials;
 
 import java.io.File;
-import java.io.IOException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -190,6 +189,12 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public Object getData() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

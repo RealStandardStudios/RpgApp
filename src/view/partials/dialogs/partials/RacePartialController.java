@@ -2,18 +2,23 @@ package view.partials.dialogs.partials;
 
 import java.io.File;
 
-import org.controlsfx.dialog.Dialogs;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import pathfinder.data.Classes.Class;
+
+import org.controlsfx.dialog.Dialogs;
+
 import pathfinder.data.Races.Race;
 
 public class RacePartialController extends NewCharacterPartialController {
 	
+	Race selectedRace;
+
 	//region FXML Fields
+	@FXML
+	ComboBox<Race> cboRaces;
 	@FXML
 	Label lblName;
 	@FXML
@@ -52,6 +57,7 @@ public class RacePartialController extends NewCharacterPartialController {
 		races = FXCollections.observableArrayList();
 		
 		setData();
+		cboRaces.setItems(races);
 	}
 
 	@Override
@@ -72,5 +78,20 @@ public class RacePartialController extends NewCharacterPartialController {
 			e.printStackTrace();
 		}
 	}
+	
+	@FXML
+	private void handleSelectionChanged() {
+		selectedRace = cboRaces.getValue();
+		lblName.setText(selectedRace.getName());
+		lblDescription.setText(selectedRace.getDescription());
+		lblPDescription.setText(selectedRace.getPhysicalDescription());
+		lblRaceRelations.setText(selectedRace.getRelations());
+		lblAlignment.setText(selectedRace.getAlignmentAndReligion());
+		lblAdventures.setText(selectedRace.getAdventures());
+	}
 
+	@Override
+	public Object getData() {
+		return selectedRace;
+	}
 }

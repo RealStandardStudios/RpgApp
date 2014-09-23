@@ -16,6 +16,8 @@ import jefXif.interfaces.PartialLoader;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Character.Character;
+import pathfinder.data.Classes.Class;
+import pathfinder.data.Races.Race;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
 /**
@@ -57,7 +59,7 @@ public class NewCharacterController extends DialogController implements PartialL
 	@Override
 	public void initialize() {
 		newCharacter = new Character();
-	}	
+	}
 	
 	@Override
 	public WindowController loadPartial(String name, Gui ui) throws IOException {
@@ -88,6 +90,18 @@ public class NewCharacterController extends DialogController implements PartialL
 	public void handleNext(ActionEvent event) {
 		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<6)
 			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()+1);
+		String selectedTab = tpTabs.getSelectionModel().getSelectedItem().tabPaneProperty().get().getId();
+		switch (selectedTab) {
+		case "Class":
+			newCharacter.setClasses(new Class[]{(Class) partials.get(selectedTab).getData()});
+			break;
+		case "Race":
+			newCharacter.setRace((Race) partials.get(selectedTab).getData());
+			break;
+
+		default:
+			break;
+		}
 	}
 
 	public void loadPartials() {

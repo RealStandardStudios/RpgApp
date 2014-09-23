@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.RacePartialController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.RacePartialController">
    <children>
       <GridPane layoutX="232.0" layoutY="193.0" prefHeight="601.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ComboBox fx:id="comboRace" promptText="What is your character's Race?" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+            <ComboBox fx:id="cboRaces" onAction="#handleSelectionChanged" promptText="What is your character's Race?" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="100.0" />
                </GridPane.margin>
@@ -24,7 +24,7 @@
                           <content>
                             <AnchorPane minHeight="-Infinity" minWidth="-Infinity">
                                  <children>
-                                    <GridPane prefHeight="866.0" prefWidth="830.0">
+                                    <GridPane gridLinesVisible="true" prefHeight="866.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <Label text="Race Name">
                                              <font>
@@ -104,7 +104,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="labelRacialModifiers" text="Label" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+                                          <Label fx:id="labelRacialModifiers" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
                                              <padding>
                                                 <Insets left="10.0" />
                                              </padding>
@@ -139,7 +139,7 @@
                                                 <Insets left="10.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lblDescription" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+                                          <Label fx:id="lblDescription" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                                              <padding>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
@@ -147,7 +147,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="lblPDescription" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                          <Label fx:id="lblPDescription" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -155,7 +155,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lblSociety" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                          <Label fx:id="lblSociety" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -163,7 +163,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lblRaceRelations" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                          <Label fx:id="lblRaceRelations" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -171,7 +171,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lblAlignment" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                          <Label fx:id="lblAlignment" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -179,7 +179,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lblAdventures" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                          <Label fx:id="lblAdventures" prefHeight="102.0" prefWidth="698.0" text="There will be a description of the race here&#10;It will be grand" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -194,12 +194,12 @@
                                        </columnConstraints>
                                        <rowConstraints>
                                           <RowConstraints maxHeight="35.0" minHeight="-Infinity" prefHeight="20.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="100.0" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="100.0" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="100.0" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="100.0" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="50.0" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="100.0" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="-Infinity" vgrow="ALWAYS" />
+                                          <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="35.0" minHeight="-Infinity" prefHeight="20.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="35.0" minHeight="-Infinity" prefHeight="20.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="35.0" minHeight="-Infinity" prefHeight="20.0" vgrow="SOMETIMES" />
