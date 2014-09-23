@@ -15,9 +15,8 @@ public class ProfilePartialController extends NewCharacterPartialController {
 	}
 
 	@Override
-	public Object getData() {
+	public void getData() {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

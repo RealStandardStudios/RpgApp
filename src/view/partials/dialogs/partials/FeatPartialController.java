@@ -96,7 +96,7 @@ public class FeatPartialController extends NewCharacterPartialController {
 	}
 
 	@Override
-	public Object getData() {
-		return addedFeats;
+	public void getData() {
+		getCharacter().setFeats(addedFeats.toArray(new Feat[]{}));
 	}
 }

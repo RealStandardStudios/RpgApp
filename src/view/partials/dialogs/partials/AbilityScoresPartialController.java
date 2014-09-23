@@ -93,7 +93,7 @@ public class AbilityScoresPartialController extends
 								+ Integer.parseInt(lblRacialBonusStr.getText()) + Integer
 									.parseInt(lblMiscStr.getText())));
 		lblBaseStr.setText("" + getCharacter().getStrength().getValue());
-		lblStrMod.setText("" + getCharacter().getStrength().getModifier());
+		lblStrMod.setText("" + getCharacter().getStrength().getModifier().get());
 	}
 
 	void setDexLabels() {
@@ -103,7 +103,7 @@ public class AbilityScoresPartialController extends
 								+ Integer.parseInt(lblRacialBonusDex.getText()) + Integer
 									.parseInt(lblMiscDex.getText())));
 		lblBaseDex.setText("" + getCharacter().getDexterity().getValue());
-		lblDexMod.setText("" + getCharacter().getDexterity().getModifier());
+		lblDexMod.setText("" + getCharacter().getDexterity().getModifier().get());
 	}
 
 	void setConLabels() {
@@ -113,7 +113,7 @@ public class AbilityScoresPartialController extends
 								+ Integer.parseInt(lblRacialBonusCon.getText()) + Integer
 									.parseInt(lblMiscCon.getText())));
 		lblBaseCon.setText("" + getCharacter().getConstitution().getValue());
-		lblConMod.setText("" + getCharacter().getConstitution().getModifier());
+		lblConMod.setText("" + getCharacter().getConstitution().getModifier().get());
 	}
 
 	void setIntLabels() {
@@ -123,7 +123,7 @@ public class AbilityScoresPartialController extends
 								+ Integer.parseInt(lblRacialBonusInt.getText()) + Integer
 									.parseInt(lblMiscInt.getText())));
 		lblBaseInt.setText("" + getCharacter().getIntelligence().getValue());
-		lblIntMod.setText("" + getCharacter().getIntelligence().getModifier());
+		lblIntMod.setText("" + getCharacter().getIntelligence().getModifier().get());
 	}
 
 	void setWisLabels() {
@@ -133,7 +133,7 @@ public class AbilityScoresPartialController extends
 								+ Integer.parseInt(lblRacialBonusWis.getText()) + Integer
 									.parseInt(lblMiscWis.getText())));
 		lblBaseWis.setText("" + getCharacter().getWisdom().getValue());
-		lblWisMod.setText("" + getCharacter().getWisdom().getModifier());
+		lblWisMod.setText("" + getCharacter().getWisdom().getModifier().get());
 	}
 
 	void setChaLabels() {
@@ -143,7 +143,7 @@ public class AbilityScoresPartialController extends
 								+ Integer.parseInt(lblRacialBonusCha.getText()) + Integer
 									.parseInt(lblMiscCha.getText())));
 		lblBaseCha.setText("" + getCharacter().getCharisma().getValue());
-		lblChaMod.setText("" + getCharacter().getCharisma().getModifier());
+		lblChaMod.setText("" + getCharacter().getCharisma().getModifier().get());
 	}
 
 	// endregion
@@ -292,14 +292,8 @@ public class AbilityScoresPartialController extends
 		int tempCount = 0;
 		for (Label label : abilityModLabels) {
 			label.setText(getCharacter().getAbilities()[tempCount]
-					.getModifier() + "");
+					.getModifier().get() + "");
 		}
-	}
-
-	@Override
-	public Object getData() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

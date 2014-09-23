@@ -508,8 +508,8 @@ public class ClassPartialController extends NewCharacterPartialController {
 	}
 
 	@Override
-	public Object getData() {
-		return selectedClass;
+	public void getData() {
+		getCharacter().setClasses(new Class[]{selectedClass});
 	}
 
 }

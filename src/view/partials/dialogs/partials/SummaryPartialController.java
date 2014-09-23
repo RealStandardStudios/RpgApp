@@ -1,5 +1,6 @@
 package view.partials.dialogs.partials;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -77,7 +78,7 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	@FXML
 	Label lblHitPoints;
 	@FXML
-	Label lblArmorClas;
+	Label lblArmorClass;
 	@FXML
 	Label lblInitiative;
 	@FXML
@@ -96,28 +97,45 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	@FXML
 	TableColumn<Skill,String> colSkillName;
 	@FXML
-	TableColumn<Skill,String> colSkillBonus;
+	TableColumn<Skill,Integer> colSkillBonus;
 	@FXML
-	TableColumn<Skill,String> colSkillRanks;
+	TableColumn<Skill,Integer> colSkillRanks;
 	//endregion
 	//endregion
 	
 	@Override
 	public void setData() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Object getData() {
-		// TODO Auto-generated method stub
-		return null;
+		//set fluff labels
+		lblClass.setText(getCharacter().getClasses()[0].getName());
+		lblRace.setText(getCharacter().getRace().getName());
+		
+		//set ability Labels
+		lblStrScore.setText(""+getCharacter().getStrength().getValue());
+		lblStrMod.setText(""+getCharacter().getStrength().getModifier().get());
+		lblDexScore.setText(""+getCharacter().getDexterity().getValue());
+		lblDexMod.setText(""+getCharacter().getDexterity().getModifier().get());
+		lblConScore.setText(""+getCharacter().getConstitution().getValue());
+		lblConMod.setText(""+getCharacter().getConstitution().getModifier().get());
+		lblIntScore.setText(""+getCharacter().getIntelligence().getValue());
+		lblIntMod.setText(""+getCharacter().getIntelligence().getModifier().get());
+		lblWisScore.setText(""+getCharacter().getWisdom().getValue());
+		lblWisMod.setText(""+getCharacter().getWisdom().getModifier().get());
+		lblChaScore.setText(""+getCharacter().getCharisma().getValue());
+		lblChaMod.setText(""+getCharacter().getCharisma().getModifier().get());
+		
+		//set Speed Labels
+		
+		//set Defense Labels
+		
+		//set TableSkills
+		tableSkills.setItems(FXCollections.observableArrayList(getCharacter().getSkills()));
 	}
 
 	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
-
+		colSkillName.setCellValueFactory(cellData->cellData.getValue().Name);
+		colSkillBonus.setCellValueFactory(cellData->cellData.getValue().AttrToUse.get().getModifier());
+		colSkillRanks.setCellValueFactory(cellData->cellData.getValue().Rank);
 	}
 
 }

@@ -15,7 +15,8 @@ public abstract class NewCharacterPartialController extends WindowController imp
 	 */
 	public abstract void setData();
 	
-	public abstract Object getData();
+	public void getData() {
+	}
 		
 	/**
 	 * @return the character
