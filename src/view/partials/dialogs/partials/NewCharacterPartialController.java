@@ -15,6 +15,8 @@ public abstract class NewCharacterPartialController extends WindowController imp
 	 * This is what you will use to set the data for the partial view
 	 */
 	public abstract void setData();
+	
+	public abstract Object getData();
 		
 	/**
 	 * @return the character

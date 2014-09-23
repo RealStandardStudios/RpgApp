@@ -24,7 +24,9 @@ import pathfinder.data.Classes.Objects.LevelTable.MonkLevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
 
 public class ClassPartialController extends NewCharacterPartialController {
-
+	
+	Class selectedClass;
+	
 	// region Class FXML fields
 	@FXML
 	ComboBox<Class> cboClasses;
@@ -212,9 +214,6 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<Feature, String> columnFeatureDesctiption;
 
-	@FXML
-	private TableColumn<Feature, String> columnFeatureEffect;
-
 	TableColumn[] featuresTable;
 	// endregion
 
@@ -227,7 +226,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@Override
 	public void initialize() {
 		classes = FXCollections.observableArrayList();
-		readClasses();
+		setData();
 
 		cboClasses.setItems(classes);
 		// region Init the Class Progression Level Table with columns
@@ -305,22 +304,19 @@ public class ClassPartialController extends NewCharacterPartialController {
 				.getFastMovementProperty());
 		// endregion
 
-		// //region Init the features table with columns
-		// columnFeatureName.setCellValueFactory(cellData -> cellData.getValue()
-		// .getNameProperty());
-		// columnFeatureType.setCellValueFactory(cellData -> cellData.getValue()
-		// .getTypeProperty());
-		// columnFeatureDesctiption.setCellValueFactory(cellData -> cellData
-		// .getValue().getDescriptionProperty());
-		// // columnFeatureEffect.setCellValueFactory(cellData ->
-		// // cellData.getValue().getEffectProperty().get().getNameProperty());
-		// //endregion
+		 //region Init the features table with columns
+		 columnFeatureName.setCellValueFactory(cellData -> cellData.getValue()
+		 .getNameProperty());
+		 columnFeatureType.setCellValueFactory(cellData -> cellData.getValue()
+		 .getTypeProperty());
+		 columnFeatureDesctiption.setCellValueFactory(cellData -> cellData
+		 .getValue().getDescriptionProperty());
+		// endregion
 
 		// Array of Table Columns
 		levelTable = new TableColumn[] { columnLevel, columnBAB, columnFort,
 				columnRef, columnWill, columnSpecial };
-		// table.getcolumns().adListener(new
-		// ListChangeListenet<TableColumn<DataType,?>>() { }
+
 		tableLevelTable.getColumns().addListener(
 				new ListChangeListener<TableColumn<LevelTableRow, ?>>() {
 					public boolean suspended;
@@ -412,26 +408,25 @@ public class ClassPartialController extends NewCharacterPartialController {
 					}
 				});
 
-		// featuresTable = new TableColumn[] { columnFeatureName,
-		// columnFeatureType, columnFeatureDesctiption,
-		// columnFeatureEffect };
-		//
-		// tableFeatures.getColumns().addListener(
-		// new ListChangeListener<TableColumn<Feature, ?>>() {
-		// public boolean suspended;
-		//
-		// @Override
-		// public void onChanged(
-		// Change<? extends TableColumn<Feature, ?>> change) {
-		// change.next();
-		//
-		// if (change.wasReplaced() && !suspended) {
-		// this.suspended = true;
-		// tableFeatures.getColumns().setAll(featuresTable);
-		// this.suspended = false;
-		// }
-		// }
-		// });
+		featuresTable = new TableColumn[] { columnFeatureName,
+				columnFeatureType, columnFeatureDesctiption };
+
+		tableFeatures.getColumns().addListener(
+				new ListChangeListener<TableColumn<Feature, ?>>() {
+					public boolean suspended;
+
+					@Override
+					public void onChanged(
+							Change<? extends TableColumn<Feature, ?>> change) {
+						change.next();
+
+						if (change.wasReplaced() && !suspended) {
+							this.suspended = true;
+							tableFeatures.getColumns().setAll(featuresTable);
+							this.suspended = false;
+						}
+					}
+				});
 	}
 
 	private void readClasses() {
@@ -450,7 +445,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 
 	@Override
 	public void setData() {
-
+		readClasses();
 	}
 
 	@FXML
@@ -507,6 +502,14 @@ public class ClassPartialController extends NewCharacterPartialController {
 			tableMonkTable.setItems(FXCollections
 					.observableArrayList(levelTableRow));
 		}
+		
+		tableFeatures.setItems(selectedClass.getFeatures());
+		//need to resize row according to the length of the description field some how
+	}
+
+	@Override
+	public Object getData() {
+		return selectedClass;
 	}
 
 }

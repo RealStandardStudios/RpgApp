@@ -1119,4 +1119,10 @@ public class SkillsPartialController extends NewCharacterPartialController {
 		handleLabelSteup();
 	}
 
+	@Override
+	public Object getData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
