@@ -246,4 +246,10 @@ public class AbilityScoresPartialController extends
 		// endregion
 	}
 
+	@Override
+	public Object getData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

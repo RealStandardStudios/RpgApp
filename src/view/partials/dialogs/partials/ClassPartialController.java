@@ -24,12 +24,8 @@ import pathfinder.data.Classes.Objects.LevelTable.MonkLevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
 
 public class ClassPartialController extends NewCharacterPartialController {
-
-	Class selectedClass;
 	
-	public Class getSelectedClass() {
-		return selectedClass;
-	}
+	Class selectedClass;
 
 	// region Class FXML fields
 	@FXML
@@ -509,6 +505,11 @@ public class ClassPartialController extends NewCharacterPartialController {
 		
 		tableFeatures.setItems(selectedClass.getFeatures());
 		//need to resize row according to the length of the description field some how
+	}
+
+	@Override
+	public Object getData() {
+		return selectedClass;
 	}
 
 }

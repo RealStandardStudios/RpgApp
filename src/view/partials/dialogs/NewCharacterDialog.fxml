@@ -13,37 +13,37 @@
   <children>
       <TabPane fx:id="tpTabs" layoutX="14.0" layoutY="14.0" prefHeight="700.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab text="Ability Scores">
+          <Tab id="AbilityScores" text="Ability Scores">
             <content>
               <AnchorPane fx:id="apAbilityScores" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
-          <Tab text="Race">
+          <Tab id="Race" text="Race">
             <content>
               <AnchorPane fx:id="apRace" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
-            <Tab text="Class">
+            <Tab id="Class" text="Class">
               <content>
                 <AnchorPane fx:id="apClass" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Skills">
+            <Tab id="Skills" text="Skills">
               <content>
                 <AnchorPane fx:id="apSkills" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Feats">
+            <Tab id="Feat" text="Feats">
               <content>
                 <AnchorPane fx:id="apFeats" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Equipment">
+            <Tab id="Equipment" text="Equipment">
               <content>
                 <AnchorPane fx:id="apEquipment" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Profile">
+            <Tab id="Profile" text="Profile">
               <content>
                 <AnchorPane fx:id="apProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
