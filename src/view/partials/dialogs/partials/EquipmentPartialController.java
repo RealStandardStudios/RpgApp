@@ -187,6 +187,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	Integer totalWeight = 0;
 	Integer goldRemaining = 0;
+	boolean havePressedGenerateGold = true;
 
 	@Override
 	public void initialize() {
@@ -315,7 +316,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	 * This is what you will use to set the data for this view if you need to take data from the character class
 	 */
 	public void setData() {
-		// TODO Auto-generated method stub
+		if(!havePressedGenerateGold)
+		{
+			havePressedGenerateGold = true;
+			btnRollStartingWealth.setDisable(false);
+		}
 
 	}
 
@@ -546,16 +551,21 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private void handleRollStartingWealth() {
-		int startingWealthD6 = getCharacter().getClasses()[0]
-				.getStartingWealthD6();
-		Random rnd = new Random();
-		int min = startingWealthD6;
-		int max = startingWealthD6 * 6;
-		Integer startingWealth = (rnd.nextInt(max - min) + min) * 10;
-		goldRemaining = startingWealth;
-
-		lblStartingWealthValue.setText(startingWealth.toString());
-		lblGoldRemainingValue.setText("" + goldRemaining);
+		if(havePressedGenerateGold)
+		{
+			int startingWealthD6 = getCharacter().getClasses()[0]
+					.getStartingWealthD6();
+			Random rnd = new Random();
+			int min = startingWealthD6;
+			int max = startingWealthD6 * 6;
+			Integer startingWealth = (rnd.nextInt(max - min) + min) * 10;
+			goldRemaining = startingWealth;
+	
+			lblStartingWealthValue.setText(startingWealth.toString());
+			lblGoldRemainingValue.setText("" + goldRemaining);
+			btnRollStartingWealth.setDisable(true);
+			havePressedGenerateGold = false;
+		}
 	}
 
 	@Override
