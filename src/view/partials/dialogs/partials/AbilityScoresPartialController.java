@@ -271,13 +271,13 @@ public class AbilityScoresPartialController extends
 	}
 
 	void firstTimeRun() {
-		getCharacter().setStrength(new Ability(AbilityName.Strength, 10));
-		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 10));
-		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 10));
+		getCharacter().setStrength(new Ability(AbilityName.Strength, 8));
+		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 8));
+		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 8));
 		getCharacter().setIntelligence(
-				new Ability(AbilityName.Intelligence, 10));
-		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 10));
-		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 10));
+				new Ability(AbilityName.Intelligence, 8));
+		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 8));
+		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
 
 		lblBaseStr.setText("" + getCharacter().getStrength().getValue());
 		lblBaseDex.setText("" + getCharacter().getDexterity().getValue());

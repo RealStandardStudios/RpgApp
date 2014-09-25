@@ -93,11 +93,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	@FXML
 	void handleAbilityLabelSetup()
 	{
-		try {
+		if(partials != null)
+		{
 			partials.get("AbilityScores").setData();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
 		}
 	}
 	
