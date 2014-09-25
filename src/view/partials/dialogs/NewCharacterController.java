@@ -76,6 +76,21 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		controller.setParentWindow(this);
 		return controller;
 	}
+	
+	@FXML
+	private void handleTabChanged(ActionEvent event) {
+		System.out.println();
+		Object o = event.getSource();
+		//System.out.println(tpChanged.getId());
+//		switch (tpChanged.getId()) {
+//		case "tpAbilityScores":
+//			partials.get("AbilityScores").
+//			break;
+//
+//		default:
+//			break;
+//		}
+	}
 
 	@FXML
 	void handleSkillLabelSetup()
@@ -93,12 +108,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	@FXML
 	void handleAbilityLabelSetup()
 	{
-		try {
-			partials.get("AbilityScores").setData();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
+		if(partials!=null)partials.get("AbilityScores").setData();
 	}
 	
 	@FXML

@@ -13,42 +13,42 @@
   <children>
       <TabPane fx:id="tpTabs" layoutX="14.0" layoutY="14.0" prefHeight="700.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab onSelectionChanged="#handleAbilityLabelSetup" text="Ability Scores">
+          <Tab fx:id="tpAbilityScores" onSelectionChanged="#handleAbilityLabelSetup" text="Ability Scores">
             <content>
               <AnchorPane fx:id="apAbilityScores" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
-          <Tab text="Race">
+          <Tab fx:id="tpRace" text="Race">
             <content>
               <AnchorPane fx:id="apRace" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
-            <Tab text="Class">
+            <Tab fx:id="tpClass" text="Class">
               <content>
                 <AnchorPane fx:id="apClass" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab onSelectionChanged="#handleSkillLabelSetup" text="Skills">
+            <Tab fx:id="tpSkills" onSelectionChanged="#handleSkillLabelSetup" text="Skills">
               <content>
                 <AnchorPane fx:id="apSkills" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Feats">
+            <Tab fx:id="tpFeats" text="Feats">
               <content>
                 <AnchorPane fx:id="apFeats" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab onSelectionChanged="#handleEquipmentSetup" text="Equipment">
+            <Tab fx:id="tpEquipment" onSelectionChanged="#handleEquipmentSetup" text="Equipment">
               <content>
                 <AnchorPane fx:id="apEquipment" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab onSelectionChanged="#handleProfileSetup" text="Profile">
+            <Tab fx:id="tpProfile" onSelectionChanged="#handleProfileSetup" text="Profile">
               <content>
                 <AnchorPane fx:id="apProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab onSelectionChanged="#handleSummaryLabelSetup" text="Summary">
+            <Tab fx:id="tpSummary" onSelectionChanged="#handleSummaryLabelSetup" text="Summary">
               <content>
                 <AnchorPane fx:id="apSummary" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>

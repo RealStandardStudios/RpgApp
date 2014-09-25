@@ -106,6 +106,9 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	public void setData() {
 		//set fluff labels
 		lblClass.setText(getCharacter().getClasses()[0].getName());
+		lblName.setText(getCharacter().getName());
+		//lblAlignment.setText(getCharacter().getAlignment().name());
+		lblSize.setText(getCharacter().getFluff().get("Height"));
 		lblRace.setText(getCharacter().getRace().getName());
 		lblAge.setText(getCharacter().getFluff().get("Age"));
 		lblGender.setText(getCharacter().getFluff().get("Gender"));

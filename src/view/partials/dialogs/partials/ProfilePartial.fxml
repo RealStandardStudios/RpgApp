@@ -193,15 +193,15 @@
                      <font>
                         <Font size="17.0" />
                      </font></Label>
-                  <CheckBox fx:id="cbLawfulGood" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbNeutralGood" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbChaoticGood" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbLawfulNeutral" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbTrueNeutral" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbChaoticNeutral" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbLawfulEvil" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbChaoticEvil" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbNeutralEvil" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbLawfulGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbNeutralGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbChaoticGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbLawfulNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbTrueNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbChaoticNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbLawfulEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbChaoticEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <CheckBox fx:id="cbNeutralEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
