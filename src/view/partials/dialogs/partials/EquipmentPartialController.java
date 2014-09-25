@@ -354,33 +354,124 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private void handleAddToCharacter(ActionEvent event) {
+		
 		if (itemToAdd != null) {
+			String[] cost;
+			Integer priceCheck = null;
+			String[] weight;
+			
 			switch (itemToAdd.getClass().toString()) {
 			case "class pathfinder.data.Items.Weapon":
+				
+				cost = itemToAdd.Cost.get().split(" ");
+				try
+				{
+					priceCheck = goldRemaining - Integer.parseInt(cost[0]);
+				}
+				catch(java.lang.NumberFormatException e)
+				{
+					if(cost[0].contains(",")) {
+						String[] over1000 = cost[0].split(",");
+						String price = "";
+						for (String string : over1000) {
+							price+=string;
+						}
+						priceCheck = goldRemaining - Integer.parseInt(price);
+					}
+					else e.printStackTrace();
+				}
+				if(priceCheck <= 0) break;
+				//if the cost of the item takes your money into deficit, don't buy the item
+				
+				goldRemaining = priceCheck;
+				lblGoldRemainingValue.setText(goldRemaining+ "");
+				
+				weight = itemToAdd.Weight.get().split(" ");
+				totalWeight += Integer.parseInt(weight[0]);
+				lblWeightValue.setText(totalWeight.toString());
+				
 				obsChosenWeapons.add((Weapon) itemToAdd);
 				break;
 
 			case "class pathfinder.data.Items.Armor":
+				
+				cost = itemToAdd.Cost.get().split(" ");
+				try
+				{
+					priceCheck = goldRemaining - Integer.parseInt(cost[0]);
+				}
+				catch(java.lang.NumberFormatException e)
+				{
+					if(cost[0].contains(",")) {
+						String[] over1000 = cost[0].split(",");
+						String price = "";
+						for (String string : over1000) {
+							price+=string;
+						}
+						priceCheck = goldRemaining - Integer.parseInt(price);
+					}
+					else e.printStackTrace();
+				}
+				if(priceCheck <= 0) break;
+				//if the cost of the item takes your money into deficit, don't buy the item
+				
+				goldRemaining = priceCheck;
+				lblGoldRemainingValue.setText(goldRemaining+ "");
+				
+				weight = itemToAdd.Weight.get().split(" ");
+				totalWeight += Integer.parseInt(weight[0]);
+				lblWeightValue.setText(totalWeight.toString());
+				
 				obsChosenArmor.add((Armor) itemToAdd);
 				break;
 
 			case "class pathfinder.data.Items.Goods":
+				
+				cost = itemToAdd.Cost.get().split(" ");
+				try
+				{
+					priceCheck = goldRemaining - Integer.parseInt(cost[0]);
+				}
+				catch(java.lang.NumberFormatException e)
+				{
+					if(cost[0].contains(",")) {
+						String[] over1000 = cost[0].split(",");
+						String price = "";
+						for (String string : over1000) {
+							price+=string;
+						}
+						priceCheck = goldRemaining - Integer.parseInt(price);
+					}
+					else e.printStackTrace();
+				}
+				if(priceCheck <= 0) break;
+				//if the cost of the item takes your money into deficit, don't buy the item
+				
+				goldRemaining = priceCheck;
+				lblGoldRemainingValue.setText(goldRemaining+ "");
+				
+				weight = itemToAdd.Weight.get().split(" ");
+				totalWeight += Integer.parseInt(weight[0]);
+				lblWeightValue.setText(totalWeight.toString());
+				
 				obsChosenGoods.add((Goods) itemToAdd);
 				break;
 
 			default:
 				break;
 			}
+			/**
 			totalWeight = 0;
+			currentGold = goldRemaining;
 			
 			for (Item i : obsChosenWeapons) {
+				String[] cost = i.Cost.get().split(" ");
+				currentGold -= Integer.parseInt(cost[0]);
+				lblGoldRemainingValue.setText(currentGold + "");
+				
 				String[] weight = i.Weight.get().split(" ");
 				totalWeight += Integer.parseInt(weight[0]);
 				lblWeightValue.setText(totalWeight.toString());
-				
-				String[] cost = i.Cost.get().split(" ");
-				goldRemaining -= Integer.parseInt(cost[0]);
-				lblGoldRemainingValue.setText(goldRemaining.toString());
 			}
 			
 			for (Item i : obsChosenArmor) {
@@ -389,8 +480,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				lblWeightValue.setText(totalWeight.toString());
 				
 				String[] cost = i.Cost.get().split(" ");
-				goldRemaining -= Integer.parseInt(cost[0]);
-				lblGoldRemainingValue.setText(goldRemaining.toString());
+				currentGold -= Integer.parseInt(cost[0]);
+				lblGoldRemainingValue.setText(currentGold + "");
 			}
 			
 			for (Item i : obsChosenGoods) {
@@ -399,11 +490,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				lblWeightValue.setText(totalWeight.toString());
 				
 				String[] cost = i.Cost.get().split(" ");
-				goldRemaining -= Integer.parseInt(cost[0]);
-				lblGoldRemainingValue.setText(goldRemaining.toString());
+				currentGold -= Integer.parseInt(cost[0]);
+				lblGoldRemainingValue.setText(currentGold + "");
 			}
-
 			itemToAdd = null;
+			**/
 		}
 	}
 
@@ -416,8 +507,25 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			lblWeightValue.setText(totalWeight.toString());
 			
 			String[] cost = itemToRemove.Cost.get().split(" ");
-			goldRemaining += Integer.parseInt(cost[0]);
-			lblGoldRemainingValue.setText(goldRemaining.toString());
+			Integer price = null;
+			try
+			{
+				price = Integer.parseInt(cost[0]);
+			}
+			catch(java.lang.NumberFormatException e)
+			{
+				if(cost[0].contains(",")) {
+					String[] over1000 = cost[0].split(",");
+					String priceParts = "";
+					for (String string : over1000) {
+						priceParts+=string;
+					}
+					price = Integer.parseInt(priceParts);
+				}
+				else e.printStackTrace();
+			}
+			goldRemaining += price;
+			lblGoldRemainingValue.setText(goldRemaining + "");
 			
 			
 			switch (itemToRemove.getClass().toString()) {
@@ -444,9 +552,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		int min = startingWealthD6;
 		int max = startingWealthD6 * 6;
 		Integer startingWealth = (rnd.nextInt(max - min) + min) * 10;
+		goldRemaining = startingWealth;
 
 		lblStartingWealthValue.setText(startingWealth.toString());
-		lblGoldRemainingValue.setText(startingWealth.toString());
+		lblGoldRemainingValue.setText("" + goldRemaining);
 	}
 
 	@Override
