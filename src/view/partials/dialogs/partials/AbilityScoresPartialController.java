@@ -151,74 +151,110 @@ public class AbilityScoresPartialController extends
 	// region handle AbilityScores
 	@FXML
 	void handleStrIncrease() {
-		getCharacter().getStrength().increaseValue();
-		setStrLabels();
+		if(getCharacter().getStrength().getValue() < 18)
+		{
+			getCharacter().getStrength().increaseValue();
+			setStrLabels();
+		}
 	}
 
 	@FXML
 	void handleStrDecrease() {
-		getCharacter().getStrength().decreaseValue();
-		setStrLabels();
+		if(getCharacter().getStrength().getValue() > 3)
+		{
+			getCharacter().getStrength().decreaseValue();
+			setStrLabels();
+		}
 	}
 
 	@FXML
 	void handleDexIncrease() {
-		getCharacter().getDexterity().increaseValue();
-		setDexLabels();
+		if(getCharacter().getDexterity().getValue() < 18)
+		{
+			getCharacter().getDexterity().increaseValue();
+			setDexLabels();
+		}
 	}
 
 	@FXML
 	void handleDexDecrease() {
-		getCharacter().getDexterity().decreaseValue();
-		setDexLabels();
+		if(getCharacter().getDexterity().getValue() > 3)
+		{
+			getCharacter().getDexterity().decreaseValue();
+			setDexLabels();
+		}
 	}
 
 	@FXML
 	void handleConIncrease() {
-		getCharacter().getConstitution().increaseValue();
-		setConLabels();
+		if(getCharacter().getConstitution().getValue() < 18)
+		{
+			getCharacter().getConstitution().increaseValue();
+			setConLabels();
+		}
 	}
 
 	@FXML
 	void handleConDecrease() {
-		getCharacter().getConstitution().decreaseValue();
-		setConLabels();
+		if(getCharacter().getConstitution().getValue() > 3)
+		{
+			getCharacter().getConstitution().decreaseValue();
+			setConLabels();
+		}
 	}
 
 	@FXML
 	void handleIntIncrease() {
-		getCharacter().getIntelligence().increaseValue();
-		setIntLabels();
+		if(getCharacter().getIntelligence().getValue() < 18)
+		{
+			getCharacter().getIntelligence().increaseValue();
+			setIntLabels();
+		}
 	}
 
 	@FXML
 	void handleIntDecrease() {
-		getCharacter().getIntelligence().decreaseValue();
-		setIntLabels();
+		if(getCharacter().getIntelligence().getValue() > 3)
+		{
+			getCharacter().getIntelligence().decreaseValue();
+			setIntLabels();
+		}
 	}
 
 	@FXML
 	void handleWisIncrease() {
-		getCharacter().getWisdom().increaseValue();
-		setWisLabels();
+		if(getCharacter().getWisdom().getValue() < 18)
+		{
+			getCharacter().getWisdom().increaseValue();
+			setWisLabels();
+		}
 	}
 
 	@FXML
 	void handleWisDecrease() {
-		getCharacter().getWisdom().decreaseValue();
-		setWisLabels();
+		if(getCharacter().getWisdom().getValue() > 3)
+		{
+			getCharacter().getWisdom().decreaseValue();
+			setWisLabels();
+		}
 	}
 
 	@FXML
 	void handleChaIncrease() {
-		getCharacter().getCharisma().increaseValue();
-		setChaLabels();
+		if(getCharacter().getCharisma().getValue() < 18)
+		{
+			getCharacter().getCharisma().increaseValue();
+			setChaLabels();
+		}
 	}
 
 	@FXML
 	void handleChaDecrease() {
-		getCharacter().getCharisma().decreaseValue();
-		setChaLabels();
+		if(getCharacter().getCharisma().getValue() > 3)
+		{
+			getCharacter().getCharisma().decreaseValue();
+			setChaLabels();
+		}
 	}
 
 	// endregion
@@ -271,13 +307,13 @@ public class AbilityScoresPartialController extends
 	}
 
 	void firstTimeRun() {
-		getCharacter().setStrength(new Ability(AbilityName.Strength, 10));
-		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 10));
-		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 10));
+		getCharacter().setStrength(new Ability(AbilityName.Strength, 8));
+		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 8));
+		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 8));
 		getCharacter().setIntelligence(
-				new Ability(AbilityName.Intelligence, 10));
-		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 10));
-		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 10));
+				new Ability(AbilityName.Intelligence, 8));
+		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 8));
+		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
 
 		lblBaseStr.setText("" + getCharacter().getStrength().getValue());
 		lblBaseDex.setText("" + getCharacter().getDexterity().getValue());

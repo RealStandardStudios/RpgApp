@@ -112,6 +112,15 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	}
 	
 	@FXML
+	public void recheckWealthRoll()
+	{
+		if(partials != null)
+		{
+			partials.get("Equipment").setData();
+		}
+	}
+	
+	@FXML
 	void handleSummaryLabelSetup()
 	{
 		try {
