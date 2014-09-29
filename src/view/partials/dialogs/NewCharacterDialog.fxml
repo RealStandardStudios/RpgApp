@@ -13,12 +13,7 @@
   <children>
       <TabPane fx:id="tpTabs" layoutX="14.0" layoutY="14.0" prefHeight="700.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab fx:id="tpAbilityScores" onSelectionChanged="#handleTabChanged" text="Ability Scores">
-            <content>
-              <AnchorPane fx:id="apAbilityScores" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-          <Tab fx:id="tpRace" onSelectionChanged="#handleTabChanged" text="Race">
+          <Tab fx:id="tpRace" text="Race">
             <content>
               <AnchorPane fx:id="apRace" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
@@ -28,6 +23,11 @@
                 <AnchorPane fx:id="apClass" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
+          <Tab fx:id="tpAbilityScores" onSelectionChanged="#handleTabChanged" text="Ability Scores">
+            <content>
+              <AnchorPane fx:id="apAbilityScores" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
             <Tab fx:id="tpSkills" onSelectionChanged="#handleTabChanged" text="Skills">
               <content>
                 <AnchorPane fx:id="apSkills" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="200.0" />

@@ -2,8 +2,6 @@ package view.partials.dialogs.partials;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import pathfinder.data.Attributes.Ability;
-import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Effects.Effect;
 
@@ -90,9 +88,11 @@ public class AbilityScoresPartialController extends
 		lblTotalStr
 				.setText(""
 						+ (getCharacter().getStrength().getValue()
-								+ Integer.parseInt(lblRacialBonusStr.getText()) + Integer
-									.parseInt(lblMiscStr.getText())));
-		lblBaseStr.setText("" + getCharacter().getStrength().getValue());
+						+ Integer.parseInt(lblMiscStr.getText())));
+		if(lblRacialBonusStr.getText()!="0")
+			lblBaseStr.setText("" + (getCharacter().getStrength().getValue()-Integer.parseInt(lblRacialBonusStr.getText())));
+		else
+			lblBaseStr.setText("" + getCharacter().getStrength().getValue());
 		lblStrMod.setText("" + getCharacter().getStrength().getModifier().get());
 	}
 
@@ -100,19 +100,23 @@ public class AbilityScoresPartialController extends
 		lblTotalDex
 				.setText(""
 						+ (getCharacter().getDexterity().getValue()
-								+ Integer.parseInt(lblRacialBonusDex.getText()) + Integer
-									.parseInt(lblMiscDex.getText())));
-		lblBaseDex.setText("" + getCharacter().getDexterity().getValue());
+						+ Integer.parseInt(lblMiscDex.getText())));
+		if(lblRacialBonusDex.getText()!="0")
+			lblBaseDex.setText("" + (getCharacter().getDexterity().getValue()-Integer.parseInt(lblRacialBonusDex.getText())));
+		else
+			lblBaseDex.setText("" + getCharacter().getDexterity().getValue());
 		lblDexMod.setText("" + getCharacter().getDexterity().getModifier().get());
 	}
 
 	void setConLabels() {
 		lblTotalCon
 				.setText(""
-						+ (getCharacter().getConstitution().getValue()
-								+ Integer.parseInt(lblRacialBonusCon.getText()) + Integer
-									.parseInt(lblMiscCon.getText())));
-		lblBaseCon.setText("" + getCharacter().getConstitution().getValue());
+						+ (getCharacter().getConstitution().getValue() 
+						+ Integer.parseInt(lblMiscCon.getText())));
+		if(lblRacialBonusCon.getText()!="0")
+			lblBaseCon.setText("" + (getCharacter().getConstitution().getValue()-Integer.parseInt(lblRacialBonusCon.getText())));
+		else
+			lblBaseCon.setText("" + getCharacter().getConstitution().getValue());
 		lblConMod.setText("" + getCharacter().getConstitution().getModifier().get());
 	}
 
@@ -120,9 +124,11 @@ public class AbilityScoresPartialController extends
 		lblTotalInt
 				.setText(""
 						+ (getCharacter().getIntelligence().getValue()
-								+ Integer.parseInt(lblRacialBonusInt.getText()) + Integer
-									.parseInt(lblMiscInt.getText())));
-		lblBaseInt.setText("" + getCharacter().getIntelligence().getValue());
+						+ Integer.parseInt(lblMiscInt.getText())));
+		if(lblRacialBonusInt.getText()!="0")
+			lblBaseInt.setText("" + (getCharacter().getIntelligence().getValue()-Integer.parseInt(lblRacialBonusInt.getText())));
+		else
+			lblBaseInt.setText("" + getCharacter().getIntelligence().getValue());
 		lblIntMod.setText("" + getCharacter().getIntelligence().getModifier().get());
 	}
 
@@ -130,9 +136,11 @@ public class AbilityScoresPartialController extends
 		lblTotalWis
 				.setText(""
 						+ (getCharacter().getWisdom().getValue()
-								+ Integer.parseInt(lblRacialBonusWis.getText()) + Integer
-									.parseInt(lblMiscWis.getText())));
-		lblBaseWis.setText("" + getCharacter().getWisdom().getValue());
+						+ Integer.parseInt(lblMiscWis.getText())));
+		if(lblRacialBonusWis.getText()!="0")
+			lblBaseWis.setText("" + (getCharacter().getWisdom().getValue()-Integer.parseInt(lblRacialBonusWis.getText())));
+		else
+			lblBaseWis.setText("" + getCharacter().getWisdom().getValue());
 		lblWisMod.setText("" + getCharacter().getWisdom().getModifier().get());
 	}
 
@@ -140,9 +148,11 @@ public class AbilityScoresPartialController extends
 		lblTotalCha
 				.setText(""
 						+ (getCharacter().getCharisma().getValue()
-								+ Integer.parseInt(lblRacialBonusCha.getText()) + Integer
-									.parseInt(lblMiscCha.getText())));
-		lblBaseCha.setText("" + getCharacter().getCharisma().getValue());
+						+ Integer.parseInt(lblMiscCha.getText())));
+		if(lblRacialBonusCha.getText()!="0")
+			lblBaseCha.setText("" + (getCharacter().getCharisma().getValue()-Integer.parseInt(lblRacialBonusCha.getText())));
+		else
+			lblBaseCha.setText("" + getCharacter().getCharisma().getValue());
 		lblChaMod.setText("" + getCharacter().getCharisma().getModifier().get());
 	}
 
@@ -266,37 +276,47 @@ public class AbilityScoresPartialController extends
 			firstTimeRun();
 		}
 		setUpRacialBonus();
-
-		// endregion
 	}
 
 	void setUpRacialBonus() {
 		for (Effect e : getCharacter().getEffects()) {
-			System.out.println(e.getClass().toString());
-			if (e.getClass().toString() == "class pathfinder.data.Effects.AbilityEffect") {
+			//System.out.println(e.getClass().toString());
+			if (e.getClass().toString().equals("class pathfinder.data.Effects.AbilityEffect")) {
 				switch (((AbilityEffect) e).getAbilityName()) {
 				case Strength:
 					lblRacialBonusStr.setText("" + e.getValue());
+					getCharacter().getStrength().setValue(getCharacter().getStrength().getValue()+e.getValue());
+					setStrLabels();
 					break;
 
 				case Constitution:
 					lblRacialBonusCon.setText("" + e.getValue());
+					getCharacter().getConstitution().setValue(getCharacter().getConstitution().getValue()+e.getValue());
+					setConLabels();
 					break;
 
 				case Dexterity:
 					lblRacialBonusDex.setText("" + e.getValue());
+					getCharacter().getDexterity().setValue(getCharacter().getDexterity().getValue()+e.getValue());
+					setDexLabels();
 					break;
 
 				case Charisma:
 					lblRacialBonusCha.setText("" + e.getValue());
+					getCharacter().getCharisma().setValue(getCharacter().getCharisma().getValue()+e.getValue());
+					setChaLabels();
 					break;
 
 				case Intelligence:
 					lblRacialBonusInt.setText("" + e.getValue());
+					getCharacter().getIntelligence().setValue(getCharacter().getIntelligence().getValue()+e.getValue());
+					setIntLabels();
 					break;
 
 				case Wisdom:
 					lblRacialBonusWis.setText("" + e.getValue());
+					getCharacter().getWisdom().setValue(getCharacter().getWisdom().getValue()+e.getValue());
+					setWisLabels();
 					break;
 
 				default:
@@ -307,13 +327,7 @@ public class AbilityScoresPartialController extends
 	}
 
 	void firstTimeRun() {
-		getCharacter().setStrength(new Ability(AbilityName.Strength, 8));
-		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 8));
-		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 8));
-		getCharacter().setIntelligence(
-				new Ability(AbilityName.Intelligence, 8));
-		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 8));
-		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
+		getParentWindow().setAbilities();
 
 		lblBaseStr.setText("" + getCharacter().getStrength().getValue());
 		lblBaseDex.setText("" + getCharacter().getDexterity().getValue());

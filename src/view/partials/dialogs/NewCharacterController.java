@@ -16,6 +16,8 @@ import jefXif.WindowController;
 
 import org.controlsfx.dialog.Dialogs;
 
+import pathfinder.data.Attributes.Ability;
+import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Character.Character;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
@@ -85,6 +87,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		//System.out.println(tabChanged.getId());
 		switch (tabChanged.getId()) {
 		case "tpAbilityScores":
+			partials.get("Race").getData();
+			partials.get("Class").getData();
 			if(partials!=null)partials.get("AbilityScores").setData();
 			break;
 			
@@ -125,6 +129,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			partials.get("Race").getData();
 			partials.get("Skills").getData();
 			partials.get("Feat").getData();
+			getCharacter().setLevel(1);
 			
 			partials.get("Summary").setData();
 			break;
@@ -181,5 +186,15 @@ public class NewCharacterController extends DialogController implements jefXif.i
 
 	public Character getCharacter() {
 		return this.newCharacter;
+	}
+
+	public void setAbilities() {
+		getCharacter().setStrength(new Ability(AbilityName.Strength, 8));
+		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 8));
+		getCharacter().setConstitution(new Ability(AbilityName.Dexterity, 8));
+		getCharacter().setIntelligence(
+				new Ability(AbilityName.Intelligence, 8));
+		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 8));
+		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
 	}
 }
