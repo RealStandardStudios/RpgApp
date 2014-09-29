@@ -97,9 +97,10 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			break;
 			
 		case "tpSkills":
-			partials.get("Skills").setData();
 			partials.get("Class").getData();
 			partials.get("Race").getData();
+			
+			partials.get("Skills").setData();
 			break;
 			
 		case "tpFeats":
@@ -110,7 +111,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			partials.get("Race").getData();
 			partials.get("Feat").getData();
 			
-			partials.get("Equipment").setData();
+			if(partials!=null)partials.get("Equipment").setData();
 			break;
 			
 		case "tpProfile":
@@ -122,6 +123,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			partials.get("Equipment").getData();
 			partials.get("Class").getData();
 			partials.get("Race").getData();
+			partials.get("Skills").getData();
+			partials.get("Feat").getData();
 			
 			partials.get("Summary").setData();
 			break;
@@ -130,14 +133,13 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
 	}
 	
-	@FXML
-	public void recheckWealthRoll()
-	{
-		if(partials != null)
-		{
-			partials.get("Equipment").setData();
-		}
-	}
+//	public void recheckWealthRoll()
+//	{
+//		if(partials != null)
+//		{
+//			partials.get("Equipment").setData();
+//		}
+//	}
 	
 	@Override
 	public void handleOkay(ActionEvent event) {

@@ -86,6 +86,7 @@ public class RacePartialController extends NewCharacterPartialController {
 		lblDescription.setText(selectedRace.getDescription());
 		lblPDescription.setText(selectedRace.getPhysicalDescription());
 		lblRaceRelations.setText(selectedRace.getRelations());
+		lblSociety.setText(selectedRace.getSociety());
 		lblAlignment.setText(selectedRace.getAlignmentAndReligion());
 		lblAdventures.setText(selectedRace.getAdventures());
 		lblRacialModifiers.setText(selectedRace.getRacialModifierString());

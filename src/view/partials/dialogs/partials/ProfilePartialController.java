@@ -13,7 +13,7 @@ import pathfinder.data.Character.Alignments;
 
 public class ProfilePartialController extends NewCharacterPartialController {
 
-	//region FXML fields
+	// region FXML fields
 	@FXML
 	TextField txtCharName;
 	@FXML
@@ -29,15 +29,15 @@ public class ProfilePartialController extends NewCharacterPartialController {
 	@FXML
 	TextField txtCharHeight;
 	@FXML
-	TextField txtCharWeight;	
+	TextField txtCharWeight;
 	@FXML
 	TextArea txtaCharAppearance;
 	@FXML
 	TextArea txtaCharPersonality;
 	@FXML
 	TextField txtCharGender;
-	
-	//region Alignment Grid
+
+	// region Alignment Grid
 	@FXML
 	CheckBox cbLawfulGood;
 	@FXML
@@ -57,19 +57,22 @@ public class ProfilePartialController extends NewCharacterPartialController {
 	@FXML
 	CheckBox cbChaoticEvil;
 	CheckBox[] alignments;
-	//endregion
-	//endregion
-	
+
+	// endregion
+	// endregion
+
 	@Override
 	public void initialize() {
-		alignments = new CheckBox[] { cbLawfulGood,cbNeutralGood,cbChaoticGood,cbNeutralGood,cbTrueNeutral,cbNeutralEvil,cbChaoticGood,cbChaoticNeutral,cbChaoticEvil };
+		alignments = new CheckBox[] { cbLawfulGood, cbNeutralGood,
+				cbChaoticGood, cbLawfulNeutral, cbTrueNeutral,
+				cbChaoticNeutral, cbLawfulEvil, cbNeutralEvil, cbChaoticEvil };
 	}
-	
+
 	@FXML
 	private void handleChecked(ActionEvent event) {
 		CheckBox checkBox = (CheckBox) event.getSource();
 		for (CheckBox cb : alignments) {
-			if(!cb.equals(checkBox)) {
+			if (!cb.equals(checkBox)) {
 				cb.selectedProperty().set(false);
 			}
 		}
@@ -77,9 +80,10 @@ public class ProfilePartialController extends NewCharacterPartialController {
 
 	@Override
 	public void setData() {
-		for (Alignment al : getCharacter().getClasses()[0].getRequireAlignments()) {
+		for (Alignment al : getCharacter().getClasses()[0]
+				.getRequireAlignments()) {
 			for (int i = 0; i < alignments.length; i++) {
-				if(Alignments.Any[i].equals(al)){
+				if (Alignments.Any[i].equals(al)) {
 					alignments[i].setDisable(false);
 				}
 			}
@@ -89,9 +93,9 @@ public class ProfilePartialController extends NewCharacterPartialController {
 	@Override
 	public void getData() {
 		getCharacter().setName(txtCharName.getText());
-		HashMap<String,String> fluff = new HashMap<String,String>();
+		HashMap<String, String> fluff = new HashMap<String, String>();
 		for (int i = 0; i < alignments.length; i++) {
-			if(alignments[i].selectedProperty().get()){
+			if (alignments[i].selectedProperty().get()) {
 				getCharacter().setAlignment(Alignments.Any[i]);
 			}
 		}
