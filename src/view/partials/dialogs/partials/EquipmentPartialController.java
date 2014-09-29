@@ -117,7 +117,22 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private TableColumn<Weapon, String> columnCharWeaponName;
-
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponType;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponDmgS;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponDmgM;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponCritical;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponDmgType;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponRange;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponWeight;
+	@FXML
+	private TableColumn<Weapon, String> columnCharWeaponSpecial;
 	@FXML
 	private TableColumn<Weapon, String> columnCharWeaponQuantity;
 
@@ -127,7 +142,22 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private TableColumn<Armor, String> columnCharArmorName;
-
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorType;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorBonus;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorMaxDexBonus;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorCheckPenalty;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorArcaneSpellFailure;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorSpeed30;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorSpeed20;
+	@FXML
+	private TableColumn<Armor, String> columnCharArmorWeight;
 	@FXML
 	private TableColumn<Armor, String> columnCharArmorQuantity;
 
@@ -137,7 +167,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private TableColumn<Goods, String> columnCharGoodsName;
-
+	@FXML
+	private TableColumn<Goods, String> columnCharGoodsWeight;
 	@FXML
 	private TableColumn<Goods, String> columnCharGoodsQuantity;
 
@@ -203,11 +234,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				.selectedItemProperty()
 				.addListener(
 						(observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
-//		tableGoodsAvailable
-//				.getSelectionModel()
-//				.selectedItemProperty()
-//				.addListener(
-//						(observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
+		tableGoodsAvailable
+				.getSelectionModel()
+				.selectedItemProperty()
+				.addListener(
+						(observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
 		
 		tableWeaponsCharacter
 				.getSelectionModel()
@@ -290,16 +321,50 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		tableWeaponsCharacter.setItems(obsChosenWeapons);
 		columnCharWeaponName.setCellValueFactory(cellData -> cellData
 				.getValue().Name);
+		columnCharWeaponType.setCellValueFactory(cellData -> cellData
+				.getValue().WeaponType);
+		columnCharWeaponDmgS.setCellValueFactory(cellData -> cellData
+				.getValue().DmgS);
+		columnCharWeaponDmgM.setCellValueFactory(cellData -> cellData
+				.getValue().DmgM);
+		columnCharWeaponCritical.setCellValueFactory(cellData -> cellData
+				.getValue().Critical);
+		columnCharWeaponDmgType.setCellValueFactory(cellData -> cellData
+				.getValue().WeaponDmgType);
+		columnCharWeaponRange.setCellValueFactory(cellData -> cellData
+				.getValue().Range);
+		columnCharWeaponWeight.setCellValueFactory(cellData -> cellData
+				.getValue().Weight);
+		columnCharWeaponSpecial.setCellValueFactory(cellData -> cellData
+				.getValue().Special);
 		// columnCharWeaponQuantity - this might not always be 1
 
 		tableArmorCharacter.setItems(obsChosenArmor);
 		columnCharArmorName
 				.setCellValueFactory(cellData -> cellData.getValue().Name);
+		columnCharArmorType
+		.setCellValueFactory(cellData -> cellData.getValue().ArmorType);
+		columnCharArmorBonus
+		.setCellValueFactory(cellData -> cellData.getValue().ArmorBonus);
+		columnCharArmorMaxDexBonus
+		.setCellValueFactory(cellData -> cellData.getValue().MaxDexBonus);
+		columnCharArmorCheckPenalty
+		.setCellValueFactory(cellData -> cellData.getValue().ArcaneSpellFailure);
+		columnCharArmorArcaneSpellFailure
+		.setCellValueFactory(cellData -> cellData.getValue().ArcaneSpellFailure);
+		columnCharArmorSpeed30
+		.setCellValueFactory(cellData -> cellData.getValue().Speed30feet);
+		columnCharArmorSpeed20
+		.setCellValueFactory(cellData -> cellData.getValue().Speed20feet);
+		columnCharArmorWeight
+		.setCellValueFactory(cellData -> cellData.getValue().Name);	
 		// columnCharArmorQuantity - this will probably always be 1
 
 		tableGoodsCharacter.setItems(obsChosenGoods);
 		columnCharGoodsName
 				.setCellValueFactory(cellData -> cellData.getValue().Name);
+		columnCharGoodsWeight
+		.setCellValueFactory(cellData -> cellData.getValue().Weight);
 		// columnCharGoodsQuantity - this might not always be 1
 
 		// endregion

@@ -204,7 +204,15 @@
                                                    </columnResizePolicy>
                                                    <columns>
                                                       <TableColumn fx:id="columnCharWeaponName" prefWidth="160.50000154972076" text="Name" />
-                                                      <TableColumn fx:id="columnCharWeaponQuantity" prefWidth="88.99999237060547" text="Quantity" />
+                                                      <TableColumn fx:id="columnCharWeaponType" prefWidth="75.0" text="Type" />
+                                                      <TableColumn fx:id="columnCharWeaponDmgS" prefWidth="75.0" text="Damage S" />
+                                                      <TableColumn fx:id="columnCharWeaponDmgM" prefWidth="75.0" text="Damage M" />
+                                                      <TableColumn fx:id="columnCharWeaponCritical" prefWidth="75.0" text="Critical" />
+                                                      <TableColumn fx:id="columnCharWeaponDmgType" prefWidth="75.0" text="Damage Type" />
+                                                      <TableColumn fx:id="columnCharWeaponRange" prefWidth="75.0" text="Range" />
+                                                      <TableColumn fx:id="columnCharWeaponWeight" prefWidth="116.0" text="Weight" />
+                                                      <TableColumn fx:id="columnCharWeaponSpecial" prefWidth="134.0" text="Special" />
+                                                      <TableColumn fx:id="columnCharWeaponQuantity" prefWidth="75.0" text="Quantity" />
                                                    </columns>
                                                 </TableView>
                                              </children>
@@ -221,6 +229,14 @@
                                                    </columnResizePolicy>
                                                    <columns>
                                                       <TableColumn fx:id="columnCharArmorName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharArmorType" prefWidth="75.0" text="Armor Type" />
+                                                      <TableColumn fx:id="columnCharArmorBonus" prefWidth="75.0" text="Armor Bonus" />
+                                                      <TableColumn fx:id="columnCharArmorMaxDexBonus" prefWidth="75.0" text="Max Dex Bonus" />
+                                                      <TableColumn fx:id="columnCharArmorCheckPenalty" prefWidth="75.0" text="Armor Check Penalty" />
+                                                      <TableColumn fx:id="columnCharArmorArcaneSpellFailure" prefWidth="75.0" text="Arcane Spell Failure" />
+                                                      <TableColumn fx:id="columnCharArmorSpeed30" prefWidth="75.0" text="Speed 30" />
+                                                      <TableColumn fx:id="columnCharArmorSpeed20" prefWidth="75.0" text="Speed 20" />
+                                                      <TableColumn fx:id="columnCharArmorWeight" prefWidth="75.0" text="Weight" />
                                                       <TableColumn fx:id="columnCharArmorQuantity" prefWidth="88.99999237060547" text="Quantity" />
                                                    </columns>
                                                 </TableView>
@@ -238,6 +254,7 @@
                                                    </columnResizePolicy>
                                                    <columns>
                                                       <TableColumn fx:id="columnCharGoodsName" prefWidth="160.50000154972076" text="Name" />
+                                                      <TableColumn fx:id="columnCharGoodsWeight" prefWidth="75.0" text="Weight" />
                                                       <TableColumn fx:id="columnCharGoodsQuantity" prefWidth="88.99999237060547" text="Quantity" />
                                                    </columns>
                                                 </TableView>
