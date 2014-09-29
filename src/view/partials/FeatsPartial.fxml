@@ -10,61 +10,306 @@
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.FeatsController">
   <children>
-    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
-    <TitledPane fx:id="paneRaceFeatures" animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" minWidth="383.0" prefHeight="330.0" prefWidth="530.0" text="Race Features">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="505.0">
-          <children>
-            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="76.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="108.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="138.0" prefHeight="25.0" prefWidth="506.0" />
-          </children>
-        </AnchorPane>
-      </content>
-      <font>
-        <Font name="System Bold" size="14.0" fx:id="x1" />
-      </font>
-    </TitledPane>
-    <TitledPane fx:id="paneFeats" animated="false" collapsible="false" font="$x1" layoutX="558.0" layoutY="14.0" prefHeight="400.0" prefWidth="530.0" text="Feats">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="42.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="75.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="107.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="137.0" prefHeight="25.0" prefWidth="506.0" />
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TitledPane fx:id="paneClassFeatures" animated="false" font="$x1" layoutX="14.0" layoutY="356.0" prefHeight="330.0" prefWidth="530.0" text="Class Features">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="76.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="108.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="138.0" prefHeight="25.0" prefWidth="506.0" />
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TitledPane fx:id="paneTraits" animated="false" collapsible="false" font="$x1" layoutX="558.0" layoutY="425.0" prefHeight="259.0" prefWidth="530.0" text="Traits">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="73.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="105.0" prefHeight="25.0" prefWidth="506.0" />
-            <TextField layoutX="10.0" layoutY="135.0" prefHeight="25.0" prefWidth="506.0" />
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
+      <GridPane hgap="10.0" prefHeight="700.0" prefWidth="1100.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+          <TitledPane fx:id="paneRaceFeatures" animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="Race Features" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+            <content>
+              <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="505.0">
+                     <children>
+                        <VBox layoutX="57.0" layoutY="47.0" prefHeight="337.0" prefWidth="543.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblRaceFeature1" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature2" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature3" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature4" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature5" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature6" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature7" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature8" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature9" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature10" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature11" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRaceFeature12" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+              </AnchorPane>
+            </content>
+            <font>
+              <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+          </TitledPane>
+          <TitledPane fx:id="paneFeats" animated="false" collapsible="false" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="Feats" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="TOP">
+            <content>
+              <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="669.0" prefWidth="543.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblFeat1" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat2" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat3" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat4" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat5" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat6" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat7" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat8" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat9" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat10" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat11" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat12" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat13" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat14" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat15" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat16" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat17" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat18" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat19" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat20" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat21" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat22" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat23" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat24" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat25" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFeat26" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+              </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="paneClassFeatures" animated="false" collapsible="false" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="Class Features" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <content>
+              <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="291.0" prefWidth="543.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblClassFeature1" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature2" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature3" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature4" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature5" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature6" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature7" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature8" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature9" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature10" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature11" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblClassFeature12" disable="true" text="-">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+              </AnchorPane>
+            </content>
+          </TitledPane>
+         </children>
+      </GridPane>
   </children>
 </AnchorPane>
