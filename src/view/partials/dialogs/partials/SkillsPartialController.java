@@ -156,7 +156,6 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	Label lblTotalUseMagicDevice;
 	//endregion
 
-
 	//region Skill Labels
 	@FXML
 	Label lblRanksAcrobatics;
