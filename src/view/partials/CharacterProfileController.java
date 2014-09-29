@@ -6,7 +6,7 @@ import jefXif.WindowController;
  * @author Real Standard Studios - Matthew Meehan
  *
  */
-public class CharacterFluffController extends WindowController {
+public class CharacterProfileController extends WindowController {
 
 	@Override
 	public void initialize() {

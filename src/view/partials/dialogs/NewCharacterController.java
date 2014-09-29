@@ -4,8 +4,10 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import jefXif.DialogController;
@@ -78,95 +80,70 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	}
 	
 	@FXML
-	private void handleTabChanged(ActionEvent event) {
-		System.out.println();
-		Object o = event.getSource();
-		//System.out.println(tpChanged.getId());
-//		switch (tpChanged.getId()) {
-//		case "tpAbilityScores":
-//			partials.get("AbilityScores").
-//			break;
-//
-//		default:
-//			break;
-//		}
-	}
-
-	@FXML
-	void handleSkillLabelSetup()
-	{
-		try {
-			partials.get("Skills").setData();
+	private void handleTabChanged(Event event) {
+		Tab tabChanged = (Tab) event.getSource();
+		//System.out.println(tabChanged.getId());
+		switch (tabChanged.getId()) {
+		case "tpAbilityScores":
+			if(partials!=null)partials.get("AbilityScores").setData();
+			break;
+			
+		case "tpRace":
+			
+			break;
+			
+		case "tpClass":
+			
+			break;
+			
+		case "tpSkills":
 			partials.get("Class").getData();
 			partials.get("Race").getData();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@FXML
-	void handleAbilityLabelSetup()
-	{
-		if(partials!=null)partials.get("AbilityScores").setData();
-	}
-	
-	@FXML
-	public void recheckWealthRoll()
-	{
-		if(partials != null)
-		{
-			partials.get("Equipment").setData();
-		}
-	}
-	
-	@FXML
-	void handleSummaryLabelSetup()
-	{
-		try {
-			partials.get("Skills").getData();
-			partials.get("Profile").getData();
-			partials.get("Summary").setData();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@FXML
-	void handleProfileSetup()
-	{
-		try {
-			partials.get("Profile").setData();
 			
-			//get all the stuff ready for summary
+			partials.get("Skills").setData();
+			break;
+			
+		case "tpFeats":
+			
+			break;
+		case "tpEquipment":
+			partials.get("Class").getData();
+			partials.get("Race").getData();
+			partials.get("Feat").getData();
+			
+			if(partials!=null)partials.get("Equipment").setData();
+			break;
+			
+		case "tpProfile":
+			partials.get("Class").getData();
+			partials.get("Profile").setData();
+			break;
+			
+		case "tpSummary":
 			partials.get("Equipment").getData();
 			partials.get("Class").getData();
 			partials.get("Race").getData();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
+			partials.get("Skills").getData();
+			partials.get("Feat").getData();
+			
+			partials.get("Summary").setData();
+			break;
+		default:
+			break;
 		}
 	}
 	
-	@FXML
-	void handleEquipmentSetup()
-	{
-		try {
-			partials.get("Equipment").setData();
-			
-			partials.get("Class").getData();
-			partials.get("Race").getData();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
+//	public void recheckWealthRoll()
+//	{
+//		if(partials != null)
+//		{
+//			partials.get("Equipment").setData();
+//		}
+//	}
 	
 	@Override
 	public void handleOkay(ActionEvent event) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Look at how much this is saving right now");
 	}
 	
 	@FXML

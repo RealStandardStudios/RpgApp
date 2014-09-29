@@ -23,7 +23,7 @@ public class RootLayoutController {
 	
 	@FXML
 	private void handleCharacterAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("CharacterFluff").getNode());
+		SwapWindow(windowPartials.get("CharacterProfile").getNode());
 	}
 	@FXML
 	private void handleCombatStatsAction(ActionEvent event) {

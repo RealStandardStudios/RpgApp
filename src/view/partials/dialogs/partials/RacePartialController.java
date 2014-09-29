@@ -73,7 +73,7 @@ public class RacePartialController extends NewCharacterPartialController {
 			races.setAll(readDataFile(featsFile, Race.class));
 		} catch (Exception e) {
 			Dialogs.create().masthead("Read Error")
-					.masthead("Couldn't read the Class File Properly")
+					.masthead("Couldn't read the Race File Properly")
 					.message(e.getMessage()).showWarning();
 			e.printStackTrace();
 		}
@@ -86,8 +86,16 @@ public class RacePartialController extends NewCharacterPartialController {
 		lblDescription.setText(selectedRace.getDescription());
 		lblPDescription.setText(selectedRace.getPhysicalDescription());
 		lblRaceRelations.setText(selectedRace.getRelations());
+		lblSociety.setText(selectedRace.getSociety());
 		lblAlignment.setText(selectedRace.getAlignmentAndReligion());
 		lblAdventures.setText(selectedRace.getAdventures());
+		lblRacialModifiers.setText(selectedRace.getRacialModifierString());
+		lblSize.setText(selectedRace.getSize().name());
+		lblSpeed.setText(""+selectedRace.getSpeed()+" ft");
+		lblVision.setText(selectedRace.getVisionString());
+		lblTraits.setText(selectedRace.getTraitsString());
+		lblWeapons.setText(selectedRace.getWeaponsString());
+		lblLanguages.setText(selectedRace.getLanguagesString());
 	}
 
 	@Override
