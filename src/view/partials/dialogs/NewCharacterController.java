@@ -32,7 +32,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		"AbilityScores","Class","Equipment","Feat","Profile","Race","Skills","Summary"
 	};
 	
-	HashMap<String,NewCharacterPartialController> partials;
+	private HashMap<String,NewCharacterPartialController> partials;
 	
 	//region tab Panes
 	@FXML
@@ -87,9 +87,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		//System.out.println(tabChanged.getId());
 		switch (tabChanged.getId()) {
 		case "tpAbilityScores":
-			partials.get("Race").getData();
-			partials.get("Class").getData();
-			if(partials!=null)partials.get("AbilityScores").setData();
+			getPartials().get("Race").getData();
+			getPartials().get("Class").getData();
+			if(getPartials()!=null)getPartials().get("AbilityScores").setData();
 			break;
 			
 		case "tpRace":
@@ -101,37 +101,37 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			break;
 			
 		case "tpSkills":
-			partials.get("Class").getData();
-			partials.get("Race").getData();
+			getPartials().get("Class").getData();
+			getPartials().get("Race").getData();
 			
-			partials.get("Skills").setData();
+			getPartials().get("Skills").setData();
 			break;
 			
 		case "tpFeats":
 			
 			break;
 		case "tpEquipment":
-			partials.get("Class").getData();
-			partials.get("Race").getData();
-			partials.get("Feat").getData();
+			getPartials().get("Class").getData();
+			getPartials().get("Race").getData();
+			getPartials().get("Feat").getData();
 			
-			if(partials!=null)partials.get("Equipment").setData();
+			if(getPartials()!=null)getPartials().get("Equipment").setData();
 			break;
 			
 		case "tpProfile":
-			partials.get("Class").getData();
-			partials.get("Profile").setData();
+			getPartials().get("Class").getData();
+			getPartials().get("Profile").setData();
 			break;
 			
 		case "tpSummary":
-			partials.get("Equipment").getData();
-			partials.get("Class").getData();
-			partials.get("Race").getData();
-			partials.get("Skills").getData();
-			partials.get("Feat").getData();
+			getPartials().get("Equipment").getData();
+			getPartials().get("Class").getData();
+			getPartials().get("Race").getData();
+			getPartials().get("Skills").getData();
+			getPartials().get("Feat").getData();
 			getCharacter().setLevel(1);
 			
-			partials.get("Summary").setData();
+			getPartials().get("Summary").setData();
 			break;
 		default:
 			break;
@@ -164,24 +164,24 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	}
 
 	public void loadPartials() {
-		partials= new HashMap<String, NewCharacterPartialController>();
+		partials = new HashMap<String, NewCharacterPartialController>();
 		for (String string : partialNames) {
 			try {
-				partials.put(string, (NewCharacterPartialController)loadPartial(string, getInterface()));
+				getPartials().put(string, (NewCharacterPartialController)loadPartial(string, getInterface()));
 			} catch (IOException e) {
 				Dialogs.create().title("Read Error").masthead("There was an error with loading the UI").message(e.getMessage()).showWarning();
 				e.printStackTrace();
 			}
 		}
-		partials.get(partialNames[0]).setData();
-		apAbilityScores.getChildren().setAll(partials.get(partialNames[0]).getNode());
-		apClass.getChildren().setAll(partials.get(partialNames[1]).getNode());
-		apEquipment.getChildren().setAll(partials.get(partialNames[2]).getNode());
-		apFeats.getChildren().setAll(partials.get(partialNames[3]).getNode());
-		apProfile.getChildren().setAll(partials.get(partialNames[4]).getNode());
-		apRace.getChildren().setAll(partials.get(partialNames[5]).getNode());
-		apSkills.getChildren().setAll(partials.get(partialNames[6]).getNode());
-		apSummary.getChildren().setAll(partials.get(partialNames[7]).getNode());
+		getPartials().get(partialNames[0]).setData();
+		apAbilityScores.getChildren().setAll(getPartials().get(partialNames[0]).getNode());
+		apClass.getChildren().setAll(getPartials().get(partialNames[1]).getNode());
+		apEquipment.getChildren().setAll(getPartials().get(partialNames[2]).getNode());
+		apFeats.getChildren().setAll(getPartials().get(partialNames[3]).getNode());
+		apProfile.getChildren().setAll(getPartials().get(partialNames[4]).getNode());
+		apRace.getChildren().setAll(getPartials().get(partialNames[5]).getNode());
+		apSkills.getChildren().setAll(getPartials().get(partialNames[6]).getNode());
+		apSummary.getChildren().setAll(getPartials().get(partialNames[7]).getNode());
 	}
 
 	public Character getCharacter() {
@@ -196,5 +196,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 				new Ability(AbilityName.Intelligence, 8));
 		getCharacter().setWisdom(new Ability(AbilityName.Wisdom, 8));
 		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
+	}
+
+	public HashMap<String,NewCharacterPartialController> getPartials() {
+		return partials;
 	}
 }

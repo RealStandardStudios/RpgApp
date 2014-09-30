@@ -97,6 +97,7 @@ public class RacePartialController extends NewCharacterPartialController {
 		lblWeapons.setText(selectedRace.getWeaponsString());
 		lblLanguages.setText(selectedRace.getLanguagesString());
 		getParentWindow().setAbilities();
+		((AbilityScoresPartialController)getParentWindow().getPartials().get("AbilityScores")).firstTimeRun();
 	}
 
 	@Override
