@@ -1,14 +1,13 @@
 package view.partials.dialogs.partials;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import pathfinder.data.Skill;
-import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Effects.Effect;
 import pathfinder.data.Effects.SkillEffect;
+import view.SkillGridRow;
 
 public class SkillsPartialController extends NewCharacterPartialController {
 	
@@ -229,7 +228,7 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	Label lblRanksSwim;
 	@FXML
 	Label lblRanksUseMagicDevice;
-	Label[] skillLabels;
+	SkillGridRow[] skillGrid;
 	//endregion
 
 	//region Class Skill Labels
@@ -380,1078 +379,716 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	
 	@Override
 	public void initialize() {
-		skillLabels = new Label[] { lblRanksAcrobatics, lblRanksAppraise,
-				lblRanksBluff, lblRanksClimb, lblRanksClimb, lblRanksCraft,
-				lblRanksDiplomacy, lblRanksDisableDevice, lblRanksDisguise,
-				lblRanksEscapeArtist, lblRanksFly, lblRanksHandleAnimal,
-				lblRanksHeal, lblRanksIntimidate, lblRanksKnowledgeArcana,
-				lblRanksKnowledgeDungeoneering, lblRanksKnowledgeEngineering,
-				lblRanksKnowledgeGeography, lblRanksKnowledgeHistory,
-				lblRanksKnowledgeLocal, lblRanksKnowledgeNature,
-				lblRanksKnowledgeNobility, lblRanksKnowledgePlanes,
-				lblRanksKnowledgeReligion, lblRanksLinguistics,
-				lblRanksPerception, lblRanksPerform, lblRanksProfession,
-				lblRanksRide, lblRanksSenseMotive, lblRanksSleightOfHand,
-				lblRanksSpellcraft, lblRanksStealth, lblRanksSurvival,
-				lblRanksSwim, lblRanksUseMagicDevice };
-
-		for (Label label : skillLabels) {
-			label.setText("0");
-		}
 	}
 	
 	@FXML
 	public void handleLabelSteup()
 	{
-		//region HandlesTheAbilityModifiersToBeSetUp
-		setAcrobatics();
-		setAppraise();
-		setBluff();
-		setClimb();
-		setCraft();
-		setDiplomacy();
-		setDisableDevice();
-		setDisguise();
-		setEscapeArtist();
-		setFly();
-		setHandleAnimal();
-		setHeal();
-		setIntimidate();
-		setKnowledgeArcana();
-		setKnowledgeDungeoneering();
-		setKnowledgeEngineering();
-		setKnowledgeGeography();
-		setKnowledgeHistory();
-		setKnowledgeLocal();
-		setKnowledgeNature();
-		setKnowledgeNobility();
-		setKnowledgePlanes();
-		setKnowledgeReligion();
-		setLinguistics();
-		setPerception();
-		setPerform();
-		setProfession();
-		setRide();
-		setSenseMotive();
-		setSleightOfHand();
-		setSpellcraft();
-		setStealth();
-		setSurvival();
-		setSwim();
-		setUseMagicDevice();
-		//endregion
-		
-		//region HandlesSettingUpTheTotals
-		setTotalAcrobatics();
-		setTotalAppraise();
-		setTotalBluff();
-		setTotalClimb();
-		setTotalCraft();
-		setTotalDiplomacy();
-		setTotalDisableDevice();
-		setTotalDisguise();
-		setTotalEscapeArtist();
-		setTotalFly();
-		setTotalHandleAnimal();
-		setTotalHeal();
-		setTotalIntimidate();
-		setTotalKnowledgeArcana();
-		setTotalKnowledgeDungeoneering();
-		setTotalKnowledgeEngineering();
-		setTotalKnowledgeGeography();
-		setTotalKnowledgeHistory();
-		setTotalKnowledgeLocal();
-		setTotalKnowledgeNature();
-		setTotalKnowledgeNobility();
-		setTotalKnowledgePlanes();
-		setTotalKnowledgeReligion();
-		setTotalLinguistics();
-		setTotalPerception();
-		setTotalPerform();
-		setTotalProfession();
-		setTotalRide();
-		setTotalSenseMotive();
-		setTotalSleightOfHand();
-		setTotalSpellcraft();
-		setTotalStealth();
-		setTotalSurvival();
-		setTotalSwim();
-		setTotalUseMagicDevice();
-		//endregion
-		
+		for (SkillGridRow skillGridRow : skillGrid) {
+			skillGridRow.getAbilityLabel();
+			skillGridRow.setClassSkill(getClassSkill(skillGridRow.getName()));
+			skillGridRow.setRacialMod(getRacialMod(skillGridRow.getName()));
+			skillGridRow.getRanksLabel();
+			setTotal(skillGridRow);
+		}		
 	}
 	
 	//region abilitySetupForSkills
-	private void setClassSkillLabel(String skill, Label lblClassSkill) {
+	private Boolean getClassSkill(String skill) {
+		Boolean classSkill = false;
 		for (String s : getCharacter().getClasses()[0].getClassSkills()) {
 			if(s.trim().equals(skill.trim())||(skill.contains("Knowledge")&&s.equals("Knowledge (any)"))) {
-				lblClassSkill.setText("True");
-				break;
+				return true;
 			}
-			else
-				lblClassSkill.setText("False");
 		}
+		return classSkill;
 	}	
-	private void setRacialBonusLabel(String skill,Label lblRacialBonus) {
+	private int getRacialMod(String skill) {
+		int racialBonus = 0;
 		for (Effect e : getCharacter().getEffects()) {
 			System.out.println(e.getClass().toString());
 			if(e.getClass().toString().equals("class pathfinder.data.Effects.SkillEffect")) {
 				SkillEffect effect = (SkillEffect) e;
 				//System.out.println("There is a skill effect!");
 				if(effect.getBonusType().equals("racial")) {
-					if(effect.getSkillName().trim().toLowerCase().equals(skill.trim().toLowerCase()))
-						lblRacialBonus.setText(""+effect.getValue());
-					else
-						lblRacialBonus.setText("0");
+					if(effect.getSkillName().trim().toLowerCase().equals(skill.trim().toLowerCase())){
+						return effect.getValue();
+					}
 				}
 			}
-			else lblRacialBonus.setText("0");
 		}
+		return racialBonus;
 	}
-	void setAcrobatics()
-	{
-		lblAbilityAcrobatics.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Acrobatics";
-		setClassSkillLabel(skill,lblClassAcrobatics);
-		setRacialBonusLabel(skill, lblRacialAcrobatics);
-	}
-	void setAppraise()
-	{
-		lblAbilityAppraise.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Appraise";
-		setClassSkillLabel(skill,lblClassAppraise);
-		setRacialBonusLabel(skill, lblRacialAcrobatics);
-	}
-	void setBluff()
-	{
-		lblAbilityBluff.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Bluff";
-		setClassSkillLabel(skill,lblClassBluff);
-		setRacialBonusLabel(skill, lblRacialBluff);
-	}
-	void setClimb()
-	{
-		lblAbilityClimb.setText("Str: " + getCharacter().getStrength().getModifier().get().toString());
-		String skill = "Climb";
-		setClassSkillLabel(skill,lblClassClimb);
-		setRacialBonusLabel(skill, lblRacialClimb);
-	}
-	void setCraft()
-	{
-		lblAbilityCraft.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Craft";
-		setClassSkillLabel(skill,lblClassCraft);
-		setRacialBonusLabel(skill, lblRacialCraft);
-	}
-	void setDiplomacy()
-	{
-		lblAbilityDiplomacy.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Diplomacy";
-		setClassSkillLabel(skill,lblClassDiplomacy);
-		setRacialBonusLabel(skill, lblRacialDiplomacy);
-	}
-	void setDisableDevice()
-	{
-		lblAbilityDisableDevice.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Disable Device";
-		setClassSkillLabel(skill,lblClassDisableDevice);
-		setRacialBonusLabel(skill, lblRacialDisableDevice);
-	}
-	void setDisguise()
-	{
-		lblAbilityDisguise.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Disguise";
-		setClassSkillLabel(skill,lblClassDisguise);
-		setRacialBonusLabel(skill, lblRacialDisguise);
-	}
-	void setEscapeArtist()
-	{
-		lblAbilityEscapeArtist.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Escape Artist";
-		setClassSkillLabel(skill,lblClassEscapeArtist);
-		setRacialBonusLabel(skill, lblRacialEscapeArtist);
-	}
-	void setFly()
-	{
-		lblAbilityFly.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Fly";
-		setClassSkillLabel(skill,lblClassFly);
-		setRacialBonusLabel(skill, lblRacialFly);
-	}
-	void setHandleAnimal()
-	{
-		lblAbilityHandleAnimal.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Handle Animal";
-		setClassSkillLabel(skill,lblClassHandleAnimal);
-		setRacialBonusLabel(skill, lblRacialHandleAnimal);
-	}
-	void setHeal()
-	{
-		lblAbilityHeal.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
-		String skill = "Heal";
-		setClassSkillLabel(skill,lblClassHeal);
-		setRacialBonusLabel(skill, lblRacialHeal);
-	}
-	void setIntimidate()
-	{
-		lblAbilityIntimidate.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Intimidate";
-		setClassSkillLabel(skill,lblClassIntimidate);
-		setRacialBonusLabel(skill, lblRacialIntimidate);
-	}
-	void setKnowledgeArcana()
-	{
-		lblAbilityKnowledgeArcana.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (arcana)";
-		setClassSkillLabel(skill,lblClassKnowledgeArcana);
-		setRacialBonusLabel(skill, lblRacialKnowledgeArcana);
-	}
-	void setKnowledgeDungeoneering()
-	{
-		lblAbilityKnowledgeDungeoneering.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (dungeoneering)";
-		setClassSkillLabel(skill,lblClassKnowledgeDungeoneering);
-		setRacialBonusLabel(skill, lblRacialKnowledgeDungeoneering);
-	}
-	void setKnowledgeEngineering()
-	{
-		lblAbilityKnowledgeEngineering.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (engineering)";
-		setClassSkillLabel(skill,lblClassKnowledgeEngineering);
-		setRacialBonusLabel(skill, lblRacialKnowledgeEngineering);
-	}
-	void setKnowledgeGeography()
-	{
-		lblAbilityKnowledgeGeography.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (geography)";
-		setClassSkillLabel(skill,lblClassKnowledgeGeography);
-		setRacialBonusLabel(skill, lblRacialKnowledgeGeography);
-	}
-	void setKnowledgeHistory()
-	{
-		lblAbilityKnowledgeHistory.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (history)";
-		setClassSkillLabel(skill,lblClassKnowledgeHistory);
-		setRacialBonusLabel(skill, lblRacialKnowledgeHistory);
-	}
-	void setKnowledgeLocal()
-	{
-		lblAbilityKnowledgeLocal.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (local)";
-		setClassSkillLabel(skill,lblClassKnowledgeLocal);
-		setRacialBonusLabel(skill, lblRacialKnowledgeLocal);
-	}
-	void setKnowledgeNature()
-	{
-		lblAbilityKnowledgeNature.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (nature)";
-		setClassSkillLabel(skill,lblClassKnowledgeNature);
-		setRacialBonusLabel(skill, lblRacialKnowledgeNature);
-	}
-	void setKnowledgeNobility()
-	{
-		lblAbilityKnowledgeNobility.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (nobility)";
-		setClassSkillLabel(skill,lblClassKnowledgeNobility);
-		setRacialBonusLabel(skill, lblRacialKnowledgeNobility);
-	}
-	void setKnowledgePlanes()
-	{
-		lblAbilityKnowledgePlanes.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (planes)";
-		setClassSkillLabel(skill,lblClassKnowledgePlanes);
-		setRacialBonusLabel(skill, lblRacialKnowledgePlanes);
-	}
-	void setKnowledgeReligion()
-	{
-		lblAbilityKnowledgeReligion.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Knowledge (religion)";
-		setClassSkillLabel(skill,lblClassKnowledgeReligion);
-		setRacialBonusLabel(skill, lblRacialKnowledgeReligion);
-	}
-	void setLinguistics()
-	{
-		lblAbilityLinguistics.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Linguistics";
-		setClassSkillLabel(skill,lblClassLinguistics);
-		setRacialBonusLabel(skill, lblRacialLinguistics);
-	}
-	void setPerception()
-	{
-		lblAbilityPerception.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
-		String skill = "Perception";
-		setClassSkillLabel(skill,lblClassPerception);
-		setRacialBonusLabel(skill, lblRacialPerception);
-	}
-	void setPerform()
-	{
-		lblAbilityPerform.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Perform";
-		setClassSkillLabel(skill,lblClassPerform);
-		setRacialBonusLabel(skill, lblRacialPerform);
-	}
-	void setProfession()
-	{
-		lblAbilityProfession.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
-		String skill = "Profession";
-		setClassSkillLabel(skill,lblClassProfession);
-		setRacialBonusLabel(skill, lblRacialProfession);
-	}
-	void setRide()
-	{
-		lblAbilityRide.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Ride";
-		setClassSkillLabel(skill,lblClassRide);
-		setRacialBonusLabel(skill, lblRacialRide);
-	}
-	void setSenseMotive()
-	{
-		lblAbilitySenseMotive.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
-		String skill = "Sense Motive";
-		setClassSkillLabel(skill,lblClassSenseMotive);
-		setRacialBonusLabel(skill, lblRacialSenseMotive);
-	}
-	void setSleightOfHand()
-	{
-		lblAbilitySleightOfHand.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Sleight of Hand";
-		setClassSkillLabel(skill,lblClassSleightOfHand);
-		setRacialBonusLabel(skill, lblRacialSleightOfHand);
-	}
-	void setSpellcraft()
-	{
-		lblAbilitySpellcraft.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
-		String skill = "Spellcraft";
-		setClassSkillLabel(skill,lblClassSpellcraft);
-		setRacialBonusLabel(skill, lblRacialSpellcraft);
-	}
-	void setStealth()
-	{
-		lblAbilityStealth.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
-		String skill = "Stealth";
-		setClassSkillLabel(skill,lblClassStealth);
-		setRacialBonusLabel(skill, lblRacialStealth);
-	}
-	void setSurvival()
-	{
-		lblAbilitySurvival.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
-		String skill = "Survival";
-		setClassSkillLabel(skill,lblClassSurvival);
-		setRacialBonusLabel(skill, lblRacialSurvival);
-	}
-	void setSwim()
-	{
-		lblAbilitySwim.setText("Str: " + getCharacter().getStrength().getModifier().get().toString());
-		String skill = "Swim";
-		setClassSkillLabel(skill,lblClassSwim);
-		setRacialBonusLabel(skill, lblRacialSwim);
-	}
-	void setUseMagicDevice()
-	{
-		lblAbilityUseMagicDevice.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
-		String skill = "Use Magic Device";
-		setClassSkillLabel(skill,lblClassUseMagicDevice);
-		setRacialBonusLabel(skill, lblRacialUseMagicDevice);
-	}
+//	void setAcrobatics()
+//	{
+//		
+//		lblAbilityAcrobatics.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Acrobatics";
+//		setClassSkillLabel(skill,lblClassAcrobatics);
+//		getRacialMod(skill, lblRacialAcrobatics);
+//	}
+//	void setAppraise()
+//	{
+//		lblAbilityAppraise.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Appraise";
+//		setClassSkillLabel(skill,lblClassAppraise);
+//		getRacialMod(skill, lblRacialAppraise);
+//	}
+//	void setBluff()
+//	{
+//		lblAbilityBluff.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Bluff";
+//		setClassSkillLabel(skill,lblClassBluff);
+//		getRacialMod(skill, lblRacialBluff);
+//	}
+//	void setClimb()
+//	{
+//		lblAbilityClimb.setText("Str: " + getCharacter().getStrength().getModifier().get().toString());
+//		String skill = "Climb";
+//		setClassSkillLabel(skill,lblClassClimb);
+//		getRacialMod(skill, lblRacialClimb);
+//	}
+//	void setCraft()
+//	{
+//		lblAbilityCraft.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Craft";
+//		setClassSkillLabel(skill,lblClassCraft);
+//		getRacialMod(skill, lblRacialCraft);
+//	}
+//	void setDiplomacy()
+//	{
+//		lblAbilityDiplomacy.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Diplomacy";
+//		setClassSkillLabel(skill,lblClassDiplomacy);
+//		getRacialMod(skill, lblRacialDiplomacy);
+//	}
+//	void setDisableDevice()
+//	{
+//		lblAbilityDisableDevice.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Disable Device";
+//		setClassSkillLabel(skill,lblClassDisableDevice);
+//		getRacialMod(skill, lblRacialDisableDevice);
+//	}
+//	void setDisguise()
+//	{
+//		lblAbilityDisguise.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Disguise";
+//		setClassSkillLabel(skill,lblClassDisguise);
+//		getRacialMod(skill, lblRacialDisguise);
+//	}
+//	void setEscapeArtist()
+//	{
+//		lblAbilityEscapeArtist.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Escape Artist";
+//		setClassSkillLabel(skill,lblClassEscapeArtist);
+//		getRacialMod(skill, lblRacialEscapeArtist);
+//	}
+//	void setFly()
+//	{
+//		lblAbilityFly.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Fly";
+//		setClassSkillLabel(skill,lblClassFly);
+//		getRacialMod(skill, lblRacialFly);
+//	}
+//	void setHandleAnimal()
+//	{
+//		lblAbilityHandleAnimal.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Handle Animal";
+//		setClassSkillLabel(skill,lblClassHandleAnimal);
+//		getRacialMod(skill, lblRacialHandleAnimal);
+//	}
+//	void setHeal()
+//	{
+//		lblAbilityHeal.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
+//		String skill = "Heal";
+//		setClassSkillLabel(skill,lblClassHeal);
+//		getRacialMod(skill, lblRacialHeal);
+//	}
+//	void setIntimidate()
+//	{
+//		lblAbilityIntimidate.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Intimidate";
+//		setClassSkillLabel(skill,lblClassIntimidate);
+//		getRacialMod(skill, lblRacialIntimidate);
+//	}
+//	void setKnowledgeArcana()
+//	{
+//		lblAbilityKnowledgeArcana.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (arcana)";
+//		setClassSkillLabel(skill,lblClassKnowledgeArcana);
+//		getRacialMod(skill, lblRacialKnowledgeArcana);
+//	}
+//	void setKnowledgeDungeoneering()
+//	{
+//		lblAbilityKnowledgeDungeoneering.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (dungeoneering)";
+//		setClassSkillLabel(skill,lblClassKnowledgeDungeoneering);
+//		getRacialMod(skill, lblRacialKnowledgeDungeoneering);
+//	}
+//	void setKnowledgeEngineering()
+//	{
+//		lblAbilityKnowledgeEngineering.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (engineering)";
+//		setClassSkillLabel(skill,lblClassKnowledgeEngineering);
+//		getRacialMod(skill, lblRacialKnowledgeEngineering);
+//	}
+//	void setKnowledgeGeography()
+//	{
+//		lblAbilityKnowledgeGeography.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (geography)";
+//		setClassSkillLabel(skill,lblClassKnowledgeGeography);
+//		getRacialMod(skill, lblRacialKnowledgeGeography);
+//	}
+//	void setKnowledgeHistory()
+//	{
+//		lblAbilityKnowledgeHistory.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (history)";
+//		setClassSkillLabel(skill,lblClassKnowledgeHistory);
+//		getRacialMod(skill, lblRacialKnowledgeHistory);
+//	}
+//	void setKnowledgeLocal()
+//	{
+//		lblAbilityKnowledgeLocal.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (local)";
+//		setClassSkillLabel(skill,lblClassKnowledgeLocal);
+//		getRacialMod(skill, lblRacialKnowledgeLocal);
+//	}
+//	void setKnowledgeNature()
+//	{
+//		lblAbilityKnowledgeNature.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (nature)";
+//		setClassSkillLabel(skill,lblClassKnowledgeNature);
+//		getRacialMod(skill, lblRacialKnowledgeNature);
+//	}
+//	void setKnowledgeNobility()
+//	{
+//		lblAbilityKnowledgeNobility.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (nobility)";
+//		setClassSkillLabel(skill,lblClassKnowledgeNobility);
+//		getRacialMod(skill, lblRacialKnowledgeNobility);
+//	}
+//	void setKnowledgePlanes()
+//	{
+//		lblAbilityKnowledgePlanes.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (planes)";
+//		setClassSkillLabel(skill,lblClassKnowledgePlanes);
+//		getRacialMod(skill, lblRacialKnowledgePlanes);
+//	}
+//	void setKnowledgeReligion()
+//	{
+//		lblAbilityKnowledgeReligion.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Knowledge (religion)";
+//		setClassSkillLabel(skill,lblClassKnowledgeReligion);
+//		getRacialMod(skill, lblRacialKnowledgeReligion);
+//	}
+//	void setLinguistics()
+//	{
+//		lblAbilityLinguistics.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Linguistics";
+//		setClassSkillLabel(skill,lblClassLinguistics);
+//		getRacialMod(skill, lblRacialLinguistics);
+//	}
+//	void setPerception()
+//	{
+//		lblAbilityPerception.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
+//		String skill = "Perception";
+//		setClassSkillLabel(skill,lblClassPerception);
+//		getRacialMod(skill, lblRacialPerception);
+//	}
+//	void setPerform()
+//	{
+//		lblAbilityPerform.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Perform";
+//		setClassSkillLabel(skill,lblClassPerform);
+//		getRacialMod(skill, lblRacialPerform);
+//	}
+//	void setProfession()
+//	{
+//		lblAbilityProfession.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
+//		String skill = "Profession";
+//		setClassSkillLabel(skill,lblClassProfession);
+//		getRacialMod(skill, lblRacialProfession);
+//	}
+//	void setRide()
+//	{
+//		lblAbilityRide.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Ride";
+//		setClassSkillLabel(skill,lblClassRide);
+//		getRacialMod(skill, lblRacialRide);
+//	}
+//	void setSenseMotive()
+//	{
+//		lblAbilitySenseMotive.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
+//		String skill = "Sense Motive";
+//		setClassSkillLabel(skill,lblClassSenseMotive);
+//		getRacialMod(skill, lblRacialSenseMotive);
+//	}
+//	void setSleightOfHand()
+//	{
+//		lblAbilitySleightOfHand.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Sleight of Hand";
+//		setClassSkillLabel(skill,lblClassSleightOfHand);
+//		getRacialMod(skill, lblRacialSleightOfHand);
+//	}
+//	void setSpellcraft()
+//	{
+//		lblAbilitySpellcraft.setText("Int: " + getCharacter().getIntelligence().getModifier().get().toString());
+//		String skill = "Spellcraft";
+//		setClassSkillLabel(skill,lblClassSpellcraft);
+//		getRacialMod(skill, lblRacialSpellcraft);
+//	}
+//	void setStealth()
+//	{
+//		lblAbilityStealth.setText("Dex: " + getCharacter().getDexterity().getModifier().get().toString());
+//		String skill = "Stealth";
+//		setClassSkillLabel(skill,lblClassStealth);
+//		getRacialMod(skill, lblRacialStealth);
+//	}
+//	void setSurvival()
+//	{
+//		lblAbilitySurvival.setText("Wis: " + getCharacter().getWisdom().getModifier().get().toString());
+//		String skill = "Survival";
+//		setClassSkillLabel(skill,lblClassSurvival);
+//		getRacialMod(skill, lblRacialSurvival);
+//	}
+//	void setSwim()
+//	{
+//		lblAbilitySwim.setText("Str: " + getCharacter().getStrength().getModifier().get().toString());
+//		String skill = "Swim";
+//		setClassSkillLabel(skill,lblClassSwim);
+//		getRacialMod(skill, lblRacialSwim);
+//	}
+//	void setUseMagicDevice()
+//	{
+//		lblAbilityUseMagicDevice.setText("Cha: " + getCharacter().getCharisma().getModifier().get().toString());
+//		String skill = "Use Magic Device";
+//		setClassSkillLabel(skill,lblClassUseMagicDevice);
+//		getRacialMod(skill, lblRacialUseMagicDevice);
+//	}
 	//endregion
 	
 	//region totalSetupForSkills
-		void setTotalAcrobatics()
-		{
-			lblTotalAcrobatics.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksAcrobatics.getText())));
-		}
-		void setTotalAppraise()
-		{
-			lblTotalAppraise.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksAppraise.getText())));
-		}
-		void setTotalBluff()
-		{
-			lblTotalBluff.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksBluff.getText())));
-		}
-		void setTotalClimb()
-		{
-			lblTotalClimb.setText("" + (getCharacter().getStrength().getModifier().get() + Integer.parseInt(lblRanksClimb.getText())));
-		}
-		void setTotalCraft()
-		{
-			lblTotalCraft.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksCraft.getText())));
-		}
-		void setTotalDiplomacy()
-		{
-			lblTotalDiplomacy.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksDiplomacy.getText())));
-		}
-		void setTotalDisableDevice()
-		{
-			lblTotalDisableDevice.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksDisableDevice.getText())));
-		}
-		void setTotalDisguise()
-		{
-			lblTotalDisguise.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksDisguise.getText())));
-		}
-		void setTotalEscapeArtist()
-		{
-			lblTotalEscapeArtist.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksEscapeArtist.getText())));
-		}
-		void setTotalFly()
-		{
-			lblTotalFly.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksFly.getText())));
-		}
-		void setTotalHandleAnimal()
-		{
-			lblTotalHandleAnimal.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksHandleAnimal.getText())));
-		}
-		void setTotalHeal()
-		{
-			lblTotalHeal.setText("" + (getCharacter().getWisdom().getModifier().get() + Integer.parseInt(lblRanksHeal.getText())));
-		}
-		void setTotalIntimidate()
-		{
-			lblTotalIntimidate.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksIntimidate.getText())));
-		}
-		void setTotalKnowledgeArcana()
-		{
-			lblTotalKnowledgeArcana.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeArcana.getText())));
-		}
-		void setTotalKnowledgeDungeoneering()
-		{
-			lblTotalKnowledgeDungeoneering.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeDungeoneering.getText())));
-		}
-		void setTotalKnowledgeEngineering()
-		{
-			lblTotalKnowledgeEngineering.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeEngineering.getText())));
-		}
-		void setTotalKnowledgeGeography()
-		{
-			lblTotalKnowledgeGeography.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeGeography.getText())));
-		}
-		void setTotalKnowledgeHistory()
-		{
-			lblTotalKnowledgeHistory.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeHistory.getText())));
-		}
-		void setTotalKnowledgeLocal()
-		{
-			lblTotalKnowledgeLocal.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeLocal.getText())));
-		}
-		void setTotalKnowledgeNature()
-		{
-			lblTotalKnowledgeNature.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeNature.getText())));
-		}
-		void setTotalKnowledgeNobility()
-		{
-			lblTotalKnowledgeNobility.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeNobility.getText())));
-		}
-		void setTotalKnowledgePlanes()
-		{
-			lblTotalKnowledgePlanes.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgePlanes.getText())));
-		}
-		void setTotalKnowledgeReligion()
-		{
-			lblTotalKnowledgeReligion.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksKnowledgeReligion.getText())));
-		}
-		void setTotalLinguistics()
-		{
-			lblTotalLinguistics.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksLinguistics.getText())));
-		}
-		void setTotalPerception()
-		{
-			lblTotalPerception.setText("" + (getCharacter().getWisdom().getModifier().get() + Integer.parseInt(lblRanksPerception.getText())));
-		}
-		void setTotalPerform()
-		{
-			lblTotalPerform.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksPerform.getText())));
-		}
-		void setTotalProfession()
-		{
-			lblTotalProfession.setText("" + (getCharacter().getWisdom().getModifier().get() + Integer.parseInt(lblRanksProfession.getText())));
-		}
-		void setTotalRide()
-		{
-			lblTotalRide.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksRide.getText())));
-		}
-		void setTotalSenseMotive()
-		{
-			lblTotalSenseMotive.setText("" + (getCharacter().getWisdom().getModifier().get() + Integer.parseInt(lblRanksSenseMotive.getText())));
-		}
-		void setTotalSleightOfHand()
-		{
-			lblTotalSleightOfHand.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksSleightOfHand.getText())));
-		}
-		void setTotalSpellcraft()
-		{
-			lblTotalSpellcraft.setText("" + (getCharacter().getIntelligence().getModifier().get() + Integer.parseInt(lblRanksSpellcraft.getText())));
-		}
-		void setTotalStealth()
-		{
-			lblTotalStealth.setText("" + (getCharacter().getDexterity().getModifier().get() + Integer.parseInt(lblRanksStealth.getText())));
-		}
-		void setTotalSurvival()
-		{
-			lblTotalSurvival.setText("" + (getCharacter().getWisdom().getModifier().get() + Integer.parseInt(lblRanksSurvival.getText())));
-		}
-		void setTotalSwim()
-		{
-			lblTotalSwim.setText("" + (getCharacter().getStrength().getModifier().get() + Integer.parseInt(lblRanksSwim.getText())));
-		}
-		void setTotalUseMagicDevice()
-		{
-			lblTotalUseMagicDevice.setText("" + (getCharacter().getCharisma().getModifier().get() + Integer.parseInt(lblRanksUseMagicDevice.getText())));
-		}
-		//endregion
+	void setTotal(SkillGridRow row)
+	{
+		row.getTotalLabel();
+	}
+	//endregion
 	
 	//region handleSkills
 	@FXML
 	void handleUseMagicDeviceIncrease() {
-		lblRanksUseMagicDevice.setText(""
-				+ (Integer.parseInt(lblRanksUseMagicDevice.getText()) + 1));
-		setTotalUseMagicDevice();
+		skillGrid[34].increaseRanks();
 	}
 
 	@FXML
 	void handleUseMagicDeviceDecrease() {
-		lblRanksUseMagicDevice.setText(""
-				+ (Integer.parseInt(lblRanksUseMagicDevice.getText()) - 1));
-		setTotalUseMagicDevice();
+		skillGrid[34].decreaseRanks();
 	}
 	
 	@FXML
 	void handleSwimIncrease() {
-		lblRanksSwim.setText(""
-				+ (Integer.parseInt(lblRanksSwim.getText()) + 1));
-		setTotalSwim();
+		skillGrid[33].increaseRanks();
 	}
 
 	@FXML
 	void handleSwimDecrease() {
-		lblRanksSwim.setText(""
-				+ (Integer.parseInt(lblRanksSwim.getText()) - 1));
-		setTotalSwim();
+		skillGrid[33].decreaseRanks();
 	}
 	
 	@FXML
 	void handleSurvivalIncrease() {
-		lblRanksSurvival.setText(""
-				+ (Integer.parseInt(lblRanksSurvival.getText()) + 1));
-		setTotalSurvival();
+		skillGrid[32].increaseRanks();
 	}
 
 	@FXML
 	void handleSurvivalDecrease() {
-		lblRanksSurvival.setText(""
-				+ (Integer.parseInt(lblRanksSurvival.getText()) - 1));
-		setTotalSurvival();
+		skillGrid[32].decreaseRanks();
 	}
 	
 	@FXML
 	void handleStealthIncrease() {
-		lblRanksStealth.setText(""
-				+ (Integer.parseInt(lblRanksStealth.getText()) + 1));
-		setTotalStealth();
+		skillGrid[31].increaseRanks();
 	}
 
 	@FXML
 	void handleStealthDecrease() {
-		lblRanksStealth.setText(""
-				+ (Integer.parseInt(lblRanksStealth.getText()) - 1));
-		setTotalStealth();
+		skillGrid[31].decreaseRanks();
 	}
 	
 	@FXML
 	void handleSpellcraftIncrease() {
-		lblRanksSpellcraft.setText(""
-				+ (Integer.parseInt(lblRanksSpellcraft.getText()) + 1));
-		setTotalSpellcraft();
+		skillGrid[30].increaseRanks();
 	}
 
 	@FXML
 	void handleSpellcraftDecrease() {
-		lblRanksSpellcraft.setText(""
-				+ (Integer.parseInt(lblRanksSpellcraft.getText()) - 1));
-		setTotalSpellcraft();
+		skillGrid[30].decreaseRanks();
 	}
 	
 	@FXML
 	void handleSleightOfHandIncrease() {
-		lblRanksSleightOfHand.setText(""
-				+ (Integer.parseInt(lblRanksSleightOfHand.getText()) + 1));
-		setTotalSleightOfHand();
+		skillGrid[29].increaseRanks();
 	}
 
 	@FXML
 	void handleSleightOfHandDecrease() {
-		lblRanksSleightOfHand.setText(""
-				+ (Integer.parseInt(lblRanksSleightOfHand.getText()) - 1));
-		setTotalSleightOfHand();
+		skillGrid[29].decreaseRanks();
 	}
 	
 	@FXML
 	void handleSenseMotiveIncrease() {
-		lblRanksSenseMotive.setText(""
-				+ (Integer.parseInt(lblRanksSenseMotive.getText()) + 1));
-		setTotalSenseMotive();
+		skillGrid[28].increaseRanks();
 	}
 
 	@FXML
 	void handleSenseMotiveDecrease() {
-		lblRanksSenseMotive.setText(""
-				+ (Integer.parseInt(lblRanksSenseMotive.getText()) - 1));
-		setTotalSenseMotive();
+		skillGrid[28].decreaseRanks();
 	}
 	
 	@FXML
 	void handleRideIncrease() {
-		lblRanksRide.setText(""
-				+ (Integer.parseInt(lblRanksRide.getText()) + 1));
-		setTotalRide();
+		skillGrid[27].increaseRanks();
 	}
 
 	@FXML
 	void handleRideDecrease() {
-		lblRanksRide.setText(""
-				+ (Integer.parseInt(lblRanksRide.getText()) - 1));
-		setTotalRide();
+		skillGrid[27].decreaseRanks();
 	}
 	
 	@FXML
 	void handleProfessionIncrease() {
-		lblRanksProfession.setText(""
-				+ (Integer.parseInt(lblRanksProfession.getText()) + 1));
-		setTotalProfession();
+		skillGrid[26].increaseRanks();
 	}
 
 	@FXML
 	void handleProfessionDecrease() {
-		lblRanksProfession.setText(""
-				+ (Integer.parseInt(lblRanksProfession.getText()) - 1));
-		setTotalProfession();
+		skillGrid[26].decreaseRanks();
 	}
 	
 	@FXML
 	void handlePerformIncrease() {
-		lblRanksPerform.setText(""
-				+ (Integer.parseInt(lblRanksPerform.getText()) + 1));
-		setTotalPerform();
+		skillGrid[25].increaseRanks();
 	}
 
 	@FXML
 	void handlePerformDecrease() {
-		lblRanksPerform.setText(""
-				+ (Integer.parseInt(lblRanksPerform.getText()) - 1));
-		setTotalPerform();
+		skillGrid[25].decreaseRanks();
 	}
 	
 	@FXML
 	void handlePerceptionIncrease() {
-		lblRanksPerception.setText(""
-				+ (Integer.parseInt(lblRanksPerception.getText()) + 1));
-		setTotalPerception();
+		skillGrid[24].increaseRanks();
 	}
 
 	@FXML
 	void handlePerceptionDecrease() {
-		lblRanksPerception.setText(""
-				+ (Integer.parseInt(lblRanksPerception.getText()) - 1));
-		setTotalPerception();
+		skillGrid[24].decreaseRanks();
 	}
 	
 	@FXML
 	void handleLinguisticsIncrease() {
-		lblRanksLinguistics.setText(""
-				+ (Integer.parseInt(lblRanksLinguistics.getText()) + 1));
-		setTotalLinguistics();
+		skillGrid[23].increaseRanks();
 	}
 
 	@FXML
 	void handleLinguisticsDecrease() {
-		lblRanksLinguistics.setText(""
-				+ (Integer.parseInt(lblRanksLinguistics.getText()) - 1));
-		setTotalLinguistics();
+		skillGrid[23].decreaseRanks();
 	}
 	
 	@FXML
 	void handleKnowledgeReligionIncrease() {
-		lblRanksKnowledgeReligion.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeReligion.getText()) + 1));
-		setTotalKnowledgeReligion();
+		skillGrid[22].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeReligionDecrease() {
-		lblRanksKnowledgeReligion.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeReligion.getText()) - 1));
-		setTotalKnowledgeReligion();
+		skillGrid[22].decreaseRanks();
 	}
 	
 	@FXML
 	void handleKnowledgePlanesIncrease() {
-		lblRanksKnowledgePlanes.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgePlanes.getText()) + 1));
-		setTotalKnowledgePlanes();
+		skillGrid[21].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgePlanesDecrease() {
-		lblRanksKnowledgePlanes.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgePlanes.getText()) - 1));
-		setTotalKnowledgePlanes();
+		skillGrid[21].decreaseRanks();
 	}
 	
 	@FXML
 	void handleKnowledgeNobilityIncrease() {
-		lblRanksKnowledgeNobility.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeNobility.getText()) + 1));
-		setTotalKnowledgeNobility();
+		skillGrid[20].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeNobilityDecrease() {
-		lblRanksKnowledgeNobility.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeNobility.getText()) - 1));
-		setTotalKnowledgeNobility();
+		skillGrid[20].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeNatureIncrease() {
-		lblRanksKnowledgeNature.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeNature.getText()) + 1));
-		setTotalKnowledgeNature();
+		skillGrid[19].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeNatureDecrease() {
-		lblRanksKnowledgeNature.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeNature.getText()) - 1));
-		setTotalKnowledgeNature();
+		skillGrid[19].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeLocalIncrease() {
-		lblRanksKnowledgeLocal.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeLocal.getText()) + 1));
-		setTotalKnowledgeLocal();
+		skillGrid[18].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeLocalDecrease() {
-		lblRanksKnowledgeLocal.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeLocal.getText()) - 1));
-		setTotalKnowledgeLocal();
+		skillGrid[18].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeHistoryIncrease() {
-		lblRanksKnowledgeHistory.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeHistory.getText()) + 1));
-		setTotalKnowledgeHistory();
+		skillGrid[17].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeHistoryDecrease() {
-		lblRanksKnowledgeHistory.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeHistory.getText()) - 1));
-		setTotalKnowledgeHistory();
+		skillGrid[17].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeGeographyIncrease() {
-		lblRanksKnowledgeGeography.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeGeography.getText()) + 1));
-		setTotalKnowledgeGeography();
+		skillGrid[16].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeGeographyDecrease() {
-		lblRanksKnowledgeGeography.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeGeography.getText()) - 1));
-		setTotalKnowledgeGeography();
+		skillGrid[16].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeEngineeringIncrease() {
-		lblRanksKnowledgeEngineering
-				.setText(""
-						+ (Integer.parseInt(lblRanksKnowledgeEngineering
-								.getText()) + 1));
-		setTotalKnowledgeEngineering();
+		skillGrid[15].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeEngineeringDecrease() {
-		lblRanksKnowledgeEngineering
-				.setText(""
-						+ (Integer.parseInt(lblRanksKnowledgeEngineering
-								.getText()) - 1));
-		setTotalKnowledgeEngineering();
+		skillGrid[15].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeDungeoneeringIncrease() {
-		lblRanksKnowledgeDungeoneering
-				.setText(""
-						+ (Integer.parseInt(lblRanksKnowledgeDungeoneering
-								.getText()) + 1));
-		setTotalKnowledgeDungeoneering();
+		skillGrid[14].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeDungeoneeringDecrease() {
-		lblRanksKnowledgeDungeoneering
-				.setText(""
-						+ (Integer.parseInt(lblRanksKnowledgeDungeoneering
-								.getText()) - 1));
-		setTotalKnowledgeDungeoneering();
+		skillGrid[14].decreaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeArcanaIncrease() {
-		lblRanksKnowledgeArcana.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeArcana.getText()) + 1));
-		setTotalKnowledgeArcana();
+		skillGrid[13].increaseRanks();
 	}
 
 	@FXML
 	void handleKnowledgeArcanaDecrease() {
-		lblRanksKnowledgeArcana.setText(""
-				+ (Integer.parseInt(lblRanksKnowledgeArcana.getText()) - 1));
-		setTotalKnowledgeArcana();
+		skillGrid[13].decreaseRanks();
 	}
 
 	@FXML
 	void handleIntimidateIncrease() {
-		lblRanksIntimidate.setText(""
-				+ (Integer.parseInt(lblRanksIntimidate.getText()) + 1));
-		setTotalIntimidate();
+		skillGrid[12].increaseRanks();
 	}
 
 	@FXML
 	void handleIntimidateDecrease() {
-		lblRanksIntimidate.setText(""
-				+ (Integer.parseInt(lblRanksIntimidate.getText()) - 1));
-		setTotalIntimidate();
+		skillGrid[12].decreaseRanks();
 	}
 
 	@FXML
 	void handleHealIncrease() {
-		lblRanksHeal.setText(""
-				+ (Integer.parseInt(lblRanksHeal.getText()) + 1));
-		setTotalHeal();
+		skillGrid[11].increaseRanks();
 	}
 
 	@FXML
 	void handleHealDecrease() {
-		lblRanksHeal.setText(""
-				+ (Integer.parseInt(lblRanksHeal.getText()) - 1));
-		setTotalHeal();
+		skillGrid[11].decreaseRanks();
 	}
 
 	@FXML
 	void handleHandleAnimalIncrease() {
-		lblRanksHandleAnimal.setText(""
-				+ (Integer.parseInt(lblRanksHandleAnimal.getText()) + 1));
-		setTotalHandleAnimal();
+		skillGrid[10].increaseRanks();
 	}
 
 	@FXML
 	void handleHandleAnimalDecrease() {
-		lblRanksHandleAnimal.setText(""
-				+ (Integer.parseInt(lblRanksHandleAnimal.getText()) - 1));
-		setTotalHandleAnimal();
+		skillGrid[10].decreaseRanks();
 	}
 
 	@FXML
 	void handleFlyIncrease() {
-		lblRanksFly.setText("" + (Integer.parseInt(lblRanksFly.getText()) + 1));
-		setTotalFly();
+		skillGrid[9].increaseRanks();
 	}
 
 	@FXML
 	void handleFlyDecrease() {
-		lblRanksFly.setText("" + (Integer.parseInt(lblRanksFly.getText()) - 1));
-		setTotalFly();
+		skillGrid[9].decreaseRanks();
 	}
 
 	@FXML
 	void handleEscapeArtistIncrease() {
-		lblRanksEscapeArtist.setText(""
-				+ (Integer.parseInt(lblRanksEscapeArtist.getText()) + 1));
-		setTotalEscapeArtist();
+		skillGrid[8].increaseRanks();
 	}
 
 	@FXML
 	void handleEscapeArtistDecrease() {
-		lblRanksEscapeArtist.setText(""
-				+ (Integer.parseInt(lblRanksEscapeArtist.getText()) - 1));
-		setTotalEscapeArtist();
+		skillGrid[8].decreaseRanks();
 	}
 
 	@FXML
 	void handleDisguiseIncrease() {
-		lblRanksDisguise.setText(""
-				+ (Integer.parseInt(lblRanksDisguise.getText()) + 1));
-		setTotalDisguise();
+		skillGrid[7].increaseRanks();
 	}
 
 	@FXML
 	void handleDisguiseDecrease() {
-		lblRanksDisguise.setText(""
-				+ (Integer.parseInt(lblRanksDisguise.getText()) - 1));
-				setTotalDisguise();
+		skillGrid[7].decreaseRanks();
 	}
 
 	@FXML
 	void handleDisableDeviceIncrease() {
-		lblRanksDisableDevice.setText(""
-				+ (Integer.parseInt(lblRanksDisableDevice.getText()) + 1));
-		setTotalDisableDevice();
+		skillGrid[6].increaseRanks();
 	}
 
 	@FXML
 	void handleDisableDeviceDecrease() {
-		lblRanksDisableDevice.setText(""
-				+ (Integer.parseInt(lblRanksDisableDevice.getText()) - 1));
-		setTotalDisableDevice();
+		skillGrid[6].decreaseRanks();
 	}
 
 	@FXML
 	void handleDiplomacyIncrease() {
-		lblRanksDiplomacy.setText(""
-				+ (Integer.parseInt(lblRanksDiplomacy.getText()) + 1));
-		setTotalDiplomacy();
+		skillGrid[5].increaseRanks();
 	}
 
 	@FXML
 	void handleDiplomacyDecrease() {
-		lblRanksDiplomacy.setText(""
-				+ (Integer.parseInt(lblRanksDiplomacy.getText()) - 1));
-		setTotalDiplomacy();
+		skillGrid[5].decreaseRanks();
 	}
 
 	@FXML
 	void handleCraftIncrease() {
-		lblRanksCraft.setText(""
-				+ (Integer.parseInt(lblRanksCraft.getText()) + 1));
-		setTotalCraft();
+		skillGrid[4].increaseRanks();
 	}
 
 	@FXML
 	void handleCraftDecrease() {
-		lblRanksCraft.setText(""
-				+ (Integer.parseInt(lblRanksCraft.getText()) - 1));
-				setTotalCraft();
+		skillGrid[4].decreaseRanks();
 	}
 
 	@FXML
 	void handleClimbIncrease() {
-		lblRanksClimb.setText(""
-				+ (Integer.parseInt(lblRanksClimb.getText()) + 1));
-		setTotalClimb();
+		skillGrid[3].increaseRanks();
 	}
 
 	@FXML
 	void handleClimbDecrease() {
-		lblRanksClimb.setText(""
-				+ (Integer.parseInt(lblRanksClimb.getText()) - 1));
-		setTotalClimb();
+		skillGrid[3].decreaseRanks();
 	}
 
 	@FXML
 	void handleBluffIncrease() {
-		lblRanksBluff.setText(""
-				+ (Integer.parseInt(lblRanksBluff.getText()) + 1));
-		setTotalBluff();
+		skillGrid[2].increaseRanks();
 	}
 
 	@FXML
 	void handleBluffDecrease() {
-		lblRanksBluff.setText(""
-				+ (Integer.parseInt(lblRanksBluff.getText()) - 1));
-		setTotalBluff();
+		skillGrid[2].decreaseRanks();
 	}
 
 	@FXML
 	void handleAppraiseIncrease() {
-		lblRanksAppraise.setText(""
-				+ (Integer.parseInt(lblRanksAppraise.getText()) + 1));
-		setTotalAppraise();
+		skillGrid[1].increaseRanks();
 	}
 
 	@FXML
 	void handleAppraiseDecrease() {
-		lblRanksAppraise.setText(""
-				+ (Integer.parseInt(lblRanksAppraise.getText()) - 1));
-		setTotalAppraise();
+		skillGrid[1].decreaseRanks();
 	}
 
 	@FXML
 	void handleAcrobaticsIncrease() {
-		lblRanksAcrobatics.setText(""
-				+ (Integer.parseInt(lblRanksAcrobatics.getText()) + 1));
-		setTotalAcrobatics();
+		skillGrid[0].increaseRanks();
 	}
 
 	@FXML
 	void handleAcrobaticsDecrease() {
-		lblRanksAcrobatics.setText(""
-				+ (Integer.parseInt(lblRanksAcrobatics.getText()) - 1));
-		setTotalAcrobatics();
+		skillGrid[0].decreaseRanks();
 	}
 	//endregion
 
 	@Override
 	public void setData() {
+
+		skillGrid = new SkillGridRow[] {
+			new SkillGridRow("Acrobatics", lblTotalAcrobatics, lblRanksAcrobatics, lblAbilityAcrobatics, lblRacialAcrobatics, lblClassAcrobatics, getCharacter().getDexterity()),
+			new SkillGridRow("Appraise", lblTotalAppraise, lblRanksAppraise, lblAbilityAppraise, lblRacialAppraise, lblClassAppraise, getCharacter().getIntelligence()),
+			new SkillGridRow("Bluff", lblTotalBluff, lblRanksBluff, lblAbilityBluff, lblRacialBluff, lblClassBluff, getCharacter().getCharisma()),
+			new SkillGridRow("Climb", lblTotalClimb, lblRanksClimb, lblAbilityClimb, lblRacialClimb, lblClassClimb, getCharacter().getStrength()),
+			new SkillGridRow("Craft", lblTotalCraft, lblRanksCraft, lblAbilityCraft, lblRacialCraft, lblClassCraft, getCharacter().getIntelligence()),
+			new SkillGridRow("Diplomacy", lblTotalDiplomacy, lblRanksDiplomacy, lblAbilityDiplomacy, lblRacialDiplomacy, lblClassDiplomacy, getCharacter().getCharisma()),
+			new SkillGridRow("Disable Device", lblTotalDisableDevice, lblRanksDisableDevice, lblAbilityDisableDevice, lblRacialDisableDevice, lblClassDisableDevice, getCharacter().getDexterity()),
+			new SkillGridRow("Disguise", lblTotalDisguise, lblRanksDisguise, lblAbilityDisguise, lblRacialDisguise, lblClassDisguise, getCharacter().getCharisma()),
+			new SkillGridRow("Escape Artist", lblTotalEscapeArtist, lblRanksEscapeArtist, lblAbilityEscapeArtist, lblRacialEscapeArtist, lblClassEscapeArtist, getCharacter().getDexterity()),
+			new SkillGridRow("Fly", lblTotalFly, lblRanksFly, lblAbilityFly, lblRacialFly, lblClassFly, getCharacter().getDexterity()),
+			new SkillGridRow("Handle Animal", lblTotalHandleAnimal, lblRanksHandleAnimal, lblAbilityHandleAnimal, lblRacialHandleAnimal, lblClassHandleAnimal, getCharacter().getCharisma()),
+			new SkillGridRow("Heal", lblTotalHeal, lblRanksHeal, lblAbilityHeal, lblRacialHeal, lblClassHeal, getCharacter().getWisdom()),
+			new SkillGridRow("Intimidate", lblTotalIntimidate, lblRanksIntimidate, lblAbilityIntimidate, lblRacialIntimidate, lblClassIntimidate, getCharacter().getCharisma()),
+			new SkillGridRow("Knowledge (arcana)", lblTotalKnowledgeArcana, lblRanksKnowledgeArcana, lblAbilityKnowledgeArcana, lblRacialKnowledgeArcana, lblClassKnowledgeArcana, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (dungeoneering)", lblTotalKnowledgeDungeoneering, lblRanksKnowledgeDungeoneering, lblAbilityKnowledgeDungeoneering, lblRacialKnowledgeDungeoneering, lblClassKnowledgeDungeoneering, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (engineering)", lblTotalKnowledgeEngineering, lblRanksKnowledgeEngineering, lblAbilityKnowledgeEngineering, lblRacialKnowledgeEngineering, lblClassKnowledgeEngineering, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (geography)", lblTotalKnowledgeGeography, lblRanksKnowledgeGeography, lblAbilityKnowledgeGeography, lblRacialKnowledgeGeography, lblClassKnowledgeGeography, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (history)", lblTotalKnowledgeHistory, lblRanksKnowledgeHistory, lblAbilityKnowledgeHistory, lblRacialKnowledgeHistory, lblClassKnowledgeHistory, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (local)", lblTotalKnowledgeLocal, lblRanksKnowledgeLocal, lblAbilityKnowledgeLocal, lblRacialKnowledgeLocal, lblClassKnowledgeLocal, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (nature)", lblTotalKnowledgeNature, lblRanksKnowledgeNature, lblAbilityKnowledgeNature, lblRacialKnowledgeNature, lblClassKnowledgeNature, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (nobility)", lblTotalKnowledgeNobility, lblRanksKnowledgeNobility, lblAbilityKnowledgeNobility, lblRacialKnowledgeNobility, lblClassKnowledgeNobility, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (planes)", lblTotalKnowledgePlanes, lblRanksKnowledgePlanes, lblAbilityKnowledgePlanes, lblRacialKnowledgePlanes, lblClassKnowledgePlanes, getCharacter().getIntelligence()),
+			new SkillGridRow("Knowledge (religion)", lblTotalKnowledgeReligion, lblRanksKnowledgeReligion, lblAbilityKnowledgeReligion, lblRacialKnowledgeReligion, lblClassKnowledgeReligion, getCharacter().getIntelligence()),
+			new SkillGridRow("Linguistics", lblTotalLinguistics, lblRanksLinguistics, lblAbilityLinguistics, lblRacialLinguistics, lblClassLinguistics, getCharacter().getIntelligence()),
+			new SkillGridRow("Perception", lblTotalPerception, lblRanksPerception, lblAbilityPerception, lblRacialPerception, lblClassPerception, getCharacter().getWisdom()),
+			new SkillGridRow("Perform", lblTotalPerform, lblRanksPerform, lblAbilityPerform, lblRacialPerform, lblClassPerform, getCharacter().getCharisma()),
+			new SkillGridRow("Profession", lblTotalProfession, lblRanksProfession, lblAbilityProfession, lblRacialProfession, lblClassProfession, getCharacter().getWisdom()),
+			new SkillGridRow("Ride", lblTotalRide, lblRanksRide, lblAbilityRide, lblRacialRide, lblClassRide, getCharacter().getDexterity()),
+			new SkillGridRow("Sense Motive", lblTotalSenseMotive, lblRanksSenseMotive, lblAbilitySenseMotive, lblRacialSenseMotive, lblClassSenseMotive, getCharacter().getWisdom()),
+			new SkillGridRow("Sleight of Hand", lblTotalSleightOfHand, lblRanksSleightOfHand, lblAbilitySleightOfHand, lblRacialSleightOfHand, lblClassSleightOfHand, getCharacter().getDexterity()),
+			new SkillGridRow("Spellcraft", lblTotalSpellcraft, lblRanksSpellcraft, lblAbilitySpellcraft, lblRacialSpellcraft, lblClassSpellcraft, getCharacter().getIntelligence()),
+			new SkillGridRow("Stealth", lblTotalStealth, lblRanksStealth, lblAbilityStealth, lblRacialStealth, lblClassStealth, getCharacter().getDexterity()),
+			new SkillGridRow("Survival", lblTotalSurvival, lblRanksSurvival, lblAbilitySurvival, lblRacialSurvival, lblClassSurvival, getCharacter().getWisdom()),
+			new SkillGridRow("Swim", lblTotalSwim, lblRanksSwim, lblAbilitySwim, lblRacialSwim, lblClassSwim, getCharacter().getStrength()),
+			new SkillGridRow("Use Magic Device", lblTotalUseMagicDevice, lblRanksUseMagicDevice, lblAbilityUseMagicDevice, lblRacialUseMagicDevice, lblClassUseMagicDevice, getCharacter().getDexterity())
+		};
 		handleLabelSteup();
 	}
 
 	@Override
 	public void getData() {
 		ArrayList<Skill> skills = new ArrayList<Skill>();
-		skills.add(addSkill(Integer.parseInt(lblRanksAcrobatics.getText()), getCharacter().getDexterity(), "Acrobatics", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksAcrobatics.getText()), getCharacter().getDexterity(), "Acrobatics", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksAppraise.getText()), getCharacter().getIntelligence(), "Appraise", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksBluff.getText()), getCharacter().getCharisma(), "Bluff", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksClimb.getText()), getCharacter().getStrength(), "Climb", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksCraft.getText()), getCharacter().getIntelligence(), "Craft", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksDiplomacy.getText())	, getCharacter().getCharisma(), "Diplomacy", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksDisableDevice.getText()), getCharacter().getDexterity(), "Disable Device", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksDisguise.getText()), getCharacter().getCharisma(), "Disguise", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksEscapeArtist.getText()), getCharacter().getDexterity(), "Escape Artist", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksFly.getText()), getCharacter().getDexterity(), "Fly", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksHandleAnimal.getText()), getCharacter().getCharisma(), "Handle Animal", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksHeal.getText()), getCharacter().getWisdom(), "Heal", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksIntimidate.getText()), getCharacter().getCharisma(), "Intimidate", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeArcana.getText()), getCharacter().getIntelligence(), "Knowledge Arcana", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeDungeoneering.getText()), getCharacter().getIntelligence(), "Knowledge Dungeoneering", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeEngineering.getText()), getCharacter().getIntelligence(), "Knowledge Engineering", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeGeography.getText()), getCharacter().getIntelligence(), "Knowledge Geography", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeHistory.getText()), getCharacter().getIntelligence(), "Knowledge History", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeLocal.getText()), getCharacter().getIntelligence(), "Knowledge Local", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeNature.getText()), getCharacter().getIntelligence(), "Knowledge Nature", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeNobility.getText()), getCharacter().getIntelligence(), "Knowledge Nobility", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgePlanes.getText()), getCharacter().getIntelligence(), "Knowledge Planes", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksKnowledgeReligion.getText()), getCharacter().getIntelligence(), "Knowledge Religion", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksLinguistics.getText()), getCharacter().getIntelligence(), "Linguistics", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksPerception.getText()), getCharacter().getWisdom(), "Perception", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksPerform.getText()), getCharacter().getCharisma(), "Perform", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksProfession.getText()), getCharacter().getWisdom(), "Profession", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksRide.getText()), getCharacter().getDexterity(), "Ride", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksSenseMotive.getText()), getCharacter().getWisdom(), "Sense Motive", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksSleightOfHand.getText()), getCharacter().getDexterity(), "Sleight of Hand", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksSpellcraft.getText()), getCharacter().getIntelligence(), "Spellcraft", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksStealth.getText()), getCharacter().getDexterity(), "Stealth", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksSurvival.getText()), getCharacter().getWisdom(), "Survival", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksSwim.getText()), getCharacter().getDexterity(), "Swim", null));
-		skills.add(addSkill(Integer.parseInt(lblRanksUseMagicDevice.getText()), getCharacter().getCharisma(), "Use Magic Device", null));
+		for (SkillGridRow skillGridRow : skillGrid) {
+			skills.add(skillGridRow.toSkill());
+		}
 		
 		this.getCharacter().setSkills(skills.toArray(new Skill[]{}));
 	}
 
-	private Skill addSkill(int rank, Ability attrToUse, String name, HashMap<String, Integer> situationalMod) {
-		Skill skill = null;
-		for (String S : getCharacter().getClasses()[0].getClassSkills()) {
-			if(S.equals(name)) skill =  new Skill(rank, attrToUse, name, true, situationalMod);
-			else skill = new Skill(rank, attrToUse, name, false, situationalMod);
-		}
-		return skill;
-		
-	}
+	// private Skill addSkill(int rank, Ability attrToUse, String name,
+	// HashMap<String, Integer> situationalMod) {
+	// Skill skill = null;
+	// for (String S : getCharacter().getClasses()[0].getClassSkills()) {
+	// if(S.equals(name)) skill = new Skill(rank, attrToUse, name, true,
+	// situationalMod);
+	// else skill = new Skill(rank, attrToUse, name, false, situationalMod);
+	// }
+	// return skill;
+	//
+	// }
 
 }
