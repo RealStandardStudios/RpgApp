@@ -450,7 +450,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 					}
 					else e.printStackTrace();
 				}
-				if(priceCheck <= 0) break;
+				if(priceCheck < 0) break;
 				//if the cost of the item takes your money into deficit, don't buy the item
 				
 				goldRemaining = priceCheck;
@@ -482,7 +482,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 					}
 					else e.printStackTrace();
 				}
-				if(priceCheck <= 0) break;
+				if(priceCheck < 0) break;
 				//if the cost of the item takes your money into deficit, don't buy the item
 				
 				goldRemaining = priceCheck;
@@ -514,7 +514,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 					}
 					else e.printStackTrace();
 				}
-				if(priceCheck <= 0) break;
+				if(priceCheck < 0) break;
 				//if the cost of the item takes your money into deficit, don't buy the item
 				
 				goldRemaining = priceCheck;
