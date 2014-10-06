@@ -134,6 +134,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			getPartials().get("Race").getData();
 			getPartials().get("Skills").getData();
 			getPartials().get("Feat").getData();
+			getPartials().get("Profile").getData();
 			getCharacter().setLevel(1);
 			
 			getPartials().get("Summary").setData();
@@ -143,14 +144,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			break;
 		}
 	}
-	
-//	public void recheckWealthRoll()
-//	{
-//		if(partials != null)
-//		{
-//			partials.get("Equipment").setData();
-//		}
-//	}
 	
 	@Override
 	public void handleOkay(ActionEvent event) {
@@ -170,7 +163,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		
 		directoryChooser.setTitle("Data Directory");
 		File defaultDirectory = new File(this.getClass().getResource("")
-				.getPath()+"\\..\\..\\..\\..\\");
+				.getPath()+"\\..\\..\\..\\..\\characters");
 		if(!defaultDirectory.exists())
 			defaultDirectory.mkdirs();
 		directoryChooser.setInitialDirectory(defaultDirectory);

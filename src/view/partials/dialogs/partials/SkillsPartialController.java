@@ -406,7 +406,7 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	private int getRacialMod(String skill) {
 		int racialBonus = 0;
 		for (Effect e : getCharacter().getEffects()) {
-			System.out.println(e.getClass().toString());
+			//System.out.println(e.getClass().toString());
 			if(e.getClass().toString().equals("class pathfinder.data.Effects.SkillEffect")) {
 				SkillEffect effect = (SkillEffect) e;
 				//System.out.println("There is a skill effect!");

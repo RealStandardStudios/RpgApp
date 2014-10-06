@@ -94,11 +94,13 @@ public class ProfilePartialController extends NewCharacterPartialController {
 	public void getData() {
 		getCharacter().setName(txtCharName.getText());
 		HashMap<String, String> fluff = new HashMap<String, String>();
+		Alignment alignment = null;
 		for (int i = 0; i < alignments.length; i++) {
 			if (alignments[i].selectedProperty().get()) {
-				getCharacter().setAlignment(Alignments.Any[i]);
+				alignment = Alignments.Any[i];
 			}
 		}
+		getCharacter().setAlignment(alignment);
 		fluff.put("HomeLand", txtCharHomeLand.getText());
 		fluff.put("Background", txtaCharBackground.getText());
 		fluff.put("Deities", txtCharDeities.getText());
