@@ -11,6 +11,8 @@ import view.SkillGridRow;
 
 public class SkillsPartialController extends NewCharacterPartialController {
 	
+	@FXML
+	Label lblRanksRemaining;
 	//region Skill Ability mods
 	@FXML
 	Label lblAbilityAcrobatics;
@@ -428,361 +430,387 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	}
 	//endregion
 	
+	void increaseRank(SkillGridRow skill)
+	{
+		int pointsRemaining = Integer.parseInt(lblRanksRemaining.getText());
+		if(pointsRemaining > 0)
+		{
+			if(skill.getRanks() < getCharacter().getLevel())
+			{
+				skill.increaseRanks();
+				pointsRemaining--;
+				lblRanksRemaining.setText(pointsRemaining + "");
+			}
+		}
+	}
+	
+	void decreseRank(SkillGridRow skill)
+	{
+		int pointsRemaining = Integer.parseInt(lblRanksRemaining.getText());
+		if(skill.getRanks() > 0)
+		{
+			skill.decreaseRanks();
+			pointsRemaining++;
+			lblRanksRemaining.setText(pointsRemaining + "");
+		}
+	}
+	
 	//region handleSkills
 	@FXML
 	void handleUseMagicDeviceIncrease() {
-		skillGrid[34].increaseRanks();
+		increaseRank(skillGrid[34]);
 	}
 
 	@FXML
 	void handleUseMagicDeviceDecrease() {
-		skillGrid[34].decreaseRanks();
+		decreseRank(skillGrid[34]);
 	}
 	
 	@FXML
 	void handleSwimIncrease() {
-		skillGrid[33].increaseRanks();
+		increaseRank(skillGrid[33]);
 	}
 
 	@FXML
 	void handleSwimDecrease() {
-		skillGrid[33].decreaseRanks();
+		decreseRank(skillGrid[33]);
 	}
 	
 	@FXML
 	void handleSurvivalIncrease() {
-		skillGrid[32].increaseRanks();
+		increaseRank(skillGrid[32]);
 	}
 
 	@FXML
 	void handleSurvivalDecrease() {
-		skillGrid[32].decreaseRanks();
+		decreseRank(skillGrid[32]);
 	}
 	
 	@FXML
 	void handleStealthIncrease() {
-		skillGrid[31].increaseRanks();
+		increaseRank(skillGrid[31]);
 	}
 
 	@FXML
 	void handleStealthDecrease() {
-		skillGrid[31].decreaseRanks();
+		decreseRank(skillGrid[31]);
 	}
 	
 	@FXML
 	void handleSpellcraftIncrease() {
-		skillGrid[30].increaseRanks();
+		increaseRank(skillGrid[30]);
 	}
 
 	@FXML
 	void handleSpellcraftDecrease() {
-		skillGrid[30].decreaseRanks();
+		decreseRank(skillGrid[30]);
 	}
 	
 	@FXML
 	void handleSleightOfHandIncrease() {
-		skillGrid[29].increaseRanks();
+		increaseRank(skillGrid[29]);
 	}
 
 	@FXML
 	void handleSleightOfHandDecrease() {
-		skillGrid[29].decreaseRanks();
+		decreseRank(skillGrid[29]);
 	}
 	
 	@FXML
 	void handleSenseMotiveIncrease() {
-		skillGrid[28].increaseRanks();
+		increaseRank(skillGrid[28]);
 	}
 
 	@FXML
 	void handleSenseMotiveDecrease() {
-		skillGrid[28].decreaseRanks();
+		decreseRank(skillGrid[28]);
 	}
 	
 	@FXML
 	void handleRideIncrease() {
-		skillGrid[27].increaseRanks();
+		increaseRank(skillGrid[27]);
 	}
 
 	@FXML
 	void handleRideDecrease() {
-		skillGrid[27].decreaseRanks();
+		decreseRank(skillGrid[27]);
 	}
 	
 	@FXML
 	void handleProfessionIncrease() {
-		skillGrid[26].increaseRanks();
+		increaseRank(skillGrid[26]);
 	}
 
 	@FXML
 	void handleProfessionDecrease() {
-		skillGrid[26].decreaseRanks();
+		decreseRank(skillGrid[26]);
 	}
 	
 	@FXML
 	void handlePerformIncrease() {
-		skillGrid[25].increaseRanks();
+		increaseRank(skillGrid[25]);
 	}
 
 	@FXML
 	void handlePerformDecrease() {
-		skillGrid[25].decreaseRanks();
+		decreseRank(skillGrid[25]);
 	}
 	
 	@FXML
 	void handlePerceptionIncrease() {
-		skillGrid[24].increaseRanks();
+		increaseRank(skillGrid[24]);
 	}
 
 	@FXML
 	void handlePerceptionDecrease() {
-		skillGrid[24].decreaseRanks();
+		decreseRank(skillGrid[24]);
 	}
 	
 	@FXML
 	void handleLinguisticsIncrease() {
-		skillGrid[23].increaseRanks();
+		increaseRank(skillGrid[23]);
 	}
 
 	@FXML
 	void handleLinguisticsDecrease() {
-		skillGrid[23].decreaseRanks();
+		decreseRank(skillGrid[23]);
 	}
 	
 	@FXML
 	void handleKnowledgeReligionIncrease() {
-		skillGrid[22].increaseRanks();
+		increaseRank(skillGrid[22]);
 	}
 
 	@FXML
 	void handleKnowledgeReligionDecrease() {
-		skillGrid[22].decreaseRanks();
+		decreseRank(skillGrid[22]);
 	}
 	
 	@FXML
 	void handleKnowledgePlanesIncrease() {
-		skillGrid[21].increaseRanks();
+		increaseRank(skillGrid[21]);
 	}
 
 	@FXML
 	void handleKnowledgePlanesDecrease() {
-		skillGrid[21].decreaseRanks();
+		decreseRank(skillGrid[21]);
 	}
 	
 	@FXML
 	void handleKnowledgeNobilityIncrease() {
-		skillGrid[20].increaseRanks();
+		increaseRank(skillGrid[20]);
 	}
 
 	@FXML
 	void handleKnowledgeNobilityDecrease() {
-		skillGrid[20].decreaseRanks();
+		decreseRank(skillGrid[20]);
 	}
 
 	@FXML
 	void handleKnowledgeNatureIncrease() {
-		skillGrid[19].increaseRanks();
+		increaseRank(skillGrid[19]);
 	}
 
 	@FXML
 	void handleKnowledgeNatureDecrease() {
-		skillGrid[19].decreaseRanks();
+		decreseRank(skillGrid[19]);
 	}
 
 	@FXML
 	void handleKnowledgeLocalIncrease() {
-		skillGrid[18].increaseRanks();
+		increaseRank(skillGrid[18]);
 	}
 
 	@FXML
 	void handleKnowledgeLocalDecrease() {
-		skillGrid[18].decreaseRanks();
+		decreseRank(skillGrid[18]);
 	}
 
 	@FXML
 	void handleKnowledgeHistoryIncrease() {
-		skillGrid[17].increaseRanks();
+		increaseRank(skillGrid[17]);
 	}
 
 	@FXML
 	void handleKnowledgeHistoryDecrease() {
-		skillGrid[17].decreaseRanks();
+		decreseRank(skillGrid[17]);
 	}
 
 	@FXML
 	void handleKnowledgeGeographyIncrease() {
-		skillGrid[16].increaseRanks();
+		increaseRank(skillGrid[16]);
 	}
 
 	@FXML
 	void handleKnowledgeGeographyDecrease() {
-		skillGrid[16].decreaseRanks();
+		decreseRank(skillGrid[16]);
 	}
 
 	@FXML
 	void handleKnowledgeEngineeringIncrease() {
-		skillGrid[15].increaseRanks();
+		increaseRank(skillGrid[15]);
 	}
 
 	@FXML
 	void handleKnowledgeEngineeringDecrease() {
-		skillGrid[15].decreaseRanks();
+		decreseRank(skillGrid[15]);
 	}
 
 	@FXML
 	void handleKnowledgeDungeoneeringIncrease() {
-		skillGrid[14].increaseRanks();
+		increaseRank(skillGrid[14]);
 	}
 
 	@FXML
 	void handleKnowledgeDungeoneeringDecrease() {
-		skillGrid[14].decreaseRanks();
+		decreseRank(skillGrid[14]);
 	}
 
 	@FXML
 	void handleKnowledgeArcanaIncrease() {
-		skillGrid[13].increaseRanks();
+		increaseRank(skillGrid[13]);
 	}
 
 	@FXML
 	void handleKnowledgeArcanaDecrease() {
-		skillGrid[13].decreaseRanks();
+		decreseRank(skillGrid[13]);
 	}
 
 	@FXML
 	void handleIntimidateIncrease() {
-		skillGrid[12].increaseRanks();
+		increaseRank(skillGrid[12]);
 	}
 
 	@FXML
 	void handleIntimidateDecrease() {
-		skillGrid[12].decreaseRanks();
+		decreseRank(skillGrid[12]);
 	}
 
 	@FXML
 	void handleHealIncrease() {
-		skillGrid[11].increaseRanks();
+		increaseRank(skillGrid[11]);
 	}
 
 	@FXML
 	void handleHealDecrease() {
-		skillGrid[11].decreaseRanks();
+		decreseRank(skillGrid[11]);
 	}
 
 	@FXML
 	void handleHandleAnimalIncrease() {
-		skillGrid[10].increaseRanks();
+		increaseRank(skillGrid[10]);
 	}
 
 	@FXML
 	void handleHandleAnimalDecrease() {
-		skillGrid[10].decreaseRanks();
+		decreseRank(skillGrid[10]);
 	}
 
 	@FXML
 	void handleFlyIncrease() {
-		skillGrid[9].increaseRanks();
+		increaseRank(skillGrid[9]);
 	}
 
 	@FXML
 	void handleFlyDecrease() {
-		skillGrid[9].decreaseRanks();
+		decreseRank(skillGrid[9]);
 	}
 
 	@FXML
 	void handleEscapeArtistIncrease() {
-		skillGrid[8].increaseRanks();
+		increaseRank(skillGrid[8]);
 	}
 
 	@FXML
 	void handleEscapeArtistDecrease() {
-		skillGrid[8].decreaseRanks();
+		decreseRank(skillGrid[8]);
 	}
 
 	@FXML
 	void handleDisguiseIncrease() {
-		skillGrid[7].increaseRanks();
+		increaseRank(skillGrid[7]);
 	}
 
 	@FXML
 	void handleDisguiseDecrease() {
-		skillGrid[7].decreaseRanks();
+		decreseRank(skillGrid[7]);
 	}
 
 	@FXML
 	void handleDisableDeviceIncrease() {
-		skillGrid[6].increaseRanks();
+		increaseRank(skillGrid[6]);
 	}
 
 	@FXML
 	void handleDisableDeviceDecrease() {
-		skillGrid[6].decreaseRanks();
+		decreseRank(skillGrid[6]);
 	}
 
 	@FXML
 	void handleDiplomacyIncrease() {
-		skillGrid[5].increaseRanks();
+		increaseRank(skillGrid[5]);
 	}
 
 	@FXML
 	void handleDiplomacyDecrease() {
-		skillGrid[5].decreaseRanks();
+		decreseRank(skillGrid[5]);
 	}
 
 	@FXML
 	void handleCraftIncrease() {
-		skillGrid[4].increaseRanks();
+		increaseRank(skillGrid[4]);
 	}
 
 	@FXML
 	void handleCraftDecrease() {
-		skillGrid[4].decreaseRanks();
+		decreseRank(skillGrid[4]);
 	}
 
 	@FXML
 	void handleClimbIncrease() {
-		skillGrid[3].increaseRanks();
+		increaseRank(skillGrid[3]);
 	}
 
 	@FXML
 	void handleClimbDecrease() {
-		skillGrid[3].decreaseRanks();
+		decreseRank(skillGrid[3]);
 	}
 
 	@FXML
 	void handleBluffIncrease() {
-		skillGrid[2].increaseRanks();
+		increaseRank(skillGrid[2]);
 	}
 
 	@FXML
 	void handleBluffDecrease() {
-		skillGrid[2].decreaseRanks();
+		decreseRank(skillGrid[2]);
 	}
 
 	@FXML
 	void handleAppraiseIncrease() {
-		skillGrid[1].increaseRanks();
+		increaseRank(skillGrid[1]);
 	}
 
 	@FXML
 	void handleAppraiseDecrease() {
-		skillGrid[1].decreaseRanks();
+		decreseRank(skillGrid[1]);
 	}
 
 	@FXML
 	void handleAcrobaticsIncrease() {
-		skillGrid[0].increaseRanks();
+		increaseRank(skillGrid[0]);
 	}
 
 	@FXML
 	void handleAcrobaticsDecrease() {
-		skillGrid[0].decreaseRanks();
+		decreseRank(skillGrid[0]);
 	}
 	//endregion
 
 	@Override
-	public void setData() {
-
+	public void setData() {	
+		lblRanksRemaining.setText((getCharacter().getIntelligence().getModifier().getValue() + getCharacter().getClasses()[0].getSkillRanksPerLevel()) + "");
+		
 		skillGrid = new SkillGridRow[] {
 			new SkillGridRow("Acrobatics", lblTotalAcrobatics, lblRanksAcrobatics, lblAbilityAcrobatics, lblRacialAcrobatics, lblClassAcrobatics, getCharacter().getDexterity()),
 			new SkillGridRow("Appraise", lblTotalAppraise, lblRanksAppraise, lblAbilityAppraise, lblRacialAppraise, lblClassAppraise, getCharacter().getIntelligence()),

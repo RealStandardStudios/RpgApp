@@ -108,6 +108,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		case "tpSkills":
 			getPartials().get("Class").getData();
 			getPartials().get("Race").getData();
+			getCharacter().setLevel(1);
 			
 			getPartials().get("Skills").setData();
 			break;
@@ -134,7 +135,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			getPartials().get("Race").getData();
 			getPartials().get("Skills").getData();
 			getPartials().get("Feat").getData();
-			getCharacter().setLevel(1);
 			
 			getPartials().get("Summary").setData();
 			summaryReached = true;
