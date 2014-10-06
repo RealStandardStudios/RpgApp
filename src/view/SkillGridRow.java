@@ -69,10 +69,6 @@ public class SkillGridRow {
 		this.getRanksLabel();
 		this.getTotalLabel();
 	}
-	
-//	public void setRanks(int ranks) {
-//		this.ranks = ranks;
-//	}
 
 	public int getRacialMod() {
 		return racialMod;
@@ -129,6 +125,6 @@ public class SkillGridRow {
 	}
 	
 	public Skill toSkill() {
-		return new Skill(ranks, ability, name, classSkill, null);
+		return new Skill(racialMod, ranks, ability, name, classSkill, null);
 	}
 }

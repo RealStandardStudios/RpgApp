@@ -86,7 +86,7 @@ public class FeatPartialController extends NewCharacterPartialController {
 		ObservableList<FeatPrerequisite>prerequisites = FXCollections.observableArrayList(feat.getPrerequisite());
 		
 		tableFeat.setItems(prerequisites);
-		columnFeatPrereq.setCellValueFactory(cellData->cellData.getValue().Name);
+		columnFeatPrereq.setCellValueFactory(cellData->cellData.getValue().Description);
 	}
 
 	@Override

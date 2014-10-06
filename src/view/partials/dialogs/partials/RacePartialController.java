@@ -68,9 +68,9 @@ public class RacePartialController extends NewCharacterPartialController {
 	private void readRaces() {
 		File file = new File(this.getClass().getResource("").getPath()
 				+ programRoot + "PathfinderData/data");
-		File featsFile = new File(file.getPath() + "\\Races.rdf");
+		File raceFile = new File(file.getPath() + "\\Races.rdf");
 		try {
-			races.setAll(readDataFile(featsFile, Race.class));
+			races.setAll(readDataFile(raceFile, Race.class));
 		} catch (Exception e) {
 			Dialogs.create().masthead("Read Error")
 					.masthead("Couldn't read the Race File Properly")

@@ -96,6 +96,8 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	@FXML
 	TableColumn<Skill,String> colSkillName;
 	@FXML
+	TableColumn<Skill,Integer> colSkillTotal;
+	@FXML
 	TableColumn<Skill,Integer> colSkillBonus;
 	@FXML
 	TableColumn<Skill,Integer> colSkillRanks;
@@ -107,7 +109,7 @@ public class SummaryPartialController extends NewCharacterPartialController {
 		//set fluff labels
 		lblClass.setText(getCharacter().getClasses()[0].getName());
 		lblName.setText(getCharacter().getName());
-		//lblAlignment.setText(getCharacter().getAlignment().name());
+		lblAlignment.setText(getCharacter().getAlignment().name());
 		lblSize.setText(getCharacter().getFluff().get("Height"));
 		lblRace.setText(getCharacter().getRace().getName());
 		lblAge.setText(getCharacter().getFluff().get("Age"));
@@ -150,6 +152,7 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	@Override
 	public void initialize() {
 		colSkillName.setCellValueFactory(cellData->cellData.getValue().Name);
+		colSkillTotal.setCellValueFactory(cellData->cellData.getValue().getTotal());
 		colSkillBonus.setCellValueFactory(cellData->cellData.getValue().AttrToUse.get().getModifier());
 		colSkillRanks.setCellValueFactory(cellData->cellData.getValue().Rank);
 	}

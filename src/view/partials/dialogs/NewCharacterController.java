@@ -1,5 +1,6 @@
 package view.partials.dialogs;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -10,9 +11,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.DirectoryChooser;
 import jefXif.DialogController;
 import jefXif.Gui;
 import jefXif.WindowController;
+import jefXif.io.Data;
 
 import org.controlsfx.dialog.Dialogs;
 
@@ -26,6 +29,8 @@ import view.partials.dialogs.partials.NewCharacterPartialController;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class NewCharacterController extends DialogController implements jefXif.interfaces.PartialLoader{
+	
+	private boolean summaryReached;
 	
 	public final String programRoot = "../../../../../";
 	String[] partialNames = new String[] {
@@ -132,6 +137,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			getCharacter().setLevel(1);
 			
 			getPartials().get("Summary").setData();
+			summaryReached = true;
 			break;
 		default:
 			break;
@@ -149,8 +155,35 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	@Override
 	public void handleOkay(ActionEvent event) {
 		System.out.println("Look at how much this is saving right now");
+		if(summaryReached){
+			try {
+				saveCharacter();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 	
+	private void saveCharacter() throws IOException {
+		DirectoryChooser directoryChooser = new DirectoryChooser();
+
+		directoryChooser.setTitle("Data Directory");
+		File defaultDirectory = new File(this.getClass().getResource("")
+				.getPath()+"\\..\\..\\..\\..\\");
+		if(!defaultDirectory.exists())
+			defaultDirectory.mkdirs();
+		directoryChooser.setInitialDirectory(defaultDirectory);
+		// Show the directory chooser
+		File file = directoryChooser.showDialog(this.getInterface()
+				.getPrimaryStage());
+
+		if (file != null) {
+			Data.Write(file.getPath() + "\\"+getCharacter().getName()+".cdf",
+					getCharacter());
+		}
+	}
+
 	@FXML
 	public void handleBack(ActionEvent event) {
 		if(tpTabs.getSelectionModel().selectedIndexProperty().get()>0)

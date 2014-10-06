@@ -15,49 +15,49 @@
         <tabs>
           <Tab fx:id="tpRace" text="Race">
             <content>
-              <AnchorPane fx:id="apRace" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane fx:id="apRace" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
             </content>
           </Tab>
             <Tab fx:id="tpClass" onSelectionChanged="#handleTabChanged" text="Class">
               <content>
-                <AnchorPane fx:id="apClass" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane fx:id="apClass" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
               </content>
             </Tab>
           <Tab fx:id="tpAbilityScores" onSelectionChanged="#handleTabChanged" text="Ability Scores">
             <content>
-              <AnchorPane fx:id="apAbilityScores" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane fx:id="apAbilityScores" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
             </content>
           </Tab>
             <Tab fx:id="tpSkills" onSelectionChanged="#handleTabChanged" text="Skills">
               <content>
-                <AnchorPane fx:id="apSkills" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane fx:id="apSkills" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
               </content>
             </Tab>
             <Tab fx:id="tpFeats" onSelectionChanged="#handleTabChanged" text="Feats">
               <content>
-                <AnchorPane fx:id="apFeats" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane fx:id="apFeats" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
               </content>
             </Tab>
             <Tab fx:id="tpEquipment" onSelectionChanged="#handleTabChanged" text="Equipment">
               <content>
-                <AnchorPane fx:id="apEquipment" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane fx:id="apEquipment" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
               </content>
             </Tab>
             <Tab fx:id="tpProfile" onSelectionChanged="#handleTabChanged" text="Profile">
               <content>
-                <AnchorPane fx:id="apProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane fx:id="apProfile" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
               </content>
             </Tab>
             <Tab fx:id="tpSummary" onSelectionChanged="#handleTabChanged" text="Summary">
               <content>
-                <AnchorPane fx:id="apSummary" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane fx:id="apSummary" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
               </content>
             </Tab>
         </tabs>
       </TabPane>
       <HBox alignment="CENTER" layoutX="771.0" layoutY="586.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" text="Save">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOkay" prefHeight="35.0" prefWidth="70.0" text="Save">
                <font>
                   <Font size="14.0" />
                </font>
