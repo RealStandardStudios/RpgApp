@@ -167,7 +167,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	
 	private void saveCharacter() throws IOException {
 		DirectoryChooser directoryChooser = new DirectoryChooser();
-
+		
 		directoryChooser.setTitle("Data Directory");
 		File defaultDirectory = new File(this.getClass().getResource("")
 				.getPath()+"\\..\\..\\..\\..\\");
