@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -9,373 +10,1164 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.InventoryController">
-  <children>
-    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="700.0" layoutX="0.0" layoutY="0.0" stroke="#606060" strokeType="INSIDE" width="1100.0" />
-    <TitledPane fx:id="tPaneContainers" animated="false" collapsible="false" layoutX="550.0" layoutY="499.0" prefHeight="186.0" prefWidth="250.0" text="Containers">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <GridPane fx:id="gPaneContainers" gridLinesVisible="false" layoutX="1.0" layoutY="0.0" prefHeight="157.0" prefWidth="246.0">
-              <children>
-                <TextField id="txtContainer" fx:id="txtContainer1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <TextField fx:id="txtContainer2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <TextField fx:id="txtContainer3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                <TextField fx:id="txtContainer4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                <TextField fx:id="txtVol1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="txtVol2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="txtVol3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField fx:id="txtVol4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField fx:id="txtWeight1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <TextField fx:id="txtWeight2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <TextField fx:id="txtWeight3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                <TextField fx:id="txtWeight4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                <Label text="Container" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
-                  <font>
-                    <Font name="System Bold" size="12.0" fx:id="x1" />
-                  </font>
-                </Label>
-                <Label font="$x1" text="Volume" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Weight" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-              </children>
+   <children>
+      <GridPane layoutX="231.0" layoutY="236.0" prefHeight="700.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Worn Equipment">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                  <Tab text="Magic Items">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane gridLinesVisible="true" layoutX="212.0" layoutY="155.0" prefHeight="671.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Item" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Quantity" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Uses / Charges" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Total Weight (lbs)" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Inventory">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane hgap="20.0" layoutX="144.0" layoutY="183.0" prefHeight="671.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane gridLinesVisible="true" GridPane.columnIndex="1">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Item" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Quantity" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Total Weight (lbs)" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane gridLinesVisible="true">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Item" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Quantity" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Total Weight (lbs)" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Containers">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <GridPane GridPane.columnIndex="1">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
-          </children>
-        </AnchorPane>
-      </content>
-      <font>
-        <Font name="System Bold" size="14.0" fx:id="x2" />
-      </font>
-    </TitledPane>
-    <TitledPane fx:id="tPaneInventory" animated="false" font="$x2" layoutX="10.0" layoutY="10.0" prefHeight="480.0" prefWidth="580.0" text="Inventory">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <GridPane fx:id="gPaneInventory" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefHeight="451.0" prefWidth="576.0">
-              <children>
-                <Label font="$x1" text="Item" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Qty" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Weight" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Qty" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Item" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Weight" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty1_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty2_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty3_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty4_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty5_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty6_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty7_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty8_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty9_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty10_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty11_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty12_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty13_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty14_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem1_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem2_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem3_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem4_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem5_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem6_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem7_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem8_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem9_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem10_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem11_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem12_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem13_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem14_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight1_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight2_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight3_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight4_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight5_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight6_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight7_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight8_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight9_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight10_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight11_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight12_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight13_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight14_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty1_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty2_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty3_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty4_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty5_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty6_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty7_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty8_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty9_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty10_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty11_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty12_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty13_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemQty14_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem1_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem2_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem3_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem4_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem5_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem6_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem7_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem8_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem9_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem10_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem11_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem12_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem13_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItem14_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight1_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight2_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight3_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight4_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight5_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight6_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight7_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight8_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight9_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight10_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight11_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight12_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight13_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtItemWeight14_2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-              </children>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="140.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="290.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="5.0" prefWidth="5.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="140.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="290.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TitledPane fx:id="tPaneWealth" animated="false" collapsible="false" font="$x2" layoutX="813.0" layoutY="499.0" prefHeight="186.0" prefWidth="271.0" text="Wealth">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <GridPane fx:id="gPaneWealth" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefHeight="157.0" prefWidth="260.0">
-              <children>
-                <Label font="$x1" text="Currency" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Treasure" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label text="Platinum" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <Label text="Gold" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <Label text="Silver" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <Label text="Copper" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <Label text="Other" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtPlatinum" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="txtGold" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="txtSilver" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField fx:id="txtCopper" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField fx:id="txtOther" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <TextField fx:id="txtTreasure1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <TextField fx:id="txtTreasure2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <TextField fx:id="txtTreasure3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                <TextField fx:id="txtTreasure4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                <TextField fx:id="txtTreasure5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-              </children>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="80.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TitledPane fx:id="tPaneMagicItems" animated="false" collapsible="false" font="$x2" layoutX="602.0" layoutY="10.0" prefHeight="480.0" prefWidth="484.0" text="Magic Items">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <GridPane fx:id="gPaneMagicItems" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefHeight="451.0" prefWidth="476.0">
-              <children>
-                <Label font="$x1" text="Qty" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Item" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Uses / Charges" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" text="Weight" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty13" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemQty14" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem13" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItem14" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses13" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemUses14" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight13" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtMagicItemWeight14" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-              </children>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="70.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="45.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
+               <children>
+                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" text="Loads and Lift" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane gridLinesVisible="true" layoutX="-18.0" layoutY="70.0" prefHeight="319.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Total Weight (lbs):" wrapText="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Light Load:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Medium Load:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Heavy Load:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Lift over Head:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Lift off Ground:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Drag or Push:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" text="Money" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane gridLinesVisible="true" layoutX="-8.0" layoutY="131.0" prefHeight="319.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Platinum Pieces:" wrapText="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Gold Pieces:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Silver Pieces:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Copper Pieces:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TitledPane>
+               </children>
             </GridPane>
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TitledPane fx:id="tPaneWornEquipment" animated="false" collapsible="false" font="$x2" layoutX="11.0" layoutY="498.0" prefHeight="186.0" prefWidth="529.0" text="Worn Equipment">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <GridPane fx:id="gPaneWornEquipment" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" prefHeight="157.0" prefWidth="522.0">
-              <children>
-                <Label font="$x1" prefWidth="60.0" text="Head" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Headband" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Eyes" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Neck" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Shoulders" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Body" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Chest" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Belt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Hands" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Feet" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Rings" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Wrist" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                <TextField fx:id="txtWornHead" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <TextField fx:id="txtWornEyes" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="txtWornShoulders" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="txtWornChest" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField fx:id="txtWornHands" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField fx:id="txtWornRings1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <TextField fx:id="txtWornRings2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <TextField fx:id="txtWornHeadband" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                <TextField fx:id="txtWornNeck" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                <TextField fx:id="txtWornBody" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                <TextField fx:id="txtWornBelt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                <TextField fx:id="txtWornFeet" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                <TextField fx:id="txtWornWrist1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                <TextField fx:id="txtWornWrist2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                <Label font="$x1" prefWidth="60.0" text="Rings" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                <Label font="$x1" prefWidth="60.0" text="Wrist" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-              </children>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="80.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="80.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-  </children>
+         </children>
+      </GridPane>
+   </children>
 </AnchorPane>
