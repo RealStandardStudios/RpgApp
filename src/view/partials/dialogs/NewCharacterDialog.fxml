@@ -13,7 +13,7 @@
   <children>
       <TabPane fx:id="tpTabs" layoutX="14.0" layoutY="14.0" prefHeight="700.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab fx:id="tpRace" disable="true" text="Race">
+          <Tab fx:id="tpRace" text="Race">
             <content>
               <AnchorPane fx:id="apRace" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" />
             </content>

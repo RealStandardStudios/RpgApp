@@ -206,6 +206,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	public void handleNext(ActionEvent event) {
 		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<partialNames.length-1)
 			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()+1);
+		tpTabs.getSelectionModel().getSelectedItem().setDisable(false);
 	}
 
 	public void loadPartials() {
