@@ -98,6 +98,8 @@ public class RacePartialController extends NewCharacterPartialController {
 		lblLanguages.setText(selectedRace.getLanguagesString());
 		getParentWindow().setAbilities();
 		((AbilityScoresPartialController)getParentWindow().getPartials().get("AbilityScores")).firstTimeRun();
+		getParentWindow().setAeAdded(false);
+		getParentWindow().setTeAdded(false);
 	}
 
 	@Override

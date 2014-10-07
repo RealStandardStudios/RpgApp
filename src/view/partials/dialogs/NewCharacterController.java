@@ -2,6 +2,7 @@ package view.partials.dialogs;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javafx.event.ActionEvent;
@@ -22,6 +23,8 @@ import org.controlsfx.dialog.Dialogs;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Character.Character;
+import pathfinder.data.Effects.AbilityEffect;
+import pathfinder.data.Races.Traits.Trait;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
 /**
@@ -62,6 +65,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	TabPane tpTabs;
 	
 	Character newCharacter;
+	boolean aeAdded = false;
+	boolean teAdded = false;
 	
 	
 	public NewCharacterController() {
@@ -94,6 +99,20 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		case "tpAbilityScores":
 			getPartials().get("Race").getData();
 			getPartials().get("Class").getData();
+			if(getCharacter().getEffects().size()>0)
+				getCharacter().setEffects(new ArrayList<>());
+			if(!aeAdded) {
+				for (AbilityEffect effect : getCharacter().getRace().getRacialModifiers()) {
+					getCharacter().getEffects().add(effect);
+				}
+				aeAdded = true;
+			}
+			if(!teAdded) {
+				for (Trait t: getCharacter().getRace().getRacialTraits()) {
+					getCharacter().getEffects().add(t.getEffect());
+				}
+				teAdded = true;
+			}
 			if(getPartials()!=null)getPartials().get("AbilityScores").setData();
 			break;
 			
@@ -147,7 +166,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	
 	@Override
 	public void handleOkay(ActionEvent event) {
-		System.out.println("Look at how much this is saving right now");
 		if(summaryReached){
 			try {
 				saveCharacter();
@@ -172,8 +190,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 				.getPrimaryStage());
 
 		if (file != null) {
+			this.getDialogStage().close();
 			Data.Write(file.getPath() + "\\"+getCharacter().getName()+".cdf",
-					getCharacter());
+					newCharacter);
 		}
 	}
 
@@ -226,5 +245,13 @@ public class NewCharacterController extends DialogController implements jefXif.i
 
 	public HashMap<String,NewCharacterPartialController> getPartials() {
 		return partials;
+	}
+
+	public void setAeAdded(boolean b) {
+		this.aeAdded = b;
+	}
+
+	public void setTeAdded(boolean b) {
+		this.teAdded = b;
 	}
 }

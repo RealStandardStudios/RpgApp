@@ -399,12 +399,12 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	private Boolean getClassSkill(String skill) {
 		Boolean classSkill = false;
 		for (String s : getCharacter().getClasses()[0].getClassSkills()) {
-			if(s.trim().equals(skill.trim())||(skill.contains("Knowledge")&&s.equals("Knowledge (any)"))) {
+			if(s.trim().contains(skill.trim())||(skill.contains("Knowledge")&&s.equals("Knowledge (any)"))) {
 				return true;
 			}
 		}
 		return classSkill;
-	}	
+	}
 	private int getRacialMod(String skill) {
 		int racialBonus = 0;
 		for (Effect e : getCharacter().getEffects()) {

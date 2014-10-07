@@ -235,11 +235,11 @@ public class ClassPartialController extends NewCharacterPartialController {
 		columnBAB.setCellValueFactory(cellData -> cellData.getValue()
 				.getBABProperty());
 		columnFort.setCellValueFactory(cellData -> cellData.getValue()
-				.getFortSave().getBaseValueProperty());
+				.getFortProp());
 		columnRef.setCellValueFactory(cellData -> cellData.getValue()
-				.getRefSave().getBaseValueProperty());
+				.getRefProp());
 		columnWill.setCellValueFactory(cellData -> cellData.getValue()
-				.getWillSave().getBaseValueProperty());
+				.getWillProp());
 		columnSpecial.setCellValueFactory(cellData -> cellData.getValue()
 				.getSpecialProperty());
 		// endregion
