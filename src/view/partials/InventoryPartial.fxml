@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.InventoryController">
    <children>
-      <GridPane layoutX="231.0" layoutY="236.0" prefHeight="700.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <GridPane hgap="5.0" layoutX="231.0" layoutY="236.0" prefHeight="700.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,7 +24,404 @@
               <tabs>
                 <Tab text="Worn Equipment">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane gridLinesVisible="true" layoutX="192.0" layoutY="187.0" prefHeight="671.0" prefWidth="880.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Worn Magic Items" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <GridPane gridLinesVisible="true" prefHeight="304.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Label text="Head:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Eyes:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Shoulders:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Body:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Hands:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Ring:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Ring:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Headband:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Neck:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Chest:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Belt:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Feet:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Wrist:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Wrist:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Weapons" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <GridPane gridLinesVisible="true" layoutX="158.0" layoutY="56.0" prefHeight="170.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Armor" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <GridPane gridLinesVisible="true" layoutX="101.0" layoutY="53.0" prefHeight="170.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Armor:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Shield:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TitledPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
                   <Tab text="Magic Items">
@@ -386,7 +783,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <GridPane hgap="20.0" layoutX="144.0" layoutY="183.0" prefHeight="671.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <GridPane hgap="10.0" layoutX="144.0" layoutY="183.0" prefHeight="671.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -922,7 +1319,207 @@
                 </Tab>
                   <Tab text="Containers">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane gridLinesVisible="true" layoutX="201.0" layoutY="215.0" prefHeight="671.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Item" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Weight (lbs)" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Weight Limit (lbs)" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Notes" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
                     </content>
                   </Tab>
               </tabs>
@@ -936,7 +1533,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" text="Loads and Lift" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Loads and Lift" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -1076,7 +1673,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TitledPane>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" text="Money" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Money" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
