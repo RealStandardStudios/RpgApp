@@ -2,12 +2,19 @@ package view.partials.dialogs.partials;
 
 import java.util.HashMap;
 
+import com.sun.javafx.scene.control.behavior.TextAreaBehavior;
+import com.sun.javafx.scene.control.skin.TextAreaSkin;
+
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.SkinBase;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Character.Alignments;
 
@@ -80,6 +87,7 @@ public class ProfilePartialController extends NewCharacterPartialController {
 
 	@Override
 	public void setData() {
+		fixTextAreas();
 		for (Alignment al : getCharacter().getClasses()[0]
 				.getRequireAlignments()) {
 			for (int i = 0; i < alignments.length; i++) {
@@ -111,6 +119,63 @@ public class ProfilePartialController extends NewCharacterPartialController {
 		fluff.put("Appearance", txtaCharAppearance.getText());
 		fluff.put("Personality", txtaCharPersonality.getText());
 		getCharacter().setFluff(fluff);
+	}
+
+	private void fixTextAreas() {
+		txtaCharAppearance.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+	        @Override
+	        public void handle(KeyEvent event) {
+	            if (event.getCode() == KeyCode.TAB) {
+	                TextAreaSkin skin = (TextAreaSkin) txtaCharAppearance.getSkin();
+	                if (skin.getBehavior() instanceof TextAreaBehavior) {
+	                    TextAreaBehavior behavior = (TextAreaBehavior) skin.getBehavior();
+	                    if (event.isControlDown()) {
+	                        behavior.callAction("InsertTab");
+	                    } else {
+	                        behavior.callAction("TraverseNext");
+	                    }
+	                    event.consume();
+	                }
+
+	            }
+	        }
+	    });
+		txtaCharBackground.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+	        @Override
+	        public void handle(KeyEvent event) {
+	            if (event.getCode() == KeyCode.TAB) {
+	                TextAreaSkin skin = (TextAreaSkin) txtaCharBackground.getSkin();
+	                if (skin.getBehavior() instanceof TextAreaBehavior) {
+	                    TextAreaBehavior behavior = (TextAreaBehavior) skin.getBehavior();
+	                    if (event.isControlDown()) {
+	                        behavior.callAction("InsertTab");
+	                    } else {
+	                        behavior.callAction("TraverseNext");
+	                    }
+	                    event.consume();
+	                }
+
+	            }
+	        }
+	    });
+		txtaCharPersonality.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+	        @Override
+	        public void handle(KeyEvent event) {
+	            if (event.getCode() == KeyCode.TAB) {
+	                TextAreaSkin skin = (TextAreaSkin) txtaCharPersonality.getSkin();
+	                if (skin.getBehavior() instanceof TextAreaBehavior) {
+	                    TextAreaBehavior behavior = (TextAreaBehavior) skin.getBehavior();
+	                    if (event.isControlDown()) {
+	                        behavior.callAction("InsertTab");
+	                    } else {
+	                        behavior.callAction("TraverseNext");
+	                    }
+	                    event.consume();
+	                }
+
+	            }
+	        }
+	    });
 	}
 
 }

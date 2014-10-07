@@ -27,6 +27,22 @@
                   <Font size="16.0" />
                </font>
             </TextField>
+            <Label text="Gender:" GridPane.columnIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCharGender" promptText="What is your character's gender?" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
             <Label text="Homeland:" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="10.0" />
@@ -43,22 +59,6 @@
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label text="Background:" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label text="Gender:" GridPane.columnIndex="2" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
             <Label text="Age:" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="10.0" />
@@ -66,15 +66,7 @@
                <font>
                   <Font size="16.0" />
                </font>
-            </Label>
-            <TextField fx:id="txtCharGender" promptText="What is your character's gender?" GridPane.columnIndex="3">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
+            </Label>            
             <TextField fx:id="txtCharAge" promptText="What is your character's age?" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -83,22 +75,22 @@
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextField fx:id="txtCharHeight" promptText="What is your character's height?" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Label text="Background:" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
-                  <Insets right="10.0" />
+                  <Insets left="10.0" />
                </GridPane.margin>
                <font>
                   <Font size="16.0" />
                </font>
-            </TextField>
-            <TextField fx:id="txtCharWeight" promptText="What is your character's weight?" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            </Label>
+            <TextArea fx:id="txtaCharBackground" maxWidth="1.7976931348623157E308" promptText="What is your character's background?" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <GridPane.margin>
-                  <Insets right="10.0" />
+                  <Insets />
                </GridPane.margin>
                <font>
-                  <Font size="16.0" />
+                  <Font size="14.0" />
                </font>
-            </TextField>
+            </TextArea>
             <Label text="Height:" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="10.0" />
@@ -107,6 +99,14 @@
                   <Font size="16.0" />
                </font>
             </Label>
+            <TextField fx:id="txtCharHeight" promptText="What is your character's height?" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
             <Label text="Weight:" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="10.0" />
@@ -115,23 +115,15 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label text="Appearance:" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <TextField fx:id="txtCharWeight" promptText="What is your character's weight?" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets left="10.0" />
+                  <Insets right="10.0" />
                </GridPane.margin>
                <font>
                   <Font size="16.0" />
                </font>
-            </Label>
-            <Label text="Personality:" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets left="10.0" top="20.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label text="Languages Known:" wrapText="true" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            </TextField>
+            <Label text="Deities:" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
@@ -147,7 +139,39 @@
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label text="Deities:" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Label text="Appearance:" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtaCharAppearance" prefHeight="200.0" promptText="Describe your character's appearance" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label text="Personality:" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="10.0" top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtaCharPersonality" prefHeight="200.0" promptText="Describe your character's personality" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label text="Languages Known:" wrapText="true" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
@@ -216,30 +240,6 @@
                   <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
                </rowConstraints>
             </GridPane>
-            <TextArea fx:id="txtaCharBackground" maxWidth="1.7976931348623157E308" promptText="What is your character's background?" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextArea>
-            <TextArea fx:id="txtaCharAppearance" prefHeight="200.0" promptText="Describe your character's appearance" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextArea>
-            <TextArea fx:id="txtaCharPersonality" prefHeight="200.0" promptText="Describe your character's personality" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextArea>
          </children>
          <columnConstraints>
             <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
