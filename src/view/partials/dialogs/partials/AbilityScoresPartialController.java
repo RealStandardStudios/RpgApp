@@ -281,6 +281,12 @@ public class AbilityScoresPartialController extends
 			firstTimeRun();
 		}
 		setUpRacialBonus();
+		setChaLabels();
+		setConLabels();
+		setDexLabels();
+		setIntLabels();
+		setStrLabels();
+		setWisLabels();
 	}
 
 	void setUpRacialBonus() {
