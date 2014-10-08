@@ -1,7 +1,7 @@
 package view.partials.dialogs.partials;
 
-import jefXif.WindowController;
 import jefXif.interfaces.DataFileReader;
+import jefXif.view.WindowController;
 import pathfinder.data.Character.Character;
 import view.partials.dialogs.NewCharacterController;
 

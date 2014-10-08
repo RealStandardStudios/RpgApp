@@ -1,6 +1,6 @@
 package view.partials;
 
-import jefXif.WindowController;
+import jefXif.view.WindowController;
 
 /**
  * @author Real Standard Studios - Matthew Meehan

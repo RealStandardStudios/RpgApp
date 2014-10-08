@@ -1,16 +1,26 @@
 package view.partials;
 
+import java.io.File;
 import java.io.IOException;
 
-import view.partials.dialogs.NewCharacterController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import jefXif.WindowController;
+import jefXif.io.Data;
+import jefXif.view.WindowController;
+
+import org.controlsfx.dialog.Dialog;
+import org.controlsfx.dialog.Dialogs;
+
+import pathfinder.data.Character.Character;
+import view.RootController;
+import view.partials.dialogs.NewCharacterController;
+//import javafx.scene.control.Dialog;
 
 /**
  * @author Real Standard Studios - Matthew Meehan
@@ -21,6 +31,28 @@ public class OtherCharacterController extends WindowController {
 	@FXML
 	private void handleNewCharacterAction(ActionEvent event) {
 		showNewChar();
+	}
+	
+	@FXML
+	private void handleLoadChatacterAction(ActionEvent event) throws IOException {
+		FileChooser fileChooser = new FileChooser();
+		
+		// Set extension filter
+		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("CDF files (*.cdf)", "*.cdf");
+		fileChooser.getExtensionFilters().add(extFilter);
+		fileChooser.setInitialDirectory(new File(this.getClass().getResource("../../").getPath()));
+		
+		// Show open file dialog
+        File file = fileChooser.showOpenDialog(getInterface().getPrimaryStage());
+
+        if (file != null) {
+        	((RootController) getRoot()).setCharacter(Data.Read(file.getPath(), Character.class));
+        	Dialogs.create()
+        	.title("Character Loaded")
+        	.message(String.format("The Character:%s was successfully loaded!", ((RootController) getRoot()).getCharacter().getName()))
+        	.styleClass(Dialog.STYLE_CLASS_UNDECORATED)
+        	.showInformation();
+        }
 	}
 	
 	@FXML
@@ -48,13 +80,15 @@ public class OtherCharacterController extends WindowController {
 	
 	        // Show the dialog and wait until the user closes it
 	        dialogStage.showAndWait();
+	        
+	        ((RootController) this.getRoot()).setCharacter(controller.getCharacter());
 		}
 		catch(IOException e)
 		{
 	        e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public void initialize() {
 		// TODO Auto-generated method stub

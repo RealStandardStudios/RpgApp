@@ -13,10 +13,10 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
-import jefXif.DialogController;
-import jefXif.Gui;
-import jefXif.WindowController;
 import jefXif.io.Data;
+import jefXif.view.DialogController;
+import jefXif.view.Gui;
+import jefXif.view.WindowController;
 
 import org.controlsfx.dialog.Dialogs;
 

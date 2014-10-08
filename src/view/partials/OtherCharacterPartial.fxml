@@ -18,7 +18,7 @@
         </TitledPane>
       </panes>
     </Accordion>
-    <Button layoutX="41.0" layoutY="646.0" mnemonicParsing="false" text="Load Other Character">
+    <Button layoutX="41.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleLoadChatacterAction" text="Load Other Character">
       <font>
         <Font name="System Bold" size="15.0" fx:id="x1" />
       </font>

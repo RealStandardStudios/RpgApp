@@ -1,6 +1,8 @@
 package view.partials.dialogs.partials;
 
+import java.awt.MouseInfo;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,10 +10,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import org.controlsfx.dialog.Dialogs;
 
@@ -21,9 +29,11 @@ import pathfinder.data.Items.Consumables;
 import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Weapon;
+import view.itemViews.ItemView;
+import view.itemViews.WeaponView;
 
 public class EquipmentPartialController extends NewCharacterPartialController {
-
+	
 	// region Items Available Table annotations
 
 	// Weapons available table
@@ -196,6 +206,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	// endregion
 
 	Item itemToAdd;
+	ItemView weaponView;
 	Item itemToRemove;
 
 	private ObservableList<Weapon> obsListWeapons = FXCollections
@@ -314,7 +325,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		columnGoodsWeight
 				.setCellValueFactory(cellData -> cellData.getValue().Weight);
 
-		// end region
+		// endregion
 
 		// region Character Items
 
@@ -376,6 +387,23 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	}
 
+	private void readItemViews() throws IOException {
+		// Load the fxml file and create a new stage for the popup dialog.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+        
+        Stage weaponViewStage = new Stage();
+        weaponViewStage.setScene(new Scene(page));
+        weaponViewStage.initStyle(StageStyle.UNDECORATED);
+        weaponViewStage.setAlwaysOnTop(true);
+        weaponViewStage.initOwner(getParentWindow().getDialogStage());
+        weaponViewStage.setOpacity(0.9);
+        weaponViewStage.initModality(Modality.WINDOW_MODAL);
+        weaponView = loader.getController();
+        weaponView.setDialogStage(weaponViewStage);
+	}
+
 	@Override
 	/**
 	 * This is what you will use to set the data for this view if you need to take data from the character class
@@ -386,7 +414,12 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			havePressedGenerateGold = true;
 			btnRollStartingWealth.setDisable(false);
 		}
-
+		try {
+			readItemViews();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	void readItems() {
@@ -414,6 +447,12 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		// Action result =
 		// Dialogs.create().title("Item Selected").masthead("Do you want to add this Item to your Character?").message("Selected Item: "+item.Name.get()).showConfirm();
 		itemToAdd = item;
+		if (itemToAdd.getClass().toString().contains("Weapon")) {
+			weaponView.setItem(itemToAdd);
+			weaponView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX()-5);
+			weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY()-5);
+			weaponView.show();
+		}
 	}
 
 	private void handleSelectedCharacterItem(Item item) {
