@@ -154,7 +154,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1">
+                                                      <Label fx:id="lblHead" disable="true" text="-" wrapText="true" GridPane.columnIndex="1">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -162,7 +162,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <Label fx:id="lblEyes" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -170,7 +170,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblShoulders" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -178,7 +178,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblBody" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -186,7 +186,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                      <Label fx:id="lblHands" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -194,7 +194,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                      <Label fx:id="lblRing1" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -202,7 +202,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                      <Label fx:id="lblRing2" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -210,7 +210,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3">
+                                                      <Label fx:id="lblHeadband" disable="true" text="-" wrapText="true" GridPane.columnIndex="3">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -218,7 +218,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <Label fx:id="lblNeck" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -226,7 +226,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblChest" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -234,7 +234,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblBelt" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -242,7 +242,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                                      <Label fx:id="lblFeet" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -250,7 +250,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                                      <Label fx:id="lblWrist1" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -258,7 +258,7 @@
                                                             <Insets left="5.0" right="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                                      <Label fx:id="lblWrist2" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -307,7 +307,7 @@
                                                       <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
                                                   </rowConstraints>
                                                    <children>
-                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblWeapon1" disable="true" text="-" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -315,7 +315,7 @@
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblWeapon2" disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -323,7 +323,7 @@
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblWeapon3" disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -331,7 +331,7 @@
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblWeapon4" disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -339,7 +339,7 @@
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblWeapon5" disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -347,7 +347,7 @@
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblWeapon6" disable="true" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -378,7 +378,7 @@
                                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                   </rowConstraints>
                                                    <children>
-                                                      <Label disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblArmor" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -386,7 +386,7 @@
                                                             <Insets left="10.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblShield" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -459,12 +459,12 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Quantity" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Label text="Uses / Charges" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Uses / Charges" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Label text="Quantity" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="14.0" />
                                        </font>
@@ -474,302 +474,302 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem1" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem1Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem1Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem1Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem2" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem2Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem2Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem2Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem3" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem3Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem3Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem3Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem4" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem4Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem4Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem4Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem5" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem5Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem5Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem5Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem6" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem6Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem6Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem6Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem7" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem7Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem7Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem7Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem8" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem8Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem8Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem8Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem9" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem9Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem9Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem9Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem10" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem10Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem10Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem10Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem11" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem11Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem11Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem11Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem12" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem12Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem12Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem12Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem13" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem13Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem13Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem13Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem14" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem14Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem14Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem14Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem15" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem15Uses" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem15Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMagicItem15Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
@@ -818,212 +818,212 @@
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem15" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem15Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem15Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem16" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem16Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem16Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem17" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem17Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem17Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem18" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem18Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem18Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem19" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem19Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem19Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem20" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem20Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem20Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem21" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem21Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem21Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem22" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem22Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem22Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem23" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem23Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem23Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem24" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem24Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem24Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem25" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem25Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem25Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem26" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem26Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem26Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem27" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem27Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem27Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem28" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem28Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem28Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
@@ -1078,212 +1078,212 @@
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem1" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem1Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem1Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem2" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem2Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem2Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem3" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem3Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem3Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem4" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem4Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem4Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem5" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem5Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem5Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem6" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem6Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem6Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem7" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem7Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem7Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem8" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem8Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem8Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem9" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem9Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem9Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem10" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem10Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem10Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem11" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem11Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem11Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem12" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem12Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem12Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem13" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem13Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem13Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem14" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem14Quantity" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                                          <Label fx:id="lblItem14Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </GridPane.margin>
@@ -1357,7 +1357,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer1" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1365,7 +1365,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer1Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1373,7 +1373,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer1WeightLimit" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1381,7 +1381,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer1Notes" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1389,7 +1389,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer2" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1397,7 +1397,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer2Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1405,7 +1405,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer2WeightLimit" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1413,7 +1413,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer2Notes" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1421,7 +1421,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer3" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1429,7 +1429,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer3Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1437,7 +1437,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer3WeightLimit" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1445,7 +1445,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer3Notes" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1453,7 +1453,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer4" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1461,7 +1461,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer4Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1469,7 +1469,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer4WeightLimit" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1477,7 +1477,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer4Notes" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1485,7 +1485,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer5" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1493,7 +1493,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer5Weight" disable="true" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1501,7 +1501,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer5WeightLimit" disable="true" text="-" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1509,7 +1509,7 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblContainer5Notes" disable="true" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets left="5.0" />
                                        </GridPane.margin>
@@ -1608,7 +1608,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblTotalWeight" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1616,7 +1616,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblLightLoad" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1624,7 +1624,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblMediumLoad" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1632,7 +1632,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblHeavyLoad" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1640,7 +1640,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblLiftHead" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1648,7 +1648,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblLiftGround" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1656,7 +1656,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblPush" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1721,7 +1721,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblPlatinum" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1729,7 +1729,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblGold" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1737,7 +1737,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblSilver" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -1745,7 +1745,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="lblCopper" text="-" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
