@@ -17,6 +17,8 @@
     -fx-alignment: CENTER;
     -fx-padding: 0 0 0 0;
     -fx-background-radius: 0 0 0 0;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0 0 2px 0;
 }
 .titled-pane > .title > .text {
 	-fx-fill: WHITE;
