@@ -5,6 +5,7 @@ import java.util.HashMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import jefXif.view.Gui;
 import jefXif.view.RootLayoutController;
 import jefXif.view.WindowController;
@@ -16,6 +17,9 @@ import window.Interface;
  *
  */
 public class RootController extends RootLayoutController {
+	
+	@FXML
+	Label lblCharacterName;
 	
 	private Character character;
 	
@@ -30,6 +34,7 @@ public class RootController extends RootLayoutController {
 	 */
 	public void setCharacter(Character character) {
 		this.character = character;
+		this.lblCharacterName.setText(this.character.getName());
 	}
 
 	private HashMap<String, WindowController> windowPartials;
