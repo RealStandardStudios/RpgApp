@@ -136,11 +136,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecCraft" promptText="Enter specialty if applicable" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseCraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCraftIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -348,11 +343,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeArcana" promptText="Enter specialty if applicable" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeArcana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeArcanaIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -376,11 +366,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeDungeoneering" promptText="Enter specialty if applicable" GridPane.rowIndex="14" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeDungeoneering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeDungeoneeringIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -404,11 +389,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeEngineering" promptText="Enter specialty if applicable" GridPane.rowIndex="15" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeEngineering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeEngineeringIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -432,11 +412,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeGeography" promptText="Enter specialty if applicable" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeGeography" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeGeographyIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -460,11 +435,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeHistory" promptText="Enter specialty if applicable" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeHistory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeHistoryIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -488,11 +458,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeLocal" promptText="Enter specialty if applicable" GridPane.rowIndex="18" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeLocal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeLocalIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -516,11 +481,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeNature" promptText="Enter specialty if applicable" GridPane.rowIndex="19" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeNature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNatureIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -544,11 +504,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeNobility" promptText="Enter specialty if applicable" GridPane.rowIndex="20" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeNobility" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNobilityIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -572,11 +527,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgePlanes" promptText="Enter specialty if applicable" GridPane.rowIndex="21" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgePlanes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgePlanesIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -600,11 +550,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecKnowledgeReligion" promptText="Enter specialty if applicable" GridPane.rowIndex="22" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseKnowledgeReligion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeReligionIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
@@ -697,11 +642,6 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="txtSpecProfession" promptText="Enter specialty if applicable" GridPane.rowIndex="26" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </TextField>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER">
                                  <children>
                                     <Button fx:id="btnIncreaseProfession" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProfessionIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
