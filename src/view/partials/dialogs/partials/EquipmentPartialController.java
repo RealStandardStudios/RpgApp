@@ -22,6 +22,8 @@ import javafx.stage.StageStyle;
 
 import org.controlsfx.dialog.Dialogs;
 
+import com.sun.deploy.uitoolkit.impl.fx.ui.FXConsole;
+
 import pathfinder.data.Character.Inventory;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Goods;
@@ -365,6 +367,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		{
 			btnRollStartingWealth.setDisable(false);
 			classChosen = getCharacter().getClasses()[0].getName();
+			obsChosenWeapons.clear();
+			obsChosenGoods.clear();
+			obsChosenArmor.clear();
 		}
 
 		try {
