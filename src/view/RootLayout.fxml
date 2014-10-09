@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="rootLayout" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RootLayoutController">
+<BorderPane fx:id="rootLayout" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RootController">
 	<left>
 		<Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
 			<children>
-				<Label id="characterName" fx:id="lblCharacterName" layoutX="14.0" layoutY="42.0" prefWidth="134.0" text="Character Name" />
+				<Label id="characterName" fx:id="lblCharacterName" layoutX="14.0" layoutY="42.0" maxHeight="60.0" prefWidth="134.0" text="Character Name" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
 				<Button id="charactersButton" fx:id="btnCharacter" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleCharacterAction" pickOnBounds="false" prefHeight="34.960837500002526" prefWidth="134.0" text="Character" />
 				<Button id="combatStatsButton" fx:id="btnCombatStats" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleCombatStatsAction" prefHeight="34.960837500002526" prefWidth="134.00009999999747" text="Combat Stats" />
 				<Button id="skillsButton" fx:id="btnSkills" layoutX="14.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleSkillsAction" prefHeight="34.960837500002526" prefWidth="134.0" text="Skills" />

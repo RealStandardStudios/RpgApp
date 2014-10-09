@@ -9,9 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import jefXif.Gui;
-import jefXif.WindowController;
-import view.RootLayoutController;
+import jefXif.view.Gui;
+import jefXif.view.RootLayoutController;
+import jefXif.view.WindowController;
+import view.RootController;
 
 import com.sun.istack.internal.logging.Logger;
 
@@ -20,7 +21,6 @@ import com.sun.istack.internal.logging.Logger;
  * Loads and Initializes the main program
  */
 public class Interface extends Gui {
-	private RootLayoutController rootLayoutController;
 	
 	public Interface(Stage primaryStage) {
 		super(primaryStage);
@@ -34,15 +34,16 @@ public class Interface extends Gui {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(this.getClass().getResource(
 					"../view/RootLayout.fxml"));
-			setRootLayout((BorderPane) loader.load());
+			BorderPane pane = loader.load();
 
 			// Show the scene containing the root layout
-			Scene scene = new Scene(getRootLayout());
+			Scene scene = new Scene(pane);
 			getPrimaryStage().setScene(scene);
 
 			// Give the controller access to the main app.
-			rootLayoutController = loader.getController();
-			rootLayoutController.setInterface(this);
+			RootLayoutController controller = loader.getController();
+			controller.setInterface(this);
+			setRootLayout(controller);
 
 			getPrimaryStage().show();
 		} catch (IOException e) {
@@ -59,7 +60,7 @@ public class Interface extends Gui {
 		for (String string : Windows) {
 			windowPartials.put(string, loadPartial(string, this));
 		}
-		rootLayoutController.setWindowPartials(windowPartials);
+		((RootController) getRootLayout()).setWindowPartials(windowPartials);
 	}
 
 	@Override

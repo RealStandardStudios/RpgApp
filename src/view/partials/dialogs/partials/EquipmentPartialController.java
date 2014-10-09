@@ -1,27 +1,35 @@
 package view.partials.dialogs.partials;
 
+import java.awt.MouseInfo;
 import java.io.File;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.Random;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Character.Inventory;
 import pathfinder.data.Items.Armor;
-import pathfinder.data.Items.Consumables;
 import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Weapon;
+import view.itemViews.ArmorView;
+import view.itemViews.ItemView;
+import view.itemViews.WeaponView;
 
 public class EquipmentPartialController extends NewCharacterPartialController {
 
@@ -33,33 +41,6 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private TableColumn<Weapon, String> columnWeaponName;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponType;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponCost;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponDmgS;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponDmgM;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponDmgType;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponCrit;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponRange;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponWeight;
-
-	@FXML
-	private TableColumn<Weapon, String> columnWeaponSpecial;
 
 	// Armor available table
 	@FXML
@@ -197,6 +178,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	// endregion
 
 	Item itemToAdd;
+	ItemView weaponView;
+	ItemView armorView;
 	Item itemToRemove;
 
 	private ObservableList<Weapon> obsListWeapons = FXCollections
@@ -265,58 +248,22 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		// Set the columns
 		columnWeaponName
 				.setCellValueFactory(cellData -> cellData.getValue().Name);
-		columnWeaponType
-				.setCellValueFactory(cellData -> cellData.getValue().WeaponType);
-		columnWeaponCost
-				.setCellValueFactory(cellData -> cellData.getValue().Cost);
-		columnWeaponDmgS
-				.setCellValueFactory(cellData -> cellData.getValue().DmgS);
-		columnWeaponDmgM
-				.setCellValueFactory(cellData -> cellData.getValue().DmgM);
-		columnWeaponDmgType
-				.setCellValueFactory(cellData -> cellData.getValue().WeaponDmgType);
-		columnWeaponCrit
-				.setCellValueFactory(cellData -> cellData.getValue().Critical);
-		columnWeaponRange
-				.setCellValueFactory(cellData -> cellData.getValue().Range);
-		columnWeaponWeight
-				.setCellValueFactory(cellData -> cellData.getValue().Weight);
-		columnWeaponSpecial
-				.setCellValueFactory(cellData -> cellData.getValue().Special);
 
 		// Armor
 		tableArmorAvailable.setItems(obsListArmor);
 		columnArmorName
 				.setCellValueFactory(cellData -> cellData.getValue().Name);
-		columnArmorType
-				.setCellValueFactory(cellData -> cellData.getValue().ArmorType);
-		columnArmorCost
-				.setCellValueFactory(cellData -> cellData.getValue().Cost);
-		columnArmorBonus
-				.setCellValueFactory(cellData -> cellData.getValue().ArmorBonus);
-		columnArmorMaxDex
-				.setCellValueFactory(cellData -> cellData.getValue().MaxDexBonus);
-		columnArmorCheckPenalty.setCellValueFactory(cellData -> cellData
-				.getValue().ArmorCheckPenalty);
-		columnArmorSpellFailure.setCellValueFactory(cellData -> cellData
-				.getValue().ArcaneSpellFailure);
-		columnArmorSpeed30
-				.setCellValueFactory(cellData -> cellData.getValue().Speed30feet);
-		columnArmorSpeed20
-				.setCellValueFactory(cellData -> cellData.getValue().Speed20feet);
-		columnArmorWeight
-				.setCellValueFactory(cellData -> cellData.getValue().Weight);
 
 		// Goods
 		tableGoodsAvailable.setItems(obsListGoods);
 		columnGoodsName
 				.setCellValueFactory(cellData -> cellData.getValue().Name);
-		columnGoodsCost
-				.setCellValueFactory(cellData -> cellData.getValue().Cost);
-		columnGoodsWeight
-				.setCellValueFactory(cellData -> cellData.getValue().Weight);
+//		columnGoodsCost
+//				.setCellValueFactory(cellData -> cellData.getValue().Cost);
+//		columnGoodsWeight
+//				.setCellValueFactory(cellData -> cellData.getValue().Weight);
 
-		// end region
+		// endregion
 
 		// region Character Items
 
@@ -378,6 +325,37 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	}
 
+	private void readItemViews() throws IOException {
+		// Load the fxml file and create a new stage for the popup dialog.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+        
+        Stage weaponViewStage = new Stage();
+        weaponViewStage.setScene(new Scene(page));
+        weaponViewStage.initStyle(StageStyle.UNDECORATED);
+        weaponViewStage.setAlwaysOnTop(true);
+        weaponViewStage.initOwner(getParentWindow().getDialogStage());
+        weaponViewStage.setOpacity(0.9);
+        weaponViewStage.initModality(Modality.WINDOW_MODAL);
+        weaponView = loader.getController();
+        weaponView.setDialogStage(weaponViewStage);
+        
+        loader = new FXMLLoader();
+        loader.setLocation(ArmorView.class.getResource("ArmorView.fxml"));
+        page = (AnchorPane) loader.load();
+        
+        Stage armorViewStage = new Stage();
+        armorViewStage.setScene(new Scene(page));
+        armorViewStage.initStyle(StageStyle.UNDECORATED);
+        armorViewStage.setAlwaysOnTop(true);
+        armorViewStage.initOwner(getParentWindow().getDialogStage());
+        armorViewStage.setOpacity(0.9);
+        armorViewStage.initModality(Modality.WINDOW_MODAL);
+        armorView = loader.getController();
+        armorView.setDialogStage(armorViewStage);
+	}
+
 	@Override
 	/**
 	 * This is what you will use to set the data for this view if you need to take data from the character class
@@ -387,6 +365,13 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		{
 			btnRollStartingWealth.setDisable(false);
 			classChosen = getCharacter().getClasses()[0].getName();
+		}
+
+		try {
+			readItemViews();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -415,6 +400,18 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		// Action result =
 		// Dialogs.create().title("Item Selected").masthead("Do you want to add this Item to your Character?").message("Selected Item: "+item.Name.get()).showConfirm();
 		itemToAdd = item;
+		if (itemToAdd.getClass().toString().contains("Weapon")&& weaponView != null) {
+			weaponView.setItem(itemToAdd);
+			weaponView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX()-5);
+			weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY()-5);
+			weaponView.show();
+		}
+		if (itemToAdd.getClass().toString().contains("Armor") && armorView != null) {
+			armorView.setItem(itemToAdd);
+			armorView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX()-5);
+			armorView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY()-5);
+			armorView.show();
+		}
 	}
 
 	private void handleSelectedCharacterItem(Item item) {

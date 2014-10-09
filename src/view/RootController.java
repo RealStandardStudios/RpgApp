@@ -5,21 +5,40 @@ import java.util.HashMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.layout.BorderPane;
-import jefXif.WindowController;
+import javafx.scene.control.Label;
+import jefXif.view.Gui;
+import jefXif.view.RootLayoutController;
+import jefXif.view.WindowController;
+import pathfinder.data.Character.Character;
 import window.Interface;
 
 /**
  * @author Real Standard Studios - Matthew Meehan
  *
  */
-public class RootLayoutController {
-	private Interface ui;
-	
-	private HashMap<String, WindowController> windowPartials;
+public class RootController extends RootLayoutController {
 	
 	@FXML
-	private BorderPane rootLayout;
+	Label lblCharacterName;
+	
+	private Character character;
+	
+	/**
+	 * @return the character
+	 */
+	public Character getCharacter() {
+		return character;
+	}
+	/**
+	 * @param character the character to set
+	 */
+	public void setCharacter(Character character) {
+		this.character = character;
+		this.lblCharacterName.setText(this.character.getName());
+	}
+
+	private HashMap<String, WindowController> windowPartials;
+	
 	
 	@FXML
 	private void handleCharacterAction(ActionEvent event) {
@@ -58,12 +77,8 @@ public class RootLayoutController {
 		rootLayout.setCenter(node);
 	}
 
-	public Interface getInterface() {
-		return ui;
-	}
-
-	public void setInterface(Interface ui) {
-		this.ui = ui;
+	public void setInterface(Gui ui) {
+		this.ui = (Interface) ui;
 	}
 	
 	public void setWindowPartials(HashMap<String, WindowController>windowPartials) {
