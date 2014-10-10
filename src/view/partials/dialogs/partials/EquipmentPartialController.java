@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -247,6 +248,21 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 		// Set observable list of weapons into the weapons table
 		tableWeaponsAvailable.setItems(obsListWeapons);
+		tableWeaponsAvailable.setRowFactory(tableView-> {
+			final TableRow<Weapon> row = new TableRow<>();
+			
+			row.hoverProperty().addListener((observable) -> {
+				final Weapon weapon = row.getItem();
+				if(row.isHover() && weapon != null) {
+					weaponView.setItem(weapon);
+					weaponView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX());
+					weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
+					weaponView.show();
+				}
+			});
+			
+			return row;
+		});
 		// Set the columns
 		columnWeaponName
 				.setCellValueFactory(cellData -> cellData.getValue().Name);
@@ -336,10 +352,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
         Stage weaponViewStage = new Stage();
         weaponViewStage.setScene(new Scene(page));
         weaponViewStage.initStyle(StageStyle.UNDECORATED);
-        weaponViewStage.setAlwaysOnTop(true);
+//        weaponViewStage.setAlwaysOnTop(true);
         weaponViewStage.initOwner(getParentWindow().getDialogStage());
         weaponViewStage.setOpacity(0.9);
-        weaponViewStage.initModality(Modality.WINDOW_MODAL);
+        weaponViewStage.initModality(Modality.NONE);
         weaponView = loader.getController();
         weaponView.setDialogStage(weaponViewStage);
         
@@ -353,7 +369,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
         armorViewStage.setAlwaysOnTop(true);
         armorViewStage.initOwner(getParentWindow().getDialogStage());
         armorViewStage.setOpacity(0.9);
-        armorViewStage.initModality(Modality.WINDOW_MODAL);
+        armorViewStage.initModality(Modality.NONE);
         armorView = loader.getController();
         armorView.setDialogStage(armorViewStage);
 	}
@@ -405,12 +421,12 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		// Action result =
 		// Dialogs.create().title("Item Selected").masthead("Do you want to add this Item to your Character?").message("Selected Item: "+item.Name.get()).showConfirm();
 		itemToAdd = item;
-		if (itemToAdd.getClass().toString().contains("Weapon")&& weaponView != null) {
-			weaponView.setItem(itemToAdd);
-			weaponView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX()-5);
-			weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY()-5);
-			weaponView.show();
-		}
+//		if (itemToAdd.getClass().toString().contains("Weapon")&& weaponView != null) {
+//			weaponView.setItem(itemToAdd);
+//			weaponView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX()-5);
+//			weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY()-5);
+//			weaponView.show();
+//		}
 		if (itemToAdd.getClass().toString().contains("Armor") && armorView != null) {
 			armorView.setItem(itemToAdd);
 			armorView.getDialogStage().setX(MouseInfo.getPointerInfo().getLocation().getX()-5);
