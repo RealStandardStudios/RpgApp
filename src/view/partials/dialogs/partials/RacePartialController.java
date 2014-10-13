@@ -100,6 +100,7 @@ public class RacePartialController extends NewCharacterPartialController {
 		((AbilityScoresPartialController)getParentWindow().getPartials().get("AbilityScores")).firstTimeRun();
 		getParentWindow().setAeAdded(false);
 		getParentWindow().setTeAdded(false);
+		getParentWindow().raceSelected = true;
 	}
 
 	@Override

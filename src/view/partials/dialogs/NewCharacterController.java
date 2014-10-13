@@ -66,6 +66,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
     Character newCharacter;
     boolean aeAdded = false;
     boolean teAdded = false;
+	public boolean raceSelected = false;
+	public boolean classSelected = false;
+	int pageNumber = 1;
 
     public NewCharacterController() {
 	newCharacter = new Character();
@@ -208,10 +211,40 @@ public class NewCharacterController extends DialogController implements jefXif.i
 
     @FXML
     public void handleNext(ActionEvent event) {
-	if (tpTabs.getSelectionModel().selectedIndexProperty().get() < partialNames.length - 1)
-	    tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() + 1);
-	tpTabs.getSelectionModel().getSelectedItem().setDisable(false);
+	if(pageNumber == 3)
+		{
+			goToNext();
+		}
+		if(classSelected && pageNumber == 2)
+		{
+			goToNext();
+			pageNumber++;
+		}
+		else if(!classSelected && pageNumber == 2)
+		{
+			Dialogs.create().title("Selection error").masthead("Please Select A Class ")
+			.message("Please select a class from the dropdown menu")
+			.showWarning();
+		}
+		if(raceSelected && pageNumber == 1)
+		{
+			goToNext();
+			pageNumber++;
+		}
+		else if(!raceSelected && pageNumber == 1)
+		{
+			Dialogs.create().title("Selection error").masthead("Please Select A Race ")
+			.message("Please select a race from the dropdown menu")
+			.showWarning();
+		}
     }
+    
+    void goToNext()
+	{
+		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<partialNames.length-1)
+			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()+1);
+		tpTabs.getSelectionModel().getSelectedItem().setDisable(false);
+	}
 
     public void loadPartials() {
 	partials = new HashMap<String, NewCharacterPartialController>();

@@ -384,7 +384,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	    int max = startingWealthD6 * 6;
 	    Integer startingWealth = (rnd.nextInt(max - min) + min) * 10;
 	    goldRemaining = startingWealth;
-
+ 
 	    lblStartingWealthValue.setText(startingWealth.toString());
 	    lblGoldRemainingValue.setText("" + goldRemaining);
 	    btnRollStartingWealth.setDisable(true);
