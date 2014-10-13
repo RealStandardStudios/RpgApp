@@ -3,6 +3,7 @@ package view.partials.dialogs.partials;
 import java.util.ArrayList;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import pathfinder.data.Skill;
 import pathfinder.data.Effects.Effect;
@@ -233,77 +234,77 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	SkillGridRow[] skillGrid;
 	//endregion
 
-	//region Class Skill Labels
+	//region Class Skill Labels	
 	@FXML
-	Label lblClassAcrobatics;
+	CheckBox chkClassAcrobatics;
 	@FXML
-	Label lblClassAppraise;
+	CheckBox chkClassAppraise;
 	@FXML
-	Label lblClassBluff;
+	CheckBox chkClassBluff;
 	@FXML
-	Label lblClassClimb;
+	CheckBox chkClassClimb;
 	@FXML
-	Label lblClassCraft;
+	CheckBox chkClassCraft;
 	@FXML
-	Label lblClassDiplomacy;
+	CheckBox chkClassDiplomacy;
 	@FXML
-	Label lblClassDisableDevice;
+	CheckBox chkClassDisableDevice;
 	@FXML
-	Label lblClassDisguise;
+	CheckBox chkClassDisguise;
 	@FXML
-	Label lblClassEscapeArtist;
+	CheckBox chkClassEscapeArtist;
 	@FXML
-	Label lblClassFly;
+	CheckBox chkClassFly;
 	@FXML
-	Label lblClassHandleAnimal;
+	CheckBox chkClassHandleAnimal;
 	@FXML
-	Label lblClassHeal;
+	CheckBox chkClassHeal;
 	@FXML
-	Label lblClassIntimidate;
+	CheckBox chkClassIntimidate;
 	@FXML
-	Label lblClassKnowledgeArcana;
+	CheckBox chkClassKnowledgeArcana;
 	@FXML
-	Label lblClassKnowledgeDungeoneering;
+	CheckBox chkClassKnowledgeDungeoneering;
 	@FXML
-	Label lblClassKnowledgeEngineering;
+	CheckBox chkClassKnowledgeEngineering;
 	@FXML
-	Label lblClassKnowledgeGeography;
+	CheckBox chkClassKnowledgeGeography;
 	@FXML
-	Label lblClassKnowledgeHistory;
+	CheckBox chkClassKnowledgeHistory;
 	@FXML
-	Label lblClassKnowledgeLocal;
+	CheckBox chkClassKnowledgeLocal;
 	@FXML
-	Label lblClassKnowledgeNature;
+	CheckBox chkClassKnowledgeNature;
 	@FXML
-	Label lblClassKnowledgeNobility;
+	CheckBox chkClassKnowledgeNobility;
 	@FXML
-	Label lblClassKnowledgePlanes;
+	CheckBox chkClassKnowledgePlanes;
 	@FXML
-	Label lblClassKnowledgeReligion;
+	CheckBox chkClassKnowledgeReligion;
 	@FXML
-	Label lblClassLinguistics;
+	CheckBox chkClassLinguistics;
 	@FXML
-	Label lblClassPerception;
+	CheckBox chkClassPerception;
 	@FXML
-	Label lblClassPerform;
+	CheckBox chkClassPerform;
 	@FXML
-	Label lblClassProfession;
+	CheckBox chkClassProfession;
 	@FXML
-	Label lblClassRide;
+	CheckBox chkClassRide;
 	@FXML
-	Label lblClassSenseMotive;
+	CheckBox chkClassSenseMotive;
 	@FXML
-	Label lblClassSleightOfHand;
+	CheckBox chkClassSleightOfHand;
 	@FXML
-	Label lblClassSpellcraft;
+	CheckBox chkClassSpellcraft;
 	@FXML
-	Label lblClassStealth;
+	CheckBox chkClassStealth;
 	@FXML
-	Label lblClassSurvival;
+	CheckBox chkClassSurvival;
 	@FXML
-	Label lblClassSwim;
+	CheckBox chkClassSwim;
 	@FXML
-	Label lblClassUseMagicDevice;
+	CheckBox chkClassUseMagicDevice;
 	//endregion
 
 	//region Racial Bonus Labels
@@ -407,6 +408,7 @@ public class SkillsPartialController extends NewCharacterPartialController {
 		}
 		return classSkill;
 	}
+	
 	private int getRacialMod(String skill) {
 		int racialBonus = 0;
 		for (Effect e : getCharacter().getEffects()) {
@@ -415,6 +417,8 @@ public class SkillsPartialController extends NewCharacterPartialController {
 				SkillEffect effect = (SkillEffect) e;
 				//System.out.println("There is a skill effect!");
 				if(effect.getBonusType().equals("racial")) {
+					
+					// this might not be true
 					if(effect.getSkillName().trim().toLowerCase().equals(skill.trim().toLowerCase())){
 						return effect.getValue();
 					}
@@ -792,7 +796,6 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	void handleAppraiseIncrease() {
 		increaseRank(skillGrid[1]);
 	}
-
 	@FXML
 	void handleAppraiseDecrease() {
 		decreseRank(skillGrid[1]);
@@ -817,41 +820,41 @@ public class SkillsPartialController extends NewCharacterPartialController {
 			lblRanksRemaining.setText((getCharacter().getIntelligence().getModifier().getValue() + getCharacter().getClasses()[0].getSkillRanksPerLevel()) + "");
 			
 			skillGrid = new SkillGridRow[] {
-				new SkillGridRow("Acrobatics", lblTotalAcrobatics, lblRanksAcrobatics, lblAbilityAcrobatics, lblRacialAcrobatics, lblClassAcrobatics, getCharacter().getDexterity()),
-				new SkillGridRow("Appraise", lblTotalAppraise, lblRanksAppraise, lblAbilityAppraise, lblRacialAppraise, lblClassAppraise, getCharacter().getIntelligence()),
-				new SkillGridRow("Bluff", lblTotalBluff, lblRanksBluff, lblAbilityBluff, lblRacialBluff, lblClassBluff, getCharacter().getCharisma()),
-				new SkillGridRow("Climb", lblTotalClimb, lblRanksClimb, lblAbilityClimb, lblRacialClimb, lblClassClimb, getCharacter().getStrength()),
-				new SkillGridRow("Craft", lblTotalCraft, lblRanksCraft, lblAbilityCraft, lblRacialCraft, lblClassCraft, getCharacter().getIntelligence()),
-				new SkillGridRow("Diplomacy", lblTotalDiplomacy, lblRanksDiplomacy, lblAbilityDiplomacy, lblRacialDiplomacy, lblClassDiplomacy, getCharacter().getCharisma()),
-				new SkillGridRow("Disable Device", lblTotalDisableDevice, lblRanksDisableDevice, lblAbilityDisableDevice, lblRacialDisableDevice, lblClassDisableDevice, getCharacter().getDexterity()),
-				new SkillGridRow("Disguise", lblTotalDisguise, lblRanksDisguise, lblAbilityDisguise, lblRacialDisguise, lblClassDisguise, getCharacter().getCharisma()),
-				new SkillGridRow("Escape Artist", lblTotalEscapeArtist, lblRanksEscapeArtist, lblAbilityEscapeArtist, lblRacialEscapeArtist, lblClassEscapeArtist, getCharacter().getDexterity()),
-				new SkillGridRow("Fly", lblTotalFly, lblRanksFly, lblAbilityFly, lblRacialFly, lblClassFly, getCharacter().getDexterity()),
-				new SkillGridRow("Handle Animal", lblTotalHandleAnimal, lblRanksHandleAnimal, lblAbilityHandleAnimal, lblRacialHandleAnimal, lblClassHandleAnimal, getCharacter().getCharisma()),
-				new SkillGridRow("Heal", lblTotalHeal, lblRanksHeal, lblAbilityHeal, lblRacialHeal, lblClassHeal, getCharacter().getWisdom()),
-				new SkillGridRow("Intimidate", lblTotalIntimidate, lblRanksIntimidate, lblAbilityIntimidate, lblRacialIntimidate, lblClassIntimidate, getCharacter().getCharisma()),
-				new SkillGridRow("Knowledge (arcana)", lblTotalKnowledgeArcana, lblRanksKnowledgeArcana, lblAbilityKnowledgeArcana, lblRacialKnowledgeArcana, lblClassKnowledgeArcana, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (dungeoneering)", lblTotalKnowledgeDungeoneering, lblRanksKnowledgeDungeoneering, lblAbilityKnowledgeDungeoneering, lblRacialKnowledgeDungeoneering, lblClassKnowledgeDungeoneering, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (engineering)", lblTotalKnowledgeEngineering, lblRanksKnowledgeEngineering, lblAbilityKnowledgeEngineering, lblRacialKnowledgeEngineering, lblClassKnowledgeEngineering, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (geography)", lblTotalKnowledgeGeography, lblRanksKnowledgeGeography, lblAbilityKnowledgeGeography, lblRacialKnowledgeGeography, lblClassKnowledgeGeography, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (history)", lblTotalKnowledgeHistory, lblRanksKnowledgeHistory, lblAbilityKnowledgeHistory, lblRacialKnowledgeHistory, lblClassKnowledgeHistory, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (local)", lblTotalKnowledgeLocal, lblRanksKnowledgeLocal, lblAbilityKnowledgeLocal, lblRacialKnowledgeLocal, lblClassKnowledgeLocal, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (nature)", lblTotalKnowledgeNature, lblRanksKnowledgeNature, lblAbilityKnowledgeNature, lblRacialKnowledgeNature, lblClassKnowledgeNature, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (nobility)", lblTotalKnowledgeNobility, lblRanksKnowledgeNobility, lblAbilityKnowledgeNobility, lblRacialKnowledgeNobility, lblClassKnowledgeNobility, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (planes)", lblTotalKnowledgePlanes, lblRanksKnowledgePlanes, lblAbilityKnowledgePlanes, lblRacialKnowledgePlanes, lblClassKnowledgePlanes, getCharacter().getIntelligence()),
-				new SkillGridRow("Knowledge (religion)", lblTotalKnowledgeReligion, lblRanksKnowledgeReligion, lblAbilityKnowledgeReligion, lblRacialKnowledgeReligion, lblClassKnowledgeReligion, getCharacter().getIntelligence()),
-				new SkillGridRow("Linguistics", lblTotalLinguistics, lblRanksLinguistics, lblAbilityLinguistics, lblRacialLinguistics, lblClassLinguistics, getCharacter().getIntelligence()),
-				new SkillGridRow("Perception", lblTotalPerception, lblRanksPerception, lblAbilityPerception, lblRacialPerception, lblClassPerception, getCharacter().getWisdom()),
-				new SkillGridRow("Perform", lblTotalPerform, lblRanksPerform, lblAbilityPerform, lblRacialPerform, lblClassPerform, getCharacter().getCharisma()),
-				new SkillGridRow("Profession", lblTotalProfession, lblRanksProfession, lblAbilityProfession, lblRacialProfession, lblClassProfession, getCharacter().getWisdom()),
-				new SkillGridRow("Ride", lblTotalRide, lblRanksRide, lblAbilityRide, lblRacialRide, lblClassRide, getCharacter().getDexterity()),
-				new SkillGridRow("Sense Motive", lblTotalSenseMotive, lblRanksSenseMotive, lblAbilitySenseMotive, lblRacialSenseMotive, lblClassSenseMotive, getCharacter().getWisdom()),
-				new SkillGridRow("Sleight of Hand", lblTotalSleightOfHand, lblRanksSleightOfHand, lblAbilitySleightOfHand, lblRacialSleightOfHand, lblClassSleightOfHand, getCharacter().getDexterity()),
-				new SkillGridRow("Spellcraft", lblTotalSpellcraft, lblRanksSpellcraft, lblAbilitySpellcraft, lblRacialSpellcraft, lblClassSpellcraft, getCharacter().getIntelligence()),
-				new SkillGridRow("Stealth", lblTotalStealth, lblRanksStealth, lblAbilityStealth, lblRacialStealth, lblClassStealth, getCharacter().getDexterity()),
-				new SkillGridRow("Survival", lblTotalSurvival, lblRanksSurvival, lblAbilitySurvival, lblRacialSurvival, lblClassSurvival, getCharacter().getWisdom()),
-				new SkillGridRow("Swim", lblTotalSwim, lblRanksSwim, lblAbilitySwim, lblRacialSwim, lblClassSwim, getCharacter().getStrength()),
-				new SkillGridRow("Use Magic Device", lblTotalUseMagicDevice, lblRanksUseMagicDevice, lblAbilityUseMagicDevice, lblRacialUseMagicDevice, lblClassUseMagicDevice, getCharacter().getDexterity())
+				new SkillGridRow("Acrobatics", lblTotalAcrobatics, lblRanksAcrobatics, lblAbilityAcrobatics, lblRacialAcrobatics, chkClassAcrobatics, getCharacter().getDexterity()),
+				new SkillGridRow("Appraise", lblTotalAppraise, lblRanksAppraise, lblAbilityAppraise, lblRacialAppraise, chkClassAppraise, getCharacter().getIntelligence()),
+				new SkillGridRow("Bluff", lblTotalBluff, lblRanksBluff, lblAbilityBluff, lblRacialBluff, chkClassBluff, getCharacter().getCharisma()),
+				new SkillGridRow("Climb", lblTotalClimb, lblRanksClimb, lblAbilityClimb, lblRacialClimb, chkClassClimb, getCharacter().getStrength()),
+				new SkillGridRow("Craft", lblTotalCraft, lblRanksCraft, lblAbilityCraft, lblRacialCraft, chkClassCraft, getCharacter().getIntelligence()),
+				new SkillGridRow("Diplomacy", lblTotalDiplomacy, lblRanksDiplomacy, lblAbilityDiplomacy, lblRacialDiplomacy, chkClassDiplomacy, getCharacter().getCharisma()),
+				new SkillGridRow("Disable Device", lblTotalDisableDevice, lblRanksDisableDevice, lblAbilityDisableDevice, lblRacialDisableDevice, chkClassDisableDevice, getCharacter().getDexterity()),
+				new SkillGridRow("Disguise", lblTotalDisguise, lblRanksDisguise, lblAbilityDisguise, lblRacialDisguise, chkClassDisguise, getCharacter().getCharisma()),
+				new SkillGridRow("Escape Artist", lblTotalEscapeArtist, lblRanksEscapeArtist, lblAbilityEscapeArtist, lblRacialEscapeArtist, chkClassEscapeArtist, getCharacter().getDexterity()),
+				new SkillGridRow("Fly", lblTotalFly, lblRanksFly, lblAbilityFly, lblRacialFly, chkClassFly, getCharacter().getDexterity()),
+				new SkillGridRow("Handle Animal", lblTotalHandleAnimal, lblRanksHandleAnimal, lblAbilityHandleAnimal, lblRacialHandleAnimal, chkClassHandleAnimal, getCharacter().getCharisma()),
+				new SkillGridRow("Heal", lblTotalHeal, lblRanksHeal, lblAbilityHeal, lblRacialHeal, chkClassHeal, getCharacter().getWisdom()),
+				new SkillGridRow("Intimidate", lblTotalIntimidate, lblRanksIntimidate, lblAbilityIntimidate, lblRacialIntimidate, chkClassIntimidate, getCharacter().getCharisma()),
+				new SkillGridRow("Knowledge (arcana)", lblTotalKnowledgeArcana, lblRanksKnowledgeArcana, lblAbilityKnowledgeArcana, lblRacialKnowledgeArcana, chkClassKnowledgeArcana, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (dungeoneering)", lblTotalKnowledgeDungeoneering, lblRanksKnowledgeDungeoneering, lblAbilityKnowledgeDungeoneering, lblRacialKnowledgeDungeoneering, chkClassKnowledgeDungeoneering, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (engineering)", lblTotalKnowledgeEngineering, lblRanksKnowledgeEngineering, lblAbilityKnowledgeEngineering, lblRacialKnowledgeEngineering, chkClassKnowledgeEngineering, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (geography)", lblTotalKnowledgeGeography, lblRanksKnowledgeGeography, lblAbilityKnowledgeGeography, lblRacialKnowledgeGeography, chkClassKnowledgeGeography, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (history)", lblTotalKnowledgeHistory, lblRanksKnowledgeHistory, lblAbilityKnowledgeHistory, lblRacialKnowledgeHistory, chkClassKnowledgeHistory, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (local)", lblTotalKnowledgeLocal, lblRanksKnowledgeLocal, lblAbilityKnowledgeLocal, lblRacialKnowledgeLocal, chkClassKnowledgeLocal, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (nature)", lblTotalKnowledgeNature, lblRanksKnowledgeNature, lblAbilityKnowledgeNature, lblRacialKnowledgeNature, chkClassKnowledgeNature, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (nobility)", lblTotalKnowledgeNobility, lblRanksKnowledgeNobility, lblAbilityKnowledgeNobility, lblRacialKnowledgeNobility, chkClassKnowledgeNobility, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (planes)", lblTotalKnowledgePlanes, lblRanksKnowledgePlanes, lblAbilityKnowledgePlanes, lblRacialKnowledgePlanes, chkClassKnowledgePlanes, getCharacter().getIntelligence()),
+				new SkillGridRow("Knowledge (religion)", lblTotalKnowledgeReligion, lblRanksKnowledgeReligion, lblAbilityKnowledgeReligion, lblRacialKnowledgeReligion, chkClassKnowledgeReligion, getCharacter().getIntelligence()),
+				new SkillGridRow("Linguistics", lblTotalLinguistics, lblRanksLinguistics, lblAbilityLinguistics, lblRacialLinguistics, chkClassLinguistics, getCharacter().getIntelligence()),
+				new SkillGridRow("Perception", lblTotalPerception, lblRanksPerception, lblAbilityPerception, lblRacialPerception, chkClassPerception, getCharacter().getWisdom()),
+				new SkillGridRow("Perform", lblTotalPerform, lblRanksPerform, lblAbilityPerform, lblRacialPerform, chkClassPerform, getCharacter().getCharisma()),
+				new SkillGridRow("Profession", lblTotalProfession, lblRanksProfession, lblAbilityProfession, lblRacialProfession, chkClassProfession, getCharacter().getWisdom()),
+				new SkillGridRow("Ride", lblTotalRide, lblRanksRide, lblAbilityRide, lblRacialRide, chkClassRide, getCharacter().getDexterity()),
+				new SkillGridRow("Sense Motive", lblTotalSenseMotive, lblRanksSenseMotive, lblAbilitySenseMotive, lblRacialSenseMotive, chkClassSenseMotive, getCharacter().getWisdom()),
+				new SkillGridRow("Sleight of Hand", lblTotalSleightOfHand, lblRanksSleightOfHand, lblAbilitySleightOfHand, lblRacialSleightOfHand, chkClassSleightOfHand, getCharacter().getDexterity()),
+				new SkillGridRow("Spellcraft", lblTotalSpellcraft, lblRanksSpellcraft, lblAbilitySpellcraft, lblRacialSpellcraft, chkClassSpellcraft, getCharacter().getIntelligence()),
+				new SkillGridRow("Stealth", lblTotalStealth, lblRanksStealth, lblAbilityStealth, lblRacialStealth, chkClassStealth, getCharacter().getDexterity()),
+				new SkillGridRow("Survival", lblTotalSurvival, lblRanksSurvival, lblAbilitySurvival, lblRacialSurvival, chkClassSurvival, getCharacter().getWisdom()),
+				new SkillGridRow("Swim", lblTotalSwim, lblRanksSwim, lblAbilitySwim, lblRacialSwim, chkClassSwim, getCharacter().getStrength()),
+				new SkillGridRow("Use Magic Device", lblTotalUseMagicDevice, lblRanksUseMagicDevice, lblAbilityUseMagicDevice, lblRacialUseMagicDevice, chkClassUseMagicDevice, getCharacter().getDexterity())
 			};
 			handleLabelSteup();
 			haveIBeenHereBefore = true;
