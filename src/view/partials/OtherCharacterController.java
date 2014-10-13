@@ -22,16 +22,28 @@ import view.partials.dialogs.NewCharacterController;
 
 
 /**
+ * The Controller for the Other Characters
+ * 
  * @author Real Standard Studios - Matthew Meehan
- *
  */
 public class OtherCharacterController extends MainWindowController {
 
+	/**
+	 * handler for the NewCharacter event
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void handleNewCharacterAction(ActionEvent event) {
 		showNewChar();
 	}
 	
+	/**
+	 * handler for the Load Character event
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	private void handleLoadChatacterAction(ActionEvent event) throws IOException {
 		FileChooser fileChooser = new FileChooser();
@@ -54,6 +66,9 @@ public class OtherCharacterController extends MainWindowController {
         }
 	}
 	
+	/**
+	 * displays the new character views
+	 */
 	@FXML
 	private void showNewChar()
 	{

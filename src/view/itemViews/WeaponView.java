@@ -4,6 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import pathfinder.data.Items.Weapon;
 
+/**
+ * The view for Weapons
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class WeaponView extends ItemView {
 	
 	@FXML
@@ -24,6 +29,9 @@ public class WeaponView extends ItemView {
 		
 	}
 
+	/**
+	 * shows the view
+	 */
 	@Override
 	public void show() {
 		this.getDialogStage().show();

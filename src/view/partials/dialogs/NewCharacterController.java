@@ -28,6 +28,7 @@ import pathfinder.data.Races.Traits.Trait;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
 /**
+ * The Controller for New Characters
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
@@ -67,8 +68,13 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	Character newCharacter;
 	boolean aeAdded = false;
 	boolean teAdded = false;
+	public boolean raceSelected = false;
+	public boolean classSelected = false;
+	int pageNumber = 1;
 	
-	
+	/**
+	 * constructor for NewCharacterController
+	 */
 	public NewCharacterController() {
 		newCharacter = new Character();
 	}
@@ -78,6 +84,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		
 	}
 	
+	/**
+	 * loads the partial for NewCharacter
+	 */
 	@Override
 	public WindowController loadPartial(String name, Gui ui) throws IOException {
 		FXMLLoader loader = new FXMLLoader();
@@ -91,6 +100,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		return controller;
 	}
 	
+	/**
+	 * handles the tab changing event
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void handleTabChanged(Event event) {
 		Tab tabChanged = (Tab) event.getSource();
@@ -164,6 +178,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
 	}
 	
+	/**
+	 * handles the Okay event
+	 */
 	@Override
 	public void handleOkay(ActionEvent event) {
 		if(summaryReached){
@@ -176,6 +193,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
 	}
 	
+	/**
+	 * saves a New Character to a file location
+	 * 
+	 * @throws IOException
+	 */
 	private void saveCharacter() throws IOException {
 		DirectoryChooser directoryChooser = new DirectoryChooser();
 		
@@ -196,19 +218,64 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
 	}
 
+	/**
+	 * handles the back event
+	 * 
+	 * @param event
+	 */
 	@FXML
 	public void handleBack(ActionEvent event) {
 		if(tpTabs.getSelectionModel().selectedIndexProperty().get()>0)
 			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()-1);
 	}
 	
+	/**
+	 * handles the Next event
+	 * 
+	 * @param event
+	 */
 	@FXML
 	public void handleNext(ActionEvent event) {
+		if(pageNumber == 3)
+		{
+			goToNext();
+		}
+		if(classSelected && pageNumber == 2)
+		{
+			goToNext();
+			pageNumber++;
+		}
+		else if(!classSelected && pageNumber == 2)
+		{
+			Dialogs.create().title("Selection error").masthead("Please Select A Class ")
+			.message("Please select a class from the dropdown menu")
+			.showWarning();
+		}
+		if(raceSelected && pageNumber == 1)
+		{
+			goToNext();
+			pageNumber++;
+		}
+		else if(!raceSelected && pageNumber == 1)
+		{
+			Dialogs.create().title("Selection error").masthead("Please Select A Race ")
+			.message("Please select a race from the dropdown menu")
+			.showWarning();
+		}
+	}
+	
+	void goToNext()
+	{
 		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<partialNames.length-1)
 			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get()+1);
 		tpTabs.getSelectionModel().getSelectedItem().setDisable(false);
 	}
+	
+	
 
+	/**
+	 * loads all the partials in New Character
+	 */
 	public void loadPartials() {
 		partials = new HashMap<String, NewCharacterPartialController>();
 		for (String string : partialNames) {
@@ -230,10 +297,18 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		apSummary.getChildren().setAll(getPartials().get(partialNames[7]).getNode());
 	}
 
+	/**
+	 * gets character
+	 * 
+	 * @return
+	 */
 	public Character getCharacter() {
 		return this.newCharacter;
 	}
 
+	/**
+	 * sets the Character's ability scores
+	 */
 	public void setAbilities() {
 		getCharacter().setStrength(new Ability(AbilityName.Strength, 8));
 		getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 8));
@@ -244,14 +319,29 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
 	}
 
+	/**
+	 * gets the partials
+	 * 
+	 * @return
+	 */
 	public HashMap<String,NewCharacterPartialController> getPartials() {
 		return partials;
 	}
 
+	/**
+	 * sets whether the Ability effects is added or not
+	 * 
+	 * @param b
+	 */
 	public void setAeAdded(boolean b) {
 		this.aeAdded = b;
 	}
 
+	/**
+	 * sets whether the Trait effects is added or not
+	 * 
+	 * @param b
+	 */
 	public void setTeAdded(boolean b) {
 		this.teAdded = b;
 	}

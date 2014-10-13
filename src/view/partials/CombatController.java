@@ -2,8 +2,9 @@ package view.partials;
 
 
 /**
+ * The Controller for Combat
+ * 
  * @author Real Standard Studios - Matthew Meehan
- *
  */
 public class CombatController extends MainWindowController {
 

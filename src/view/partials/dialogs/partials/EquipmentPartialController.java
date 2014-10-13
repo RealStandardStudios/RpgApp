@@ -32,6 +32,7 @@ import view.itemViews.ArmorView;
 import view.itemViews.ItemView;
 import view.itemViews.WeaponView;
 
+@SuppressWarnings("deprecation")
 public class EquipmentPartialController extends NewCharacterPartialController {
 
 	// region Items Available Table annotations
@@ -375,6 +376,13 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				}
 
 				inventoryPartial.getItems().add(itemToAdd);
+			}
+			else
+			{
+				double amountNeeded = -priceCheck;
+				Dialogs.create().masthead("Low Cash")
+				.masthead("Not enough money")
+				.message("You need " + amountNeeded + "gp more to afford " + itemToAdd.Name.getValue()).showWarning();
 			}
 
 		}

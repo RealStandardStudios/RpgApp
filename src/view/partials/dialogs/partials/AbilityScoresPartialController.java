@@ -5,6 +5,11 @@ import javafx.scene.control.Label;
 import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Effects.Effect;
 
+/**
+ * The controller for the partial for Ability Scores
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class AbilityScoresPartialController extends
 		NewCharacterPartialController {
 	// region FXML labels
@@ -80,6 +85,9 @@ public class AbilityScoresPartialController extends
 
 	boolean totalsAdded;
 
+	/**
+	 * the initialize method
+	 */
 	@Override
 	public void initialize() {
 		totalsAdded = false;
@@ -274,6 +282,9 @@ public class AbilityScoresPartialController extends
 
 	// endregion
 
+	/**
+	 * sets the Data for all modifications to Ability Scores
+	 */
 	@Override
 	public void setData() {
 		if (firstRun) {
@@ -289,6 +300,9 @@ public class AbilityScoresPartialController extends
 		setWisLabels();
 	}
 
+	/**
+	 * sets up the Racial Bonuses to Ability scores
+	 */
 	void setUpRacialBonus() {
 		if (!totalsAdded)
 			for (Effect e : getCharacter().getEffects()) {
@@ -357,6 +371,9 @@ public class AbilityScoresPartialController extends
 			}
 	}
 
+	/**
+	 * sets up the values on the first time running
+	 */
 	public void firstTimeRun() {
 		totalsAdded = false;
 		getParentWindow().setAbilities();
