@@ -15,7 +15,7 @@
                   <Font name="System Bold" size="15.0" />
                </font></Label>
 				<Button id="charactersButton" fx:id="btnCharacter" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleCharacterAction" pickOnBounds="false" prefHeight="34.960837500002526" prefWidth="134.0" text="Character" />
-				<Button id="combatStatsButton" fx:id="btnCombatStats" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleCombatStatsAction" prefHeight="34.960837500002526" prefWidth="134.00009999999747" text="Combat Stats" />
+				<Button id="combatStatsButton" fx:id="btnCombatStats" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleCombatStatsAction" prefHeight="34.960837500002526" prefWidth="134.00009999999747" text="Statistics" />
 				<Button id="skillsButton" fx:id="btnSkills" layoutX="14.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleSkillsAction" prefHeight="34.960837500002526" prefWidth="134.0" text="Skills" />
 				<Button id="otherCharacter" layoutX="14.0" layoutY="671.0" mnemonicParsing="false" onAction="#handleOtherCharacterAction" prefHeight="34.9609459472631" prefWidth="134.0" text="Other Character" wrapText="true" />
 				<Button id="spellsButton" fx:id="btnSpells" layoutX="14.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleSpellsAction" prefHeight="34.9609375" prefWidth="134.0" text="Spells" />

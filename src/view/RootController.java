@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import jefXif.view.Gui;
 import jefXif.view.RootLayoutController;
-import jefXif.view.WindowController;
 import pathfinder.data.Character.Character;
 import view.partials.MainWindowController;
 import window.Interface;
@@ -36,8 +35,10 @@ public class RootController extends RootLayoutController {
 	public void setCharacter(Character character) {
 		this.character = character;
 		this.lblCharacterName.setText(this.character.getName());
-		for (MainWindowController window : windowPartials.values()) {
-			window.setData();
+		if(character!=null) {
+			for (MainWindowController window : windowPartials.values()) {
+				window.setData();
+			}
 		}
 	}
 

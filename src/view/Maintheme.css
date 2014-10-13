@@ -107,14 +107,14 @@
  
  .data-label {
  	-fx-padding: 8 10 8 10;
- 	-fx-background-color: WHITE;
+ 	/*-fx-background-color: WHITE;*/
  }
  .data-label > .text {
  	-fx-fill: BLACK;
  	-fx-font-size: 14px;
  }
  
-  .header-label {
+ .header-label {
  	-fx-padding: 5 5 5 5;
  	-fx-background-color: BLACK;
  	-fx-halignment: right;
