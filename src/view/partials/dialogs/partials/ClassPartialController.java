@@ -23,6 +23,11 @@ import pathfinder.data.Classes.Objects.LevelTable.LevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.MonkLevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
 
+/**
+ * the controller for the partial for Classes
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class ClassPartialController extends NewCharacterPartialController {
 	
 	Class selectedClass;
@@ -223,6 +228,9 @@ public class ClassPartialController extends NewCharacterPartialController {
 	// endregion
 	ObservableList<Class> classes;
 
+	/**
+	 * the initialize method for Class Partials
+	 */
 	@Override
 	public void initialize() {
 		classes = FXCollections.observableArrayList();
@@ -429,6 +437,9 @@ public class ClassPartialController extends NewCharacterPartialController {
 				});
 	}
 
+	/**
+	 * reads the classes in from a file
+	 */
 	private void readClasses() {
 		File file = new File(this.getClass().getResource("").getPath()
 				+ programRoot + "PathfinderData/data");
@@ -448,6 +459,11 @@ public class ClassPartialController extends NewCharacterPartialController {
 		readClasses();
 	}
 
+	/**
+	 * handler for selecting a class from a combo box
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void handleChangedClass(ActionEvent event) {
 		selectedClass = cboClasses.getSelectionModel().getSelectedItem();

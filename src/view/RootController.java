@@ -13,8 +13,9 @@ import view.partials.MainWindowController;
 import window.Interface;
 
 /**
+ * The Root Controller for the RogApp
+ * 
  * @author Real Standard Studios - Matthew Meehan
- *
  */
 public class RootController extends RootLayoutController {
 
@@ -42,6 +43,7 @@ public class RootController extends RootLayoutController {
 		window.setData();
 	    }
 	}
+	
     }
 
     private HashMap<String, MainWindowController> windowPartials;
@@ -94,6 +96,9 @@ public class RootController extends RootLayoutController {
 	this.ui = (Interface) ui;
     }
 
+	/**
+	 * sets the interface
+	 */
     public void setWindowPartials(HashMap<String, MainWindowController> windowPartials) {
 	this.windowPartials = windowPartials;
     }

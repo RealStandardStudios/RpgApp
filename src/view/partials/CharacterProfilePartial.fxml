@@ -123,24 +123,24 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label fx:id="lblName" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblRace" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblHomeland" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblGender" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblAge" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblHeight" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblWeight" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblAlignment" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblDeity" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblLanguages" styleClass="data-label" text="Label Filler Text" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblName" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblRace" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblHomeland" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblGender" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblAge" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblHeight" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblWeight" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblAlignment" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblDeity" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblLanguages" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
                               <Label fx:id="lblBackground" prefHeight="62.0" prefWidth="393.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
-                              <Label fx:id="lblApperance" prefHeight="17.0" prefWidth="392.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6" />
-                              <Label fx:id="lblPersonality" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="lblApperance" prefHeight="17.0" prefWidth="392.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                              <Label fx:id="lblPersonality" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
                            </children>
                            <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="23.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="27.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
                            </columnConstraints>
                            <rowConstraints>
@@ -181,9 +181,9 @@
                      <children>
                         <GridPane layoutX="127.0" layoutY="83.0" prefHeight="314.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="160.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.64999999999998" minWidth="10.0" percentWidth="22.0" prefWidth="97.64999999999998" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>

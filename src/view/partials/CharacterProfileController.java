@@ -5,8 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 /**
+ * The Controller for the Character Controller
+ * 
  * @author Real Standard Studios - Matthew Meehan
- *
  */
 public class CharacterProfileController extends MainWindowController {
 	
@@ -43,6 +44,9 @@ public class CharacterProfileController extends MainWindowController {
 
 	}
 	
+	/**
+	 * sets the data for the Character Profile
+	 */
 	public void setData() {
 		this.lblAge.setText(((RootController) getRoot()).getCharacter().getFluff().get("Age"));
 		this.lblAlignment.setText(((RootController) getRoot()).getCharacter().getAlignment().name());

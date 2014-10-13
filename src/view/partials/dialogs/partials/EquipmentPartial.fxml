@@ -20,7 +20,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblStartingWealthValue" styleClass="data-label" text="oh ok" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+            <Label fx:id="lblStartingWealthValue" styleClass="data-label" text="-" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
                <GridPane.margin>
                   <Insets left="140.0" top="15.0" />
                </GridPane.margin>
@@ -50,7 +50,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblGoldRemainingValue" styleClass="data-label" text="heaps as bae" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+            <Label fx:id="lblGoldRemainingValue" styleClass="data-label" text="-" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
                <GridPane.margin>
                   <Insets left="140.0" top="50.0" />
                </GridPane.margin>

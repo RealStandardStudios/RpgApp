@@ -78,6 +78,10 @@
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
  
+ .tab-pane:top > .tab-content-area {
+ 	-fx-background-color: #E09C51;
+ }
+ 
  /******************************************************************************
  *                                                                             *
  * Button                                                                      *
