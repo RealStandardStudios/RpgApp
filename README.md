@@ -1,5 +1,4 @@
-#RPG App
-##(name to be decided)
+#Compendium of Heroes
 
 #Warning! for the time being code will be refactored unsparingly. When this reaches an alpha release we will stick to naming conventions etc.
 

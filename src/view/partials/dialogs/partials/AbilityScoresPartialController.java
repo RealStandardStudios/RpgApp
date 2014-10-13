@@ -178,7 +178,7 @@ public class AbilityScoresPartialController extends
 	// region handle AbilityScores
 	@FXML
 	void handleStrIncrease() {
-		if (getCharacter().getStrength().getValue() < 18) {
+		if (Integer.parseInt(lblBaseStr.getText()) < 18) {
 			getCharacter().getStrength().increaseValue();
 			setStrLabels();
 		}
@@ -186,7 +186,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleStrDecrease() {
-		if (getCharacter().getStrength().getValue() > 3) {
+		if (Integer.parseInt(lblBaseStr.getText()) > 3) {
 			getCharacter().getStrength().decreaseValue();
 			setStrLabels();
 		}
@@ -194,7 +194,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleDexIncrease() {
-		if (getCharacter().getDexterity().getValue() < 18) {
+		if (Integer.parseInt(lblBaseDex.getText()) < 18) {
 			getCharacter().getDexterity().increaseValue();
 			setDexLabels();
 		}
@@ -202,7 +202,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleDexDecrease() {
-		if (getCharacter().getDexterity().getValue() > 3) {
+		if (Integer.parseInt(lblBaseDex.getText()) > 3) {
 			getCharacter().getDexterity().decreaseValue();
 			setDexLabels();
 		}
@@ -210,7 +210,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleConIncrease() {
-		if (getCharacter().getConstitution().getValue() < 18) {
+		if (Integer.parseInt(lblBaseCon.getText()) < 18) {
 			getCharacter().getConstitution().increaseValue();
 			setConLabels();
 		}
@@ -218,7 +218,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleConDecrease() {
-		if (getCharacter().getConstitution().getValue() > 3) {
+		if (Integer.parseInt(lblBaseCon.getText()) > 3) {
 			getCharacter().getConstitution().decreaseValue();
 			setConLabels();
 		}
@@ -226,7 +226,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleIntIncrease() {
-		if (getCharacter().getIntelligence().getValue() < 18) {
+		if (Integer.parseInt(lblBaseInt.getText()) < 18) {
 			getCharacter().getIntelligence().increaseValue();
 			setIntLabels();
 		}
@@ -234,7 +234,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleIntDecrease() {
-		if (getCharacter().getIntelligence().getValue() > 3) {
+		if (Integer.parseInt(lblBaseInt.getText())  > 3) {
 			getCharacter().getIntelligence().decreaseValue();
 			setIntLabels();
 		}
@@ -242,7 +242,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleWisIncrease() {
-		if (getCharacter().getWisdom().getValue() < 18) {
+		if (Integer.parseInt(lblBaseWis.getText())  < 18) {
 			getCharacter().getWisdom().increaseValue();
 			setWisLabels();
 		}
@@ -250,7 +250,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleWisDecrease() {
-		if (getCharacter().getWisdom().getValue() > 3) {
+		if (Integer.parseInt(lblBaseWis.getText())  > 3) {
 			getCharacter().getWisdom().decreaseValue();
 			setWisLabels();
 		}
@@ -258,7 +258,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleChaIncrease() {
-		if (getCharacter().getCharisma().getValue() < 18) {
+		if (Integer.parseInt(lblBaseCha.getText())  < 18) {
 			getCharacter().getCharisma().increaseValue();
 			setChaLabels();
 		}
@@ -266,7 +266,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleChaDecrease() {
-		if (getCharacter().getCharisma().getValue() > 3) {
+		if (Integer.parseInt(lblBaseCha.getText())  > 3) {
 			getCharacter().getCharisma().decreaseValue();
 			setChaLabels();
 		}
