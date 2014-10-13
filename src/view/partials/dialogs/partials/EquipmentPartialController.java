@@ -383,7 +383,6 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				Dialogs.create().masthead("Low Cash")
 				.masthead("Not enough money")
 				.message("You need " + amountNeeded + "gp more to afford " + itemToAdd.Name.getValue()).showWarning();
-				
 			}
 
 		}

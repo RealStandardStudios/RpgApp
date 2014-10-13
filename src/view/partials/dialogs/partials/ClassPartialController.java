@@ -504,6 +504,8 @@ public class ClassPartialController extends NewCharacterPartialController {
 		}
 		
 		tableFeatures.setItems(selectedClass.getFeatures());
+		
+		getParentWindow().classSelected = true;
 		//need to resize row according to the length of the description field some how
 		
 		//this.getParentWindow().recheckWealthRoll();
