@@ -12,7 +12,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import jefXif.io.Data;
-import jefXif.view.WindowController;
 
 import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
@@ -20,13 +19,13 @@ import org.controlsfx.dialog.Dialogs;
 import pathfinder.data.Character.Character;
 import view.RootController;
 import view.partials.dialogs.NewCharacterController;
-//import javafx.scene.control.Dialog;
+
 
 /**
  * @author Real Standard Studios - Matthew Meehan
  *
  */
-public class OtherCharacterController extends WindowController {
+public class OtherCharacterController extends MainWindowController {
 
 	@FXML
 	private void handleNewCharacterAction(ActionEvent event) {
@@ -93,6 +92,12 @@ public class OtherCharacterController extends WindowController {
 	public void initialize() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void setData() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

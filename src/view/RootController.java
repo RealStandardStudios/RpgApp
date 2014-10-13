@@ -10,6 +10,7 @@ import jefXif.view.Gui;
 import jefXif.view.RootLayoutController;
 import jefXif.view.WindowController;
 import pathfinder.data.Character.Character;
+import view.partials.MainWindowController;
 import window.Interface;
 
 /**
@@ -35,9 +36,12 @@ public class RootController extends RootLayoutController {
 	public void setCharacter(Character character) {
 		this.character = character;
 		this.lblCharacterName.setText(this.character.getName());
+		for (MainWindowController window : windowPartials.values()) {
+			window.setData();
+		}
 	}
 
-	private HashMap<String, WindowController> windowPartials;
+	private HashMap<String, MainWindowController> windowPartials;
 	
 	
 	@FXML
@@ -81,7 +85,7 @@ public class RootController extends RootLayoutController {
 		this.ui = (Interface) ui;
 	}
 	
-	public void setWindowPartials(HashMap<String, WindowController>windowPartials) {
+	public void setWindowPartials(HashMap<String, MainWindowController>windowPartials) {
 		this.windowPartials = windowPartials;
 	}
 }

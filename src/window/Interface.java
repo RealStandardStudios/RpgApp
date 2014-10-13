@@ -11,8 +11,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import jefXif.view.Gui;
 import jefXif.view.RootLayoutController;
-import jefXif.view.WindowController;
 import view.RootController;
+import view.partials.MainWindowController;
 
 import com.sun.istack.internal.logging.Logger;
 
@@ -53,12 +53,12 @@ public class Interface extends Gui {
 
 	@Override
 	public void loadPartials() throws IOException {
-		HashMap<String, WindowController> windowPartials = new HashMap<>();
+		HashMap<String, MainWindowController> windowPartials = new HashMap<>();
 		String[] Windows = { "CharacterProfile", "Combat", "CombatStats",
 				"Feats", "Inventory", "OtherCharacter",
 				"Skills", "Spells"};
 		for (String string : Windows) {
-			windowPartials.put(string, loadPartial(string, this));
+			windowPartials.put(string, (MainWindowController) loadPartial(string, this));
 		}
 		((RootController) getRootLayout()).setWindowPartials(windowPartials);
 	}

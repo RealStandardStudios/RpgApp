@@ -53,7 +53,7 @@
 	-fx-background-radius: 5 5 0 0;
  }
  
- /*******************************************************************************
+ /******************************************************************************
  *                                                                             *
  * Button                                                                      *
  *                                                                             *
@@ -74,4 +74,30 @@
  	-fx-fill: WHITE;
 	-fx-font-size:16px;
 	-fx-font-weight: Bold;
+ }
+ 
+ /******************************************************************************
+ *                                                                             *
+ * Labels                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+ 
+ .data-label {
+ 	-fx-padding: 8 10 8 10;
+ 	-fx-background-color: WHITE;
+ }
+ .data-label > .text {
+ 	-fx-fill: BLACK;
+ 	-fx-font-size: 14px;
+ }
+ 
+  .header-label {
+ 	-fx-padding: 5 5 5 5;
+ 	-fx-background-color: BLACK;
+ 	-fx-halignment: right;
+ }
+ .header-label > .text {
+ 	-fx-fill: WHITE;
+ 	-fx-font-size: 18px;
+ 	-fx-font-weight: Bold;
  }
