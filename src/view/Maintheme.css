@@ -18,7 +18,8 @@
 .titled-pane > .title > .text, 
 .data-label,
 .table-column > .label > .text {
-	-fx-fill: #E0AE77; 
+	/*-fx-fill: #E0AE77;*/
+	-fx-fill: #CCA41F;
 }
 
 .data-label,
