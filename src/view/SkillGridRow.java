@@ -4,6 +4,11 @@ import javafx.scene.control.Label;
 import pathfinder.data.Skill;
 import pathfinder.data.Attributes.Ability;
 
+/**
+ * Populates the Skills Grid with each available skill
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class SkillGridRow {
 	String name;
 	Label totalLabel;
@@ -105,6 +110,18 @@ public class SkillGridRow {
 	}
 
 	// endregion
+	
+	/**
+	 * Base Constructor
+	 * 
+	 * @param name
+	 * @param totalLabel
+	 * @param ranksLabel
+	 * @param abilityLabel
+	 * @param racialLabel
+	 * @param classLabel
+	 * @param ability
+	 */
 	public SkillGridRow(String name, Label totalLabel, Label ranksLabel, Label abilityLabel, Label racialLabel,
 			Label classLabel, Ability ability) {
 		this.name = name;
@@ -124,6 +141,9 @@ public class SkillGridRow {
 		this.getTotal();
 	}
 	
+	/**
+	 * @returns a Skill and the data needed for it's function
+	 */
 	public Skill toSkill() {
 		return new Skill(racialMod, ranks, ability, name, classSkill, null);
 	}

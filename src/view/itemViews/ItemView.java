@@ -6,6 +6,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import jefXif.view.HoverDialog;
 
+/**
+ * The view for Items
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public abstract class ItemView extends HoverDialog {
 	Item item;
 	@FXML
@@ -18,12 +23,14 @@ public abstract class ItemView extends HoverDialog {
 	Label itemWeight;
 	@FXML
 	ImageView itemImage;
+	
 	/**
 	 * @return the item
 	 */
 	public Item getItem() {
 		return item;
 	}
+	
 	/**
 	 * @param item the item to set
 	 */
@@ -31,8 +38,14 @@ public abstract class ItemView extends HoverDialog {
 		this.item = item;
 	}
 	
+	/**
+	 * shows the view
+	 */
 	public abstract void show();
 	
+	/**
+	 * handler for Close
+	 */
 	@FXML
 	private void handleClose() {
 		this.getDialogStage().close();

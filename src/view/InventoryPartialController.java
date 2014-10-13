@@ -29,8 +29,9 @@ import pathfinder.data.Items.Weapon;
 import view.itemViews.ItemView;
 
 /**
- * @author Matthew
- *
+ * This is a Controller for the Inventory of the App
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class InventoryPartialController extends WindowController {
 
@@ -70,6 +71,11 @@ public class InventoryPartialController extends WindowController {
 	ItemView goodsView;
 	Item itemToRemove;
 
+	/**
+	 * Simple Get method for the itemToRemove data mamber
+	 * 
+	 * @returns an Item
+	 */
 	public Item getItemToRemove() {
 		return this.itemToRemove;
 	}
@@ -77,10 +83,22 @@ public class InventoryPartialController extends WindowController {
 	private ObservableList<Item> inventory = FXCollections
 			.observableArrayList();
 	
+	/**
+	 * Simple method for the inventory data member
+	 * 
+	 * @return
+	 */
 	public ObservableList<Item> getItems() {
 		return this.inventory;
 	}
 
+	/**
+	 * Gets data from the ObservableList inventory and populates
+	 * individual ArrayLists based on item type.
+	 * 
+	 * @param money
+	 * @returns an Inventory
+	 */
 	public Inventory getInventory(double money) {
 		ArrayList<Weapon> weapons = new ArrayList<>();
 		ArrayList<Armor> armor = new ArrayList<>();
@@ -99,9 +117,10 @@ public class InventoryPartialController extends WindowController {
 				FXCollections.observableArrayList(goods), money);
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * The basic initialize method for the class
 	 * 
+	 * (non-Javadoc)
 	 * @see jefXif.view.WindowController#initialize()
 	 */
 	@Override
@@ -163,6 +182,9 @@ public class InventoryPartialController extends WindowController {
 		itemSlots = new HashMap<>();
 	}
 
+	/**
+	 * Sets up things relevant to the inventory screen
+	 */
 	public void setupScreen() {
 		itemSlots.put("Head", new ItemSlot(lblHead, SlotType.Head));
 		itemSlots.put("Torso", new ItemSlot(lblTorso, SlotType.Torso));
@@ -178,11 +200,21 @@ public class InventoryPartialController extends WindowController {
 		itemSlots.put("Shield", new ItemSlot(lblShield, SlotType.Shield));
 	}
 
+	/**
+	 * Handles selected character items
+	 * 
+	 * @param item
+	 */
 	private void handleSelectedCharacterItem(Item item) {
 		itemToRemove = item;
 	}
 
-	public Labeled getWeightLabel() {
+	/**
+	 * simple Get method for the WeightLabel
+	 * 
+	 * @returns a label
+	 */
+	public Label getWeightLabel() {
 		return this.lblWeightValue;
 	}
 
@@ -195,6 +227,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Torso slot
+	 */
 	@FXML
 	private void showTorso() {
 		armorView.setItem(itemSlots.get("Torso").getItem());
@@ -204,6 +239,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Hands slot
+	 */
 	@FXML
 	private void showHands() {
 		armorView.setItem(itemSlots.get("Hands").getItem());
@@ -213,6 +251,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Right Ring slot
+	 */
 	@FXML
 	private void showRightRing() {
 		armorView.setItem(itemSlots.get("RightRing").getItem());
@@ -222,6 +263,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Left Ring slot
+	 */
 	@FXML
 	private void showLeftRing() {
 		armorView.setItem(itemSlots.get("LeftRing").getItem());
@@ -231,6 +275,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Waist slot
+	 */
 	@FXML
 	private void showWaist() {
 		armorView.setItem(itemSlots.get("Waist").getItem());
@@ -240,6 +287,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Legs slot
+	 */
 	@FXML
 	private void showLegs() {
 		armorView.setItem(itemSlots.get("Legs").getItem());
@@ -249,6 +299,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Feet slot
+	 */
 	@FXML
 	private void showFeet() {
 		armorView.setItem(itemSlots.get("Feet").getItem());
@@ -258,6 +311,9 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Weapon slot
+	 */
 	@FXML
 	private void showWeapon() {
 		weaponView.setItem(itemSlots.get("Weapon").getItem());
@@ -267,6 +323,9 @@ public class InventoryPartialController extends WindowController {
 			weaponView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Ranged Weapon slot
+	 */
 	@FXML
 	private void showRangedWeapon() {
 		weaponView.setItem(itemSlots.get("Ranged").getItem());
@@ -276,6 +335,9 @@ public class InventoryPartialController extends WindowController {
 			weaponView.show();
 	}
 
+	/**
+	 * Shows anything attached to the Shield slot
+	 */
 	@FXML
 	private void showShield() {
 		armorView.setItem(itemSlots.get("Shield").getItem());
@@ -285,14 +347,29 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
+	/**
+	 * Sets up the weapons view
+	 * 
+	 * @param weaponView
+	 */
 	public void setWeaponView(ItemView weaponView) {
 		this.weaponView = weaponView;
 	}
 
+	/**
+	 * sets up the armour view
+	 * 
+	 * @param armorView
+	 */
 	public void setArmorView(ItemView armorView) {
 		this.armorView = armorView;
 	}
 
+	/**
+	 * sets up the goods view
+	 * 
+	 * @param goodsView
+	 */
 	public void setGoodsView(ItemView goodsView) {
 		this.goodsView = goodsView;
 	}

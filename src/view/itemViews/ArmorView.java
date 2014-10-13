@@ -4,6 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import pathfinder.data.Items.Armor;
 
+/**
+ * The View for Armour
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class ArmorView extends ItemView {
 
 	@FXML
@@ -19,6 +24,9 @@ public class ArmorView extends ItemView {
 	@FXML
 	Label armorSpeed20;
 	
+	/**
+	 * Shows the view
+	 */
 	@Override
 	public void show() {
 		this.getDialogStage().show();
