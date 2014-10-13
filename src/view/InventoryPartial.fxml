@@ -10,13 +10,13 @@
 
 <AnchorPane prefHeight="589.0" prefWidth="815.0" styleClass="main-anchor-pane" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryPartialController">
    <children>
-      <ImageView fitHeight="332.0" fitWidth="241.0" layoutX="392.4851837158203" layoutY="112.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="210.808349609375" AnchorPane.rightAnchor="254.89266967773438" AnchorPane.topAnchor="112.0">
+      <ImageView fitHeight="332.0" fitWidth="241.0" layoutX="387.28314208984375" layoutY="130.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="192.808349609375" AnchorPane.rightAnchor="260.09471130371094" AnchorPane.topAnchor="130.0">
          <image>
             <Image url="@../../resources/images/mannequin.png" />
          </image>
       </ImageView>
       <Label fx:id="lblShield" layoutX="551.0" layoutY="401.0" onMouseEntered="#showShield" prefWidth="150.0" styleClass="data-label" text="Shield" AnchorPane.rightAnchor="70.0" />
-      <Label fx:id="lblRangedWeapon" layoutX="435.0" layoutY="466.0" onMouseEntered="#showRangedWeapon" styleClass="data-label" text="Ranged Weapon" AnchorPane.rightAnchor="291.0" />
+      <Label fx:id="lblRangedWeapon" layoutX="410.0" layoutY="466.0" onMouseEntered="#showRangedWeapon" styleClass="data-label" text="Ranged Weapon" AnchorPane.rightAnchor="282.0" />
       <Label fx:id="lblWeapon" layoutX="336.0" layoutY="392.0" onMouseEntered="#showWeapon" styleClass="data-label" text="Weapon" AnchorPane.rightAnchor="460.0" />
       <Label fx:id="lblFeet" layoutX="551.0" layoutY="359.0" onMouseEntered="#showFeet" prefWidth="150.0" styleClass="data-label" text="Feet" AnchorPane.rightAnchor="70.0" />
       <Label fx:id="lblLeftRing" layoutX="551.0" layoutY="242.0" onMouseEntered="#showLeftRing" prefWidth="150.0" styleClass="data-label" text="Ring" AnchorPane.rightAnchor="70.0" />
@@ -25,7 +25,7 @@
       <Label fx:id="lblRightRing" layoutX="298.0" layoutY="242.0" onMouseEntered="#showRightRing" styleClass="data-label" text="Ring" AnchorPane.rightAnchor="460.0" />
       <Label fx:id="lblHands" layoutX="298.0" layoutY="193.0" onMouseEntered="#showHands" styleClass="data-label" text="Hands" AnchorPane.rightAnchor="460.0" />
       <Label fx:id="lblWaist" layoutX="343.0" layoutY="296.0" onMouseEntered="#showWaist" prefHeight="17.0" styleClass="data-label" text="Waist" AnchorPane.rightAnchor="460.0" />
-      <Label fx:id="lblHead" layoutX="465.0" layoutY="91.0" onMouseEntered="#showHead" prefHeight="17.0" styleClass="data-label" text="Head" AnchorPane.rightAnchor="325.0" />
+      <Label fx:id="lblHead" layoutX="443.0" layoutY="91.0" onMouseEntered="#showHead" prefHeight="17.0" styleClass="data-label" text="Head" AnchorPane.rightAnchor="319.0" />
       <Label fx:id="lblWeightValue" layoutX="738.0" layoutY="17.0" styleClass="data-label" text="much" AnchorPane.rightAnchor="50.0">
          <font>
             <Font size="14.0" />

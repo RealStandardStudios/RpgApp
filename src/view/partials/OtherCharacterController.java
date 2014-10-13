@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import jefXif.io.Data;
 
 import org.controlsfx.dialog.Dialog;
@@ -25,6 +26,7 @@ import view.partials.dialogs.NewCharacterController;
  * @author Real Standard Studios - Matthew Meehan
  *
  */
+@SuppressWarnings("deprecation")
 public class OtherCharacterController extends MainWindowController {
 
 	@FXML
@@ -67,6 +69,7 @@ public class OtherCharacterController extends MainWindowController {
 	        Stage dialogStage = new Stage();
 	        dialogStage.setTitle("Create New Character");
 	        dialogStage.initModality(Modality.WINDOW_MODAL);
+	        dialogStage.initStyle(StageStyle.UTILITY);
 	        dialogStage.initOwner(this.getInterface().getPrimaryStage());
 	        Scene scene = new Scene(page);
 	        dialogStage.setScene(scene);
@@ -80,7 +83,8 @@ public class OtherCharacterController extends MainWindowController {
 	        // Show the dialog and wait until the user closes it
 	        dialogStage.showAndWait();
 	        
-	        ((RootController) this.getRoot()).setCharacter(controller.getCharacter());
+	        if(controller.getCharacter()!=null)
+	        	((RootController) this.getRoot()).setCharacter(controller.getCharacter());
 		}
 		catch(IOException e)
 		{
