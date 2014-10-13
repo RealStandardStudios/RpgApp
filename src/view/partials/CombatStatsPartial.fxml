@@ -13,7 +13,7 @@
    <children>
       <TabPane layoutX="201.0" layoutY="279.0" prefHeight="700.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab text="Abilitiy Scores | Saving Throws | Resistances">
+          <Tab text="Character Stats">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -434,7 +434,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Hit Points | Armor Class | Attack Modifiers">
+          <Tab text="Combat Stats">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -902,7 +902,7 @@
                      </children></AnchorPane>
             </content>
           </Tab>
-            <Tab text="Initiative | Movement Speed">
+            <Tab text="Speeds">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
