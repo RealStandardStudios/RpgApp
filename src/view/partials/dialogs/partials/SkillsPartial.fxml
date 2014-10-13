@@ -57,8 +57,6 @@
                                     <Insets />
                                  </GridPane.margin>
                               </VBox>
-                              <Label fx:id="lblRanksAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityAcrobatics" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscAcrobatics" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
@@ -81,7 +79,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityAppraise" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscAppraise" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
@@ -104,7 +101,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksBluff" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassBluff" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialBluff" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityBluff" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscBluff" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
@@ -127,7 +123,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksClimb" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassClimb" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialClimb" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityClimb" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscClimb" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
@@ -150,7 +145,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksCraft" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassCraft" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialCraft" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityCraft" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscCraft" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
@@ -173,7 +167,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityDiplomacy" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscDiplomacy" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
@@ -196,7 +189,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityDisableDevice" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscDisableDevice" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
@@ -219,7 +211,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityDisguise" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscDisguise" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
@@ -242,7 +233,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityEscapeArtist" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscEscapeArtist" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
@@ -265,7 +255,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksFly" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassFly" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialFly" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityFly" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscFly" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
@@ -288,7 +277,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityHandleAnimal" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscHandleAnimal" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
@@ -311,7 +299,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksHeal" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassHeal" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialHeal" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityHeal" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscHeal" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
@@ -334,7 +321,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityIntimidate" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscIntimidate" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
@@ -357,7 +343,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeArcana" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeArcana" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
@@ -380,7 +365,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeDungeoneering" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeDungeoneering" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
@@ -403,7 +387,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeEngineering" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeEngineering" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
@@ -426,7 +409,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeGeography" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeGeography" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
@@ -449,7 +431,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeHistory" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeHistory" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
@@ -472,7 +453,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeLocal" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeLocal" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
@@ -495,7 +475,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeNature" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeNature" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
@@ -518,7 +497,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeNobility" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeNobility" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
@@ -541,7 +519,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgePlanes" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgePlanes" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
@@ -564,7 +541,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityKnowledgeReligion" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscKnowledgeReligion" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
@@ -587,7 +563,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityLinguistics" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscLinguistics" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
@@ -610,7 +585,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksPerception" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassPerception" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialPerception" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityPerception" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscPerception" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
@@ -633,7 +607,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksPerform" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassPerform" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialPerform" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityPerform" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscPerform" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
@@ -656,7 +629,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksProfession" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassProfession" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialProfession" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityProfession" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscProfession" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
@@ -679,7 +651,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksRide" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassRide" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialRide" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityRide" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscRide" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
@@ -702,7 +673,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialSenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilitySenseMotive" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscSenseMotive" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
@@ -725,7 +695,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialSleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilitySleightOfHand" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscSleightOfHand" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
@@ -748,7 +717,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialSpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilitySpellcraft" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscSpellcraft" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
@@ -771,7 +739,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksStealth" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassStealth" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialStealth" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityStealth" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscStealth" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
@@ -794,7 +761,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialSurvival" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilitySurvival" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscSurvival" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
@@ -817,7 +783,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksSwim" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassSwim" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialSwim" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilitySwim" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscSwim" alignment="CENTER" text="0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
@@ -840,7 +805,6 @@
                                  </GridPane.margin>
                               </VBox>
                               <Label fx:id="lblRanksUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblClassUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
                               <Label fx:id="lblRacialUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
                               <Label fx:id="lblAbilityUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
                               <Label fx:id="lblMiscUseMagicDevice" alignment="CENTER" text="Label" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
@@ -879,6 +843,42 @@
                               <Label fx:id="lblTotalSurvival" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="32" />
                               <Label fx:id="lblTotalSwim" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="33" />
                               <Label fx:id="lblTotalUseMagicDevice" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="34" />
+                              <Label fx:id="lblRanksAcrobatics" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassAcrobatics" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassAppraise" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassBluff" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassClimb" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassCraft" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassDiplomacy" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassDisableDevice" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassDisguise" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassEscapeArtist" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassFly" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassHandleAnimal" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassHeal" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassIntimidate" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeArcana" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeDungeoneering" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeEngineering" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeGeography" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeHistory" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeLocal" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeNature" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeNobility" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgePlanes" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassKnowledgeReligion" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassLinguistics" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassPerception" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassPerform" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassProfession" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassRide" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassSenseMotive" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassSleightOfHand" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassSpellcraft" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassStealth" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassSurvival" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassSwim" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER" />
+                              <CheckBox fx:id="chkClassUseMagicDevice" disable="true" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER" />
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="207.0" prefWidth="265.0" />
@@ -925,7 +925,7 @@
                               <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
-                              <RowConstraints />
+                              <RowConstraints minHeight="80.0" prefHeight="80.0" />
                            </rowConstraints>
                         </GridPane>
                      </children>

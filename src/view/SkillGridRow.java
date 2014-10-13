@@ -1,5 +1,6 @@
 package view;
 
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import pathfinder.data.Skill;
 import pathfinder.data.Attributes.Ability;
@@ -15,7 +16,7 @@ public class SkillGridRow {
 	Label ranksLabel;
 	Label abilityLabel;
 	Label racialLabel;
-	Label classLabel;
+	CheckBox classLabel;
 	int total;
 	int ranks;
 	int racialMod;
@@ -44,8 +45,8 @@ public class SkillGridRow {
 		return racialLabel;
 	}
 
-	public Label getClassLabel() {
-		classLabel.setText(""+classSkill);
+	public CheckBox getClassLabel() {
+		classLabel.setSelected(classSkill);
 		return classLabel;
 	}
 	
@@ -90,7 +91,7 @@ public class SkillGridRow {
 
 	public void setClassSkill(boolean classSkill) {
 		this.classSkill = classSkill;
-		this.classLabel.setText(""+classSkill);
+		this.classLabel.setSelected(classSkill);
 	}
 
 	public int getMiscMod() {
@@ -123,7 +124,7 @@ public class SkillGridRow {
 	 * @param ability
 	 */
 	public SkillGridRow(String name, Label totalLabel, Label ranksLabel, Label abilityLabel, Label racialLabel,
-			Label classLabel, Ability ability) {
+			CheckBox classLabel, Ability ability) {
 		this.name = name;
 		this.totalLabel = totalLabel;
 		this.ranksLabel = ranksLabel;
