@@ -133,7 +133,7 @@
                               <Label fx:id="lblAlignment" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
                               <Label fx:id="lblDeity" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
                               <Label fx:id="lblLanguages" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblBackground" prefHeight="62.0" prefWidth="393.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+                              <Label fx:id="lblBackground" prefHeight="62.0" prefWidth="393.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
                               <Label fx:id="lblApperance" prefHeight="17.0" prefWidth="392.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6" />
                               <Label fx:id="lblPersonality" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
                            </children>
@@ -175,7 +175,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </TitledPane>
-            <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../Maintheme.css" text="Classes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="345.0" prefWidth="551.0" stylesheets="@../Maintheme.css" text="Classes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -197,17 +197,17 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="header-label" text="Archetype:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label disable="true" styleClass="header-label" text="Archetype:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblFavoredClass" styleClass="data-label" text="class" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                              <Label fx:id="lblClass" styleClass="data-label" text="class" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblArchetype" styleClass="data-label" text="archetype" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label fx:id="lblArchetype" disable="true" styleClass="data-label" text="archetype" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -217,17 +217,17 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="header-label" text="Next Level:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label" text="NextLevel:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblExperience" styleClass="data-label" text="experience" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                              <Label fx:id="lblExp" styleClass="data-label" text="experience" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblExpNextLevel" styleClass="data-label" text="next level" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label fx:id="lblLevel" styleClass="data-label" text="next level" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -235,7 +235,7 @@
                               <TableView fx:id="tableClasses" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                                 <columns>
                                   <TableColumn fx:id="columnClass" prefWidth="320.0" text="Class" />
-                                  <TableColumn fx:id="columnLevel" prefWidth="200.0" text="Levels" />
+                                  <TableColumn fx:id="columnLevels" prefWidth="200.0" text="Levels" />
                                 </columns>
                                  <columnResizePolicy>
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

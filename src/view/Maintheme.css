@@ -26,6 +26,23 @@
 .button > .text {
 	-fx-font-size:16.0px;
 }
+.summary-label {
+	-fx-text-fill: WHITE;
+}
+.summary-grid-pane {
+	-fx-background-color: BLACK;
+}
+.summary-data-label {
+	-fx-padding: 5px;
+	-fx-background-color: White;
+}
+.summary-label, .summary-data-label {
+	-fx-pref-width: 25.0em;
+	-fx-pref-height: 25em;
+}
+.summary-ft-label {
+	-fx-background-color: WHITE;
+}
 /*******************************************************************************
  *                                                                             *
  * TitledPane                                                                  *

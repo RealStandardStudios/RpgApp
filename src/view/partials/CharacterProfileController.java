@@ -1,8 +1,13 @@
 package view.partials;
 
-import view.RootController;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import pathfinder.data.Classes.Class;
+import view.RootController;
 
 /**
  * The Controller for the Character Controller
@@ -10,7 +15,7 @@ import javafx.scene.control.Label;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class CharacterProfileController extends MainWindowController {
-	
+	//region Profile Labels
 	@FXML
 	Label lblName;
 	@FXML
@@ -37,29 +42,52 @@ public class CharacterProfileController extends MainWindowController {
 	Label lblDeity;
 	@FXML
 	Label lblLanguages;
+	//endregion
+	
+	//region Class labels
+	@FXML
+	Label lblClass;
+	@FXML
+	Label lblArchetype;
+	@FXML
+	Label lblLevel;
+	@FXML
+	Label lblExp;
+	@FXML
+	TableView<Class> tableClasses;
+	@FXML
+	TableColumn<Class, String> columnClass;
+	@FXML
+	TableColumn<Class, Integer> columnLevels;
+	//endregion
 	
 	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
-
+		columnClass.setCellValueFactory(cellData->cellData.getValue().getNameProperty());
+		columnLevels.setCellValueFactory(cellData->new SimpleObjectProperty<Integer>(cellData.getValue().getLevel()));
 	}
 	
 	/**
 	 * sets the data for the Character Profile
 	 */
 	public void setData() {
-		this.lblAge.setText(((RootController) getRoot()).getCharacter().getFluff().get("Age"));
-		this.lblAlignment.setText(((RootController) getRoot()).getCharacter().getAlignment().name());
-		this.lblApperance.setText(((RootController) getRoot()).getCharacter().getFluff().get("Apperance"));
-		this.lblBackground.setText(((RootController) getRoot()).getCharacter().getFluff().get("Background"));
-		this.lblDeity.setText(((RootController) getRoot()).getCharacter().getFluff().get("Deities"));
-		this.lblGender.setText(((RootController) getRoot()).getCharacter().getFluff().get("Gender"));
-		this.lblHeight.setText(((RootController) getRoot()).getCharacter().getFluff().get("Height"));
-		this.lblHomeland.setText(((RootController) getRoot()).getCharacter().getFluff().get("HomeLand"));
-		this.lblLanguages.setText("Lol I don't think languages work yet");
-		this.lblName.setText(((RootController) getRoot()).getCharacter().getName());
-		this.lblPersonality.setText(((RootController) getRoot()).getCharacter().getFluff().get("Personality"));
-		this.lblRace.setText(((RootController) getRoot()).getCharacter().getRace().getName());
-		this.lblWeight.setText(((RootController) getRoot()).getCharacter().getFluff().get("Weight"));
+		pathfinder.data.Character.Character character = ((RootController) getRoot()).getCharacter();
+		lblAge.setText(character.getFluff().get("Age"));
+		lblAlignment.setText(character.getAlignment().name());
+		lblApperance.setText(character.getFluff().get("Apperance"));
+		lblBackground.setText(character.getFluff().get("Background"));
+		lblDeity.setText(character.getFluff().get("Deities"));
+		lblGender.setText(character.getFluff().get("Gender"));
+		lblHeight.setText(character.getFluff().get("Height"));
+		lblHomeland.setText(character.getFluff().get("HomeLand"));
+		lblLanguages.setText("Lol I don't think languages work yet");
+		lblName.setText(character.getName());
+		lblPersonality.setText(character.getFluff().get("Personality"));
+		lblRace.setText(character.getRace().getName());
+		lblWeight.setText(character.getFluff().get("Weight"));
+		lblClass.setText(character.getClasses()[0].getName());
+		lblLevel.setText(""+character.getLevel());
+		lblExp.setText(""+character.getExperienceValue());
+		tableClasses.setItems(FXCollections.observableArrayList(character.getClasses()));
 	}
 }

@@ -14,15 +14,15 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView layoutX="191.0" layoutY="89.0" prefHeight="669.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tableSkills" layoutX="191.0" layoutY="89.0" prefHeight="669.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="250.0" text="Skill" />
-                        <TableColumn maxWidth="2500.0" prefWidth="81.99998474121094" text="Total Ranks" />
-                      <TableColumn maxWidth="2500.0" prefWidth="75.0" text="Class Skill" />
-                        <TableColumn maxWidth="2500.0" prefWidth="74.99993896484375" text="Ability" />
-                        <TableColumn maxWidth="2500.0" prefWidth="232.0" text="Ability Mod" />
-                        <TableColumn maxWidth="2500.0" prefWidth="75.0" text="Ranks" />
-                        <TableColumn maxWidth="2500.0" prefWidth="75.0" text="Misc" />
+                      <TableColumn fx:id="columnName" prefWidth="250.0" text="Skill" />
+                        <TableColumn fx:id="columnTotal" maxWidth="2500.0" prefWidth="81.99998474121094" text="Total" />
+                        <TableColumn fx:id="columnRanks" maxWidth="2500.0" prefWidth="75.0" text="Ranks" />
+                      <TableColumn fx:id="columnClassSkill" maxWidth="2500.0" prefWidth="75.0" text="Class Skill" />
+                        <TableColumn fx:id="columnAbility" maxWidth="2500.0" prefWidth="74.99993896484375" text="Ability" />
+                        <TableColumn fx:id="columnMod" maxWidth="2500.0" prefWidth="232.0" text="Ability Mod" />
+                        <TableColumn fx:id="columnMisc" maxWidth="2500.0" prefWidth="75.0" text="Misc" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
