@@ -32,6 +32,11 @@ import view.itemViews.ArmorView;
 import view.itemViews.ItemView;
 import view.itemViews.WeaponView;
 
+/**
+ * Controller for the Equipment view
+ * 
+ * @author Real Standard Studios - Matthew Heehan, Joshua Boyd
+ */
 @SuppressWarnings("deprecation")
 public class EquipmentPartialController extends NewCharacterPartialController {
 
@@ -99,6 +104,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
     boolean havePressedGenerateGold = true;
     String classChosen = "";
 
+    /**
+     * Initializes the class
+     */
     @Override
     public void initialize() {
 	readItems();
@@ -170,6 +178,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	lblGoldRemainingValue.setText("Roll first");
     }
 
+    /**
+     * loads in all the Item views
+     * 
+     * @throws IOException
+     */
     private void readItemViews() throws IOException {
 	// Load the fxml file and create a new stage for the popup dialog.
 	FXMLLoader loader = new FXMLLoader();
@@ -239,6 +252,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	inventoryPartial.setGoodsView(goodsView);
     }
 
+    /**
+     * loads the Inventory partial
+     * 
+     * @throws IOException
+     */
     private void loadInventory() throws IOException {
 	FXMLLoader loader = new FXMLLoader();
 	loader.setLocation(InventoryPartialController.class.getResource("InventoryPartial.fxml"));
@@ -253,6 +271,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	inventoryPane.getChildren().setAll((AnchorPane) inventoryPartial.getNode());
     }
 
+    /**
+     * reads in Items from the data files
+     */
     void readItems() {
 	File file = new File(this.getClass().getResource("").getPath() + programRoot + "PathfinderData/data");
 	File weaponsFile = new File(file.getPath() + "\\Weapons.idf");
@@ -269,14 +290,24 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
     }
 
+    /**
+     * handler for the Item Selection for the Available Items Table
+     * 
+     * @param item
+     */
     private void handleSelectedAvailableItem(Item item) {
 	itemToAdd = item;
     }
 
+    /**
+     * handler for the Add To Character event
+     * 
+     * @param event
+     */
     @FXML
     private void handleAddToCharacter(ActionEvent event) {
 
-	if (itemToAdd != null) {
+	if (itemToAdd != null && getCharacter().getClasses()[0].getName() == classChosen) {
 	    String[] cost;
 	    double priceCheck = 0;
 	    String[] weight;
@@ -335,9 +366,14 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
     }
 
+    /**
+     * handler for the Remove From Character event
+     * 
+     * @param event
+     */
     @FXML
     private void handleRemoveFromCharacter(ActionEvent event) {
-	if (inventoryPartial.getItemToRemove() != null) {
+	if (inventoryPartial.getItemToRemove() != null && getCharacter().getClasses()[0].getName() == classChosen) {
 
 	    String[] weight = inventoryPartial.getItemToRemove().Weight.get().split(" ");
 	    weight = itemToAdd.Weight.get().split(" ");
@@ -375,6 +411,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
     }
 
+    /**
+     * handler for the Roll Starting Wealth event
+     */
     @FXML
     private void handleRollStartingWealth() {
 	if (havePressedGenerateGold) {
@@ -391,6 +430,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
     }
 
+    /**
+     * sends the data form the view to the main controller for access elsewhere
+     */
     @Override
     public void getData() {
 	// need to get the items on each label

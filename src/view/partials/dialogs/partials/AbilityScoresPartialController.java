@@ -8,7 +8,7 @@ import pathfinder.data.Effects.Effect;
 /**
  * The controller for the partial for Ability Scores
  * 
- * @author Real Standard Studios - Matthew Meehan
+ * @author Real Standard Studios - Matthew Meehan, Joshua Boyd
  */
 public class AbilityScoresPartialController extends
 		NewCharacterPartialController {
@@ -97,88 +97,39 @@ public class AbilityScoresPartialController extends
 	// region Set Labels
 
 	void setStrLabels() {
-		lblTotalStr.setText(""
-				+ (getCharacter().getStrength().getValue() + Integer
-						.parseInt(lblMiscStr.getText())));
-		if (lblRacialBonusStr.getText() != "0")
-			lblBaseStr.setText(""
-					+ (getCharacter().getStrength().getValue() - Integer
-							.parseInt(lblRacialBonusStr.getText())));
-		else
-			lblBaseStr.setText("" + getCharacter().getStrength().getValue());
-		lblStrMod
-				.setText("" + getCharacter().getStrength().getModifier().get());
+		lblTotalStr.setText("" + getCharacter().getStrength().getTotalValue());	
+		lblBaseStr.setText("" + getCharacter().getStrength().getBaseValue());
+		lblStrMod.setText("" + getCharacter().getStrength().getModifier().get());
 	}
 
 	void setDexLabels() {
-		lblTotalDex.setText(""
-				+ (getCharacter().getDexterity().getValue() + Integer
-						.parseInt(lblMiscDex.getText())));
-		if (lblRacialBonusDex.getText() != "0")
-			lblBaseDex.setText(""
-					+ (getCharacter().getDexterity().getValue() - Integer
-							.parseInt(lblRacialBonusDex.getText())));
-		else
-			lblBaseDex.setText("" + getCharacter().getDexterity().getValue());
-		lblDexMod.setText(""
-				+ getCharacter().getDexterity().getModifier().get());
+		lblTotalDex.setText("" + (getCharacter().getDexterity().getTotalValue()));
+		lblBaseDex.setText("" + getCharacter().getDexterity().getBaseValue());
+		lblDexMod.setText(""+ getCharacter().getDexterity().getModifier().get());
 	}
 
 	void setConLabels() {
-		lblTotalCon.setText(""
-				+ (getCharacter().getConstitution().getValue() + Integer
-						.parseInt(lblMiscCon.getText())));
-		if (lblRacialBonusCon.getText() != "0")
-			lblBaseCon.setText(""
-					+ (getCharacter().getConstitution().getValue() - Integer
-							.parseInt(lblRacialBonusCon.getText())));
-		else
-			lblBaseCon
-					.setText("" + getCharacter().getConstitution().getValue());
-		lblConMod.setText(""
-				+ getCharacter().getConstitution().getModifier().get());
+		lblTotalCon.setText("" + (getCharacter().getConstitution().getTotalValue()));
+		lblBaseCon.setText("" + getCharacter().getConstitution().getBaseValue());
+		lblConMod.setText("" + getCharacter().getConstitution().getModifier().get());
 	}
 
 	void setIntLabels() {
-		lblTotalInt.setText(""
-				+ (getCharacter().getIntelligence().getValue() + Integer
-						.parseInt(lblMiscInt.getText())));
-		if (lblRacialBonusInt.getText() != "0")
-			lblBaseInt.setText(""
-					+ (getCharacter().getIntelligence().getValue() - Integer
-							.parseInt(lblRacialBonusInt.getText())));
-		else
-			lblBaseInt
-					.setText("" + getCharacter().getIntelligence().getValue());
-		lblIntMod.setText(""
-				+ getCharacter().getIntelligence().getModifier().get());
+		lblTotalInt.setText("" + (getCharacter().getIntelligence().getTotalValue()));
+		lblBaseInt.setText("" + getCharacter().getIntelligence().getBaseValue());
+		lblIntMod.setText("" + getCharacter().getIntelligence().getModifier().get());
 	}
 
 	void setWisLabels() {
-		lblTotalWis.setText(""
-				+ (getCharacter().getWisdom().getValue() + Integer
-						.parseInt(lblMiscWis.getText())));
-		if (lblRacialBonusWis.getText() != "0")
-			lblBaseWis.setText(""
-					+ (getCharacter().getWisdom().getValue() - Integer
-							.parseInt(lblRacialBonusWis.getText())));
-		else
-			lblBaseWis.setText("" + getCharacter().getWisdom().getValue());
+		lblTotalWis.setText("" + (getCharacter().getWisdom().getTotalValue()));
+		lblBaseWis.setText("" + getCharacter().getWisdom().getBaseValue());
 		lblWisMod.setText("" + getCharacter().getWisdom().getModifier().get());
 	}
 
 	void setChaLabels() {
-		lblTotalCha.setText(""
-				+ (getCharacter().getCharisma().getValue() + Integer
-						.parseInt(lblMiscCha.getText())));
-		if (lblRacialBonusCha.getText() != "0")
-			lblBaseCha.setText(""
-					+ (getCharacter().getCharisma().getValue() - Integer
-							.parseInt(lblRacialBonusCha.getText())));
-		else
-			lblBaseCha.setText("" + getCharacter().getCharisma().getValue());
-		lblChaMod
-				.setText("" + getCharacter().getCharisma().getModifier().get());
+		lblTotalCha.setText("" + (getCharacter().getCharisma().getTotalValue()));
+		lblBaseCha.setText("" + getCharacter().getCharisma().getBaseValue());
+		lblChaMod.setText("" + getCharacter().getCharisma().getModifier().get());
 	}
 
 	// endregion
@@ -186,7 +137,7 @@ public class AbilityScoresPartialController extends
 	// region handle AbilityScores
 	@FXML
 	void handleStrIncrease() {
-		if (Integer.parseInt(lblBaseStr.getText()) < 18) {
+		if (getCharacter().getStrength().getBaseValue() < 18) {
 			getCharacter().getStrength().increaseValue();
 			setStrLabels();
 		}
@@ -194,7 +145,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleStrDecrease() {
-		if (Integer.parseInt(lblBaseStr.getText()) > 3) {
+		if (getCharacter().getStrength().getBaseValue() > 3) {
 			getCharacter().getStrength().decreaseValue();
 			setStrLabels();
 		}
@@ -202,7 +153,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleDexIncrease() {
-		if (Integer.parseInt(lblBaseDex.getText()) < 18) {
+		if (getCharacter().getDexterity().getBaseValue() < 18) {
 			getCharacter().getDexterity().increaseValue();
 			setDexLabels();
 		}
@@ -210,7 +161,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleDexDecrease() {
-		if (Integer.parseInt(lblBaseDex.getText()) > 3) {
+		if (getCharacter().getDexterity().getBaseValue() > 3) {
 			getCharacter().getDexterity().decreaseValue();
 			setDexLabels();
 		}
@@ -218,7 +169,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleConIncrease() {
-		if (Integer.parseInt(lblBaseCon.getText()) < 18) {
+		if (getCharacter().getConstitution().getBaseValue() < 18) {
 			getCharacter().getConstitution().increaseValue();
 			setConLabels();
 		}
@@ -226,7 +177,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleConDecrease() {
-		if (Integer.parseInt(lblBaseCon.getText()) > 3) {
+		if (getCharacter().getConstitution().getBaseValue() > 3) {
 			getCharacter().getConstitution().decreaseValue();
 			setConLabels();
 		}
@@ -234,7 +185,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleIntIncrease() {
-		if (Integer.parseInt(lblBaseInt.getText()) < 18) {
+		if (getCharacter().getIntelligence().getBaseValue() < 18) {
 			getCharacter().getIntelligence().increaseValue();
 			setIntLabels();
 		}
@@ -242,7 +193,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleIntDecrease() {
-		if (Integer.parseInt(lblBaseInt.getText())  > 3) {
+		if (getCharacter().getIntelligence().getBaseValue() > 3) {
 			getCharacter().getIntelligence().decreaseValue();
 			setIntLabels();
 		}
@@ -250,7 +201,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleWisIncrease() {
-		if (Integer.parseInt(lblBaseWis.getText())  < 18) {
+		if (getCharacter().getWisdom().getBaseValue() < 18) {
 			getCharacter().getWisdom().increaseValue();
 			setWisLabels();
 		}
@@ -258,7 +209,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleWisDecrease() {
-		if (Integer.parseInt(lblBaseWis.getText())  > 3) {
+		if (getCharacter().getWisdom().getBaseValue() > 3) {
 			getCharacter().getWisdom().decreaseValue();
 			setWisLabels();
 		}
@@ -266,7 +217,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleChaIncrease() {
-		if (Integer.parseInt(lblBaseCha.getText())  < 18) {
+		if (getCharacter().getCharisma().getBaseValue() < 18) {
 			getCharacter().getCharisma().increaseValue();
 			setChaLabels();
 		}
@@ -274,7 +225,7 @@ public class AbilityScoresPartialController extends
 
 	@FXML
 	void handleChaDecrease() {
-		if (Integer.parseInt(lblBaseCha.getText())  > 3) {
+		if (getCharacter().getCharisma().getBaseValue() > 3) {
 			getCharacter().getCharisma().decreaseValue();
 			setChaLabels();
 		}
@@ -312,54 +263,48 @@ public class AbilityScoresPartialController extends
 					switch (((AbilityEffect) e).getAbilityName()) {
 					case Strength:
 						lblRacialBonusStr.setText("" + e.getValue());
-						getCharacter().getStrength().setValue(
-								getCharacter().getStrength().getValue()
-										+ e.getValue());
+						getCharacter().getStrength().setTotalValue(e.getValue());
+						getCharacter().getStrength().setRacialBonus(e.getValue());
 						setStrLabels();
 						totalsAdded = true;
 						break;
 
 					case Constitution:
 						lblRacialBonusCon.setText("" + e.getValue());
-						getCharacter().getConstitution().setValue(
-								getCharacter().getConstitution().getValue()
-										+ e.getValue());
+						getCharacter().getConstitution().setTotalValue(e.getValue());
+						getCharacter().getConstitution().setRacialBonus(e.getValue());
 						setConLabels();
 						totalsAdded = true;
 						break;
 
 					case Dexterity:
 						lblRacialBonusDex.setText("" + e.getValue());
-						getCharacter().getDexterity().setValue(
-								getCharacter().getDexterity().getValue()
-										+ e.getValue());
+						getCharacter().getDexterity().setTotalValue(e.getValue());
+						getCharacter().getDexterity().setRacialBonus(e.getValue());
 						setDexLabels();
 						totalsAdded = true;
 						break;
 
 					case Charisma:
 						lblRacialBonusCha.setText("" + e.getValue());
-						getCharacter().getCharisma().setValue(
-								getCharacter().getCharisma().getValue()
-										+ e.getValue());
+						getCharacter().getCharisma().setTotalValue(e.getValue());
+						getCharacter().getCharisma().setRacialBonus(e.getValue());
 						setChaLabels();
 						totalsAdded = true;
 						break;
 
 					case Intelligence:
 						lblRacialBonusInt.setText("" + e.getValue());
-						getCharacter().getIntelligence().setValue(
-								getCharacter().getIntelligence().getValue()
-										+ e.getValue());
+						getCharacter().getIntelligence().setTotalValue(e.getValue());
+						getCharacter().getIntelligence().setRacialBonus(e.getValue());
 						setIntLabels();
 						totalsAdded = true;
 						break;
 
 					case Wisdom:
 						lblRacialBonusWis.setText("" + e.getValue());
-						getCharacter().getWisdom().setValue(
-								getCharacter().getWisdom().getValue()
-										+ e.getValue());
+						getCharacter().getWisdom().setTotalValue(e.getValue());
+						getCharacter().getWisdom().setRacialBonus(e.getValue());
 						setWisLabels();
 						totalsAdded = true;
 						break;
@@ -382,12 +327,12 @@ public class AbilityScoresPartialController extends
 			label.setText("0");
 		}
 
-		lblBaseStr.setText("" + getCharacter().getStrength().getValue());
-		lblBaseDex.setText("" + getCharacter().getDexterity().getValue());
-		lblBaseCon.setText("" + getCharacter().getConstitution().getValue());
-		lblBaseInt.setText("" + getCharacter().getIntelligence().getValue());
-		lblBaseWis.setText("" + getCharacter().getWisdom().getValue());
-		lblBaseCha.setText("" + getCharacter().getCharisma().getValue());
+		lblBaseStr.setText("" + getCharacter().getStrength().getBaseValue());
+		lblBaseDex.setText("" + getCharacter().getDexterity().getBaseValue());
+		lblBaseCon.setText("" + getCharacter().getConstitution().getBaseValue());
+		lblBaseInt.setText("" + getCharacter().getIntelligence().getBaseValue());
+		lblBaseWis.setText("" + getCharacter().getWisdom().getBaseValue());
+		lblBaseCha.setText("" + getCharacter().getCharisma().getBaseValue());
 
 		// region SetAbility Mod
 		Label[] abilityModLabels = new Label[] { lblStrMod, lblDexMod,
