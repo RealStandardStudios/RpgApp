@@ -65,7 +65,7 @@
                   <Label fx:id="lblFeatSelections" text="number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
-                        <Button fx:id="btnAddFeat" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddFeat" prefHeight="40.0" prefWidth="200.0" text="Add to Character" />
+                        <Button fx:id="btnAddFeat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddFeat" prefHeight="40.0" prefWidth="200.0" text="Add to Character" />
                         <Button fx:id="btnRemoveFeat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleRemoveFeat" prefHeight="40.0" prefWidth="200.0" text="Remove from Character" />
                      </children>
                   </VBox>
