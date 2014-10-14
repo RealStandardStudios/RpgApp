@@ -35,7 +35,7 @@ import view.itemViews.WeaponView;
 /**
  * Controller for the Equipment view
  * 
- * @author Real Standard Studios - Matthew Heehan
+ * @author Real Standard Studios - Matthew Heehan, Joshua Boyd
  */
 @SuppressWarnings("deprecation")
 public class EquipmentPartialController extends NewCharacterPartialController {

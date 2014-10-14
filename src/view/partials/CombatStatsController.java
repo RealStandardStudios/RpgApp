@@ -1,13 +1,14 @@
 package view.partials;
 
-import pathfinder.data.Attributes.Ability;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import pathfinder.data.Attributes.Ability;
+import pathfinder.data.Attributes.SaveAttribute;
 import view.RootController;
 
 
 /**
- * @author Real Standard Studios - Matthew Meehan
+ * @author Real Standard Studios - Matthew Meehan, Joshua boyd
  *
  */
 
@@ -86,8 +87,52 @@ public class CombatStatsController extends MainWindowController {
 	@FXML
 	Label lblMiscCha;
 	//endregion
-
-		
+	
+	//region Total Saving Throws
+	@FXML
+	Label lblTotalFort;
+	@FXML
+	Label lblTotalRef;
+	@FXML
+	Label lblTotalWill;
+	//endregion
+	
+	//region Base Saving Throws
+	@FXML
+	Label lblBaseFort;
+	@FXML
+	Label lblBaseRef;
+	@FXML
+	Label lblBaseWill;
+	//endregion
+	
+	//region Ability Saving Throws
+	@FXML
+	Label lblAbilityFort;
+	@FXML
+	Label lblAbilityRef;
+	@FXML
+	Label lblAbilityWill;
+	//endregion
+	
+	//region Enhancement Saving Throws
+	@FXML
+	Label lblEnhFort;
+	@FXML
+	Label lblEnhRef;
+	@FXML
+	Label lblEnhWill;
+	//endregion
+	
+	//region Misc Saving Throws
+	@FXML
+	Label lblMiscFort;
+	@FXML
+	Label lblMiscRef;
+	@FXML
+	Label lblMiscWill;
+	//endregion
+	
 	@Override
 	public void initialize() {
 		// TODO Auto-generated method stub
@@ -97,9 +142,31 @@ public class CombatStatsController extends MainWindowController {
 	@Override
 	public void setData() {
 		setStats();
-		
+		setSavingThrows();
 	}
 	
+	//region setSavingThrows
+	private void setSavingThrows()
+	{
+		SaveAttribute[] save = new SaveAttribute[]{((RootController) getRoot()).getCharacter().getFortitude(),
+				((RootController) getRoot()).getCharacter().getReflex(), ((RootController) getRoot()).getCharacter().getWill()};
+		Label[] totalSavingThrow = new Label[]{lblTotalFort, lblTotalRef, lblTotalWill};
+		Label[] baseSavingThrow = new Label[]{lblBaseFort, lblBaseRef, lblBaseWill};
+		Label[] abilitySavingThrow = new Label[]{lblAbilityFort, lblAbilityRef, lblAbilityWill};
+		Label[] enhSavingThrow = new Label[]{lblEnhFort, lblEnhRef, lblEnhWill};
+		Label[] miscSavingThrow = new Label[]{lblMiscFort, lblMiscRef, lblMiscWill};
+		for (int i = 0; i < 3; i++)
+		{
+			totalSavingThrow[i].setText(save[i].getTotal()+"");
+			baseSavingThrow[i].setText(save[i].getBaseValueProperty().get().toString());
+			abilitySavingThrow[i].setText(save[i].getModifier()+"");
+			enhSavingThrow[i].setText("0");
+			miscSavingThrow[i].setText(save[i].getMiscMod()+"");
+		}
+	}
+	//endregion
+	
+	//region SetStats
 	private void setStats()
 	{
 		Label[] totalStats = new Label[]{lblTotalStr, lblTotalDex, lblTotalCon, lblTotalInt, lblTotalWis, lblTotalCha};
@@ -117,5 +184,6 @@ public class CombatStatsController extends MainWindowController {
 			enhStats[i].setText("0");
 		}
 	}
+	//endregion
 
 }

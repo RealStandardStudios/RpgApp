@@ -8,7 +8,7 @@ import pathfinder.data.Effects.Effect;
 /**
  * The controller for the partial for Ability Scores
  * 
- * @author Real Standard Studios - Matthew Meehan
+ * @author Real Standard Studios - Matthew Meehan, Joshua Boyd
  */
 public class AbilityScoresPartialController extends
 		NewCharacterPartialController {

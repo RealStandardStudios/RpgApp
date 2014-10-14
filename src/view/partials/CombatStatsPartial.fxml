@@ -306,7 +306,7 @@
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblBaseFort" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblBaseRef" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -331,7 +331,7 @@
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblBaseFort" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblBaseWill" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
