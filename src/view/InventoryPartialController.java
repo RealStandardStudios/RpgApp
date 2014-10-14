@@ -106,6 +106,9 @@ public class InventoryPartialController extends WindowController {
 		money);
     }
 
+    /**
+     * Initialization method
+     */
     @Override
     public void initialize() {
 	// make the list view look at the right list
@@ -224,10 +227,18 @@ public class InventoryPartialController extends WindowController {
 	itemToRemove = item;
     }
 
-    public Labeled getWeightLabel() {
+    /**
+     * displays amount of weight being carried
+     * 
+     * @returns a Label 
+     */
+    public Label getWeightLabel() {
 	return this.lblWeightValue;
     }
 
+    /**
+     * Shows anything related to the Head slot
+     */
     @FXML
     private void showHead() {
 	armorView.setItem(itemSlots.get("Head").getItem());
