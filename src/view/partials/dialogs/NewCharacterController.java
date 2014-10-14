@@ -70,6 +70,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	public boolean classSelected = false;
 	int pageNumber = 1;
 
+	/**
+	 * Base Constructor
+	 */
     public NewCharacterController() {
 	newCharacter = new Character();
     }
@@ -79,6 +82,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 
     }
 
+    /**
+     * loads all the partials required for a New Character
+     */
     @Override
     public WindowController loadPartial(String name, Gui ui) throws IOException {
 	FXMLLoader loader = new FXMLLoader();
@@ -92,6 +98,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	return controller;
     }
 
+    /**
+     * handler for the Tab Changed event
+     * 
+     * @param event
+     */
     @FXML
     private void handleTabChanged(Event event) {
 	Tab tabChanged = (Tab) event.getSource();
@@ -167,6 +178,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	}
     }
 
+    /**
+     * handler for the Okay event
+     */
     @Override
     public void handleOkay(ActionEvent event) {
 	if (summaryReached) {
@@ -179,6 +193,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	}
     }
 
+    /**
+     * handler for the Cancel event
+     */
     @Override
     @FXML
     public void handleCancel(ActionEvent event) {
@@ -186,6 +203,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	getDialogStage().close();
     }
 
+    /**
+     * allows for saving a New Character
+     * 
+     * @throws IOException
+     */
     private void saveCharacter() throws IOException {
 	DirectoryChooser directoryChooser = new DirectoryChooser();
 
@@ -203,12 +225,22 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	}
     }
 
+    /**
+     * handler for the Back event
+     * 
+     * @param event
+     */
     @FXML
     public void handleBack(ActionEvent event) {
 	if (tpTabs.getSelectionModel().selectedIndexProperty().get() > 0)
 	    tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() - 1);
     }
 
+    /**
+     * handler for the Next event
+     * 
+     * @param event
+     */
     @FXML
     public void handleNext(ActionEvent event) {
 	if(pageNumber == 3)
@@ -239,6 +271,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
     }
     
+    /**
+     * method for navigating the tabs
+     */
     void goToNext()
 	{
 		if(tpTabs.getSelectionModel().selectedIndexProperty().get()<partialNames.length-1)
@@ -246,6 +281,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		tpTabs.getSelectionModel().getSelectedItem().setDisable(false);
 	}
 
+    /**
+     * method for loading the partials
+     */
     public void loadPartials() {
 	partials = new HashMap<String, NewCharacterPartialController>();
 	for (String string : partialNames) {
@@ -267,10 +305,18 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	apSummary.getChildren().setAll(getPartials().get(partialNames[7]).getNode());
     }
 
+    /**
+     * a get method so that each view can access the main controller
+     * 
+     * @returns a Character
+     */
     public Character getCharacter() {
 	return this.newCharacter;
     }
 
+    /**
+     * sets the base abilities for a New Character
+     */
     public void setAbilities() {
 	getCharacter().setStrength(new Ability(AbilityName.Strength, 8));
 	getCharacter().setDexterity(new Ability(AbilityName.Dexterity, 8));
@@ -280,14 +326,28 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	getCharacter().setCharisma(new Ability(AbilityName.Charisma, 8));
     }
 
+    /**
+     * gets the Partials
+     * 
+     * @returns a HashMap<String, NewCharacterPartialController>
+     */
     public HashMap<String, NewCharacterPartialController> getPartials() {
 	return partials;
     }
 
+    /**
+     * sets Ability effects
+     * 
+     * @param b
+     */
     public void setAeAdded(boolean b) {
 	this.aeAdded = b;
     }
 
+    /**
+     * sets Trait effects
+     * @param b
+     */
     public void setTeAdded(boolean b) {
 	this.teAdded = b;
     }

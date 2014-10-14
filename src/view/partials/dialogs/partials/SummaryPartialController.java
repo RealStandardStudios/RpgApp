@@ -117,17 +117,17 @@ public class SummaryPartialController extends NewCharacterPartialController {
 		lblWeight.setText(getCharacter().getFluff().get("Weight"));
 		
 		//set ability Labels
-		lblStrScore.setText(""+getCharacter().getStrength().getValue());
+		lblStrScore.setText(""+getCharacter().getStrength().getTotalValue());
 		lblStrMod.setText(""+getCharacter().getStrength().getModifier().get());
-		lblDexScore.setText(""+getCharacter().getDexterity().getValue());
+		lblDexScore.setText(""+getCharacter().getDexterity().getTotalValue());
 		lblDexMod.setText(""+getCharacter().getDexterity().getModifier().get());
-		lblConScore.setText(""+getCharacter().getConstitution().getValue());
+		lblConScore.setText(""+getCharacter().getConstitution().getTotalValue());
 		lblConMod.setText(""+getCharacter().getConstitution().getModifier().get());
-		lblIntScore.setText(""+getCharacter().getIntelligence().getValue());
+		lblIntScore.setText(""+getCharacter().getIntelligence().getTotalValue());
 		lblIntMod.setText(""+getCharacter().getIntelligence().getModifier().get());
-		lblWisScore.setText(""+getCharacter().getWisdom().getValue());
+		lblWisScore.setText(""+getCharacter().getWisdom().getTotalValue());
 		lblWisMod.setText(""+getCharacter().getWisdom().getModifier().get());
-		lblChaScore.setText(""+getCharacter().getCharisma().getValue());
+		lblChaScore.setText(""+getCharacter().getCharisma().getTotalValue());
 		lblChaMod.setText(""+getCharacter().getCharisma().getModifier().get());
 		
 		//set Speed Labels

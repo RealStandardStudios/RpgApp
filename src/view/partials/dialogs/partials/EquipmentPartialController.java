@@ -32,6 +32,11 @@ import view.itemViews.ArmorView;
 import view.itemViews.ItemView;
 import view.itemViews.WeaponView;
 
+/**
+ * Controller for the Equipment view
+ * 
+ * @author Real Standard Studios - Matthew Heehan, Joshua Boyd
+ */
 @SuppressWarnings("deprecation")
 public class EquipmentPartialController extends NewCharacterPartialController {
 
@@ -103,6 +108,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	public void initialize() {
 		readItems();
 
+    /**
+     * Initializes the class
+     */
 		tableWeaponsAvailable.getSelectionModel().selectedItemProperty()
 				.addListener((observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
 		tableArmorAvailable.getSelectionModel().selectedItemProperty()
@@ -179,6 +187,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
 		AnchorPane page = (AnchorPane) loader.load();
 
+    /**
+     * loads in all the Item views
+     * 
+     * @throws IOException
+     */
 		Stage weaponViewStage = new Stage();
 		weaponViewStage.setScene(new Scene(page));
 		weaponViewStage.initStyle(StageStyle.UNDECORATED);
@@ -246,6 +259,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(InventoryPartialController.class.getResource("InventoryPartial.fxml"));
 
+    /**
+     * loads the Inventory partial
+     * 
+     * @throws IOException
+     */
 		AnchorPane pane = loader.load();
 		inventoryPartial = loader.getController();
 		inventoryPartial.setNode(pane);
@@ -272,15 +290,24 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+     * handler for the Item Selection for the Available Items Table
+     * 
+     * @param item
+     */
 	private void handleSelectedAvailableItem(Item item) {
 		itemToAdd = item;
 	}
 
+    /**
+     * handler for the Add To Character event
+     * 
+     * @param event
+     */
 	@FXML
 	private void handleAddToCharacter(ActionEvent event) {
 
-		if (itemToAdd != null) {
+		if (itemToAdd != null && getCharacter().getClasses()[0].getName() == classChosen) {
 			String[] cost;
 			double priceCheck = 0;
 			String[] weight;
@@ -339,9 +366,14 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		}
 	}
 
+	/**
+     * handler for the Remove From Character event
+     * 
+     * @param event
+     */
 	@FXML
 	private void handleRemoveFromCharacter(ActionEvent event) {
-		if (inventoryPartial.getItemToRemove() != null) {
+		if (inventoryPartial.getItemToRemove() != null && getCharacter().getClasses()[0].getName() == classChosen) {
 
 			String[] weight = inventoryPartial.getItemToRemove().Weight.get().split(" ");
 			weight = itemToAdd.Weight.get().split(" ");
@@ -378,7 +410,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			inventoryPartial.getItems().remove(inventoryPartial.getItemToRemove());
 		}
 	}
-
+	
+	/**
+     * handler for the Roll Starting Wealth event
+     */
 	@FXML
 	private void handleRollStartingWealth() {
 		if (havePressedGenerateGold) {
@@ -395,6 +430,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		}
 	}
 
+    /**
+     * sends the data form the view to the main controller for access elsewhere
+     */
 	@Override
 	public void getData() {
 		// need to get the items on each label

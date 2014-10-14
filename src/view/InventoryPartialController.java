@@ -165,9 +165,6 @@ public class InventoryPartialController extends WindowController {
 					@Override
 					public void handle(ActionEvent event) {
 						equipItem(row, row.getItem().getSlotType().name());
-						// System.out.println(String.format("%s Successfully added to %s slot",
-						// row.getItem().Name.get(),
-						// row.getItem().getSlotType().name()));
 					}
 
 					private void equipItem(final TableRow<Item> row, String caseString) {
@@ -235,10 +232,18 @@ public class InventoryPartialController extends WindowController {
 		itemToRemove = item;
 	}
 
+	/**
+     * displays amount of weight being carried
+     * 
+     * @returns a Label 
+     */
 	public Labeled getWeightLabel() {
 		return this.lblWeightValue;
 	}
 
+    /**
+     * Shows anything related to the Head slot
+     */
 	@FXML
 	private void showHead() {
 		armorView.setItem(itemSlots.get("Head").getItem());

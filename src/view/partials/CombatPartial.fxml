@@ -30,7 +30,7 @@
                      <children>
                         <Accordion layoutX="-41.0" layoutY="-224.0" prefHeight="180.0" prefWidth="273.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <panes>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Standard">
+                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Standard">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -217,7 +217,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                             </TitledPane>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Move">
+                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Move">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -237,7 +237,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                             </TitledPane>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Full Round">
+                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Full Round">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -303,7 +303,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                             </TitledPane>
-                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Free">
+                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Free">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                                 </content>
@@ -311,7 +311,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Swift">
+                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Swift">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -338,7 +338,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Immediate">
+                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Immediate">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                                 </content>
@@ -361,7 +361,7 @@
                      <children>
                         <Accordion layoutX="63.0" layoutY="158.0" prefHeight="669.0" prefWidth="358.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <panes>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Initiative">
+                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Initiative">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -425,7 +425,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                             </TitledPane>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Hit Points">
+                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Hit Points">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -541,7 +541,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                             </TitledPane>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Armor Class and Spell Resistance">
+                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Armor Class and Spell Resistance">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -619,7 +619,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                             </TitledPane>
-                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Attack Modifiers">
+                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Attack Modifiers">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -719,7 +719,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Saving Throws">
+                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Saving Throws">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -781,7 +781,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane animated="false" text="Speeds">
+                              <TitledPane animated="false" styleClass="combatSubTitlePane" text="Speeds">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -886,7 +886,7 @@
                                     <Font name="System Bold Italic" size="14.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane animated="false" text="Equipment Worn and Wielded">
+                              <TitledPane animated="false" styleClass="combatSubTitlePane" text="Equipment Worn and Wielded">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
