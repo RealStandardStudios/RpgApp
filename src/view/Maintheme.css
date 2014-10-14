@@ -3,6 +3,10 @@
  * Colors                                                                      *
  *                                                                             *
  ******************************************************************************/
+ /* Light brown: #E0AE77 
+  * Medium brown: #E09C51
+  * Dark brown: #7d4609 */
+ 
 .tab-pane:top > .tab-header-area > .headers-region > .tab,
 .table-column,
 .button,
@@ -56,6 +60,11 @@
 	-fx-background-color: #E09C51;
 }
 
+.combatSubTitlePane > .title > .text{
+	-fx-background-color: #E0AE77;
+	-fx-font-style: italic;
+}
+
 /*******************************************************************************
  *                                                                             *
  * TabbedPane                                                                  *
@@ -64,6 +73,7 @@
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab {
 	-fx-pref-width:130.0px;
+	-fx-background-color: #E09C51;
 	-fx-background-radius: 0.0 0.0 0.0 0.0;
  }
  
@@ -75,13 +85,15 @@
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab:selected {
 	-fx-pref-width:130.0px;
-	-fx-background-color: rgb(60.0,60.0,60.0);
+	-fx-background-color: #7d4609;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
  
  .tab-pane:top > .tab-content-area {
- 	-fx-background-color: #E09C51;
+ 	-fx-background-color: #E0AE77;
  }
+ 
+ 
  
  /******************************************************************************
  *                                                                             *
@@ -166,4 +178,13 @@
  	-fx-border-color: YELLOW;
  	-fx-border-width:2.0px;
  	-fx-background-color: BLUE;
+ }
+ 
+ /******************************************************************************
+ *                                                                             *
+ * ScrollPane		                                                           *
+ *                                                                             *
+ ******************************************************************************/
+ .scroll-pane > .viewport {
+ 	-fx-background-color: #E09C51;
  }
