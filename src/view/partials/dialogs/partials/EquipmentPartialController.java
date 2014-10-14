@@ -276,7 +276,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
     @FXML
     private void handleAddToCharacter(ActionEvent event) {
 
-	if (itemToAdd != null) {
+	if (itemToAdd != null && getCharacter().getClasses()[0].getName() == classChosen) {
 	    String[] cost;
 	    double priceCheck = 0;
 	    String[] weight;
@@ -337,7 +337,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
     @FXML
     private void handleRemoveFromCharacter(ActionEvent event) {
-	if (inventoryPartial.getItemToRemove() != null) {
+	if (inventoryPartial.getItemToRemove() != null && getCharacter().getClasses()[0].getName() == classChosen) {
 
 	    String[] weight = inventoryPartial.getItemToRemove().Weight.get().split(" ");
 	    weight = itemToAdd.Weight.get().split(" ");
