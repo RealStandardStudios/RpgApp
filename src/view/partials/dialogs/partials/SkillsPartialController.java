@@ -379,7 +379,7 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	@FXML
 	Label lblRacialUseMagicDevice;
 	
-	boolean haveIBeenHereBefore = false;
+	int checkInt = 0;
 	//endregion
 	
 	@Override
@@ -815,9 +815,10 @@ public class SkillsPartialController extends NewCharacterPartialController {
 	@Override
 	public void setData() {	
 		
-		if(!haveIBeenHereBefore)
-		{
+		if(checkInt != getCharacter().getIntelligence().getTotalValue())
+		{			
 			lblRanksRemaining.setText((getCharacter().getIntelligence().getModifier().getValue() + getCharacter().getClasses()[0].getSkillRanksPerLevel()) + "");
+			checkInt = getCharacter().getIntelligence().getTotalValue();
 			
 			skillGrid = new SkillGridRow[] {
 				new SkillGridRow("Acrobatics", lblTotalAcrobatics, lblRanksAcrobatics, lblAbilityAcrobatics, lblRacialAcrobatics, chkClassAcrobatics, getCharacter().getDexterity()),
@@ -857,7 +858,6 @@ public class SkillsPartialController extends NewCharacterPartialController {
 				new SkillGridRow("Use Magic Device", lblTotalUseMagicDevice, lblRanksUseMagicDevice, lblAbilityUseMagicDevice, lblRacialUseMagicDevice, chkClassUseMagicDevice, getCharacter().getDexterity())
 			};
 			handleLabelSteup();
-			haveIBeenHereBefore = true;
 		}
 	}
 

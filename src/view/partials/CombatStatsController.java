@@ -133,6 +133,32 @@ public class CombatStatsController extends MainWindowController {
 	Label lblMiscWill;
 	//endregion
 	
+	//region HP
+	@FXML
+	Label lblCurrentHP;
+	@FXML
+	Label lblMaxHP;
+	@FXML
+	Label lblDamage;
+	@FXML
+	Label lblNonLethalDamage;
+	@FXML
+	Label lblHitDice;
+	//endregion
+	
+	//region Initiative
+	@FXML 
+	Label lblInitTotal;
+	@FXML 
+	Label lblInitDex;
+	@FXML 
+	Label lblInitMisc1;
+	@FXML 
+	Label lblInitMisc2;
+	//endregion
+	
+	pathfinder.data.Character.Character character;
+	
 	@Override
 	public void initialize() {
 		// TODO Auto-generated method stub
@@ -141,15 +167,35 @@ public class CombatStatsController extends MainWindowController {
 
 	@Override
 	public void setData() {
+		character = ((RootController) getRoot()).getCharacter();
 		setStats();
 		setSavingThrows();
+		setHP();
+		//setInitiative();
 	}
+	
+	public void setInitiative()
+	{
+		//lblInitTotal.setText(character.getDexterity().getModifier() + "");
+		//lblInitTotal.setText(character.getClasses());
+	}
+	
+	//region setHP
+	private void setHP()
+	{
+		lblCurrentHP.setText("do we track this");
+		lblMaxHP.setText("do we track this");
+		lblDamage.setText("do we track this");
+		lblNonLethalDamage.setText("do we track this");
+		lblHitDice.setText(character.getClasses()[0].getHitDice() + "");
+	}
+	//endregion
 	
 	//region setSavingThrows
 	private void setSavingThrows()
 	{
-		SaveAttribute[] save = new SaveAttribute[]{((RootController) getRoot()).getCharacter().getFortitude(),
-				((RootController) getRoot()).getCharacter().getReflex(), ((RootController) getRoot()).getCharacter().getWill()};
+		SaveAttribute[] save = new SaveAttribute[]{character.getFortitude(),
+				character.getReflex(), character.getWill()};
 		Label[] totalSavingThrow = new Label[]{lblTotalFort, lblTotalRef, lblTotalWill};
 		Label[] baseSavingThrow = new Label[]{lblBaseFort, lblBaseRef, lblBaseWill};
 		Label[] abilitySavingThrow = new Label[]{lblAbilityFort, lblAbilityRef, lblAbilityWill};
@@ -174,7 +220,7 @@ public class CombatStatsController extends MainWindowController {
 		Label[] baseStats = new Label[]{lblBaseStr, lblBaseDex, lblBaseCon, lblBaseInt, lblBaseWis, lblBaseCha};
 		Label[] enhStats = new Label[]{lblEnhStr, lblEnhDex, lblEnhCon, lblEnhInt, lblEnhWis, lblEnhCha};
 		Label[] miscStats = new Label[]{lblMiscStr, lblMiscDex, lblMiscCon, lblMiscInt, lblMiscWis, lblMiscCha};
-		Ability[] ability = ((RootController) getRoot()).getCharacter().getAbilities();
+		Ability[] ability = character.getAbilities();
 		
 		for (int i = 0; i < ability.length; i++) {
 			totalStats[i].setText(ability[i].getTotalValue()+"");
