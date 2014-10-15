@@ -394,7 +394,7 @@
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblDR" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblDR" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
@@ -414,7 +414,7 @@
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblOtherResist" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblOtherResist" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
