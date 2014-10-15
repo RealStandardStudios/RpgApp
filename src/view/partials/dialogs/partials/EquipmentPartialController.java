@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -129,7 +130,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				final Weapon weapon = row.getItem();
 				if (row.isHover() && weapon != null) {
 					weaponView.setItem(weapon);
-					weaponView.getDialogStage().setX(row.getLayoutX() + row.getWidth() + weaponView.getDialogStage().getWidth());
+					Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth() + weaponView.getDialogStage().getWidth(), 0);
+					weaponView.getDialogStage().setX(bound.getX());
 					weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
 					weaponView.show();
 				}
@@ -271,7 +273,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		inventoryPartial.setParentWindow(this);
 		inventoryPartial.setRoot(getRoot());
 
-		inventoryPane.getChildren().setAll((AnchorPane) inventoryPartial.getNode());
+		inventoryPane.getChildren().add((AnchorPane) inventoryPartial.getNode());
 	}
 
 	void readItems() {

@@ -8,9 +8,9 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="589.0" prefWidth="815.0" styleClass="main-anchor-pane" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryPartialController">
+<AnchorPane prefHeight="550.0" prefWidth="815.0" styleClass="main-anchor-pane" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryPartialController">
    <children>
-      <ImageView fitHeight="332.0" fitWidth="241.0" layoutX="387.28314208984375" layoutY="130.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="192.808349609375" AnchorPane.rightAnchor="260.09471130371094" AnchorPane.topAnchor="130.0">
+      <ImageView fitHeight="332.0" fitWidth="241.0" layoutX="387.28314208984375" layoutY="130.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="260.09471130371094" AnchorPane.topAnchor="130.0">
          <image>
             <Image url="@../../resources/images/mannequin.png" />
          </image>
@@ -39,7 +39,7 @@
             <Insets left="10.0" />
          </padding>
       </Label>
-      <TableView fx:id="tableInventory" layoutX="14.0" layoutY="17.0" prefHeight="535.0" prefWidth="200.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <TableView fx:id="tableInventory" layoutX="14.0" layoutY="17.0" prefHeight="520.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
         <columns>
           <TableColumn fx:id="colName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="199.0" resizable="false" text="Name" />
         </columns>

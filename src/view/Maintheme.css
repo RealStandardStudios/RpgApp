@@ -22,7 +22,6 @@
 .titled-pane > .title > .text, 
 .data-label,
 .table-column > .label > .text {
-	/*-fx-fill: #E0AE77;*/
 	-fx-fill: #CCA41F;
 }
 
@@ -73,12 +72,14 @@
 	-fx-font-size:20.0px;
 	-fx-font-weight: Bold;
 }
-.titled-pane > .content {
+.titledPaneMediumBg > .content {
 	-fx-background-color: #E09C51;
 }
 
-.combatSubTitlePane > .title > .text{
+.combatSubTitlePane > .content,
+.titled-pane > .title > .text {
 	-fx-background-color: #E0AE77;
+	-fx-fill: #DDDDDD;
 	-fx-font-style: italic;
 }
 
