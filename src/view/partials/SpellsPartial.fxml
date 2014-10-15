@@ -32,42 +32,42 @@
                                        <children>
                                           <GridPane fx:id="gPaneSpellsPerDay" gridLinesVisible="true" prefHeight="640.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Label text="Spell Level" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Spell Level" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" fx:id="x1" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Save DC" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Save DC" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label alignment="CENTER" contentDisplay="CENTER" text="Total Per Day" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label alignment="CENTER" contentDisplay="CENTER" styleClass="columnHeader" text="Total Per Day" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Class Bonus" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Class Bonus" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Ability Bonus" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Ability Bonus" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Misc Bonus" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Misc Bonus" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Total Known" wrapText="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Total Known" wrapText="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets fx:id="x2" />
                                                    </GridPane.margin>
@@ -75,47 +75,47 @@
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="1" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="1" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="2" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="2" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="3" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="3" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="4" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="4" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="5" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="5" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="6" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="6" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="7" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="7" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="8" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="8" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="9" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-gold" text="9" GridPane.halignment="CENTER" GridPane.margin="$x2" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
@@ -420,7 +420,7 @@
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label disable="true" text="Domain" wrapText="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label disable="true" styleClass="columnHeader" text="Domain" wrapText="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
@@ -946,113 +946,113 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Uses" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneLightBg" text="Uses" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
                                                 <GridPane gridLinesVisible="true" prefHeight="302.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label contentDisplay="CENTER" font="$x1" text="Power Name" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                                      <Label contentDisplay="CENTER" font="$x1" text="Total Uses" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" text="Points Used" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" text="Base Uses" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" text="Ability Bonus" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                                      <Label fx:id="lblPowerUsesName1" disable="true" text="-" wrapText="true" GridPane.rowIndex="1">
+                                                      <Label contentDisplay="CENTER" font="$x1" styleClass="columnHeader" text="Power Name" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                                      <Label contentDisplay="CENTER" font="$x1" styleClass="columnHeader" text="Total Uses" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" styleClass="columnHeader" text="Points Used" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" styleClass="columnHeader" text="Base Uses" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" styleClass="columnHeader" text="Ability Bonus" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                                      <Label fx:id="lblPowerUsesName1" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.rowIndex="1">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUses1" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                      <Label fx:id="lblPowerUses1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsed1" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                      <Label fx:id="lblPowerUsed1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesBase1" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                      <Label fx:id="lblPowerUsesBase1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesAbility1" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                      <Label fx:id="lblPowerUsesAbility1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesName2" disable="true" text="-" wrapText="true" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblPowerUsesName2" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.rowIndex="2">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUses2" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblPowerUses2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsed2" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblPowerUsed2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesBase2" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblPowerUsesBase2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesAbility2" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                      <Label fx:id="lblPowerUsesAbility2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesName3" disable="true" text="-" wrapText="true" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblPowerUsesName3" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.rowIndex="3">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUses3" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblPowerUses3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsed3" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblPowerUsed3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesBase3" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblPowerUsesBase3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesAbility3" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                      <Label fx:id="lblPowerUsesAbility3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesName4" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerUsesName4" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUses4" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerUses4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsed4" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerUsed4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesBase4" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerUsesBase4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerUsesAbility4" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerUsesAbility4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
@@ -1080,133 +1080,133 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </TitledPane>
-                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Attack and Damage" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneLightBg" text="Attack and Damage" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
                                                 <GridPane gridLinesVisible="true" prefHeight="302.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label font="$x1" text="Power Name" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                      <Label font="$x1" styleClass="columnHeader" text="Power Name" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label font="$x1" text="Damage Dice" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                      <Label font="$x1" styleClass="columnHeader" text="Damage Dice" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" text="Level Damage Bonus" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" styleClass="columnHeader" text="Level Damage Bonus" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label alignment="CENTER" font="$x1" text="Total Attack Bonus" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                      <Label alignment="CENTER" font="$x1" styleClass="columnHeader" text="Total Attack Bonus" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgName1" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgName1" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgDice1" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgDice1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgLevel1" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgLevel1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgAttack1" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgAttack1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgName2" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgName2" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgDice2" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgDice2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgLevel2" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgLevel2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgAttack2" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgAttack2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgName3" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgName3" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgDice3" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgDice3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgLevel3" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgLevel3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgAttack3" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgAttack3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgName4" disable="true" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgName4" disable="true" styleClass="data-label" text="-" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgDice4" disable="true" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgDice4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgLevel4" disable="true" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgLevel4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgAttack4" disable="true" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgAttack4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <GridPane.margin>
                                                             <Insets left="5.0" />
                                                          </GridPane.margin>
                                                       </Label>
-                                                      <Label text="Total Damage Modifier" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                      <Label styleClass="columnHeader" text="Total Damage Modifier" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgTotalDmg1" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgTotalDmg1" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgTotalDmg2" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgTotalDmg2" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgTotalDmg3" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgTotalDmg3" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label fx:id="lblPowerAtkDmgTotalDmg4" disable="true" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                      <Label fx:id="lblPowerAtkDmgTotalDmg4" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1306,7 +1306,7 @@
                                  <children>
                                     <VBox alignment="CENTER_LEFT" spacing="5.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                        <children>
-                                          <Label text="Close:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                          <Label styleClass="header-label-16-black-i" text="Close:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                              <GridPane.margin>
                                                 <Insets left="5.0" />
                                              </GridPane.margin>
@@ -1314,7 +1314,7 @@
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <Label text="25 ft + 5 ft for every 2 Levels" wrapText="true" />
+                                          <Label styleClass="data-label-centre" text="25 ft + 5 ft for every 2 Levels" wrapText="true" />
                                        </children>
                                        <GridPane.margin>
                                           <Insets left="5.0" />
@@ -1322,7 +1322,7 @@
                                     </VBox>
                                     <VBox alignment="CENTER_LEFT" spacing="5.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <children>
-                                          <Label text="Medium:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                          <Label styleClass="header-label-16-black-i" text="Medium:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
@@ -1330,7 +1330,7 @@
                                                 <Insets left="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label text="100 ft + 10 ft for every Level" wrapText="true" />
+                                          <Label styleClass="data-label-centre" text="100 ft + 10 ft for every Level" wrapText="true" />
                                        </children>
                                        <opaqueInsets>
                                           <Insets />
@@ -1341,7 +1341,7 @@
                                     </VBox>
                                     <VBox alignment="CENTER_LEFT" spacing="5.0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <children>
-                                          <Label text="Long:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                          <Label styleClass="header-label-16-black-i" text="Long:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
@@ -1349,7 +1349,7 @@
                                                 <Insets left="5.0" />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label text="400 ft + 40 ft for every Level" wrapText="true" />
+                                          <Label styleClass="data-label-centre" text="400 ft + 40 ft for every Level" wrapText="true" />
                                        </children>
                                        <GridPane.margin>
                                           <Insets left="5.0" />

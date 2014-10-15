@@ -34,183 +34,187 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <VBox layoutX="48.0" layoutY="113.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="242.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <children>
-                                                <Label fx:id="lblActionAttackMelee" contentDisplay="RIGHT" text="Attack (Melee)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                          <ScrollPane fitToWidth="true" prefHeight="449.0" prefWidth="326.0">
+                                             <content>
+                                                <VBox layoutX="48.0" layoutY="113.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="242.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Label fx:id="lblActionAttackMelee" contentDisplay="RIGHT" styleClass="data-label" text="Attack (Melee)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionAttackRanged" contentDisplay="RIGHT" styleClass="data-label" text="Attack (Ranged)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionAttackUnarmed" contentDisplay="RIGHT" styleClass="data-label" text="Attack (Unarmed)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionTotalDefense" contentDisplay="RIGHT" styleClass="data-label" text="Total Defense">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionAttackRanged" contentDisplay="RIGHT" text="Attack (Ranged)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionExAbility" contentDisplay="RIGHT" styleClass="data-label" text="Use Extraordinary Ability">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionSuAbility" contentDisplay="RIGHT" styleClass="data-label" text="Use Supernatural Ability">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionSpAbility" contentDisplay="RIGHT" styleClass="data-label" text="Use Spell-Like Ability">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionCastSpell" contentDisplay="RIGHT" styleClass="data-label" text="Cast Spell">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionConcentrate" contentDisplay="RIGHT" styleClass="data-label" text="Concentration for Spell Casting">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionUseSkillStd" contentDisplay="RIGHT" styleClass="data-label" text="Use Skill (Standard Action)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionCombatMnvrStd" contentDisplay="RIGHT" styleClass="data-label" text="Combat Maneuver (Standard Action)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionActivateMagicItem" contentDisplay="RIGHT" styleClass="data-label" text="Activate Magic Item (not Potion or Oil)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionDrinkPotion" contentDisplay="RIGHT" styleClass="data-label" text="Drink Potion or Apply Oil">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionEscapeGrapple" contentDisplay="RIGHT" styleClass="data-label" text="Escape Grapple">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionAttackUnarmed" contentDisplay="RIGHT" text="Attack (Unarmed)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionStabilize" contentDisplay="RIGHT" styleClass="data-label" text="Stabilize a dying Character">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionTotalDefense" contentDisplay="RIGHT" text="Total Defense">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionExAbility" contentDisplay="RIGHT" text="Use Extraordinary Ability">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionSuAbility" contentDisplay="RIGHT" text="Use Supernatural Ability">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionSpAbility" contentDisplay="RIGHT" text="Use Spell-Like Ability">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionCastSpell" contentDisplay="RIGHT" text="Cast Spell">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionConcentrate" contentDisplay="RIGHT" text="Concentration for Spell Casting">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionUseSkillStd" contentDisplay="RIGHT" text="Use Skill (Standard Action)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionCombatMnvrStd" contentDisplay="RIGHT" text="Combat Maneuver (Standard Action)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionActivateMagicItem" contentDisplay="RIGHT" text="Activate Magic Item (not Potion or Oil)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionDrinkPotion" contentDisplay="RIGHT" text="Drink Potion or Apply Oil">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionEscapeGrapple" contentDisplay="RIGHT" text="Escape Grapple">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionStabilize" contentDisplay="RIGHT" text="Stabilize a dying Character">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
                                        </children></AnchorPane>
                               </content>
                                  <font>
@@ -221,16 +225,20 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="334.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <children>
-                                                <Label fx:id="lblActionControlMount" contentDisplay="RIGHT" text="Control Frightened Mount">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                             </children>
-                                          </VBox>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="449.0" prefWidth="326.0" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="334.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Label fx:id="lblActionControlMount" contentDisplay="RIGHT" styleClass="data-label" text="Control Frightened Mount">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Separator prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
                                        </children></AnchorPane>
                               </content>
                                  <font>
@@ -241,62 +249,66 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="334.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <children>
-                                                <Label fx:id="lblActionFullAttack" contentDisplay="RIGHT" text="Full Attack">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="449.0" prefViewportHeight="426.6000061035156" prefViewportWidth="304.0" prefWidth="326.0" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="449.0" prefWidth="326.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Label fx:id="lblActionFullAttack" contentDisplay="RIGHT" styleClass="data-label" text="Full Attack">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionCharge" contentDisplay="RIGHT" text="Charge">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionCharge" contentDisplay="RIGHT" styleClass="data-label" text="Charge">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionUseSkillFullRnd" contentDisplay="RIGHT" text="Use Skill (Full Round)">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionUseSkillFullRnd" contentDisplay="RIGHT" styleClass="data-label" text="Use Skill (Full Round)">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                                <Label fx:id="lblActionEscapeNet" contentDisplay="RIGHT" text="Escape from a Net">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                                      <Separator prefWidth="200.0" />
+                                                      <Label fx:id="lblActionEscapeNet" contentDisplay="RIGHT" styleClass="data-label" text="Escape from a Net">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                             </children>
-                                          </VBox>
+                                                      <Separator prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
                                        </children></AnchorPane>
                               </content>
                                  <font>
@@ -315,23 +327,27 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="334.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <children>
-                                                <Label fx:id="lblActionCastQuickSpell" contentDisplay="RIGHT" text="Cast Quickened Spell">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <Label text="►">
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="449.0" prefViewportHeight="426.6000061035156" prefViewportWidth="304.0" prefWidth="326.0" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="449.0" prefWidth="326.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Label fx:id="lblActionCastQuickSpell" contentDisplay="RIGHT" styleClass="data-label" text="Cast Quickened Spell">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
+                                                         <graphic>
+                                                            <Label text="►">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
                                                       </Label>
-                                                   </graphic>
-                                                </Label>
-                                                <Separator prefWidth="200.0" />
-                                             </children>
-                                          </VBox>
+                                                      <Separator prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
                                        </children></AnchorPane>
                                 </content>
                                  <font>
@@ -376,7 +392,7 @@
                                                 <RowConstraints vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Modifier:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Modifier:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -384,7 +400,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Value:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Value:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -392,7 +408,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblInitiativeBonus" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblInitiativeBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets />
                                                    </GridPane.margin>
@@ -400,7 +416,7 @@
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblInitiativeValue" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblInitiativeValue" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets />
                                                    </GridPane.margin>
@@ -445,7 +461,7 @@
                                                 <RowConstraints vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Max HP:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Max HP:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -453,7 +469,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Current HP:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Current HP:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -461,7 +477,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Damage:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Damage:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -469,7 +485,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Non-Lethal Damage:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Non-Lethal Damage:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -477,12 +493,12 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblMaxHP" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblMaxHP" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
@@ -514,17 +530,17 @@
                                                    </font>
                                                 </Button>
                                                 <Separator GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                                <Label fx:id="lblTotalNLD" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblTotalNLD" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblDR" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblDR" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Damage Reduction:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Damage Reduction:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
@@ -558,7 +574,7 @@
                                                 <RowConstraints vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label fx:id="lblAC" text="Armor Class:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblAC" styleClass="header-label-16-black" text="Armor Class:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -566,7 +582,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblTouchAC" text="Touch AC:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblTouchAC" styleClass="header-label-16-black" text="Touch AC:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -574,7 +590,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblFFAC" text="Flat-Footed AC:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblFFAC" styleClass="header-label-16-black" text="Flat-Footed AC:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -582,22 +598,22 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblAC" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblAC" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblTouchAC" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblTouchAC" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblFFAC" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblFFAC" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Spell Resistance:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Spell Resistance:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -605,7 +621,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSR" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSR" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
@@ -638,7 +654,7 @@
                                                 <RowConstraints vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Melee:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Melee:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -646,7 +662,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Ranged:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Ranged:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -654,7 +670,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="CMB:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="CMB:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -662,7 +678,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="CMD:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="CMD:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -670,42 +686,42 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Attack Bonus:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Attack Bonus:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Damage Bonus:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label styleClass="columnHeader" text="Damage Bonus:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblMeleeAttackBonus" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblMeleeAttackBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblMeleeDamageBonus" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblMeleeDamageBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblRangedAttackBonus" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblRangedAttackBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblRangedDamageBonus" text="Need this?" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblRangedDamageBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblCMBAttackBonus" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblCMBAttackBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblCMD" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblCMD" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
@@ -734,7 +750,7 @@
                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Fortitude:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Fortitude:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -742,7 +758,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Reflex:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Reflex:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -750,7 +766,7 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Will:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Will:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -758,17 +774,17 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblFortSave" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblFortSave" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblRefSave" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblRefSave" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblWillSave" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblWillSave" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
@@ -799,7 +815,7 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Base:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Base:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -807,7 +823,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="With Armor:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="With Armor:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -815,7 +831,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Climb:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Climb:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -823,7 +839,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Swim:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Swim:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -831,7 +847,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Fly:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Fly:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -839,7 +855,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label text="Burrow:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Burrow:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
@@ -847,32 +863,32 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedBase" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedBase" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedArmor" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedArmor" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedClimb" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedClimb" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedSwim" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedSwim" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedFly" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedFly" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedBurrow" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedBurrow" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
@@ -892,7 +908,7 @@
                                        <children>
                                           <GridPane layoutX="46.0" layoutY="116.0" prefHeight="436.0" prefWidth="334.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columnConstraints>
-                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="35.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
@@ -934,22 +950,22 @@
                                                       <Insets left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label fx:id="lblWeapon1" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblWeapon1" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblWeapon2" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblWeapon2" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblArmor" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblArmor" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblShield" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblShield" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -1001,42 +1017,42 @@
                                   <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="Standard:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                    <Label styleClass="header-label-16-black-i" text="Standard:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold Italic" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Move:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label styleClass="header-label-16-black-i" text="Move:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold Italic" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Full Round:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label styleClass="header-label-16-black-i" text="Full Round:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold Italic" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Swift:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label styleClass="header-label-16-black-i" text="Swift:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold Italic" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lblSelectedStandardAction" text="-" GridPane.columnIndex="1">
+                                    <Label fx:id="lblSelectedStandardAction" styleClass="data-label" text="-" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lblSelectedMoveAction" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Label fx:id="lblSelectedMoveAction" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lblSelectedFullRoundAction" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <Label fx:id="lblSelectedFullRoundAction" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lblSelectedSwiftAction" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <Label fx:id="lblSelectedSwiftAction" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <font>
                                           <Font size="14.0" />
                                        </font>

@@ -19,7 +19,7 @@
                      <children>
                         <GridPane layoutX="111.0" layoutY="91.0" prefHeight="669.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Label styleClass="header-label" text="Name:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Name:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -27,7 +27,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Race:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Race:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -35,7 +35,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Homeland:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Homeland:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -43,7 +43,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Background:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Background:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -51,7 +51,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Gender:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Gender:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -59,7 +59,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Age:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Age:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -67,7 +67,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Appearance:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Appearance:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -75,7 +75,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Personality:" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Personality:" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -83,7 +83,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Alignment:" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Alignment:" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -91,7 +91,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Height:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Height:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -99,7 +99,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Weight:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Weight:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -107,7 +107,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Deities:" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Deities:" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -115,7 +115,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label" text="Languages:" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Languages:" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -192,12 +192,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label styleClass="header-label" text="Favored Class:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Favored Class:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label disable="true" styleClass="header-label" text="Archetype:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label disable="true" styleClass="header-label-18-gold" text="Archetype:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -212,12 +212,12 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="header-label" text="Experience:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Experience:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="header-label" text="NextLevel:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Next Level:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>

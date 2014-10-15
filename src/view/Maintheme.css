@@ -6,7 +6,9 @@
  /* Light brown: #E0AE77 alt #DBBC9A (paler)
   * Medium brown: #E09C51 alt #E0AE77
   * Dark brown: #7d4609 
-  * Window background: #e9e9d5 */
+  * Window background: #e9e9d5
+  * Titled pane heading: #CCA41F (gold)
+  * "Sub-titled Pane" heading: #DDDDDD (gray) */
  
  .windowBackground {
  	-fx-background-color: #e9e9d5;
@@ -107,6 +109,10 @@
 	-fx-font-style: italic;
 }
 
+.combatSubTitlePane .scroll-pane .viewport {
+	-fx-background-color: #E3C19D;
+}
+
 /*******************************************************************************
  *                                                                             *
  * TabbedPane                                                                  *
@@ -116,12 +122,12 @@
 .tab-pane:top > .tab-header-area > .headers-region > .tab {
 	-fx-pref-width:130.0px;
 	-fx-background-color: #E09C51;
-	-fx-background-radius: 0.0 0.0 0.0 0.0;
+	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
  
-.tab-pane:top .tab-label .text {
- 	-fx-fill: WHITE;
-	-fx-font-size:15.0px;
+ .tab > .tab-container > .tab-label > .text {
+	-fx-fill: BLACK;
+	-fx-font-size:16.0px;
 	-fx-font-weight: Bold;
  }
  
@@ -129,6 +135,12 @@
 	-fx-pref-width:130.0px;
 	-fx-background-color: #7d4609;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
+ }
+ 
+ .tab:selected > .tab-container > .tab-label > .text {
+	-fx-fill: #CCA41F;
+	-fx-font-size:16.0px;
+	-fx-font-weight: Bold;
  }
   
  
@@ -143,13 +155,14 @@
  	-fx-background-radius: 0.0 0.0 0.0 0.0;
  }
  
- .button:hover {
- 	-fx-background-color: rgb(100.0,100.0,81.0);
+ .button:hover .text {
+ 	/* -fx-background-color: rgb(100.0,100.0,81.0); */
+ 	-fx-fill: #CCA41F;
  	-fx-background-radius: 0.0 3.0 0.0 3.0;
  }
  
  .button > .text {
- 	-fx-fill: WHITE;
+ 	-fx-fill: #DDDDDD;
 	-fx-font-weight: Bold;
  }
  
@@ -158,24 +171,61 @@
  * Labels                                                                      *
  *                                                                             *
  ******************************************************************************/
- 
+
  .data-label {
- 	-fx-padding: 8.0 10.0 8.0 10.0;
+ 	-fx-padding: 0.0 0.0 0.0 10.0;
  	/*-fx-background-color: WHITE;*/
  }
  .data-label > .text {
  	-fx-fill: BLACK;
- 	-fx-font-size: 14.0px;
+ 	-fx-font-size: 16.0px;
  }
  
- .header-label {
- 	-fx-padding: 5.0 5.0 5.0 5.0;
- 	-fx-background-color: BLACK;
+ .data-label-centre > .text {
+ 	-fx-fill: BLACK;
+ 	-fx-font-size: 16.0px;
+ }
+ 
+ .data-label-gold > .text {
+ 	-fx-fill: #AB891A;
+ 	-fx-font-size: 13.0px;
+ 	-fx-font-weight: Bold;
+ }
+ 
+ .header-label-18-gold {
+ 	/*-fx-background-color: BLACK;*/
  	-fx-halignment: right;
  }
- .header-label > .text {
- 	-fx-fill: WHITE;
+ .header-label-18-gold > .text {
  	-fx-font-size: 18.0px;
+ 	-fx-fill: #AB891A;
+ 	-fx-font-style: italic;
+ 	-fx-font-weight: Bold;
+ }
+ 
+ .header-label-16-gold > .text {
+ 	-fx-font-size: 16.0px;
+ 	-fx-fill: #AB891A;
+ 	-fx-font-style: italic;
+ 	-fx-font-weight: Bold;
+ }
+ 
+ .header-label-16-black-i > .text {
+ 	-fx-font-size: 16.0px;
+ 	-fx-fill: BLACK;
+ 	-fx-font-style: italic;
+ 	-fx-font-weight: Bold;
+ }
+ 
+ .header-label-16-black > .text {
+ 	-fx-font-size: 16.0px;
+ 	-fx-fill: BLACK;
+ 	-fx-font-weight: Bold;
+ }
+ 
+ .columnHeader > .text {
+ 	-fx-font-size: 13.0px;
+ 	-fx-fill: BLACK;
  	-fx-font-weight: Bold;
  }
  
@@ -200,6 +250,12 @@
  .placeholder {
  	-fx-background-color: #DBBC9A;
  }
+ 
+ .placeholder > .label {
+ 	-fx-fill: BLACK;
+ 	-fx-font-size: 16.0px;
+ }
+ 
  .table-row-cell {
  	-fx-background-color: rgb(60.0,60.0,60.0);
  	-fx-border-color: WHITE;
