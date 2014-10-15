@@ -3,15 +3,33 @@
  * Colors                                                                      *
  *                                                                             *
  ******************************************************************************/
- /* Light brown: #E0AE77 
-  * Medium brown: #E09C51
-  * Dark brown: #7d4609 */
+ /* Light brown: #E0AE77 alt #DBBC9A (paler)
+  * Medium brown: #E09C51 alt #E0AE77
+  * Dark brown: #7d4609 
+  * Window background: #e9e9d5 */
+ 
+ .windowBackground {
+ 	-fx-background-color: #e9e9d5;
+ }
+ 
+ .tab-pane:top > .tab-header-area > .tab-header-background {
+ 	-fx-background-color: #e9e9d5;
+ }
+ 
+ .tab-pane:top > .tab-content-area {
+ 	-fx-background-color: #e9e9d5;
+ }
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab,
 .table-column,
 .button,
 .titled-pane > .title {
     -fx-background-color: #7d4609;
+}
+
+.table-column > .label > .text {
+	-fx-fill: #DDDDDD;
+	-fx-font-style: italic;	
 }
 
 /*header-background-grey:rgb(82,81,81)*/
@@ -73,12 +91,18 @@
 	-fx-font-weight: Bold;
 }
 .titledPaneMediumBg > .content {
-	-fx-background-color: #E09C51;
+	-fx-background-color: #E0AE77;
 }
 
-.combatSubTitlePane > .content,
-.titled-pane > .title > .text {
-	-fx-background-color: #E0AE77;
+.titledPaneLightBg > .content {
+	-fx-background-color: #E3C19D;
+}
+
+.combatSubTitlePane > .content {
+	-fx-background-color: #E3C19D;
+}
+
+.combatSubTitlePane > .title > .text {
 	-fx-fill: #DDDDDD;
 	-fx-font-style: italic;
 }
@@ -106,12 +130,7 @@
 	-fx-background-color: #7d4609;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
- 
- .tab-pane:top > .tab-content-area {
- 	-fx-background-color: #E0AE77;
- }
- 
- 
+  
  
  /******************************************************************************
  *                                                                             *
@@ -171,11 +190,15 @@
  .table-column {
  	-fx-padding: 0.0;
  }
- .table-column > .label {
+ 
+ .table-column > .label > .text {
  	-fx-font-size:18.0px;
+ 	-fx-fill: #DDDDDD;
+	-fx-font-style: italic;
  }
+ 
  .placeholder {
- 	-fx-background-color: rgb(50.0,50.0,50.0);
+ 	-fx-background-color: #DBBC9A;
  }
  .table-row-cell {
  	-fx-background-color: rgb(60.0,60.0,60.0);
@@ -200,9 +223,15 @@
  
  /******************************************************************************
  *                                                                             *
- * ScrollPane		                                                           *
+ * ScrollPane, textArea, textField                                             *
  *                                                                             *
  ******************************************************************************/
  .scroll-pane > .viewport {
- 	-fx-background-color: #E09C51;
+ 	/*-fx-background-color: #ABC123;*/
  }
+ 
+ .text-area .scroll-pane .content,
+ .text-field {
+ 	-fx-background-color: #e9e9d5;
+ }
+ 
