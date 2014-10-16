@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.ClassPartialController">
+<AnchorPane prefHeight="595.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.ClassPartialController">
    <children>
-      <GridPane layoutX="10.0" layoutY="10.0" prefHeight="601.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <GridPane layoutX="10.0" layoutY="10.0" prefHeight="590.0" prefWidth="1090.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ComboBox fx:id="cboClasses" onAction="#handleChangedClass" promptText="What is your character's Class?" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                <GridPane.margin>

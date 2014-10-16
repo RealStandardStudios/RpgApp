@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.SkillsPartialController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../../../Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.SkillsPartialController">
    <children>
       <GridPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -42,12 +42,12 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseAcrobatics" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAcrobaticsIncrease" prefHeight="30.0" prefWidth="30.0" text="▲">
+                                    <Button fx:id="btnIncreaseAcrobatics" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAcrobaticsIncrease" prefHeight="33.0" prefWidth="33.0" styleClass="skill-row-button" text="▲">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
                                     </Button>
-                                    <Button fx:id="btnDecreaseAcrobatics" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAcrobaticsDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnDecreaseAcrobatics" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAcrobaticsDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -67,8 +67,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseAppraise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAppraiseIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseAppraise" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAppraiseDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseAppraise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAppraiseIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseAppraise" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAppraiseDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -89,8 +89,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseBluff" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBluffIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseBluff" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBluffDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseBluff" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBluffIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseBluff" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBluffDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -111,8 +111,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseClimb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClimbIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseClimb" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClimbDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseClimb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClimbIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseClimb" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClimbDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -133,8 +133,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseCraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCraftIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseCraft" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCraftDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseCraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCraftIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseCraft" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCraftDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -155,8 +155,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseDiplomacy" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDiplomacyIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseDiplomacy" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDiplomacyDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseDiplomacy" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDiplomacyIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseDiplomacy" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDiplomacyDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -177,8 +177,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseDisableDevice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisableDeviceIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseDisableDevice" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisableDeviceDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseDisableDevice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisableDeviceIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseDisableDevice" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisableDeviceDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -199,8 +199,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseDisguise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisguiseIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseDisguise" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisguiseDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseDisguise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisguiseIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseDisguise" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisguiseDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -221,8 +221,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseEscapeArtist" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEscapeArtistIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseEscapeArtist" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEscapeArtistDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseEscapeArtist" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEscapeArtistIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseEscapeArtist" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEscapeArtistDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -243,8 +243,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseFly" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFlyIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseFly" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFlyDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseFly" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFlyIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseFly" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFlyDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -265,8 +265,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseHandleAnimal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHandleAnimalIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseHandleAnimal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHandleAnimalDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseHandleAnimal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHandleAnimalIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseHandleAnimal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHandleAnimalDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -287,8 +287,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseHeal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHealIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseHeal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHealDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseHeal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHealIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseHeal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHealDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -309,8 +309,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseIntimidate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleIntimidateIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseIntimidate" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleIntimidateDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseIntimidate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleIntimidateIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseIntimidate" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleIntimidateDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -331,8 +331,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeArcana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeArcanaIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeArcana" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeArcanaDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeArcana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeArcanaIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeArcana" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeArcanaDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -353,8 +353,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeDungeoneering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeDungeoneeringIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeDungeoneering" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeDungeoneeringDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeDungeoneering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeDungeoneeringIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeDungeoneering" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeDungeoneeringDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -375,8 +375,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeEngineering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeEngineeringIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeEngineering" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeEngineeringDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeEngineering" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeEngineeringIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeEngineering" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeEngineeringDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -397,8 +397,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeGeography" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeGeographyIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeGeography" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeGeographyDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeGeography" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeGeographyIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeGeography" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeGeographyDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -419,8 +419,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeHistory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeHistoryIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeHistory" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeHistoryDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeHistory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeHistoryIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeHistory" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeHistoryDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -441,8 +441,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeLocal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeLocalIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeLocal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeLocalDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeLocal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeLocalIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeLocal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeLocalDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -463,8 +463,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeNature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNatureIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeNature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNatureDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeNature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNatureIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeNature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNatureDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -485,8 +485,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeNobility" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNobilityIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeNobility" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNobilityDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeNobility" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNobilityIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeNobility" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeNobilityDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -507,8 +507,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgePlanes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgePlanesIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgePlanes" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgePlanesDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgePlanes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgePlanesIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgePlanes" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgePlanesDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -529,8 +529,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseKnowledgeReligion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeReligionIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseKnowledgeReligion" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeReligionDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseKnowledgeReligion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeReligionIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseKnowledgeReligion" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleKnowledgeReligionDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -551,8 +551,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="23" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseLinguistics" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLinguisticsIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseLinguistics" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLinguisticsDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseLinguistics" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLinguisticsIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseLinguistics" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLinguisticsDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -573,8 +573,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="24" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreasePerception" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerceptionIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreasePerception" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerceptionDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreasePerception" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerceptionIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreasePerception" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerceptionDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -595,8 +595,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="25" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreasePerform" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerformIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreasePerform" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerformDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreasePerform" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerformIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreasePerform" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePerformDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -617,8 +617,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="26" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseProfession" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProfessionIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseProfession" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProfessionDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseProfession" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProfessionIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseProfession" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProfessionDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -639,8 +639,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="27" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseRide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRideIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseRide" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRideDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseRide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRideIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseRide" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRideDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -661,8 +661,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="28" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseSenseMotive" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSenseMotiveIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseSenseMotive" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSenseMotiveDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseSenseMotive" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSenseMotiveIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseSenseMotive" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSenseMotiveDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -683,8 +683,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="29" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseSleightOfHand" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSleightOfHandIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseSleightOfHand" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSleightOfHandDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseSleightOfHand" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSleightOfHandIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseSleightOfHand" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSleightOfHandDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -705,8 +705,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="30" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseSpellcraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpellcraftIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseSpellcraft" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpellcraftDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseSpellcraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpellcraftIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseSpellcraft" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpellcraftDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -727,8 +727,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="31" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseStealth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStealthIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseStealth" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStealthDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseStealth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStealthIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseStealth" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStealthDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -749,8 +749,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="32" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseSurvival" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSurvivalIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseSurvival" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSurvivalDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseSurvival" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSurvivalIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseSurvival" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSurvivalDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -771,8 +771,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="33" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseSwim" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSwimIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseSwim" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSwimDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseSwim" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSwimIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseSwim" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSwimDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -793,8 +793,8 @@
                               </Label>
                               <VBox alignment="CENTER" fillWidth="false" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="34" GridPane.valignment="CENTER">
                                  <children>
-                                    <Button fx:id="btnIncreaseUseMagicDevice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUseMagicDeviceIncrease" prefHeight="30.0" prefWidth="30.0" text="▲" />
-                                    <Button fx:id="btnDecreaseUseMagicDevice" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUseMagicDeviceDecrease" prefHeight="30.0" prefWidth="30.0" text="▼">
+                                    <Button fx:id="btnIncreaseUseMagicDevice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUseMagicDeviceIncrease" prefHeight="33.0" prefWidth="33.0" text="▲" />
+                                    <Button fx:id="btnDecreaseUseMagicDevice" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUseMagicDeviceDecrease" prefHeight="33.0" prefWidth="33.0" text="▼">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
