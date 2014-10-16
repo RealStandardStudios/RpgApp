@@ -3,9 +3,9 @@
  * Colors                                                                      *
  *                                                                             *
  ******************************************************************************/
- /* Light brown: #E0AE77 alt #DBBC9A (paler)
-  * Medium brown: #E09C51 alt #E0AE77
-  * Dark brown: #7d4609 
+ /* Light brown: #EDD4BA	alts #E0AE77 1st, #DBBC9A (2nd, paler)
+  * Medium brown: #DBBC9A	alts #E09C51 1st, #E0AE77
+  * Dark brown: #7d4609
   * Window background: #e9e9d5
   * Titled pane heading: #CCA41F (gold)
   * "Sub-titled Pane" heading: #DDDDDD (gray) */
@@ -23,21 +23,14 @@
  }
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab,
-.table-column,
 .button,
+.table-column > .label,
 .titled-pane > .title {
     -fx-background-color: #7d4609;
 }
 
-.table-column > .label > .text {
-	-fx-fill: #DDDDDD;
-	-fx-font-style: italic;	
-}
-
-/*header-background-grey:rgb(82,81,81)*/
-
 .main-anchor-pane {
-	-fx-background-color: #E0AE77;
+	-fx-background-color: #DBBC9A;
 }
 .titled-pane > .title > .text, 
 .data-label,
@@ -66,6 +59,11 @@
 .summary-ft-label {
 	-fx-background-color: WHITE;
 }
+
+.gridPaneLightBg {
+	-fx-background-color: #EDD4BA;
+}
+
 /*******************************************************************************
  *                                                                             *
  * TitledPane                                                                  *
@@ -93,15 +91,15 @@
 	-fx-font-weight: Bold;
 }
 .titledPaneMediumBg > .content {
-	-fx-background-color: #E0AE77;
+	-fx-background-color: #DBBC9A;
 }
 
 .titledPaneLightBg > .content {
-	-fx-background-color: #E3C19D;
+	-fx-background-color: #EDD4BA;
 }
 
 .combatSubTitlePane > .content {
-	-fx-background-color: #E3C19D;
+	-fx-background-color: #EDD4BA;
 }
 
 .combatSubTitlePane > .title > .text {
@@ -110,7 +108,7 @@
 }
 
 .combatSubTitlePane .scroll-pane .viewport {
-	-fx-background-color: #E3C19D;
+	-fx-background-color: #EDD4BA;
 }
 
 /*******************************************************************************
@@ -120,8 +118,8 @@
  ******************************************************************************/
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab {
-	-fx-pref-width:130.0px;
-	-fx-background-color: #E09C51;
+	-fx-pref-width:140.0px;
+	-fx-background-color: #DBBC9A;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
  
@@ -132,7 +130,7 @@
  }
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab:selected {
-	-fx-pref-width:130.0px;
+	-fx-pref-width:140.0px;
 	-fx-background-color: #7d4609;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
@@ -150,9 +148,16 @@
  *                                                                             *
  ******************************************************************************/
  
- .button {
+ .button,
+ .skill-row-button {
  	-fx-alignment:CENTER;
  	-fx-background-radius: 0.0 0.0 0.0 0.0;
+ }
+ 
+ .button {
+ 	-fx-effect: dropshadow( gaussian , #777777 , 0,0,2,2 );
+ 	-fx-border-width: 0.0px 2.0px 2.0 0.0px;
+ 	-fx-border-color: rgb(76.0,60.0,11.0);
  }
  
  .button:hover .text {
@@ -164,6 +169,13 @@
  .button > .text {
  	-fx-fill: #DDDDDD;
 	-fx-font-weight: Bold;
+ }
+ 
+ .button:armed {
+ 	-fx-background-color: #6E3D08;
+ 	-fx-alignment:CENTER;
+ 	-fx-background-radius: 0.0 0.0 0.0 0.0;
+ 	-fx-effect: dropshadow(gaussian, #777777, 0,0,0,0);
  }
  
  /******************************************************************************
@@ -234,11 +246,13 @@
  * TableView                                                                   *
  *                                                                             *
  ******************************************************************************/
+ 
  .table-view {
  	-fx-border-width:2.0px;
  }
  .table-column {
  	-fx-padding: 0.0;
+ 	-fx-background-color: #EDD4BA;
  }
  
  .table-column > .label > .text {
@@ -248,17 +262,17 @@
  }
  
  .placeholder {
- 	-fx-background-color: #DBBC9A;
+ 	-fx-background-color: #EDD4BA;
  }
  
- .placeholder > .label {
+ .placeholder > .label > .text {
  	-fx-fill: BLACK;
  	-fx-font-size: 16.0px;
  }
  
  .table-row-cell {
  	-fx-background-color: rgb(60.0,60.0,60.0);
- 	-fx-border-color: WHITE;
+ 	-fx-border-color: #DDDDDD;
     -fx-border-width: 0.0 0.0 2.0px 0.0;
  }
  .table-row-cell:selected {
@@ -269,12 +283,13 @@
  	-fx-background-color: rgb(80.0,80.0,80.0);
  }
  .table-row-cell .text{
- 	-fx-fill: WHITE;
+ 	-fx-fill: BLACK;
+ 	-fx-font-size: 16.0px;
  }
  .equipped {
  	-fx-border-color: YELLOW;
  	-fx-border-width:2.0px;
- 	-fx-background-color: BLUE;
+ 	-fx-background-color: #DDDDDD;
  }
  
  /******************************************************************************

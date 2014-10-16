@@ -21,7 +21,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-          <TitledPane fx:id="paneRaceFeatures" animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" styleClass="titledPaneLightBg" text="Race Traits" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+          <TitledPane fx:id="paneRaceFeatures" animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" styleClass="titledPaneMediumBg" text="Race Traits" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
             <content>
               <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="505.0">
                      <children>
@@ -41,7 +41,7 @@
               <Font name="System Bold" size="14.0" fx:id="x1" />
             </font>
           </TitledPane>
-          <TitledPane fx:id="paneFeats" animated="false" collapsible="false" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" styleClass="titledPaneLightBg" text="Feats" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="TOP">
+          <TitledPane fx:id="paneFeats" animated="false" collapsible="false" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" styleClass="titledPaneMediumBg" text="Feats" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="TOP">
             <content>
               <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -58,7 +58,7 @@
               </AnchorPane>
             </content>
           </TitledPane>
-          <TitledPane fx:id="paneClassFeatures" animated="false" collapsible="false" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" styleClass="titledPaneLightBg" text="Class Features" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+          <TitledPane fx:id="paneClassFeatures" animated="false" collapsible="false" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" styleClass="titledPaneMediumBg" text="Class Features" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
             <content>
               <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
