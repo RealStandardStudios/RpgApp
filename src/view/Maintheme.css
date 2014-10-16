@@ -183,25 +183,50 @@
  * Labels                                                                      *
  *                                                                             *
  ******************************************************************************/
+ .centered,
+ .centered > .text {
+ 	-fx-alignment: center;
+ }
+ .right,
+ .right > .text {
+ 	-fx-alignment: center-right;
+ }
+ .left,
+ .left > .text {
+ 	-fx-alignment: center-left;
+ }
+ .item-slot-label {
+ 	-fx-background-color: #EDD4BA;
+ 	-fx-border-width: 2.0px 2.0px 2.0 2.0px;
+ 	-fx-border-color: rgb(76.0,60.0,11.0);
+ }
 
  .data-label {
- 	-fx-padding: 0.0 0.0 0.0 10.0;
+ 	-fx-padding: 0.0 10.0 0.0 10.0;
  	/*-fx-background-color: WHITE;*/
  }
- .data-label > .text {
+ .data-label > .text,
+ .data-label-centre > .text  {
  	-fx-fill: BLACK;
  	-fx-font-size: 16.0px;
  }
  
- .data-label-centre > .text {
- 	-fx-fill: BLACK;
+ .header-label-16-gold > .text,
+ .header-label-16-black-i > .text,
+ .header-label-16-black > .text {
  	-fx-font-size: 16.0px;
+ }
+ 
+ .item-slot-label > .text, 
+ .data-label-gold > .text,
+ .header-label-16-gold > .text,
+ .header-label-18-gold > .text {
+ 	-fx-fill: #AB891A;
+ 	-fx-font-weight: Bold;
  }
  
  .data-label-gold > .text {
- 	-fx-fill: #AB891A;
  	-fx-font-size: 13.0px;
- 	-fx-font-weight: Bold;
  }
  
  .header-label-18-gold {
@@ -210,35 +235,26 @@
  }
  .header-label-18-gold > .text {
  	-fx-font-size: 18.0px;
- 	-fx-fill: #AB891A;
  	-fx-font-style: italic;
- 	-fx-font-weight: Bold;
  }
  
  .header-label-16-gold > .text {
- 	-fx-font-size: 16.0px;
- 	-fx-fill: #AB891A;
  	-fx-font-style: italic;
- 	-fx-font-weight: Bold;
  }
  
  .header-label-16-black-i > .text {
- 	-fx-font-size: 16.0px;
- 	-fx-fill: BLACK;
  	-fx-font-style: italic;
- 	-fx-font-weight: Bold;
  }
  
- .header-label-16-black > .text {
- 	-fx-font-size: 16.0px;
+ .columnHeader > .text,
+ .header-label-16-black > .text,
+ .header-label-16-black-i > .text  {
  	-fx-fill: BLACK;
  	-fx-font-weight: Bold;
  }
  
  .columnHeader > .text {
  	-fx-font-size: 13.0px;
- 	-fx-fill: BLACK;
- 	-fx-font-weight: Bold;
  }
  
  /******************************************************************************
@@ -299,5 +315,4 @@
  ******************************************************************************/
  .scroll-pane > .viewport {
  	/*-fx-background-color: #ABC123;*/
- }
- 
+ } 

@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -31,6 +32,7 @@ import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Weapon;
 import view.InventoryPartialController;
 import view.itemViews.ArmorView;
+import view.itemViews.GoodsView;
 import view.itemViews.ItemView;
 import view.itemViews.WeaponView;
 
@@ -66,9 +68,13 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	private TableColumn<Goods, String> columnGoodsName;
 
 	// endregion Items available
-
+	
+	@FXML
+	Label lblWeightValue;
 	@FXML
 	AnchorPane inventoryPane;
+	@FXML
+	Accordion accItems;
 
 	// region Labels and buttons
 	@FXML
@@ -186,20 +192,21 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		lblStartingWealthValue.setText("Click");
 		lblGoldRemainingValue.setText("Roll first");
 	}
-
+	
+	/**
+	 * loads in all the Item views
+	 * 
+	 * @throws IOException
+	 */
 	private void readItemViews() throws IOException {
 		// Load the fxml file and create a new stage for the popup dialog.
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
-		AnchorPane page = (AnchorPane) loader.load();
+		AnchorPane dialogView = (AnchorPane) loader.load();
 
-		/**
-		 * loads in all the Item views
-		 * 
-		 * @throws IOException
-		 */
+		
 		Stage weaponViewStage = new Stage();
-		weaponViewStage.setScene(new Scene(page));
+		weaponViewStage.setScene(new Scene(dialogView));
 		weaponViewStage.initStyle(StageStyle.UNDECORATED);
 		// weaponViewStage.setAlwaysOnTop(true);
 		weaponViewStage.initOwner(getParentWindow().getDialogStage());
@@ -210,10 +217,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 		loader = new FXMLLoader();
 		loader.setLocation(ArmorView.class.getResource("ArmorView.fxml"));
-		page = (AnchorPane) loader.load();
+		dialogView = (AnchorPane) loader.load();
 
 		Stage armorViewStage = new Stage();
-		armorViewStage.setScene(new Scene(page));
+		armorViewStage.setScene(new Scene(dialogView));
 		armorViewStage.initStyle(StageStyle.UNDECORATED);
 		// armorViewStage.setAlwaysOnTop(true);
 		armorViewStage.initOwner(getParentWindow().getDialogStage());
@@ -222,19 +229,19 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		armorView = loader.getController();
 		armorView.setDialogStage(armorViewStage);
 
-		 loader = new FXMLLoader();
-		 loader.setLocation(ArmorView.class.getResource("GoodsView.fxml"));
-		 page = (AnchorPane) loader.load();
-		
-		 Stage goodsViewStage = new Stage();
-		 goodsViewStage.setScene(new Scene(page));
-		 goodsViewStage.initStyle(StageStyle.UNDECORATED);
-		 // goodsViewStage.setAlwaysOnTop(true);
-		 goodsViewStage.initOwner(getParentWindow().getDialogStage());
-		 goodsViewStage.setOpacity(0.9);
-		 goodsViewStage.initModality(Modality.NONE);
-		 goodsView = loader.getController();
-		 goodsView.setDialogStage(armorViewStage);
+		loader = new FXMLLoader();
+		loader.setLocation(GoodsView.class.getResource("GoodsView.fxml"));
+		dialogView = (AnchorPane) loader.load();
+
+		Stage goodsViewStage = new Stage();
+		goodsViewStage.setScene(new Scene(dialogView));
+		goodsViewStage.initStyle(StageStyle.UNDECORATED);
+		// goodsViewStage.setAlwaysOnTop(true);
+		goodsViewStage.initOwner(getParentWindow().getDialogStage());
+		goodsViewStage.setOpacity(0.9);
+		goodsViewStage.initModality(Modality.NONE);
+		goodsView = loader.getController();
+		goodsView.setDialogStage(goodsViewStage);
 	}
 
 	@Override
@@ -243,7 +250,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	 */
 	public void setData() {
 		inventoryPartial.setupScreen();
-		inventoryPartial.getWeightLabel().setText(totalWeight + "");
+		
+		lblWeightValue.setText(totalWeight + "");
 		if (getCharacter().getClasses()[0].getName() != classChosen) {
 			btnRollStartingWealth.setDisable(false);
 			classChosen = getCharacter().getClasses()[0].getName();
@@ -305,7 +313,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	private void handleSelectedAvailableItem(Item item) {
 		itemToAdd = item;
 	}
-	
+
 	@FXML
 	private void handleMouseExited() {
 		weaponView.getDialogStage().close();
@@ -367,16 +375,16 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				weight = itemToAdd.Weight.get().split(" ");
 				if (weight[0].equals("1/2")) {
 					totalWeight += 0.5;
-					inventoryPartial.getWeightLabel().setText(totalWeight + "");
+					lblWeightValue.setText(totalWeight + "");
 				} else if (weight[0].equals("-")) {
 				} else {
 					totalWeight += Integer.parseInt(weight[0]);
-					inventoryPartial.getWeightLabel().setText(totalWeight + "");
+					lblWeightValue.setText(totalWeight + "");
 				}
-
-				inventoryPartial.getItems().add(itemToAdd);
+				inventoryPartial.addItem(itemToAdd);
+			} else {
+				Dialogs.create().masthead("The item you have selected is too expensive").message(String.format("Cost:%s\nAvailable Gold:%.2f", itemToAdd.Cost.get(),goldRemaining)).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			}
-
 		}
 	}
 
@@ -393,10 +401,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			weight = itemToAdd.Weight.get().split(" ");
 			if (weight[0].equals("1/2")) {
 				totalWeight -= 0.5;
-				inventoryPartial.getWeightLabel().setText(totalWeight + "");
+				lblWeightValue.setText(totalWeight + "");
 			} else {
 				totalWeight -= Integer.parseInt(weight[0]);
-				inventoryPartial.getWeightLabel().setText(totalWeight + "");
+				lblWeightValue.setText(totalWeight + "");
 			}
 
 			String[] cost = inventoryPartial.getItemToRemove().Cost.get().split(" ");
@@ -442,6 +450,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			lblGoldRemainingValue.setText("" + goldRemaining);
 			btnRollStartingWealth.setDisable(true);
 		}
+		accItems.setDisable(false);
 	}
 
 	/**

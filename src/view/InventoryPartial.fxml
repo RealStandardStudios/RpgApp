@@ -10,23 +10,73 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="815.0" styleClass="main-anchor-pane" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryPartialController">
    <children>
-      <ImageView fitHeight="332.0" fitWidth="241.0" layoutX="387.28314208984375" layoutY="130.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="260.09471130371094" AnchorPane.topAnchor="130.0">
+      <ImageView fitHeight="340.0" fitWidth="170.0" layoutX="385.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/images/mannequin.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblShield" layoutX="551.0" layoutY="401.0" onMouseEntered="#showShield" prefWidth="150.0" styleClass="data-label" text="Shield" AnchorPane.rightAnchor="70.0" />
-      <Label fx:id="lblRangedWeapon" layoutX="410.0" layoutY="466.0" onMouseEntered="#showRangedWeapon" styleClass="data-label" text="Ranged Weapon" AnchorPane.rightAnchor="282.0" />
-      <Label fx:id="lblWeapon" layoutX="336.0" layoutY="392.0" onMouseEntered="#showWeapon" styleClass="data-label" text="Weapon" AnchorPane.rightAnchor="460.0" />
-      <Label fx:id="lblFeet" layoutX="551.0" layoutY="359.0" onMouseEntered="#showFeet" prefWidth="150.0" styleClass="data-label" text="Feet" AnchorPane.rightAnchor="70.0" />
-      <Label fx:id="lblLeftRing" layoutX="551.0" layoutY="242.0" onMouseEntered="#showLeftRing" prefWidth="150.0" styleClass="data-label" text="Ring" AnchorPane.rightAnchor="70.0" />
-      <Label fx:id="lblTorso" layoutX="551.0" layoutY="218.0" onMouseEntered="#showTorso" prefWidth="150.0" styleClass="data-label" text="Torso" AnchorPane.rightAnchor="70.0" />
-      <Label fx:id="lblLegs" layoutX="551.0" layoutY="296.0" onMouseEntered="#showLegs" prefWidth="150.0" styleClass="data-label" text="Legs" AnchorPane.rightAnchor="70.0" />
-      <Label fx:id="lblRightRing" layoutX="298.0" layoutY="242.0" onMouseEntered="#showRightRing" styleClass="data-label" text="Ring" AnchorPane.rightAnchor="460.0" />
-      <Label fx:id="lblHands" layoutX="298.0" layoutY="193.0" onMouseEntered="#showHands" styleClass="data-label" text="Hands" AnchorPane.rightAnchor="460.0" />
-      <Label fx:id="lblWaist" layoutX="343.0" layoutY="296.0" onMouseEntered="#showWaist" prefHeight="17.0" styleClass="data-label" text="Waist" AnchorPane.rightAnchor="460.0" />
-      <Label fx:id="lblHead" layoutX="443.0" layoutY="91.0" onMouseEntered="#showHead" prefHeight="17.0" styleClass="data-label" text="Head" AnchorPane.rightAnchor="319.0" />
-      <Label fx:id="lblWeightValue" layoutX="738.0" layoutY="17.0" styleClass="data-label" text="much" AnchorPane.rightAnchor="50.0">
+      <Label fx:id="lblShield" layoutX="565.0" layoutY="401.0" onMouseEntered="#showShield" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Shield">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+         </styleClass></Label>
+      <Label fx:id="lblRangedWeapon" alignment="CENTER" contentDisplay="CENTER" layoutX="396.0" layoutY="480.0" onMouseEntered="#showRangedWeapon" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Ranged Weapon" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+            <String fx:value=".centered" />
+         </styleClass></Label>
+      <Label fx:id="lblWeapon" layoutX="225.0" layoutY="392.0" onMouseEntered="#showWeapon" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Weapon">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+            <String fx:value="right" />
+         </styleClass></Label>
+      <Label fx:id="lblFeet" layoutX="565.0" layoutY="359.0" onMouseEntered="#showFeet" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Feet">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+         </styleClass></Label>
+      <Label fx:id="lblLeftRing" layoutX="565.0" layoutY="242.0" onMouseEntered="#showLeftRing" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Ring">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+         </styleClass></Label>
+      <Label fx:id="lblTorso" layoutX="565.0" layoutY="209.0" onMouseEntered="#showTorso" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Torso">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+         </styleClass></Label>
+      <Label fx:id="lblLegs" layoutX="565.0" layoutY="296.0" onMouseEntered="#showLegs" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Legs">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+         </styleClass></Label>
+      <Label fx:id="lblRightRing" layoutX="225.0" layoutY="242.0" onMouseEntered="#showRightRing" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Ring">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+            <String fx:value="right" />
+         </styleClass></Label>
+      <Label fx:id="lblHands" layoutX="225.0" layoutY="193.0" onMouseEntered="#showHands" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Hands">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+            <String fx:value="right" />
+         </styleClass></Label>
+      <Label fx:id="lblWaist" layoutX="225.0" layoutY="328.0" onMouseEntered="#showWaist" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Waist">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+            <String fx:value="right" />
+         </styleClass></Label>
+      <Label fx:id="lblHead" alignment="CENTER" contentDisplay="CENTER" layoutX="396.0" layoutY="90.0" onMouseEntered="#showHead" onMouseExited="#handleMouseExited" prefHeight="30.0" prefWidth="150.0" text="Head" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="data-label" />
+            <String fx:value="item-slot-label" />
+            <String fx:value=".centered" />
+         </styleClass></Label>
+      <Label fx:id="lblWeightValue" layoutX="738.0" layoutY="17.0" styleClass="data-label" text="0" AnchorPane.rightAnchor="50.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -39,9 +89,9 @@
             <Insets left="10.0" />
          </padding>
       </Label>
-      <TableView fx:id="tableInventory" layoutX="14.0" layoutY="17.0" prefHeight="520.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <TableView fx:id="tableInventory" layoutX="14.0" layoutY="17.0" onMouseExited="#handleMouseExited" prefHeight="520.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
         <columns>
-          <TableColumn fx:id="colName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="199.0" resizable="false" text="Name" />
+          <TableColumn fx:id="colName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="199.0" resizable="false" text="Inventory" />
         </columns>
       </TableView>
    </children>

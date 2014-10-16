@@ -62,7 +62,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancel" prefHeight="35.0" prefWidth="70.0" text="Cancel">
+            <Button cancelButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancel" prefHeight="35.0" prefWidth="70.0" text="Cancel">
                <font>
                   <Font size="14.0" />
                </font>

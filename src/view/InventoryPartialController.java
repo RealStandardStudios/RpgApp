@@ -1,6 +1,3 @@
-/**
- * 
- */
 package view;
 
 import java.awt.MouseInfo;
@@ -16,7 +13,6 @@ import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
-import javafx.scene.control.Labeled;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
@@ -42,8 +38,6 @@ public class InventoryPartialController extends WindowController {
 	TableView<Item> tableInventory;
 	@FXML
 	TableColumn<Item, String> colName;
-	@FXML
-	Label lblWeightValue;
 	@FXML
 	Label lblHead;
 	@FXML
@@ -95,19 +89,19 @@ public class InventoryPartialController extends WindowController {
 		ArrayList<Armor> armor = new ArrayList<>();
 		ArrayList<Goods> goods = new ArrayList<>();
 		for (Item item : inventory) {
-			if (item.getClass().isInstance(Weapon.class))
+			if (item instanceof Weapon)
 				weapons.add((Weapon) item);
-			if (item.getClass().isInstance(Armor.class) || item.getClass().isInstance(Shield.class))
+			if (item instanceof Armor || item instanceof Shield)
 				armor.add((Armor) item);
-			if (item.getClass().isInstance(Goods.class))
+			if (item instanceof Goods)
 				goods.add((Goods) item);
 		}
 		Inventory i = new Inventory(FXCollections.observableArrayList(weapons), FXCollections.observableArrayList(armor),
 				FXCollections.observableArrayList(goods), money);
 		for (ItemSlot slot : itemSlots.values()) {
-			if(slot.getItem() instanceof Armor)
+			if (slot.getItem() instanceof Armor)
 				i.getArmorWorn().add((Armor) slot.getItem());
-			if(slot.getItem() instanceof Weapon)
+			if (slot.getItem() instanceof Weapon)
 				i.getWeaponEquipped().add((Weapon) slot.getItem());
 		}
 		return i;
@@ -137,21 +131,27 @@ public class InventoryPartialController extends WindowController {
 				if (row.isHover() && item != null) {
 					Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth() + weaponView.getDialogStage().getWidth(), 0);
 					double xLoc = bound.getX(), yLoc = MouseInfo.getPointerInfo().getLocation().getY();
-					if (item.getClass().isAssignableFrom(Weapon.class)) {
+					if (item instanceof Weapon) {
 						weaponView.setItem(item);
 						weaponView.getDialogStage().setX(xLoc);
 						weaponView.getDialogStage().setY(yLoc);
 						weaponView.show();
-					} else if (item.getClass().isAssignableFrom(Armor.class)) {
+						armorView.getDialogStage().close();
+						goodsView.getDialogStage().close();
+					} else if (item instanceof Armor) {
 						armorView.setItem(item);
 						armorView.getDialogStage().setX(xLoc);
 						armorView.getDialogStage().setY(yLoc);
 						armorView.show();
+						weaponView.getDialogStage().close();
+						goodsView.getDialogStage().close();
 					} else {
 						goodsView.setItem(item);
 						goodsView.getDialogStage().setX(xLoc);
 						goodsView.getDialogStage().setY(yLoc);
 						goodsView.show();
+						armorView.getDialogStage().close();
+						weaponView.getDialogStage().close();
 					}
 				}
 			});
@@ -167,13 +167,6 @@ public class InventoryPartialController extends WindowController {
 						equipItem(row, row.getItem().getSlotType().name());
 					}
 
-					private void equipItem(final TableRow<Item> row, String caseString) {
-						if (itemSlots.get(caseString) != null) {
-							itemSlots.get(caseString).setItem(row.getItem());
-							row.getStyleClass().add("equipped");
-						}
-					}
-
 				});
 
 				// create the Unequip option for the menu
@@ -186,24 +179,31 @@ public class InventoryPartialController extends WindowController {
 						System.out.println(String.format("%s Successfully removed from %s slot", row.getItem().Name.get(), row.getItem()
 								.getSlotType().name()));
 					}
-
-					private void unequipItem(TableRow<Item> row, String caseString) {
-						if (itemSlots.get(caseString) != null) {
-							itemSlots.get(caseString).setItem(null);
-							row.getStyleClass().remove("equipped");
-						}
-					}
-
 				});
+				if (row.getItem() instanceof Armor || row.getItem() instanceof Weapon) {
+					itemMenu.getItems().add(equip);
+					itemMenu.getItems().add(unequip);
+					row.setContextMenu(itemMenu);
+				}
 
-				itemMenu.getItems().add(equip);
-				itemMenu.getItems().add(unequip);
-
-				row.setContextMenu(itemMenu);
 				return row;
 			});
 
 		itemSlots = new HashMap<>();
+	}
+
+	private void equipItem(final TableRow<Item> row, String caseString) {
+		if (itemSlots.get(caseString) != null) {
+			itemSlots.get(caseString).setItem(row.getItem());
+			row.getStyleClass().add("equipped");
+		}
+	}
+
+	private void unequipItem(TableRow<Item> row, String caseString) {
+		if (itemSlots.get(caseString) != null) {
+			itemSlots.get(caseString).setItem(null);
+			row.getStyleClass().remove("equipped");
+		}
 	}
 
 	/**
@@ -233,17 +233,8 @@ public class InventoryPartialController extends WindowController {
 	}
 
 	/**
-     * displays amount of weight being carried
-     * 
-     * @returns a Label 
-     */
-	public Labeled getWeightLabel() {
-		return this.lblWeightValue;
-	}
-
-    /**
-     * Shows anything related to the Head slot
-     */
+	 * Shows anything related to the Head slot
+	 */
 	@FXML
 	private void showHead() {
 		armorView.setItem(itemSlots.get("Head").getItem());
@@ -400,5 +391,25 @@ public class InventoryPartialController extends WindowController {
 	 */
 	public void setGoodsView(ItemView goodsView) {
 		this.goodsView = goodsView;
+	}
+
+	public void addItem(Item itemToAdd) {
+		inventory.add(itemToAdd);
+		equipItem(itemToAdd, itemToAdd.getSlotType().name());
+	}
+	
+	@FXML
+	private void handleMouseExited() {
+		weaponView.getDialogStage().close();
+		armorView.getDialogStage().close();
+		goodsView.getDialogStage().close();
+	}
+
+	public void equipItem(Item itemToAdd, String slot) {
+		// need to figure out how to get the row for the item in the table and
+		// apply equipped
+		if (itemSlots.get(slot)!=null && itemSlots.get(slot).getItem() == null) {
+			itemSlots.get(slot).setItem(itemToAdd);
+		}
 	}
 }

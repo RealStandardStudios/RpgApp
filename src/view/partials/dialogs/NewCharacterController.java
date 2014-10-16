@@ -40,7 +40,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	String[] partialNames = new String[] { "AbilityScores", "Class", "Equipment", "Feat", "Profile", "Race", "Skills", "Summary" };
 
 	private HashMap<String, NewCharacterPartialController> partials;
-	
+
 	@FXML
 	Button btnSave;
 
@@ -73,7 +73,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	public boolean classSelected = false;
 	public boolean alignmentSelected = false;
 	public boolean Selected = false;
-	int pageNumber = 1;
 
 	/**
 	 * Base Constructor
@@ -230,54 +229,45 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
 	}
 
-    /**
-     * handler for the Back event
-     * 
-     * @param event
-     */
-    @FXML
-    public void handleBack(ActionEvent event) {
-	if (tpTabs.getSelectionModel().selectedIndexProperty().get() > 0)
-	    tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() - 1);
-	pageNumber--;
-    }
+	/**
+	 * handler for the Back event
+	 * 
+	 * @param event
+	 */
+	@FXML
+	public void handleBack(ActionEvent event) {
+		if (tpTabs.getSelectionModel().selectedIndexProperty().get() > 0)
+			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() - 1);
+	}
 
-    /**
-     * handler for the Next event
-     * 
-     * @param event
-     */
-    @FXML
-    public void handleNext(ActionEvent event) {
-    	if(alignmentSelected && pageNumber == 7)
-		{
+	/**
+	 * handler for the Next event
+	 * 
+	 * @param event
+	 */
+	@FXML
+	public void handleNext(ActionEvent event) {
+		int pageNumber = tpTabs.getSelectionModel().getSelectedIndex();
+		if (alignmentSelected && pageNumber == 6) {
 			goToNext();
-			pageNumber++;
-		}
-		else if(!alignmentSelected && pageNumber == 7)
-		{
+		} else if (!alignmentSelected && pageNumber == 6) {
 			Dialogs.create().title("Selection error").masthead("Please Select An Alignment")
-			.message("Please select a alignment from the checkboxs below")
-			.showWarning();
+					.message("Please select a alignment from the checkboxs below").styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 		}
-		if (classSelected && pageNumber == 2) {
+		if (classSelected && pageNumber == 1) {
 			goToNext();
-			pageNumber++;
-		} else if (!classSelected && pageNumber == 2) {
-			Dialogs.create().title("Selection error").masthead("Please Select A Class ").message("Please select a class from the dropdown menu").styleClass(Dialog.STYLE_CLASS_UNDECORATED)
-					.showWarning();
+		} else if (!classSelected && pageNumber == 1) {
+			Dialogs.create().title("Selection error").masthead("Please Select A Class ").message("Please select a class from the dropdown menu")
+					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 		}
-		if (raceSelected && pageNumber == 1) {
+		if (raceSelected && pageNumber == 0) {
 			goToNext();
-			pageNumber++;
-		} else if (!raceSelected && pageNumber == 1) {
-			Dialogs.create().title("Selection error").masthead("Please Select A Race ").message("Please select a race from the dropdown menu").styleClass(Dialog.STYLE_CLASS_UNDECORATED)
-					.showWarning();
+		} else if (!raceSelected && pageNumber == 0) {
+			Dialogs.create().title("Selection error").masthead("Please Select A Race ").message("Please select a race from the dropdown menu")
+					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 		}
-		if(pageNumber > 2 && pageNumber < 7)
-		{
+		if (pageNumber > 1 && pageNumber < 6) {
 			goToNext();
-			pageNumber++;
 		}
 	}
 
@@ -299,7 +289,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			try {
 				getPartials().put(string, (NewCharacterPartialController) loadPartial(string, getInterface()));
 			} catch (IOException e) {
-				Dialogs.create().title("Read Error").masthead("There was an error with loading the UI").message(e.getMessage()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
+				Dialogs.create().title("Read Error").masthead("There was an error with loading the UI").message(e.getMessage())
+						.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 				e.printStackTrace();
 			}
 		}
