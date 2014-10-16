@@ -135,7 +135,7 @@
                               <Label fx:id="lblLanguages" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
                               <Label fx:id="lblBackground" prefHeight="62.0" prefWidth="393.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
                               <Label fx:id="lblApperance" prefHeight="17.0" prefWidth="392.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6" />
-                              <Label fx:id="lblPersonality" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+                              <Label fx:id="lblPersonality" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
@@ -147,11 +147,11 @@
                               <RowConstraints vgrow="SOMETIMES" />
                               <RowConstraints vgrow="SOMETIMES" />
                               <RowConstraints vgrow="SOMETIMES" />
-                              <RowConstraints vgrow="SOMETIMES" />
-                              <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
-                              <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
-                              <RowConstraints vgrow="SOMETIMES" />
-                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="244.0" minHeight="-Infinity" prefHeight="28.00000762939453" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="137.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="130.0" vgrow="SOMETIMES" />
                               <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
                               <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
                               <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
