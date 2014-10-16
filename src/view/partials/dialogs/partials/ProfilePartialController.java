@@ -2,21 +2,20 @@ package view.partials.dialogs.partials;
 
 import java.util.HashMap;
 
-import com.sun.javafx.scene.control.behavior.TextAreaBehavior;
-import com.sun.javafx.scene.control.skin.TextAreaSkin;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.SkinBase;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Character.Alignments;
+
+import com.sun.javafx.scene.control.behavior.TextAreaBehavior;
+import com.sun.javafx.scene.control.skin.TextAreaSkin;
 
 public class ProfilePartialController extends NewCharacterPartialController {
 

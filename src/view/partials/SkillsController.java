@@ -1,11 +1,11 @@
 package view.partials;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import pathfinder.data.Skill;
-import pathfinder.data.Attributes.Ability;
 import view.RootController;
 
 /**
@@ -23,7 +23,7 @@ public class SkillsController extends MainWindowController {
 	@FXML
 	TableColumn<Skill, Boolean> columnClassSkill;
 	@FXML
-	TableColumn<Skill, Ability> columnAbility;
+	TableColumn<Skill, String> columnAbility;
 	@FXML
 	TableColumn<Skill, Integer> columnMod;
 	@FXML
@@ -37,7 +37,7 @@ public class SkillsController extends MainWindowController {
 		columnName.setCellValueFactory(cellData->cellData.getValue().Name);
 		columnTotal.setCellValueFactory(cellData->cellData.getValue().getTotal());
 		columnClassSkill.setCellValueFactory(cellData->cellData.getValue().isClassSkill());
-		columnAbility.setCellValueFactory(cellData->cellData.getValue().AttrToUse);
+		columnAbility.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().AttrToUse.get().getAbilityName().toString()));
 		columnMod.setCellValueFactory(cellData->cellData.getValue().RacialMod);
 		columnRanks.setCellValueFactory(cellData->cellData.getValue().Rank);
 	}

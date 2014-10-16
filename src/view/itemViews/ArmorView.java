@@ -23,13 +23,14 @@ public class ArmorView extends ItemView {
 	Label armorSpeed30;
 	@FXML
 	Label armorSpeed20;
-	
+
 	/**
 	 * Shows the view
 	 */
 	@Override
 	public void show() {
 		this.getDialogStage().show();
+//		getRoot().getInterface().getPrimaryStage().setFocused(true);
 		this.itemName.setText(item.Name.get());
 		this.itemType.setText(((Armor) item).ArmorType.get());
 		this.itemCost.setText(item.Cost.get());
@@ -44,7 +45,7 @@ public class ArmorView extends ItemView {
 
 	@Override
 	public void initialize() {
-		
+
 	}
 
 }

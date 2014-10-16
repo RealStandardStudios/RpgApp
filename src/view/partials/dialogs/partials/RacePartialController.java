@@ -8,10 +8,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
+import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Races.Race;
 
+@SuppressWarnings("deprecation")
 public class RacePartialController extends NewCharacterPartialController {
 	
 	Race selectedRace;
@@ -74,7 +76,7 @@ public class RacePartialController extends NewCharacterPartialController {
 		} catch (Exception e) {
 			Dialogs.create().masthead("Read Error")
 					.masthead("Couldn't read the Race File Properly")
-					.message(e.getMessage()).showWarning();
+					.message(e.getMessage()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			e.printStackTrace();
 		}
 	}

@@ -1,10 +1,10 @@
 package view.itemViews;
 
-import pathfinder.data.Items.Item;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import jefXif.view.HoverDialog;
+import pathfinder.data.Items.Item;
 
 /**
  * The view for Items
@@ -12,6 +12,7 @@ import jefXif.view.HoverDialog;
  * @author Real Standard Studios - Matthew Meehan
  */
 public abstract class ItemView extends HoverDialog {
+	
 	Item item;
 	@FXML
 	Label itemName;

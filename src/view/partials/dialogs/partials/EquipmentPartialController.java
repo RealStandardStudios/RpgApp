@@ -22,6 +22,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Items.Armor;
@@ -109,9 +110,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	public void initialize() {
 		readItems();
 
-    /**
-     * Initializes the class
-     */
+		/**
+		 * Initializes the class
+		 */
 		tableWeaponsAvailable.getSelectionModel().selectedItemProperty()
 				.addListener((observable, oldValue, newValue) -> handleSelectedAvailableItem(newValue));
 		tableArmorAvailable.getSelectionModel().selectedItemProperty()
@@ -133,7 +134,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 					Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth() + weaponView.getDialogStage().getWidth(), 0);
 					weaponView.getDialogStage().setX(bound.getX());
 					weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
+
 					weaponView.show();
+
+					getParentWindow().getDialogStage().setFocused(true);
 				}
 			});
 
@@ -189,11 +193,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
 		AnchorPane page = (AnchorPane) loader.load();
 
-    /**
-     * loads in all the Item views
-     * 
-     * @throws IOException
-     */
+		/**
+		 * loads in all the Item views
+		 * 
+		 * @throws IOException
+		 */
 		Stage weaponViewStage = new Stage();
 		weaponViewStage.setScene(new Scene(page));
 		weaponViewStage.initStyle(StageStyle.UNDECORATED);
@@ -218,19 +222,19 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		armorView = loader.getController();
 		armorView.setDialogStage(armorViewStage);
 
-		// loader = new FXMLLoader();
-		// loader.setLocation(ArmorView.class.getResource("GoodsView.fxml"));
-		// page = (AnchorPane) loader.load();
-		//
-		// Stage goodsViewStage = new Stage();
-		// goodsViewStage.setScene(new Scene(page));
-		// goodsViewStage.initStyle(StageStyle.UNDECORATED);
-		// // goodsViewStage.setAlwaysOnTop(true);
-		// goodsViewStage.initOwner(getParentWindow().getDialogStage());
-		// goodsViewStage.setOpacity(0.9);
-		// goodsViewStage.initModality(Modality.NONE);
-		// goodsView = loader.getController();
-		// goodsView.setDialogStage(armorViewStage);
+		 loader = new FXMLLoader();
+		 loader.setLocation(ArmorView.class.getResource("GoodsView.fxml"));
+		 page = (AnchorPane) loader.load();
+		
+		 Stage goodsViewStage = new Stage();
+		 goodsViewStage.setScene(new Scene(page));
+		 goodsViewStage.initStyle(StageStyle.UNDECORATED);
+		 // goodsViewStage.setAlwaysOnTop(true);
+		 goodsViewStage.initOwner(getParentWindow().getDialogStage());
+		 goodsViewStage.setOpacity(0.9);
+		 goodsViewStage.initModality(Modality.NONE);
+		 goodsView = loader.getController();
+		 goodsView.setDialogStage(armorViewStage);
 	}
 
 	@Override
@@ -261,11 +265,11 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(InventoryPartialController.class.getResource("InventoryPartial.fxml"));
 
-    /**
-     * loads the Inventory partial
-     * 
-     * @throws IOException
-     */
+		/**
+		 * loads the Inventory partial
+		 * 
+		 * @throws IOException
+		 */
 		AnchorPane pane = loader.load();
 		inventoryPartial = loader.getController();
 		inventoryPartial.setNode(pane);
@@ -288,24 +292,32 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			loadInventory();
 		} catch (Exception e) {
 			Dialogs.create().masthead("Read Error").masthead("Couldn't read the one of the Equipment Files properly").message(e.getMessage())
-					.showWarning();
+					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			e.printStackTrace();
 		}
 	}
+
 	/**
-     * handler for the Item Selection for the Available Items Table
-     * 
-     * @param item
-     */
+	 * handler for the Item Selection for the Available Items Table
+	 * 
+	 * @param item
+	 */
 	private void handleSelectedAvailableItem(Item item) {
 		itemToAdd = item;
 	}
+	
+	@FXML
+	private void handleMouseExited() {
+		weaponView.getDialogStage().close();
+		armorView.getDialogStage().close();
+		goodsView.getDialogStage().close();
+	}
 
-    /**
-     * handler for the Add To Character event
-     * 
-     * @param event
-     */
+	/**
+	 * handler for the Add To Character event
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void handleAddToCharacter(ActionEvent event) {
 
@@ -369,10 +381,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
 
 	/**
-     * handler for the Remove From Character event
-     * 
-     * @param event
-     */
+	 * handler for the Remove From Character event
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void handleRemoveFromCharacter(ActionEvent event) {
 		if (inventoryPartial.getItemToRemove() != null && getCharacter().getClasses()[0].getName() == classChosen) {
@@ -412,10 +424,10 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			inventoryPartial.getItems().remove(inventoryPartial.getItemToRemove());
 		}
 	}
-	
+
 	/**
-     * handler for the Roll Starting Wealth event
-     */
+	 * handler for the Roll Starting Wealth event
+	 */
 	@FXML
 	private void handleRollStartingWealth() {
 		if (havePressedGenerateGold) {
@@ -432,9 +444,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		}
 	}
 
-    /**
-     * sends the data form the view to the main controller for access elsewhere
-     */
+	/**
+	 * sends the data form the view to the main controller for access elsewhere
+	 */
 	@Override
 	public void getData() {
 		// need to get the items on each label

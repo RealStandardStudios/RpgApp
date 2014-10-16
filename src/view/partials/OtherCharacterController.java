@@ -86,6 +86,7 @@ public class OtherCharacterController extends MainWindowController {
 	        dialogStage.initModality(Modality.WINDOW_MODAL);
 	        dialogStage.initStyle(StageStyle.UTILITY);
 	        dialogStage.initOwner(this.getInterface().getPrimaryStage());
+	        dialogStage.resizableProperty().set(false);
 	        Scene scene = new Scene(page);
 	        dialogStage.setScene(scene);
 	

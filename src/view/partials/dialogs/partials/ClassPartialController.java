@@ -15,6 +15,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Classes.Class;
@@ -28,6 +29,7 @@ import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
+@SuppressWarnings("deprecation")
 public class ClassPartialController extends NewCharacterPartialController {
 	
 	Class selectedClass;
@@ -93,7 +95,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<LevelTableRow, String> columnSpecial;
 
-	TableColumn[] levelTable;
+	TableColumn<LevelTableRow,?>[] levelTable;
 	// endregion
 
 	// region Spells Per Level Table
@@ -136,7 +138,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<SpellLevelTableRow, String> column9th;
 
-	TableColumn[] spellLevelTable;
+	TableColumn<SpellLevelTableRow,?>[] spellLevelTable;
 	// endregion
 
 	// region Spells Known Table
@@ -179,7 +181,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<SpellLevelTableRow, String> column9thKnown;
 
-	TableColumn[] spellKnowenTable;
+	TableColumn<SpellLevelTableRow,?>[] spellKnowenTable;
 
 	// endregion
 
@@ -202,7 +204,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<MonkLevelTableRow, String> columnFastMovement;
 
-	TableColumn[] monkTable;
+	TableColumn<MonkLevelTableRow,?>[] monkTable;
 
 	// endregion
 
@@ -219,7 +221,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 	@FXML
 	private TableColumn<Feature, String> columnFeatureDesctiption;
 
-	TableColumn[] featuresTable;
+	TableColumn<Feature,String>[] featuresTable;
 	// endregion
 
 	@FXML
@@ -449,7 +451,7 @@ public class ClassPartialController extends NewCharacterPartialController {
 		} catch (Exception e) {
 			Dialogs.create().masthead("Read Error")
 					.masthead("Couldn't read the Class File Properly")
-					.message(e.getMessage()).showWarning();
+					.message(e.getMessage()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			e.printStackTrace();
 		}
 	}

@@ -2,6 +2,7 @@ package view.partials.dialogs.partials;
 
 import java.io.File;
 
+import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import javafx.collections.FXCollections;
@@ -14,6 +15,7 @@ import javafx.scene.control.TableView;
 import pathfinder.data.Feat;
 import pathfinder.data.FeatPrerequisite;
 
+@SuppressWarnings("deprecation")
 public class FeatPartialController extends NewCharacterPartialController {
 
 	@FXML
@@ -50,7 +52,7 @@ public class FeatPartialController extends NewCharacterPartialController {
 		try {
 			feats.setAll(readDataFile(featsFile, Feat.class));
 		} catch (Exception e) {
-			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).showWarning();
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the Feat File Properly").message(e.getMessage()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			e.printStackTrace();
 		}
 	}
