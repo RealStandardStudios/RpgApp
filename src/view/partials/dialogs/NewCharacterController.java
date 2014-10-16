@@ -68,6 +68,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
     boolean teAdded = false;
 	public boolean raceSelected = false;
 	public boolean classSelected = false;
+	public boolean alignmentSelected = false;
+	public boolean Selected = false;
 	int pageNumber = 1;
 
 	/**
@@ -130,11 +132,9 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	    break;
 
 	case "tpRace":
-
 	    break;
 
 	case "tpClass":
-
 	    break;
 
 	case "tpSkills":
@@ -146,7 +146,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	    break;
 
 	case "tpFeats":
-
 	    break;
 	case "tpEquipment":
 	    getPartials().get("Class").getData();
@@ -234,6 +233,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
     public void handleBack(ActionEvent event) {
 	if (tpTabs.getSelectionModel().selectedIndexProperty().get() > 0)
 	    tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() - 1);
+	pageNumber--;
     }
 
     /**
@@ -243,9 +243,16 @@ public class NewCharacterController extends DialogController implements jefXif.i
      */
     @FXML
     public void handleNext(ActionEvent event) {
-	if(pageNumber == 3)
+    	if(alignmentSelected && pageNumber == 7)
 		{
 			goToNext();
+			pageNumber++;
+		}
+		else if(!alignmentSelected && pageNumber == 7)
+		{
+			Dialogs.create().title("Selection error").masthead("Please Select An Alignment")
+			.message("Please select a alignment from the checkboxs below")
+			.showWarning();
 		}
 		if(classSelected && pageNumber == 2)
 		{
@@ -268,6 +275,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			Dialogs.create().title("Selection error").masthead("Please Select A Race ")
 			.message("Please select a race from the dropdown menu")
 			.showWarning();
+		}
+    	if(pageNumber > 2 && pageNumber < 7)
+		{
+			goToNext();
+			pageNumber++;
 		}
     }
     
