@@ -567,15 +567,15 @@
                                                 <Label fx:id="lblACDeflect" font="$x1" styleClass="columnHeader" text="Deflect" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblACEnh" font="$x1" styleClass="columnHeader" text="Enhance" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblACMisc" font="$x1" styleClass="columnHeader" text="Misc" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                                <Label alignment="CENTER" styleClass="data-label-centre" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label alignment="CENTER" styleClass="data-label-centre" text="10 +" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font></Label>
-                                                <Label alignment="CENTER" styleClass="data-label-centre" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label alignment="CENTER" styleClass="data-label-centre" text="10 +" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font></Label>
-                                                <Label alignment="CENTER" styleClass="data-label-centre" text="10+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label alignment="CENTER" styleClass="data-label-centre" text="10 +" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font></Label>
@@ -634,12 +634,12 @@
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblArmorTouchAC" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblArmorTouchAC" disable="true" styleClass="data-label-centre" text="N/A" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblShieldTouchAC" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblShieldTouchAC" disable="true" styleClass="data-label-centre" text="N/A" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -659,7 +659,7 @@
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblNaturalTouchAC" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblNaturalTouchAC" disable="true" styleClass="data-label-centre" text="N/A" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -694,7 +694,7 @@
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblDexFlatFootAC" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblDexFlatFootAC" disable="true" styleClass="data-label-centre" text="N/A" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -704,7 +704,7 @@
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblDodgeFlatFootAC" disable="true" styleClass="data-label-centre" text="-" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblDodgeFlatFootAC" disable="true" styleClass="data-label-centre" text="N/A" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -983,12 +983,12 @@
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblInitMisc1" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblInitMisc1" styleClass="data-label-centre" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblInitMisc2" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblInitMisc2" styleClass="data-label-centre" text="0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -1062,27 +1062,27 @@
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font></Label>
-                                                <Label fx:id="lblSpeedSwim" styleClass="data-label-centre" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedSwim" styleClass="data-label-centre" text="0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedClimb" styleClass="data-label-centre" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedClimb" styleClass="data-label-centre" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedFly" styleClass="data-label-centre" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedFly" styleClass="data-label-centre" text="0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedBurrow" styleClass="data-label-centre" text="-" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedBurrow" styleClass="data-label-centre" text="0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lblSpeedModifiers" styleClass="data-label-centre" text="-" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label fx:id="lblSpeedModifiers" styleClass="data-label-centre" text="0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font size="16.0" />
                                                    </font>

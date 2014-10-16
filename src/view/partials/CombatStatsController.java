@@ -1,9 +1,11 @@
 package view.partials;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.SaveAttribute;
+import pathfinder.data.Items.Armor;
 import view.RootController;
 
 
@@ -157,6 +159,88 @@ public class CombatStatsController extends MainWindowController {
 	Label lblInitMisc2;
 	//endregion
 	
+	//region Speeds
+	@FXML
+	Label lblSpeedBase;
+	@FXML
+	Label lblSpeedArmor;
+	@FXML
+	Label lblSpeedSwim;
+	@FXML
+	Label lblSpeedClimb;
+	@FXML
+	Label lblSpeedFly;
+	@FXML
+	Label lblSpeedBurrow;
+	@FXML
+	Label lblSpeedModifiers;
+	//endregion
+	
+	//region AC'S
+	@FXML
+	Label lblTotalAC;
+	@FXML
+	Label lblArmorAC;
+	@FXML
+	Label lblShieldAC;
+	@FXML
+	Label lblDexAC;
+	@FXML
+	Label lblSizeAC;
+	@FXML
+	Label lblDodgeAC;
+	@FXML
+	Label lblNaturalAC;
+	@FXML
+	Label lblDeflectAC;
+	@FXML
+	Label lblEnhAC;
+	@FXML
+	Label lblMiscAC;
+	
+	@FXML
+	Label lblTotalTouchTouchAC;
+	@FXML
+	Label lblArmorTouchAC;
+	@FXML
+	Label lblShieldTouchAC;
+	@FXML
+	Label lblDexTouchAC;
+	@FXML
+	Label lblSizeTouchAC;
+	@FXML
+	Label lblDodgeTouchAC;
+	@FXML
+	Label lblNaturalTouchAC;
+	@FXML
+	Label lblDeflectTouchAC;
+	@FXML
+	Label lblEnhTouchAC;
+	@FXML
+	Label lblMiscTouchAC;
+	
+	@FXML
+	Label lblTotalFlatFootAC;
+	@FXML
+	Label lblArmorFlatFootAC;
+	@FXML
+	Label lblShieldFlatFootAC;
+	@FXML
+	Label lblDexFlatFootAC;
+	@FXML
+	Label lblSizeFlatFootAC;
+	@FXML
+	Label lblDodgeFlatFootAC;
+	@FXML
+	Label lblNaturalFlatFootAC;
+	@FXML
+	Label lblDeflectFlatFootAC;
+	@FXML
+	Label lblEnhFlatFootAC;
+	@FXML
+	Label lblMiscFlatFootAC;
+	//endregion
+	
 	pathfinder.data.Character.Character character;
 	
 	@Override
@@ -171,14 +255,87 @@ public class CombatStatsController extends MainWindowController {
 		setStats();
 		setSavingThrows();
 		setHP();
-		//setInitiative();
+		setInitiative();
+		setSpeeds();
 	}
 	
+	public void setAC()
+	{
+		ObservableList<Armor> wornArmors = character.getInventory().getArmorWorn();
+		int wornArmorAC = 0;
+		int shieldAC = 0;
+		int dexLimit = 1000;
+		for (Armor armor : wornArmors) {
+			if (armor.ArmorType.getValue() != "Shield")
+			{
+				wornArmorAC += Integer.parseInt(armor.ArmorBonus.get()); 
+				if(armor.MaxDexBonus.getValue() == "-")
+				{
+					dexLimit = Integer.parseInt(armor.MaxDexBonus.getValue());
+				}
+			}
+			else
+			{
+				shieldAC += Integer.parseInt(armor.ArmorBonus.get()); 
+				if(armor.MaxDexBonus.getValue() == "-")
+				{
+					dexLimit = Integer.parseInt(armor.MaxDexBonus.getValue());
+				}
+			}
+		}
+		
+		if(dexLimit < character.getDexterity().getModifier().get())
+		{
+			lblDexAC.setText(dexLimit + "");
+		}
+		else
+		{
+			lblDexAC.setText(character.getDexterity().getModifier().get() + "");
+		}
+		
+		/*
+		lblTotalAC;
+		blArmorAC;
+		lblShieldAC;
+		
+		lblSizeAC;
+		lblDodgeAC;
+		lblNaturalAC;
+		lblDeflectAC;
+		lblEnhAC;
+		lblMiscAC;
+		*/
+	}
+	
+	//region setSpeeds
+	public void setSpeeds()
+	{
+		ObservableList<Armor> wornArmors = character.getInventory().getArmorWorn();
+		int wornArmorWeight = 0;
+		for (Armor armor : wornArmors) {
+			if(character.getRace().getSize().getSizeModifier() == 1 )
+			{
+				String[] ar = armor.Speed20feet.get().split(" ");
+				wornArmorWeight += Integer.parseInt(ar[0]); 
+			}
+			if(character.getRace().getSize().getSizeModifier() == 0 )
+			{
+				String[] ar = armor.Speed30feet.get().split(" ");
+				wornArmorWeight += Integer.parseInt(ar[0]); 
+			}
+		}
+		lblSpeedBase.setText(character.getRace().getSpeed() + "");
+		lblSpeedArmor.setText(wornArmorWeight + "");
+	}
+	//endregion
+	
+	//region setInitiative
 	public void setInitiative()
 	{
-		//lblInitTotal.setText(character.getDexterity().getModifier() + "");
-		//lblInitTotal.setText(character.getClasses());
+		lblInitDex.setText(character.getDexterity().getModifier().get() + "");
+		lblInitTotal.setText(character.getDexterity().getModifier().get() + "");
 	}
+	//endregion
 	
 	//region setHP
 	private void setHP()

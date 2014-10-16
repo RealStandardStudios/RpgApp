@@ -82,6 +82,7 @@ public class ProfilePartialController extends NewCharacterPartialController {
 				cb.selectedProperty().set(false);
 			}
 		}
+		getParentWindow().alignmentSelected = true;
 	}
 
 	@Override

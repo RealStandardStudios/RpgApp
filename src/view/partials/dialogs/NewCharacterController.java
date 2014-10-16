@@ -71,6 +71,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 	boolean teAdded = false;
 	public boolean raceSelected = false;
 	public boolean classSelected = false;
+	public boolean alignmentSelected = false;
+	public boolean Selected = false;
 	int pageNumber = 1;
 
 	/**
@@ -228,26 +230,35 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		}
 	}
 
-	/**
-	 * handler for the Back event
-	 * 
-	 * @param event
-	 */
-	@FXML
-	public void handleBack(ActionEvent event) {
-		if (tpTabs.getSelectionModel().selectedIndexProperty().get() > 0)
-			tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() - 1);
-	}
+    /**
+     * handler for the Back event
+     * 
+     * @param event
+     */
+    @FXML
+    public void handleBack(ActionEvent event) {
+	if (tpTabs.getSelectionModel().selectedIndexProperty().get() > 0)
+	    tpTabs.getSelectionModel().select(tpTabs.getSelectionModel().selectedIndexProperty().get() - 1);
+	pageNumber--;
+    }
 
-	/**
-	 * handler for the Next event
-	 * 
-	 * @param event
-	 */
-	@FXML
-	public void handleNext(ActionEvent event) {
-		if (pageNumber == 3) {
+    /**
+     * handler for the Next event
+     * 
+     * @param event
+     */
+    @FXML
+    public void handleNext(ActionEvent event) {
+    	if(alignmentSelected && pageNumber == 7)
+		{
 			goToNext();
+			pageNumber++;
+		}
+		else if(!alignmentSelected && pageNumber == 7)
+		{
+			Dialogs.create().title("Selection error").masthead("Please Select An Alignment")
+			.message("Please select a alignment from the checkboxs below")
+			.showWarning();
 		}
 		if (classSelected && pageNumber == 2) {
 			goToNext();
@@ -262,6 +273,11 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		} else if (!raceSelected && pageNumber == 1) {
 			Dialogs.create().title("Selection error").masthead("Please Select A Race ").message("Please select a race from the dropdown menu").styleClass(Dialog.STYLE_CLASS_UNDECORATED)
 					.showWarning();
+		}
+		if(pageNumber > 2 && pageNumber < 7)
+		{
+			goToNext();
+			pageNumber++;
 		}
 	}
 
