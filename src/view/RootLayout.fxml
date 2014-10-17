@@ -19,11 +19,11 @@
                <children>
       				<Button id="charactersButton" fx:id="btnCharacter" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCharacterAction" pickOnBounds="false" prefHeight="40.0" prefWidth="140.0" text="Character" />
       				<Button id="combatStatsButton" fx:id="btnCombatStats" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCombatStatsAction" prefHeight="40.0" prefWidth="140.0" text="Statistics" />
+      				<Button id="inventoryButton" fx:id="btnInventory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleInventoryAction" prefHeight="40.0" prefWidth="140.0" text="Inventory" />
+      				<Button fx:id="btnFeats" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFeatsAction" prefHeight="40.0" prefWidth="140.0" text="Feats" />
       				<Button id="skillsButton" fx:id="btnSkills" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSkillsAction" prefHeight="40.0" prefWidth="140.0" text="Skills" />
       				<Button id="spellsButton" fx:id="btnSpells" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpellsAction" prefHeight="40.0" prefWidth="140.0" text="Spells" />
-      				<Button id="inventoryButton" fx:id="btnInventory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleInventoryAction" prefHeight="40.0" prefWidth="140.0" text="Inventory" />
       				<Button id="spellsButton" fx:id="btnCombat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCombatAction" prefHeight="40.0" prefWidth="140.0" text="Combat" />
-      				<Button fx:id="btnFeats" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFeatsAction" prefHeight="40.0" prefWidth="140.0" text="Feats" />
                </children>
             </VBox>
 			</children>
