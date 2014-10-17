@@ -10,18 +10,22 @@
 	<left>
 		<Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
 			<children>
-				<Label id="characterName" fx:id="lblCharacterName" layoutX="14.0" layoutY="42.0" maxHeight="60.0" prefWidth="134.0" text="Character Name" wrapText="true">
+				<Label id="characterName" fx:id="lblCharacterName" layoutX="14.0" layoutY="90.0" text="No character loaded" wrapText="true">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-				<Button id="charactersButton" fx:id="btnCharacter" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleCharacterAction" pickOnBounds="false" prefHeight="34.960837500002526" prefWidth="134.0" text="Character" />
-				<Button id="combatStatsButton" fx:id="btnCombatStats" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleCombatStatsAction" prefHeight="34.960837500002526" prefWidth="134.00009999999747" text="Statistics" />
-				<Button id="skillsButton" fx:id="btnSkills" layoutX="14.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleSkillsAction" prefHeight="34.960837500002526" prefWidth="134.0" text="Skills" />
-				<Button id="otherCharacter" layoutX="14.0" layoutY="671.0" mnemonicParsing="false" onAction="#handleOtherCharacterAction" prefHeight="34.9609459472631" prefWidth="134.0" text="Other Character" wrapText="true" />
-				<Button id="spellsButton" fx:id="btnSpells" layoutX="14.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleSpellsAction" prefHeight="34.9609375" prefWidth="134.0" text="Spells" />
-				<Button id="inventoryButton" fx:id="btnInventory" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleInventoryAction" prefHeight="34.9609375" prefWidth="134.0" text="Inventory" />
-				<Button id="spellsButton" fx:id="btnCombat" layoutX="14.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleCombatAction" prefHeight="34.9609375" prefWidth="134.0" text="Combat" />
-				<Button fx:id="btnFeats" layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleFeatsAction" prefHeight="34.960845947265625" prefWidth="134.0" text="Feats" />
+				<Button id="otherCharacter" layoutX="14.0" layoutY="666.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOtherCharacterAction" prefHeight="40.0" prefWidth="140.0" text="Other Character" wrapText="true" />
+            <VBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="150.0" prefHeight="200.0" spacing="10.0">
+               <children>
+      				<Button id="charactersButton" fx:id="btnCharacter" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCharacterAction" pickOnBounds="false" prefHeight="40.0" prefWidth="140.0" text="Character" />
+      				<Button id="combatStatsButton" fx:id="btnCombatStats" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCombatStatsAction" prefHeight="40.0" prefWidth="140.0" text="Statistics" />
+      				<Button id="inventoryButton" fx:id="btnInventory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleInventoryAction" prefHeight="40.0" prefWidth="140.0" text="Inventory" />
+      				<Button fx:id="btnFeats" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleFeatsAction" prefHeight="40.0" prefWidth="140.0" text="Feats" />
+      				<Button id="skillsButton" fx:id="btnSkills" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSkillsAction" prefHeight="40.0" prefWidth="140.0" text="Skills" />
+      				<Button id="spellsButton" fx:id="btnSpells" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpellsAction" prefHeight="40.0" prefWidth="140.0" text="Spells" />
+      				<Button id="spellsButton" fx:id="btnCombat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCombatAction" prefHeight="40.0" prefWidth="140.0" text="Combat" />
+               </children>
+            </VBox>
 			</children>
 		</Pane>
 	</left>
