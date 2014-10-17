@@ -397,7 +397,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Value:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
@@ -405,7 +405,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label fx:id="lblInitiativeBonus" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
@@ -456,7 +456,7 @@
                                               <RowConstraints vgrow="SOMETIMES" />
                                               <RowConstraints vgrow="SOMETIMES" />
                                                 <RowConstraints vgrow="SOMETIMES" />
-                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints vgrow="SOMETIMES" />
                                                 <RowConstraints vgrow="SOMETIMES" />
                                                 <RowConstraints vgrow="SOMETIMES" />
                                             </rowConstraints>
@@ -466,7 +466,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Current HP:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
@@ -474,7 +474,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Damage:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
@@ -482,7 +482,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Non-Lethal Damage:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
@@ -490,7 +490,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label fx:id="lblMaxHP" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -545,7 +545,7 @@
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                              </children>
@@ -659,7 +659,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Ranged:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
@@ -667,7 +667,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="CMB:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
@@ -675,7 +675,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="CMD:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
@@ -683,7 +683,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="columnHeader" text="Attack Bonus:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -755,7 +755,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Reflex:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
@@ -763,7 +763,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Will:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
@@ -771,7 +771,7 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label fx:id="lblFortSave" styleClass="data-label-centre" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -817,7 +817,7 @@
                                              <children>
                                                 <Label styleClass="header-label-16-black" text="Base:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
@@ -825,7 +825,7 @@
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="With Armor:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
@@ -833,7 +833,7 @@
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Climb:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
@@ -841,7 +841,7 @@
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Swim:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
@@ -849,7 +849,7 @@
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Fly:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
@@ -857,7 +857,7 @@
                                                 </Label>
                                                 <Label styleClass="header-label-16-black" text="Burrow:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
@@ -918,36 +918,36 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Weapon:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Weapon:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Weapon:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Weapon:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Armor:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Armor:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <Label text="Shield:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                <Label styleClass="header-label-16-black" text="Shield:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <GridPane.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="5.0" />
                                                    </GridPane.margin>
                                                 </Label>
                                                 <Label fx:id="lblWeapon1" styleClass="data-label" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
@@ -1091,7 +1091,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TextArea fx:id="txtaNotes" layoutX="116.0" layoutY="-20.0" prefHeight="195.0" prefWidth="358.0" promptText="Enter any notes here" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TextArea fx:id="txtaNotes" layoutX="116.0" layoutY="-20.0" prefHeight="195.0" prefWidth="358.0" promptText="Enter any notes here" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font></TextArea>
