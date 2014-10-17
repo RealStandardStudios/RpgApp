@@ -24,7 +24,7 @@ import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Character.Character;
-import rpg.application;
+import rpg.MainApp;
 import view.RootController;
 import view.objects.OtherCharacterRow;
 import view.partials.dialogs.NewCharacterController;
@@ -67,7 +67,7 @@ public class OtherCharacterController extends MainWindowController {
 		// Set extension filter
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("CDF files (*.cdf)", "*.cdf");
 		fileChooser.getExtensionFilters().add(extFilter);
-		File chosenFile = new File(application.class.getResource("../").getPath()+"../characters");
+		File chosenFile = new File(MainApp.class.getResource("../").getPath()+"../characters");
 		fileChooser.setInitialDirectory(chosenFile);
 
 		// Show open file dialog
@@ -132,9 +132,9 @@ public class OtherCharacterController extends MainWindowController {
 	@Override
 	public void setData() {
 		//gets all the files in the folder /characters
-		File ogFile = new File(application.class.getResource("../").getPath()+"../characters");
+		File ogFile = new File(MainApp.class.getResource("../").getPath()+"../characters");
 		ogFile.mkdir();
-		File[] characterFiles = Tools.listFilesForFolder(new File(application.class.getResource("../").getPath()+"../characters"));
+		File[] characterFiles = Tools.listFilesForFolder(new File(MainApp.class.getResource("../").getPath()+"../characters"));
 		for (int i=0;i<characterFiles.length;i++) {
 			File file = characterFiles[i];
 			//if they are .cdf files

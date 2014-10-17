@@ -9,7 +9,7 @@ import window.Interface;
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
-public class application extends Application {
+public class MainApp extends Application {
 
 	/**
 	 * This method starts when the App is launched
