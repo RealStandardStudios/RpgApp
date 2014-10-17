@@ -12,10 +12,9 @@ import javafx.stage.Stage;
 import jefXif.Strings;
 import jefXif.view.Gui;
 import jefXif.view.RootLayoutController;
+import org.controlsfx.dialog.Dialogs;
 import view.RootController;
 import view.partials.MainWindowController;
-
-import com.sun.istack.internal.logging.Logger;
 
 /**
  * @author Real Standard Studios - Matthew Meehan
@@ -48,7 +47,7 @@ public class Interface extends Gui {
 
 			getPrimaryStage().show();
 		} catch (IOException e) {
-			Logger.getLogger(this.getClass()).log(Level.SEVERE, null, e);
+			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString()).showWarning();
 		}
 	}
 
@@ -75,7 +74,7 @@ public class Interface extends Gui {
 		try {
 			loadPartials();
 		} catch (IOException e) {
-			Logger.getLogger(this.getClass()).log(Level.SEVERE, null, e);
+			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString()).showWarning();
 		}
 	}
 
