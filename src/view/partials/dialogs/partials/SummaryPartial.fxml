@@ -22,10 +22,10 @@
          <children>
             <GridPane gridLinesVisible="true" styleClass="summary-grid-pane">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="69.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="163.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="71.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="249.0" />
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="18.0" />
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -34,103 +34,103 @@
                   <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label styleClass="summary-label" text="Name" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Name" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label styleClass="summary-label" text="Race" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Race" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label styleClass="summary-label" text="Class" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Class" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label fx:id="lblName" prefWidth="160.0" styleClass="summary-data-label" text="Charcater Name" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Charcater Name" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblRace" prefWidth="160.0" styleClass="summary-data-label" text="Character Race" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblRace" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Race" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblClass" prefWidth="160.0" styleClass="summary-data-label" text="Character Class" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblClass" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Class" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="summary-label" text="Alignment" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Alignment" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label fx:id="lblAlignment" prefWidth="160.0" styleClass="summary-data-label" text="Character Alignment" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblAlignment" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Alignment" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="summary-label" text="Size" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Size" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label styleClass="summary-label" text="Weight" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Weight" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label styleClass="summary-label" text="Gender" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Gender" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label styleClass="summary-label" text="Age" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
+                  <Label styleClass="columnHeader-gold" text="Age" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label fx:id="lblSize" prefWidth="250.0" styleClass="summary-data-label" text="Character Size" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblSize" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Size" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblWeight" prefWidth="250.0" styleClass="summary-data-label" text="Character Weight" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblWeight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Weight" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblGender" prefWidth="250.0" styleClass="summary-data-label" text="Character Gender" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblGender" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Gender" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblAge" prefWidth="250.0" styleClass="summary-data-label" text="Character Age" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                  <Label fx:id="lblAge" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="summary-data-label" text="Character Age" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -161,35 +161,53 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label styleClass="summary-label" text="STR" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+                  <Label styleClass="columnHeader-gold" text="STR" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label styleClass="summary-label" text="DEX" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+                  <Label styleClass="columnHeader-gold" text="DEX" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label styleClass="summary-label" text="CON" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+                  <Label styleClass="columnHeader-gold" text="CON" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label styleClass="summary-label" text="INT" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.vgrow="SOMETIMES">
+                  <Label styleClass="columnHeader-gold" text="INT" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label styleClass="summary-label" text="WIS" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5" GridPane.vgrow="SOMETIMES">
+                  <Label styleClass="columnHeader-gold" text="WIS" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label styleClass="summary-label" text="CHA" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
+                  <Label styleClass="columnHeader-gold" text="CHA" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
                   <Label fx:id="lblStrScore" alignment="CENTER" prefWidth="40.0" styleClass="summary-data-label" text="10" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>

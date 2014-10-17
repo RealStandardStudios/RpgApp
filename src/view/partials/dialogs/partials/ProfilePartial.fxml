@@ -7,259 +7,306 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.ProfilePartialController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../../../Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.partials.ProfilePartialController">
    <children>
-      <GridPane hgap="10.0" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label text="Name:" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCharName" promptText="What is your character's name?" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Gender:" GridPane.columnIndex="2" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCharGender" promptText="What is your character's gender?" GridPane.columnIndex="3">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Homeland:" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCharHomeLand" promptText="Where is your character from?" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Age:" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>            
-            <TextField fx:id="txtCharAge" promptText="What is your character's age?" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Background:" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextArea fx:id="txtaCharBackground" maxWidth="1.7976931348623157E308" promptText="What is your character's background?" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextArea>
-            <Label text="Height:" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCharHeight" promptText="What is your character's height?" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Weight:" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCharWeight" promptText="What is your character's weight?" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Deities:" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCharDeities" promptText="What deities does your character worship?" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <Label text="Appearance:" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextArea fx:id="txtaCharAppearance" prefHeight="200.0" promptText="Describe your character's appearance" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextArea>
-            <Label text="Personality:" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets left="10.0" top="20.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextArea fx:id="txtaCharPersonality" prefHeight="200.0" promptText="Describe your character's personality" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextArea>
-            <Label text="Languages Known:" wrapText="true" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblLanguagesKnown" text="Languages known here" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <Label text="Alignment:" GridPane.rowIndex="6" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets left="10.0" top="20.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="2">
+      <TitledPane collapsible="false" prefHeight="600.0" prefWidth="1100.0" styleClass="titledPanePageBg" text="Character Profile" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <GridPane hgap="10.0" layoutX="10.0" layoutY="10.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Label text="Lawful" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Name:" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                      <font>
-                        <Font size="17.0" />
-                     </font></Label>
-                  <Label text="Neutral" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCharName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What is your character's name?" styleClass="data-label-centre" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                      <font>
-                        <Font size="17.0" />
-                     </font></Label>
-                  <Label text="Chaotic" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Gender:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                      <font>
-                        <Font size="17.0" />
-                     </font></Label>
-                  <Label text="Good" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCharGender" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What is your character's gender?" styleClass="data-label-centre" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
                      <font>
-                        <Font size="17.0" />
-                     </font></Label>
-                  <Label text="Neutral" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Homeland:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                      <font>
-                        <Font size="17.0" />
-                     </font></Label>
-                  <Label text="Evil" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCharHomeLand" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Where is your character from?" styleClass="data-label-centre" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                      <font>
-                        <Font size="17.0" />
-                     </font></Label>
-                  <CheckBox fx:id="cbLawfulGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbNeutralGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbChaoticGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbLawfulNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbTrueNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbChaoticNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbLawfulEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbChaoticEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <CheckBox fx:id="cbNeutralEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Age:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>            
+                  <TextField fx:id="txtCharAge" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What is your character's age?" styleClass="data-label-centre" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Background:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="txtaCharBackground" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What is your character's background?" styleClass="data-label-centre" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Height:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCharHeight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What is your character's height?" styleClass="data-label-centre" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Weight:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCharWeight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What is your character's weight?" styleClass="data-label-centre" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Deities:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCharDeities" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="What deities does your character worship?" styleClass="data-label-centre" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Appearance:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="txtaCharAppearance" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Describe your character's appearance" styleClass="data-label-centre" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Personality:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="15.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="txtaCharPersonality" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Describe your character's personality" styleClass="data-label-centre" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Languages Known:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblLanguagesKnown" styleClass="data-label" text="Languages known here" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Alignment:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="15.0" />
+                     </padding>
+                  </Label>
+                  <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Label styleClass="data-label" text="Lawful" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="data-label" text="Neutral" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="data-label" text="Chaotic" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="data-label" text="Good" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="data-label" text="Neutral" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="data-label" text="Evil" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="cbLawfulGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbNeutralGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbChaoticGood" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbLawfulNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbTrueNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbChaoticNeutral" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbLawfulEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbChaoticEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="cbNeutralEvil" disable="true" mnemonicParsing="false" onAction="#handleChecked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
                </children>
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                  <ColumnConstraints percentWidth="10.0" />
+                  <ColumnConstraints />
+                  <ColumnConstraints percentWidth="10.0" />
+                  <ColumnConstraints />
                </columnConstraints>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
                <rowConstraints>
-                  <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
                </rowConstraints>
             </GridPane>
-         </children>
-         <columnConstraints>
-            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="500.0" />
-            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="350.0" prefWidth="350.0" />
-         </columnConstraints>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints vgrow="SOMETIMES" />
-            <RowConstraints vgrow="SOMETIMES" />
-         </rowConstraints>
-      </GridPane>
+         </content>
+      </TitledPane>
    </children>
 </AnchorPane>
