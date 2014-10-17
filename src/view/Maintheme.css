@@ -42,9 +42,11 @@
 .summary-label {
 	-fx-text-fill: WHITE;
 }
+/*
 .summary-grid-pane {
 	-fx-background-color: BLACK;
 }
+*/
 .summary-data-label {
 	-fx-padding: 5px;
 	-fx-background-color: White;
