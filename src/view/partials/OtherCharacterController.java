@@ -126,19 +126,21 @@ public class OtherCharacterController extends MainWindowController {
 	@Override
 	public void initialize() {
 		otherCharacterRows = new ArrayList<>();
-		
-		//should go through and check the characters folder for .cdf files and then for each one add a Label with the name, and a button to load them
 	}
 
 	@Override
 	public void setData() {
+		//gets all the files in the folder /characters
 		File[] characterFiles = Tools.listFilesForFolder(new File(application.class.getResource("../").getPath()+"../characters"));
 		for (File file : characterFiles) {
+			//if they are .cdf files
 			if(file.getPath().contains(".cdf")) {
 				String[] parts = file.getPath().split("\\\\");
+				//add a row in the other characters dialog for them
 				otherCharacterRows.add(new OtherCharacterRow(parts[parts.length-1].replace(".cdf", ""), file, getRoot()));
 				apOtherCharacters.getChildren().add(otherCharacterRows.get(otherCharacterRows.size()-1).getRow());
 				
+				//if this is the first row, change the titled pane to say "Other Characters" rather than "No Other Characters"
 				if(!tpOtherCharacters.isExpanded()) {
 					tpOtherCharacters.setExpanded(true);
 					tpOtherCharacters.setText("Other Characters");
