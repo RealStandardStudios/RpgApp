@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -132,13 +133,16 @@ public class OtherCharacterController extends MainWindowController {
 	public void setData() {
 		//gets all the files in the folder /characters
 		File[] characterFiles = Tools.listFilesForFolder(new File(application.class.getResource("../").getPath()+"../characters"));
-		for (File file : characterFiles) {
+		for (int i=0;i<characterFiles.length;i++) {
+			File file = characterFiles[i];
 			//if they are .cdf files
 			if(file.getPath().contains(".cdf")) {
 				String[] parts = file.getPath().split("\\\\");
 				//add a row in the other characters dialog for them
 				otherCharacterRows.add(new OtherCharacterRow(parts[parts.length-1].replace(".cdf", ""), file, getRoot()));
-				apOtherCharacters.getChildren().add(otherCharacterRows.get(otherCharacterRows.size()-1).getRow());
+				HBox row = otherCharacterRows.get(otherCharacterRows.size()-1).getRow();
+				apOtherCharacters.getChildren().add(row);
+				row.setLayoutY((row.getHeight()+50)*i+1);
 				
 				//if this is the first row, change the titled pane to say "Other Characters" rather than "No Other Characters"
 				if(!tpOtherCharacters.isExpanded()) {
