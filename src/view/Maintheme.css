@@ -29,9 +29,6 @@
     -fx-background-color: #7d4609;
 }
 
-.main-anchor-pane {
-	-fx-background-color: #DBBC9A;
-}
 .titled-pane > .title > .text, 
 .data-label,
 .table-column > .label > .text {
