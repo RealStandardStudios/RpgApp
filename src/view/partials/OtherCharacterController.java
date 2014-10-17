@@ -2,18 +2,21 @@ package view.partials;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
+import jefXif.Tools;
 import jefXif.io.Data;
 
 import org.controlsfx.dialog.Dialog;
@@ -22,6 +25,7 @@ import org.controlsfx.dialog.Dialogs;
 import pathfinder.data.Character.Character;
 import rpg.application;
 import view.RootController;
+import view.objects.OtherCharacterRow;
 import view.partials.dialogs.NewCharacterController;
 
 /**
@@ -31,7 +35,14 @@ import view.partials.dialogs.NewCharacterController;
  */
 @SuppressWarnings("deprecation")
 public class OtherCharacterController extends MainWindowController {
-
+	
+	@FXML
+	AnchorPane apOtherCharacters;
+	@FXML
+	TitledPane tpOtherCharacters;
+	
+	ArrayList<OtherCharacterRow> otherCharacterRows;
+	
 	/**
 	 * handler for the NewCharacter event
 	 * 
@@ -114,14 +125,26 @@ public class OtherCharacterController extends MainWindowController {
 
 	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
-
+		otherCharacterRows = new ArrayList<>();
+		
+		//should go through and check the characters folder for .cdf files and then for each one add a Label with the name, and a button to load them
 	}
 
 	@Override
 	public void setData() {
-		// TODO Auto-generated method stub
-
+		File[] characterFiles = Tools.listFilesForFolder(new File(application.class.getResource("../").getPath()+"../characters"));
+		for (File file : characterFiles) {
+			if(file.getPath().contains(".cdf")) {
+				String[] parts = file.getPath().split("\\\\");
+				otherCharacterRows.add(new OtherCharacterRow(parts[parts.length-1].replace(".cdf", ""), file, getRoot()));
+				apOtherCharacters.getChildren().add(otherCharacterRows.get(otherCharacterRows.size()-1).getRow());
+				
+				if(!tpOtherCharacters.isExpanded()) {
+					tpOtherCharacters.setExpanded(true);
+					tpOtherCharacters.setText("Other Characters");
+				}
+			}
+		}
 	}
 
 }

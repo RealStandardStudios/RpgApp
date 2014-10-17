@@ -39,6 +39,7 @@ import pathfinder.data.Items.Weapon;
 import view.itemViews.ArmorView;
 import view.itemViews.ItemView;
 import view.itemViews.WeaponView;
+import view.objects.ItemSlot;
 
 /**
  * This is a Controller for the Inventory of the App
@@ -493,6 +494,7 @@ public class InventoryPartialController extends WindowController {
 		// apply equipped
 		if (itemSlots.get(slot) != null && itemSlots.get(slot).getItem() == null) {
 			itemSlots.get(slot).setItem(itemToAdd);
+			itemSlots.get(slot).getLabel().setDisable(false);
 		}
 	}
 }

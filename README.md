@@ -21,7 +21,7 @@ We aim to have a working replacement for all paper and books used by the average
 - Combat system
 - Auto calculates need actions for each weapon such as swapping weapons etc
 - Roll required number of dice for each action
-- When inputting a field or skill have the relevant information showen
+- When inputting a field or skill have the relevant information shown
 
 Targeting all Java-SE enabled desktop systems
 
@@ -32,7 +32,7 @@ Targeting all Java-SE enabled desktop systems
 - Gms can create battlemaps for combats
 - Players can join in on the battlemap with the generated mobs for combat using a token or small sprite
 - Gms can generate mobs for combats and other misc npcs
-  - Have a drop down menu which asks for size of creature, colour for distension and optional picture if you want
+  - Have a drop down menu which asks for size of creature, colour for distinction and optional picture if you want
 - Small chat system to allow players to message each other, notifications to the GM that X player and Y player are whispering to each other and the ability to watch the conversation
 - Let players message the GM to allow for actions to be kept secret from the party
 - An android tablet version
