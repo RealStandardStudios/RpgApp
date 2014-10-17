@@ -132,6 +132,8 @@ public class OtherCharacterController extends MainWindowController {
 	@Override
 	public void setData() {
 		//gets all the files in the folder /characters
+		File ogFile = new File(application.class.getResource("../").getPath()+"../characters");
+		ogFile.mkdir();
 		File[] characterFiles = Tools.listFilesForFolder(new File(application.class.getResource("../").getPath()+"../characters"));
 		for (int i=0;i<characterFiles.length;i++) {
 			File file = characterFiles[i];
