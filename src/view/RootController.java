@@ -43,7 +43,6 @@ public class RootController extends RootLayoutController {
 				window.setData();
 			}
 		}
-
 	}
 
 	private HashMap<String, MainWindowController> windowPartials;
@@ -120,7 +119,8 @@ public class RootController extends RootLayoutController {
 	 */
 	@FXML
 	private void handleOtherCharacterAction(ActionEvent event) {
-		SwapWindow(windowPartials.get("OtherCharacter").getNode());
+		windowPartials.get("OtherCharacter").setData();
+		SwapWindow(windowPartials.get("OtherCharacter").getNode());		
 	}
 
 	/**

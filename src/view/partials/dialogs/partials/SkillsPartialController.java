@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import pathfinder.data.Skill;
 import pathfinder.data.Effects.Effect;
 import pathfinder.data.Effects.SkillEffect;
-import view.SkillGridRow;
+import view.objects.SkillGridRow;
 
 public class SkillsPartialController extends NewCharacterPartialController {
 	

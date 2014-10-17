@@ -8,15 +8,11 @@
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.OtherCharacterController">
   <children>
-    <Accordion layoutX="41.0" layoutY="33.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
-      <panes>
-        <TitledPane animated="false" prefHeight="97.0" prefWidth="374.0" text="No Other Characters">
-          <font>
-            <Font size="15.0" />
-          </font>
-        </TitledPane>
-      </panes>
-    </Accordion>
+      <TitledPane fx:id="tpOtherCharacters" animated="false" collapsible="false" expanded="false" layoutX="22.0" layoutY="23.0" prefHeight="604.0" prefWidth="457.0" text="No Other Characters">
+        <content>
+          <AnchorPane fx:id="apOtherCharacters" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </TitledPane>
     <Button layoutX="41.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleLoadChatacterAction" text="Load Other Character" AnchorPane.leftAnchor="40.0">
       <font>
         <Font name="System Bold" size="15.0" fx:id="x1" />

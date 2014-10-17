@@ -4,12 +4,8 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
@@ -20,9 +16,6 @@ import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Weapon;
 import view.InventoryPartialController;
 import view.RootController;
-import view.itemViews.ArmorView;
-import view.itemViews.GoodsView;
-import view.itemViews.WeaponView;
 
 /**
  * @author Real Standard Studios - Matthew Meehan
@@ -68,68 +61,6 @@ public class InventoryController extends MainWindowController {
 
 	}
 
-	private void readItemViews() throws IOException {
-		// create an FXML Loader
-		FXMLLoader loader = new FXMLLoader();
-
-		// Create all the views
-		WeaponView weaponView;
-		ArmorView armorView;
-		GoodsView goodsView;
-
-		// load the WeaponView
-		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
-		AnchorPane page = (AnchorPane) loader.load();
-
-		Stage weaponViewStage = new Stage();
-		weaponViewStage.setScene(new Scene(page));
-		// show no boarders on the WeaponView
-		weaponViewStage.initStyle(StageStyle.UNDECORATED);
-		// make the dialog owner the main window
-		weaponViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
-		// make it slightly transparent
-		weaponViewStage.setOpacity(0.9);
-		// make sure its not a modal window
-		weaponViewStage.initModality(Modality.NONE);
-		// set the WeapnView to the controller;
-		weaponView = loader.getController();
-		// give the controller its stage
-		weaponView.setDialogStage(weaponViewStage);
-
-		loader = new FXMLLoader();
-		loader.setLocation(ArmorView.class.getResource("ArmorView.fxml"));
-		page = (AnchorPane) loader.load();
-
-		Stage armorViewStage = new Stage();
-		armorViewStage.setScene(new Scene(page));
-		armorViewStage.initStyle(StageStyle.UNDECORATED);
-		// armorViewStage.setAlwaysOnTop(true);
-		armorViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
-		armorViewStage.setOpacity(0.9);
-		armorViewStage.initModality(Modality.NONE);
-		armorView = loader.getController();
-		armorView.setDialogStage(armorViewStage);
-
-		loader = new FXMLLoader();
-		loader.setLocation(ArmorView.class.getResource("GoodsView.fxml"));
-		page = (AnchorPane) loader.load();
-
-		Stage goodsViewStage = new Stage();
-		goodsViewStage.setScene(new Scene(page));
-		goodsViewStage.initStyle(StageStyle.UNDECORATED);
-		// goodsViewStage.setAlwaysOnTop(true);
-		goodsViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
-		goodsViewStage.setOpacity(0.9);
-		goodsViewStage.initModality(Modality.NONE);
-		goodsView = loader.getController();
-		goodsView.setDialogStage(armorViewStage);
-
-		// set all the ItemViews
-		inventoryPartial.setArmorView(armorView);
-		inventoryPartial.setWeaponView(weaponView);
-		inventoryPartial.setGoodsView(goodsView);
-	}
-
 	/**
 	 * loads the Inventory partial
 	 * 
@@ -151,17 +82,17 @@ public class InventoryController extends MainWindowController {
 
 	@Override
 	public void setData() {
+		Character character = ((RootController) getRoot()).getCharacter();
 		try {
 			loadInventory();
-			readItemViews();
 			inventoryPartial.setupScreen();
+			inventoryPartial.getItems().setAll(character.getInventory().getArmor());
+			inventoryPartial.getItems().addAll(character.getInventory().getWeapons());
+			inventoryPartial.getItems().addAll(character.getInventory().getGoods());
 		} catch (IOException e) {
 			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showError();
 		}
-		Character character = ((RootController) getRoot()).getCharacter();
-		inventoryPartial.getItems().setAll(character.getInventory().getArmor());
-		inventoryPartial.getItems().addAll(character.getInventory().getWeapons());
-		inventoryPartial.getItems().addAll(character.getInventory().getGoods());
+		
 		double weight = 0.0;
 		for (Armor a : character.getInventory().getArmorWorn()) {
 			inventoryPartial.equipItem(a, a.getSlotType().name());
