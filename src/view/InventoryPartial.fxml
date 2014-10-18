@@ -76,19 +76,6 @@
             <String fx:value="item-slot-label" />
             <String fx:value=".centered" />
          </styleClass></Label>
-      <Label fx:id="lblWeightValue" layoutX="738.0" layoutY="17.0" styleClass="data-label" text="0" AnchorPane.rightAnchor="50.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="503.0" layoutY="17.0" styleClass="data-label" text="Total Weight of Equipment (lbs):" AnchorPane.rightAnchor="100.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <padding>
-            <Insets left="10.0" />
-         </padding>
-      </Label>
       <TableView fx:id="tableInventory" layoutX="14.0" layoutY="17.0" onMouseExited="#handleMouseExited" prefHeight="520.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
         <columns>
           <TableColumn fx:id="colName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="199.0" resizable="false" text="Inventory" />
