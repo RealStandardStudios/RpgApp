@@ -2,26 +2,31 @@ package view.partials;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
+import jefXif.Tools;
 import jefXif.io.Data;
 
 import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Character.Character;
-import rpg.application;
+import rpg.MainApp;
 import view.RootController;
+import view.objects.OtherCharacterRow;
 import view.partials.dialogs.NewCharacterController;
 
 /**
@@ -31,7 +36,14 @@ import view.partials.dialogs.NewCharacterController;
  */
 @SuppressWarnings("deprecation")
 public class OtherCharacterController extends MainWindowController {
-
+	
+	@FXML
+	AnchorPane apOtherCharacters;
+	@FXML
+	TitledPane tpOtherCharacters;
+	
+	ArrayList<OtherCharacterRow> otherCharacterRows;
+	
 	/**
 	 * handler for the NewCharacter event
 	 * 
@@ -55,7 +67,7 @@ public class OtherCharacterController extends MainWindowController {
 		// Set extension filter
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("CDF files (*.cdf)", "*.cdf");
 		fileChooser.getExtensionFilters().add(extFilter);
-		File chosenFile = new File(application.class.getResource("../").getPath()+"../characters");
+		File chosenFile = new File(MainApp.class.getResource("../").getPath()+"../characters");
 		fileChooser.setInitialDirectory(chosenFile);
 
 		// Show open file dialog
@@ -114,14 +126,33 @@ public class OtherCharacterController extends MainWindowController {
 
 	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
-
+		otherCharacterRows = new ArrayList<>();
 	}
 
 	@Override
 	public void setData() {
-		// TODO Auto-generated method stub
-
+		//gets all the files in the folder /characters
+		File ogFile = new File(MainApp.class.getResource("../").getPath()+"../characters");
+		ogFile.mkdir();
+		File[] characterFiles = Tools.listFilesForFolder(new File(MainApp.class.getResource("../").getPath()+"../characters"));
+		for (int i=0;i<characterFiles.length;i++) {
+			File file = characterFiles[i];
+			//if they are .cdf files
+			if(file.getPath().contains(".cdf")) {
+				String[] parts = file.getPath().split("\\\\");
+				//add a row in the other characters dialog for them
+				otherCharacterRows.add(new OtherCharacterRow(parts[parts.length-1].replace(".cdf", ""), file, getRoot()));
+				HBox row = otherCharacterRows.get(otherCharacterRows.size()-1).getRow();
+				apOtherCharacters.getChildren().add(row);
+				row.setLayoutY((row.getHeight()+50)*i+1);
+				
+				//if this is the first row, change the titled pane to say "Other Characters" rather than "No Other Characters"
+				if(!tpOtherCharacters.isExpanded()) {
+					tpOtherCharacters.setExpanded(true);
+					tpOtherCharacters.setText("Other Characters");
+				}
+			}
+		}
 	}
 
 }

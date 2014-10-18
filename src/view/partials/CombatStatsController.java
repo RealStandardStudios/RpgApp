@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Items.Armor;
+import pathfinder.data.Items.SlotType;
 import view.RootController;
 
 
@@ -257,6 +258,7 @@ public class CombatStatsController extends MainWindowController {
 		setHP();
 		setInitiative();
 		setSpeeds();
+		setAC();
 	}
 	
 	public void setAC()
@@ -266,7 +268,7 @@ public class CombatStatsController extends MainWindowController {
 		int shieldAC = 0;
 		int dexLimit = 1000;
 		for (Armor armor : wornArmors) {
-			if (armor.ArmorType.getValue() != "Shield")
+			if (armor.getSlotType()!=SlotType.Shield)
 			{
 				wornArmorAC += Integer.parseInt(armor.ArmorBonus.get()); 
 				if(armor.MaxDexBonus.getValue() == "-")
@@ -284,6 +286,9 @@ public class CombatStatsController extends MainWindowController {
 			}
 		}
 		
+		lblArmorAC.setText(wornArmorAC+"");
+		lblShieldAC.setText(""+shieldAC);
+		
 		if(dexLimit < character.getDexterity().getModifier().get())
 		{
 			lblDexAC.setText(dexLimit + "");
@@ -292,6 +297,8 @@ public class CombatStatsController extends MainWindowController {
 		{
 			lblDexAC.setText(character.getDexterity().getModifier().get() + "");
 		}
+		
+		lblTotalAC.setText(""+character.getArmorClass());
 		
 		/*
 		lblTotalAC;
@@ -321,7 +328,8 @@ public class CombatStatsController extends MainWindowController {
 			if(character.getRace().getSize().getSizeModifier() == 0 )
 			{
 				String[] ar = armor.Speed30feet.get().split(" ");
-				wornArmorWeight += Integer.parseInt(ar[0]); 
+				if(!ar[0].equals("-"))
+					wornArmorWeight += Integer.parseInt(ar[0]); 
 			}
 		}
 		lblSpeedBase.setText(character.getRace().getSpeed() + "");

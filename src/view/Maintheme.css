@@ -29,9 +29,6 @@
     -fx-background-color: #7d4609;
 }
 
-.main-anchor-pane {
-	-fx-background-color: #DBBC9A;
-}
 .titled-pane > .title > .text, 
 .data-label,
 .table-column > .label > .text {
@@ -45,9 +42,11 @@
 .summary-label {
 	-fx-text-fill: WHITE;
 }
+/*
 .summary-grid-pane {
 	-fx-background-color: BLACK;
 }
+*/
 .summary-data-label {
 	-fx-padding: 5px;
 	-fx-background-color: White;
@@ -62,6 +61,10 @@
 
 .gridPaneLightBg {
 	-fx-background-color: #EDD4BA;
+}
+
+.gridPanePageBg {
+	-fx-background-color: #e9e9d5;
 }
 
 /*******************************************************************************
@@ -111,6 +114,10 @@
 	-fx-background-color: #EDD4BA;
 }
 
+.titledPanePageBg > .content {
+	-fx-background-color: #e9e9d5; 
+}
+
 /*******************************************************************************
  *                                                                             *
  * TabbedPane                                                                  *
@@ -156,7 +163,7 @@
  
  .button {
  	-fx-effect: dropshadow( gaussian , #777777 , 0,0,2,2 );
- 	-fx-border-width: 0.0px 2.0px 2.0 0.0px;
+ 	-fx-border-width: 1.0px 1.5px 1.5 1.0px;
  	-fx-border-color: rgb(76.0,60.0,11.0);
  }
  
@@ -213,20 +220,22 @@
  
  .header-label-16-gold > .text,
  .header-label-16-black-i > .text,
- .header-label-16-black > .text {
+ .header-label-16-black > .text,
+ .columnHeader-gold > .text {
  	-fx-font-size: 16.0px;
  }
  
  .item-slot-label > .text, 
  .data-label-gold > .text,
  .header-label-16-gold > .text,
- .header-label-18-gold > .text {
+ .header-label-18-gold > .text,
+ .columnHeader-gold > .text {
  	-fx-fill: #AB891A;
  	-fx-font-weight: Bold;
  }
  
  .data-label-gold > .text {
- 	-fx-font-size: 13.0px;
+ 	-fx-font-size: 14.0px;
  }
  
  .header-label-18-gold {
@@ -254,7 +263,7 @@
  }
  
  .columnHeader > .text {
- 	-fx-font-size: 13.0px;
+ 	-fx-font-size: 14.0px;
  }
  
  /******************************************************************************
@@ -269,6 +278,7 @@
  .table-column {
  	-fx-padding: 0.0;
  	-fx-background-color: #EDD4BA;
+ 	-fx-wrap-text: true;
  }
  
  .table-column > .label > .text {
@@ -315,4 +325,17 @@
  ******************************************************************************/
  .scroll-pane > .viewport {
  	/*-fx-background-color: #ABC123;*/
+ } 
+
+ 
+  /******************************************************************************
+ *                                                                             *
+ * Combo Box 						                                           *
+ *                                                                             *
+ ******************************************************************************/
+ 
+ .combo-box > .list-cell > .text {
+ 	-fx-fill: BLACK;
+ 	-fx-font-size: 14.0px;
+ 	-fx-font-style: italic;
  } 

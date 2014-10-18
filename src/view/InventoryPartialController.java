@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.MouseInfo;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -9,15 +10,25 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
+import javafx.scene.Scene;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import jefXif.view.WindowController;
+
+import org.controlsfx.dialog.Dialog;
+import org.controlsfx.dialog.Dialogs;
+
 import pathfinder.data.Character.Inventory;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Goods;
@@ -25,13 +36,17 @@ import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Shield;
 import pathfinder.data.Items.SlotType;
 import pathfinder.data.Items.Weapon;
+import view.itemViews.ArmorView;
 import view.itemViews.ItemView;
+import view.itemViews.WeaponView;
+import view.objects.ItemSlot;
 
 /**
  * This is a Controller for the Inventory of the App
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
+@SuppressWarnings("deprecation")
 public class InventoryPartialController extends WindowController {
 	// region FXML elements
 	@FXML
@@ -96,12 +111,12 @@ public class InventoryPartialController extends WindowController {
 			if (item instanceof Goods)
 				goods.add((Goods) item);
 		}
-		Inventory i = new Inventory(FXCollections.observableArrayList(weapons), FXCollections.observableArrayList(armor),
-				FXCollections.observableArrayList(goods), money);
+		Inventory i = new Inventory(FXCollections.observableArrayList(weapons),
+				FXCollections.observableArrayList(armor), FXCollections.observableArrayList(goods), money);
 		for (ItemSlot slot : itemSlots.values()) {
-			if (slot.getItem() instanceof Armor)
+			if (slot.getItem() instanceof Armor || slot.getItem() instanceof Shield)
 				i.getArmorWorn().add((Armor) slot.getItem());
-			if (slot.getItem() instanceof Weapon)
+			else if (slot.getItem() instanceof Weapon)
 				i.getWeaponEquipped().add((Weapon) slot.getItem());
 		}
 		return i;
@@ -126,35 +141,37 @@ public class InventoryPartialController extends WindowController {
 			 * @param money
 			 * @returns an Inventory
 			 */
-			row.hoverProperty().addListener((observable) -> {
-				final Item item = row.getItem();
-				if (row.isHover() && item != null) {
-					Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth() + weaponView.getDialogStage().getWidth(), 0);
-					double xLoc = bound.getX(), yLoc = MouseInfo.getPointerInfo().getLocation().getY();
-					if (item instanceof Weapon) {
-						weaponView.setItem(item);
-						weaponView.getDialogStage().setX(xLoc);
-						weaponView.getDialogStage().setY(yLoc);
-						weaponView.show();
-						armorView.getDialogStage().close();
-						goodsView.getDialogStage().close();
-					} else if (item instanceof Armor) {
-						armorView.setItem(item);
-						armorView.getDialogStage().setX(xLoc);
-						armorView.getDialogStage().setY(yLoc);
-						armorView.show();
-						weaponView.getDialogStage().close();
-						goodsView.getDialogStage().close();
-					} else {
-						goodsView.setItem(item);
-						goodsView.getDialogStage().setX(xLoc);
-						goodsView.getDialogStage().setY(yLoc);
-						goodsView.show();
-						armorView.getDialogStage().close();
-						weaponView.getDialogStage().close();
-					}
-				}
-			});
+			row.hoverProperty().addListener(
+					(observable) -> {
+						final Item item = row.getItem();
+						if (row.isHover() && item != null) {
+							Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth()
+									+ weaponView.getDialogStage().getWidth(), 0);
+							double xLoc = bound.getX(), yLoc = MouseInfo.getPointerInfo().getLocation().getY();
+							if (item instanceof Weapon) {
+								weaponView.setItem(item);
+								weaponView.getDialogStage().setX(xLoc);
+								weaponView.getDialogStage().setY(yLoc);
+								weaponView.show();
+								// armorView.getDialogStage().hide();
+								// goodsView.getDialogStage().hide();
+							} else if (item instanceof Armor) {
+								armorView.setItem(item);
+								armorView.getDialogStage().setX(xLoc);
+								armorView.getDialogStage().setY(yLoc);
+								armorView.show();
+								// weaponView.getDialogStage().hide();
+								// goodsView.getDialogStage().hide();
+							} else {
+								goodsView.setItem(item);
+								goodsView.getDialogStage().setX(xLoc);
+								goodsView.getDialogStage().setY(yLoc);
+								goodsView.show();
+								// armorView.getDialogStage().hide();
+								// weaponView.getDialogStage().hide();
+							}
+						}
+					});
 
 			// create a context menu for the cell
 				ContextMenu itemMenu = new ContextMenu();
@@ -176,11 +193,12 @@ public class InventoryPartialController extends WindowController {
 					@Override
 					public void handle(ActionEvent event) {
 						unequipItem(row, row.getItem().getSlotType().name());
-						System.out.println(String.format("%s Successfully removed from %s slot", row.getItem().Name.get(), row.getItem()
-								.getSlotType().name()));
+						System.out.println(String.format("%s Successfully removed from %s slot",
+								row.getItem().Name.get(), row.getItem().getSlotType().name()));
 					}
 				});
-				if (row.getItem() instanceof Armor || row.getItem() instanceof Weapon) {
+				if (row.getItem() instanceof Armor || row.getItem() instanceof Shield
+						|| row.getItem() instanceof Weapon) {
 					itemMenu.getItems().add(equip);
 					itemMenu.getItems().add(unequip);
 					row.setContextMenu(itemMenu);
@@ -210,17 +228,26 @@ public class InventoryPartialController extends WindowController {
 	 * Sets up things relevant to the inventory screen
 	 */
 	public void setupScreen() {
-		itemSlots.put("Head", new ItemSlot(lblHead, SlotType.Head));
-		itemSlots.put("Torso", new ItemSlot(lblTorso, SlotType.Torso));
-		itemSlots.put("Hands", new ItemSlot(lblHands, SlotType.Hands));
-		itemSlots.put("RightRing", new ItemSlot(lblRightRing, SlotType.Ring));
-		itemSlots.put("LeftRing", new ItemSlot(lblLeftRing, SlotType.Ring));
-		itemSlots.put("Waist", new ItemSlot(lblWaist, SlotType.Waist));
-		itemSlots.put("Legs", new ItemSlot(lblLegs, SlotType.Legs));
-		itemSlots.put("Feet", new ItemSlot(lblFeet, SlotType.Feet));
-		itemSlots.put("Melee", new ItemSlot(lblWeapon, SlotType.Melee));
-		itemSlots.put("Ranged", new ItemSlot(lblRangedWeapon, SlotType.Ranged));
-		itemSlots.put("Shield", new ItemSlot(lblShield, SlotType.Shield));
+		try {
+			if (weaponView == null)
+				readItemViews();
+		} catch (IOException e) {
+			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString())
+					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showError();
+		}
+		if (itemSlots.size() == 0) {
+			itemSlots.put("Head", new ItemSlot(lblHead, SlotType.Head));
+			itemSlots.put("Torso", new ItemSlot(lblTorso, SlotType.Torso));
+			itemSlots.put("Hands", new ItemSlot(lblHands, SlotType.Hands));
+			itemSlots.put("RightRing", new ItemSlot(lblRightRing, SlotType.Ring));
+			itemSlots.put("LeftRing", new ItemSlot(lblLeftRing, SlotType.Ring));
+			itemSlots.put("Waist", new ItemSlot(lblWaist, SlotType.Waist));
+			itemSlots.put("Legs", new ItemSlot(lblLegs, SlotType.Legs));
+			itemSlots.put("Feet", new ItemSlot(lblFeet, SlotType.Feet));
+			itemSlots.put("Melee", new ItemSlot(lblWeapon, SlotType.Melee));
+			itemSlots.put("Ranged", new ItemSlot(lblRangedWeapon, SlotType.Ranged));
+			itemSlots.put("Shield", new ItemSlot(lblShield, SlotType.Shield));
+		}
 	}
 
 	/**
@@ -334,7 +361,8 @@ public class InventoryPartialController extends WindowController {
 	@FXML
 	private void showWeapon() {
 		weaponView.setItem(itemSlots.get("Melee").getItem());
-		Bounds screenBounds = itemSlots.get("Melee").getLabel().localToScene(itemSlots.get("Melee").getLabel().getBoundsInLocal());
+		Bounds screenBounds = itemSlots.get("Melee").getLabel()
+				.localToScene(itemSlots.get("Melee").getLabel().getBoundsInLocal());
 		weaponView.getDialogStage().setX(screenBounds.getMaxX() + weaponView.getDialogStage().getWidth());
 		weaponView.getDialogStage().setY(screenBounds.getMinY());
 		if (weaponView.getItem() != null)
@@ -347,7 +375,8 @@ public class InventoryPartialController extends WindowController {
 	@FXML
 	private void showRangedWeapon() {
 		weaponView.setItem(itemSlots.get("Ranged").getItem());
-		Bounds screenBounds = itemSlots.get("Ranged").getLabel().localToScene(itemSlots.get("Ranged").getLabel().getBoundsInLocal());
+		Bounds screenBounds = itemSlots.get("Ranged").getLabel()
+				.localToScene(itemSlots.get("Ranged").getLabel().getBoundsInLocal());
 		weaponView.getDialogStage().setX(screenBounds.getMaxX() + weaponView.getDialogStage().getWidth());
 		weaponView.getDialogStage().setY(screenBounds.getMinY());
 		if (weaponView.getItem() != null)
@@ -366,38 +395,93 @@ public class InventoryPartialController extends WindowController {
 			armorView.show();
 	}
 
-	/**
-	 * Sets up the weapons view
-	 * 
-	 * @param weaponView
-	 */
-	public void setWeaponView(ItemView weaponView) {
-		this.weaponView = weaponView;
+	public ItemView getWeaponView() {
+		return weaponView;
 	}
 
-	/**
-	 * Sets up the Armour view
-	 * 
-	 * @param armorView
-	 */
-	public void setArmorView(ItemView armorView) {
-		this.armorView = armorView;
+	public ItemView getArmorView() {
+		return armorView;
 	}
 
-	/**
-	 * Sets up the goods view
-	 * 
-	 * @param goodsView
-	 */
-	public void setGoodsView(ItemView goodsView) {
-		this.goodsView = goodsView;
+	public ItemView getGoodsView() {
+		return goodsView;
+	}
+
+	private void readItemViews() throws IOException {
+		// create an FXML Loader
+		FXMLLoader loader = new FXMLLoader();
+
+		// load the WeaponView
+		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
+		AnchorPane page = (AnchorPane) loader.load();
+
+		Stage weaponViewStage = new Stage();
+		weaponViewStage.setScene(new Scene(page));
+		// show no boarders on the WeaponView
+		weaponViewStage.initStyle(StageStyle.UNDECORATED);
+		// make the dialog owner the main window
+		if (getRoot() != null)
+			weaponViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
+		else
+			weaponViewStage.initOwner(getParentWindow().getInterface().getPrimaryStage());
+		// make it slightly transparent
+		weaponViewStage.setOpacity(0.9);
+		// make sure its not a modal window
+		weaponViewStage.initModality(Modality.NONE);
+		// set the WeapnView to the controller;
+		weaponView = loader.getController();
+		// give the controller its stage
+		weaponView.setDialogStage(weaponViewStage);
+		weaponView.setInterface(getInterface());
+		weaponView.setNode(page);
+		weaponView.setRoot(getRoot());
+
+		loader = new FXMLLoader();
+		loader.setLocation(ArmorView.class.getResource("ArmorView.fxml"));
+		page = (AnchorPane) loader.load();
+
+		Stage armorViewStage = new Stage();
+		armorViewStage.setScene(new Scene(page));
+		armorViewStage.initStyle(StageStyle.UNDECORATED);
+		// armorViewStage.setAlwaysOnTop(true);
+		if (getRoot() != null)
+			armorViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
+		else
+			armorViewStage.initOwner(getParentWindow().getInterface().getPrimaryStage());
+		armorViewStage.setOpacity(0.9);
+		armorViewStage.initModality(Modality.NONE);
+		armorView = loader.getController();
+		armorView.setDialogStage(armorViewStage);
+		armorView.setInterface(getInterface());
+		armorView.setNode(page);
+		armorView.setRoot(getRoot());
+
+		loader = new FXMLLoader();
+		loader.setLocation(ArmorView.class.getResource("GoodsView.fxml"));
+		page = (AnchorPane) loader.load();
+
+		Stage goodsViewStage = new Stage();
+		goodsViewStage.setScene(new Scene(page));
+		goodsViewStage.initStyle(StageStyle.UNDECORATED);
+		// goodsViewStage.setAlwaysOnTop(true);
+		if (getRoot() != null)
+			goodsViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
+		else
+			goodsViewStage.initOwner(getParentWindow().getInterface().getPrimaryStage());
+		goodsViewStage.setOpacity(0.9);
+		goodsViewStage.initModality(Modality.NONE);
+		goodsView = loader.getController();
+		goodsView.setDialogStage(goodsViewStage);
+		goodsView.setInterface(getInterface());
+		goodsView.setNode(page);
+		goodsView.setRoot(getRoot());
 	}
 
 	public void addItem(Item itemToAdd) {
 		inventory.add(itemToAdd);
 		equipItem(itemToAdd, itemToAdd.getSlotType().name());
 	}
-	
+
 	@FXML
 	private void handleMouseExited() {
 		weaponView.getDialogStage().close();
@@ -408,8 +492,9 @@ public class InventoryPartialController extends WindowController {
 	public void equipItem(Item itemToAdd, String slot) {
 		// need to figure out how to get the row for the item in the table and
 		// apply equipped
-		if (itemSlots.get(slot)!=null && itemSlots.get(slot).getItem() == null) {
+		if (itemSlots.get(slot) != null && itemSlots.get(slot).getItem() == null) {
 			itemSlots.get(slot).setItem(itemToAdd);
+			itemSlots.get(slot).getLabel().setDisable(false);
 		}
 	}
 }

@@ -11,7 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
-import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,9 +18,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
@@ -31,10 +27,7 @@ import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Item;
 import pathfinder.data.Items.Weapon;
 import view.InventoryPartialController;
-import view.itemViews.ArmorView;
-import view.itemViews.GoodsView;
 import view.itemViews.ItemView;
-import view.itemViews.WeaponView;
 
 /**
  * Controller for the Equipment view
@@ -192,57 +185,6 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		lblStartingWealthValue.setText("Click");
 		lblGoldRemainingValue.setText("Roll first");
 	}
-	
-	/**
-	 * loads in all the Item views
-	 * 
-	 * @throws IOException
-	 */
-	private void readItemViews() throws IOException {
-		// Load the fxml file and create a new stage for the popup dialog.
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
-		AnchorPane dialogView = (AnchorPane) loader.load();
-
-		
-		Stage weaponViewStage = new Stage();
-		weaponViewStage.setScene(new Scene(dialogView));
-		weaponViewStage.initStyle(StageStyle.UNDECORATED);
-		// weaponViewStage.setAlwaysOnTop(true);
-		weaponViewStage.initOwner(getParentWindow().getDialogStage());
-		weaponViewStage.setOpacity(0.9);
-		weaponViewStage.initModality(Modality.NONE);
-		weaponView = loader.getController();
-		weaponView.setDialogStage(weaponViewStage);
-
-		loader = new FXMLLoader();
-		loader.setLocation(ArmorView.class.getResource("ArmorView.fxml"));
-		dialogView = (AnchorPane) loader.load();
-
-		Stage armorViewStage = new Stage();
-		armorViewStage.setScene(new Scene(dialogView));
-		armorViewStage.initStyle(StageStyle.UNDECORATED);
-		// armorViewStage.setAlwaysOnTop(true);
-		armorViewStage.initOwner(getParentWindow().getDialogStage());
-		armorViewStage.setOpacity(0.9);
-		armorViewStage.initModality(Modality.NONE);
-		armorView = loader.getController();
-		armorView.setDialogStage(armorViewStage);
-
-		loader = new FXMLLoader();
-		loader.setLocation(GoodsView.class.getResource("GoodsView.fxml"));
-		dialogView = (AnchorPane) loader.load();
-
-		Stage goodsViewStage = new Stage();
-		goodsViewStage.setScene(new Scene(dialogView));
-		goodsViewStage.initStyle(StageStyle.UNDECORATED);
-		// goodsViewStage.setAlwaysOnTop(true);
-		goodsViewStage.initOwner(getParentWindow().getDialogStage());
-		goodsViewStage.setOpacity(0.9);
-		goodsViewStage.initModality(Modality.NONE);
-		goodsView = loader.getController();
-		goodsView.setDialogStage(goodsViewStage);
-	}
 
 	@Override
 	/**
@@ -258,15 +200,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			inventoryPartial.getItems().clear();
 		}
 
-		try {
-			readItemViews();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		inventoryPartial.setWeaponView(weaponView);
-		inventoryPartial.setArmorView(armorView);
-		inventoryPartial.setGoodsView(goodsView);
+		this.armorView = inventoryPartial.getArmorView();
+		this.weaponView = inventoryPartial.getWeaponView();
+		this.goodsView = inventoryPartial.getGoodsView();
 	}
 
 	private void loadInventory() throws IOException {

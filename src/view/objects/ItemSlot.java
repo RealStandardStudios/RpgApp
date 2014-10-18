@@ -1,4 +1,4 @@
-package view;
+package view.objects;
 
 import javafx.scene.control.Label;
 import pathfinder.data.Items.Item;

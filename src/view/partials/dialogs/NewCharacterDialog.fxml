@@ -57,26 +57,26 @@
       </TabPane>
       <HBox alignment="CENTER" layoutX="771.0" layoutY="586.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <Button fx:id="btnSave" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOkay" prefHeight="35.0" prefWidth="70.0" text="Save">
+            <Button fx:id="btnSave" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOkay" prefHeight="40.0" prefWidth="80.0" text="Save">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button cancelButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancel" prefHeight="35.0" prefWidth="70.0" text="Cancel">
+            <Button cancelButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancel" prefHeight="40.0" prefWidth="80.0" text="Cancel">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="453.0" layoutY="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="240.0">
+      <HBox alignment="CENTER" layoutX="453.0" layoutY="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="260.0">
          <children>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="70.0" text="Back">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefHeight="40.0" prefWidth="80.0" text="Back">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefHeight="35.0" prefWidth="70.0" text="Next">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefHeight="40.0" prefWidth="80.0" text="Next">
                <font>
                   <Font size="14.0" />
                </font>
