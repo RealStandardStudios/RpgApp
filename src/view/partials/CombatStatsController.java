@@ -3,6 +3,7 @@ package view.partials;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import pathfinder.data.Feat;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Items.Armor;
@@ -177,6 +178,54 @@ public class CombatStatsController extends MainWindowController {
 	Label lblSpeedModifiers;
 	//endregion
 	
+	//region attacBonuses
+	@FXML
+	Label lblTotalMelee;
+	@FXML
+	Label lblBABMelee;
+	@FXML
+	Label lblAbilityMelee;
+	@FXML
+	Label lblSizeMelee;
+	@FXML
+	Label lblMiscMelee;
+	
+	@FXML
+	Label lblTotalRanged;
+	@FXML
+	Label lblBABRanged;
+	@FXML
+	Label lblAbilityRanged;
+	@FXML
+	Label lblSizeRanged;
+	@FXML
+	Label lblMiscRanged;
+	
+	@FXML
+	Label lblTotalCMB;
+	@FXML
+	Label lblBABCMB;
+	@FXML
+	Label lblAbilityCMB;
+	@FXML
+	Label lblSizeCMB;
+	@FXML
+	Label lblMiscCMB;
+	
+	@FXML
+	Label lblTotalCMD;
+	@FXML
+	Label lblBABCMD;
+	@FXML
+	Label lblCMDStr;
+	@FXML
+	Label lblCMDDex;
+	@FXML
+	Label lblSizeCMD;
+	@FXML
+	Label lblMiscCMD;
+	//endregion
+	
 	//region AC'S
 	@FXML
 	Label lblTotalAC;
@@ -200,7 +249,7 @@ public class CombatStatsController extends MainWindowController {
 	Label lblMiscAC;
 	
 	@FXML
-	Label lblTotalTouchTouchAC;
+	Label lblTotalTouchAC;
 	@FXML
 	Label lblArmorTouchAC;
 	@FXML
@@ -259,11 +308,63 @@ public class CombatStatsController extends MainWindowController {
 		setInitiative();
 		setSpeeds();
 		setAC();
+		setAttackBonus();
 	}
 	
+	//region setAtackBonus
+	public void setAttackBonus()
+	{
+		lblTotalMelee.setText((character.getBaB()[0] + 
+				character.getStrength().getModifier().get() +
+				character.getRace().getSize().getSizeModifier()) + "");
+		
+		lblBABMelee.setText(character.getBaB()[0]+"");
+		lblAbilityMelee.setText(character.getStrength().getModifier().get()+"");
+		lblSizeMelee.setText(character.getRace().getSize().getSizeModifier() + "");
+		lblMiscMelee.setText("0");
+		//sets up melee
+		
+		lblTotalRanged.setText((character.getBaB()[0] + 
+				character.getDexterity().getModifier().get() +
+				character.getRace().getSize().getSizeModifier()) + "");
+		
+		lblBABRanged.setText(character.getBaB()[0]+"");
+		lblAbilityRanged.setText(character.getDexterity().getModifier().get()+"");
+		lblSizeRanged.setText(character.getRace().getSize().getSizeModifier() + "");
+		lblMiscRanged.setText("0");
+		//sets up range
+		
+		lblTotalCMB.setText((character.getBaB()[0] + 
+				character.getStrength().getModifier().get() +
+				character.getRace().getSize().getSizeModifier()) + "");
+		
+		lblBABCMB.setText(character.getBaB()[0]+"");
+		lblAbilityCMB.setText(character.getStrength().getModifier().get()+"");
+		lblSizeCMB.setText(character.getRace().getSize().getSizeModifier() + "");
+		lblMiscCMB.setText("0");
+		//sets up CMB
+		
+		lblTotalCMD.setText((character.getBaB()[0]+
+				character.getStrength().getModifier().get()+
+				character.getDexterity().getModifier().get()+
+				character.getRace().getSize().getSizeModifier() + 10 ) + "");
+		
+		lblBABCMD.setText(character.getBaB()[0]+"");
+		lblCMDStr.setText(character.getStrength().getModifier().get()+"");
+		lblCMDDex.setText(character.getDexterity().getModifier().get()+"");
+		lblSizeCMD.setText(character.getRace().getSize().getSizeModifier() + "");
+		lblMiscCMD.setText("0");
+		//sets up CMD
+	}
+	//endregion
+	
+	//region setAC
 	public void setAC()
 	{
 		ObservableList<Armor> wornArmors = character.getInventory().getArmorWorn();
+		int totalFlatFootedAC = 10;
+		int totalAC = 10;
+		int totalTouchAC = 10;
 		int wornArmorAC = 0;
 		int shieldAC = 0;
 		int dexLimit = 1000;
@@ -285,34 +386,98 @@ public class CombatStatsController extends MainWindowController {
 				}
 			}
 		}
-		
+		totalAC += wornArmorAC + shieldAC;
+		totalFlatFootedAC += wornArmorAC + shieldAC;
 		lblArmorAC.setText(wornArmorAC+"");
 		lblShieldAC.setText(""+shieldAC);
+		lblArmorFlatFootAC.setText(wornArmorAC+"");
+		lblShieldFlatFootAC.setText(""+shieldAC);
 		
 		if(dexLimit < character.getDexterity().getModifier().get())
 		{
 			lblDexAC.setText(dexLimit + "");
+			lblDexTouchAC.setText(dexLimit + "");
+			totalAC += dexLimit;
+			totalTouchAC += dexLimit;
 		}
 		else
 		{
 			lblDexAC.setText(character.getDexterity().getModifier().get() + "");
+			lblDexTouchAC.setText(character.getDexterity().getModifier().get() + "");
+			totalAC += character.getDexterity().getModifier().get();
+			totalTouchAC += character.getDexterity().getModifier().get();
 		}
 		
-		lblTotalAC.setText(""+character.getArmorClass());
+		lblSizeAC.setText(character.getRace().getSize().getSizeModifier()+"");
+		lblSizeTouchAC.setText(character.getRace().getSize().getSizeModifier()+"");
+		lblSizeFlatFootAC.setText(character.getRace().getSize().getSizeModifier()+"");
 		
-		/*
-		lblTotalAC;
-		blArmorAC;
-		lblShieldAC;
+		totalAC += character.getRace().getSize().getSizeModifier();
+		totalTouchAC += character.getRace().getSize().getSizeModifier();
+		totalFlatFootedAC += character.getRace().getSize().getSizeModifier();
 		
-		lblSizeAC;
-		lblDodgeAC;
-		lblNaturalAC;
-		lblDeflectAC;
-		lblEnhAC;
-		lblMiscAC;
-		*/
+		int dodge = 0;
+		for (Feat feats : character.getFeats()) {
+			if(feats.getName().equals("Dodge*")) dodge++;
+		}
+		
+		lblDodgeAC.setText(dodge + "");
+		lblDodgeTouchAC.setText(dodge + "");
+		totalAC += dodge;
+		totalTouchAC += dodge;
+		
+		if(character.getRace().getName().equals("Kobolds"))
+		{
+			lblNaturalAC.setText("1");
+			lblNaturalFlatFootAC.setText("1");
+			totalAC += 1;
+			totalFlatFootedAC += 1;
+		}
+		else if(character.getRace().getName().equals("Changelings"))
+		{
+			lblNaturalAC.setText("1");
+			lblNaturalFlatFootAC.setText("1");
+			totalAC += 1 ;
+			totalFlatFootedAC += 1;
+		}
+		else if(character.getRace().getName().equals("Merfolk"))
+		{
+			lblNaturalAC.setText("2");
+			lblNaturalFlatFootAC.setText("2");
+			totalAC += 2;
+			totalFlatFootedAC += 2;
+		}
+		else if(character.getRace().getName().equals("Nagaji"))
+		{
+			lblNaturalAC.setText("1");
+			lblNaturalFlatFootAC.setText("1");
+			totalAC += 1;
+			totalFlatFootedAC += 1;
+		}
+		else
+		{
+			lblNaturalAC.setText("0");
+			lblNaturalFlatFootAC.setText("0");
+		}
+		
+		lblDeflectAC.setText("0");
+		lblEnhAC.setText("0");
+		lblMiscAC.setText("0");
+		lblTotalAC.setText(totalAC + "");
+		
+		lblNaturalTouchAC.setText("N/A");
+		lblDeflectTouchAC.setText("0");
+		lblEnhTouchAC.setText("N/A");
+		lblMiscTouchAC.setText("0");
+		lblTotalTouchAC.setText(totalTouchAC+"");
+		
+		
+		lblDeflectFlatFootAC.setText("0");
+		lblEnhFlatFootAC.setText("0");
+		lblMiscFlatFootAC.setText("0");
+		lblTotalFlatFootAC.setText(totalFlatFootedAC + "");
 	}
+	//endregion
 	
 	//region setSpeeds
 	public void setSpeeds()
@@ -348,10 +513,10 @@ public class CombatStatsController extends MainWindowController {
 	//region setHP
 	private void setHP()
 	{
-		lblCurrentHP.setText("do we track this");
-		lblMaxHP.setText("do we track this");
-		lblDamage.setText("do we track this");
-		lblNonLethalDamage.setText("do we track this");
+		lblCurrentHP.setText(character.getCurrentHP()+"");
+		lblMaxHP.setText(character.getMaxHP()+"");
+		lblDamage.setText((character.getMaxHP() - character.getCurrentHP())+"");
+		lblNonLethalDamage.setText(character.getNonLethalHP() +"");
 		lblHitDice.setText(character.getClasses()[0].getHitDice() + "");
 	}
 	//endregion

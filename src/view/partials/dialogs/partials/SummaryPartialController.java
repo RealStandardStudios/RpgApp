@@ -106,6 +106,8 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	
 	@Override
 	public void setData() {
+		setHPStats();
+		
 		//set fluff labels
 		lblClass.setText(getCharacter().getClasses()[0].getName());
 		lblName.setText(getCharacter().getName());
@@ -147,6 +149,14 @@ public class SummaryPartialController extends NewCharacterPartialController {
 			skills.add(skill);
 		}
 		tableSkills.setItems(FXCollections.observableArrayList(FXCollections.observableArrayList(skills)));
+	}
+	
+	private void setHPStats()
+	{
+		getCharacter().setMaxHP(1, getCharacter().getClasses()[0].getHitDice().getHitDiceAsInt(),
+				getCharacter().getConstitution().getModifier().get());
+		getCharacter().setCurrentHP(getCharacter().getMaxHP());
+		getCharacter().setNonLethalHP(0);
 	}
 
 	@Override
