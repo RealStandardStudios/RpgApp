@@ -2,7 +2,6 @@ package window;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.logging.Level;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +11,9 @@ import javafx.stage.Stage;
 import jefXif.Strings;
 import jefXif.view.Gui;
 import jefXif.view.RootLayoutController;
+
 import org.controlsfx.dialog.Dialogs;
+
 import view.RootController;
 import view.partials.MainWindowController;
 
@@ -20,6 +21,7 @@ import view.partials.MainWindowController;
  * @author Real Standard Studios - Matthew Meehan
  * Loads and Initializes the main program
  */
+@SuppressWarnings("deprecation")
 public class Interface extends Gui {
 	
 	public Interface(Stage primaryStage) {

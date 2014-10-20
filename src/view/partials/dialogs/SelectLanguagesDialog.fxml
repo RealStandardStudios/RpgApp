@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" stylesheets="@../../Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.SelectLanguagesDialogController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#handleOkay" text="Okay" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <TableView fx:id="tableLanguages" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="columnName" minWidth="-Infinity" prefWidth="210.0" resizable="false" text="Language Name" />
+          <TableColumn fx:id="columnSelected" minWidth="-Infinity" prefWidth="90.0" resizable="false" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
