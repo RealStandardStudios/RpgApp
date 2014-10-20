@@ -44,6 +44,8 @@ public class SelectLanguagesDialogController extends DialogController {
 		this.tableLanguages.setItems(this.languages);
 		this.columnName.setCellValueFactory(cellData->cellData.getValue().Language);
 		this.columnSelected.setCellValueFactory(cellData->cellData.getValue().CheckBox);
+		this.languages.get(0).CheckBox.get().setSelected(true);
+		this.languages.get(0).CheckBox.get().setDisable(true);
 	}
 	
 	public String[] getData() {

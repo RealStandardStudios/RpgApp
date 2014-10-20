@@ -173,15 +173,20 @@ public class ProfilePartialController extends NewCharacterPartialController {
 			languageDialogStage.initOwner(getParentWindow().getInterface().getPrimaryStage());;
 		// make sure its not a modal window
 		languageDialogStage.initModality(Modality.WINDOW_MODAL);
-		// set the WeapnView to the controller;
+		// set the view to the controller;
 		languageSelection = loader.getController();
-		// give the controller its stage
+		// give the controller its stage and other window references
 		languageSelection.setDialogStage(languageDialogStage);
 		languageSelection.setInterface(getInterface());
 		languageSelection.setNode(page);
 		languageSelection.setRoot(getRoot());
 		languageSelection.setData(getCharacter().getRace().getLanguages());
 		languageSelection.getDialogStage().showAndWait();
+		String languagesString = languageSelection.getData()[0];
+		for (int i = 1; i < languageSelection.getData().length; i++) {
+			languagesString+=", "+languageSelection.getData()[i];
+		}
+		lblLanguagesKnown.setText(languagesString);
 	}
 
 	private void fixTextAreas() {
