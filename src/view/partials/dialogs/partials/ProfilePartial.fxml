@@ -214,11 +214,19 @@
                         <Insets left="10.0" />
                      </padding>
                   </Label>
-                  <Label fx:id="lblLanguagesKnown" styleClass="data-label" text="Languages known here" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
+                  <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="lblLanguagesKnown" styleClass="data-label" text="Languages known here" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="btnLanguages" mnemonicParsing="false" onAction="#handleGetLanguages" text="Languages" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </HBox>
                   <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header-label-16-gold" text="Alignment:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets />
