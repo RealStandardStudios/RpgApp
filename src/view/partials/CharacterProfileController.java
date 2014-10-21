@@ -19,7 +19,7 @@ import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import pathfinder.data.Classes.Class;
 import view.RootController;
-import view.partials.levelUpDialog.LevelUpController;
+import view.partials.dialogs.LevelUpController;
 
 /**
  * The Controller for the Character Controller
