@@ -74,13 +74,13 @@ public class CharacterProfileController extends MainWindowController {
 		pathfinder.data.Character.Character character = ((RootController) getRoot()).getCharacter();
 		lblAge.setText(character.getFluff().get("Age"));
 		lblAlignment.setText(character.getAlignment().name());
-		lblApperance.setText(character.getFluff().get("Apperance"));
+		lblApperance.setText(character.getFluff().get("Appearance"));
 		lblBackground.setText(character.getFluff().get("Background"));
 		lblDeity.setText(character.getFluff().get("Deities"));
 		lblGender.setText(character.getFluff().get("Gender"));
 		lblHeight.setText(character.getFluff().get("Height"));
 		lblHomeland.setText(character.getFluff().get("HomeLand"));
-		lblLanguages.setText("Lol I don't think languages work yet");
+		lblLanguages.setText(character.getLanguagesString());
 		lblName.setText(character.getName());
 		lblPersonality.setText(character.getFluff().get("Personality"));
 		lblRace.setText(character.getRace().getName());
