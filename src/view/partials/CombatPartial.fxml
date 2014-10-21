@@ -24,346 +24,42 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneMediumBg" text="Actions" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+            <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" styleClass="titledPaneMediumBg" text="Actions" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Accordion layoutX="-41.0" layoutY="-224.0" prefHeight="180.0" prefWidth="273.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <panes>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Standard">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <ScrollPane fitToWidth="true" prefHeight="449.0" prefWidth="326.0">
-                                             <content>
-                                                <VBox layoutX="48.0" layoutY="113.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="242.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <children>
-                                                      <Label fx:id="lblActionAttackMelee" contentDisplay="RIGHT" styleClass="data-label" text="Attack (Melee)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionAttackRanged" contentDisplay="RIGHT" styleClass="data-label" text="Attack (Ranged)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionAttackUnarmed" contentDisplay="RIGHT" styleClass="data-label" text="Attack (Unarmed)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionTotalDefense" contentDisplay="RIGHT" styleClass="data-label" text="Total Defense">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionExAbility" contentDisplay="RIGHT" styleClass="data-label" text="Use Extraordinary Ability">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionSuAbility" contentDisplay="RIGHT" styleClass="data-label" text="Use Supernatural Ability">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionSpAbility" contentDisplay="RIGHT" styleClass="data-label" text="Use Spell-Like Ability">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionCastSpell" contentDisplay="RIGHT" styleClass="data-label" text="Cast Spell">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionConcentrate" contentDisplay="RIGHT" styleClass="data-label" text="Concentration for Spell Casting">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionUseSkillStd" contentDisplay="RIGHT" styleClass="data-label" text="Use Skill (Standard Action)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionCombatMnvrStd" contentDisplay="RIGHT" styleClass="data-label" text="Combat Maneuver (Standard Action)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionActivateMagicItem" contentDisplay="RIGHT" styleClass="data-label" text="Activate Magic Item (not Potion or Oil)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionDrinkPotion" contentDisplay="RIGHT" styleClass="data-label" text="Drink Potion or Apply Oil">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionEscapeGrapple" contentDisplay="RIGHT" styleClass="data-label" text="Escape Grapple">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionStabilize" contentDisplay="RIGHT" styleClass="data-label" text="Stabilize a dying Character">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </VBox>
-                                             </content>
-                                          </ScrollPane>
-                                       </children></AnchorPane>
-                              </content>
-                                 <font>
-                                    <Font name="System Bold Italic" size="14.0" />
-                                 </font>
-                            </TitledPane>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Move">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <ScrollPane hbarPolicy="NEVER" prefHeight="449.0" prefWidth="326.0" vbarPolicy="NEVER">
-                                             <content>
-                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="466.0" prefWidth="334.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <children>
-                                                      <Label fx:id="lblActionControlMount" contentDisplay="RIGHT" styleClass="data-label" text="Control Frightened Mount">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                             </content>
-                                          </ScrollPane>
-                                       </children></AnchorPane>
-                              </content>
-                                 <font>
-                                    <Font name="System Bold Italic" size="14.0" />
-                                 </font>
-                            </TitledPane>
-                            <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Full Round">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <ScrollPane hbarPolicy="NEVER" prefHeight="449.0" prefViewportHeight="426.6000061035156" prefViewportWidth="304.0" prefWidth="326.0" vbarPolicy="NEVER">
-                                             <content>
-                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="449.0" prefWidth="326.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <children>
-                                                      <Label fx:id="lblActionFullAttack" contentDisplay="RIGHT" styleClass="data-label" text="Full Attack">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionCharge" contentDisplay="RIGHT" styleClass="data-label" text="Charge">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionUseSkillFullRnd" contentDisplay="RIGHT" styleClass="data-label" text="Use Skill (Full Round)">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                      <Label fx:id="lblActionEscapeNet" contentDisplay="RIGHT" styleClass="data-label" text="Escape from a Net">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                             </content>
-                                          </ScrollPane>
-                                       </children></AnchorPane>
-                              </content>
-                                 <font>
-                                    <Font name="System Bold Italic" size="14.0" />
-                                 </font>
-                            </TitledPane>
-                              <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Swift">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <ScrollPane hbarPolicy="NEVER" prefHeight="449.0" prefViewportHeight="426.6000061035156" prefViewportWidth="304.0" prefWidth="326.0" vbarPolicy="NEVER">
-                                             <content>
-                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="449.0" prefWidth="326.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <children>
-                                                      <Label fx:id="lblActionCastQuickSpell" contentDisplay="RIGHT" styleClass="data-label" text="Cast Quickened Spell">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <Label text="►">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </graphic>
-                                                      </Label>
-                                                      <Separator prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                             </content>
-                                          </ScrollPane>
-                                       </children></AnchorPane>
-                                </content>
-                                 <font>
-                                    <Font name="System Bold Italic" size="14.0" />
-                                 </font>
-                              </TitledPane>
-                              <TitledPane animated="false" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Free">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                </content>
-                                 <font>
-                                    <Font name="System Bold Italic" size="14.0" />
-                                 </font>
-                              </TitledPane>
-                              <TitledPane animated="false" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Immediate">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                </content>
-                                 <font>
-                                    <Font name="System Bold Italic" size="14.0" />
-                                 </font>
-                              </TitledPane>
-                          </panes>
-                        </Accordion>
+                        <VBox pickOnBounds="false" styleClass="action-menu-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <MenuButton mnemonicParsing="false" pickOnBounds="false" prefHeight="35.0" prefWidth="333.0" text="Standard Actions">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#handleAttack" styleClass="action-menu-item" text="Attack Unarmed" />
+                                  <MenuItem fx:id="handleSkill" mnemonicParsing="false" styleClass="action-menu-item" text="Use a Skill" />
+                                    <MenuItem fx:id="handleCombatManeuver" mnemonicParsing="false" styleClass="action-menu-item" text="Combar Maneuver" />
+                                    <MenuItem fx:id="handleEscapeGrapple" mnemonicParsing="false" styleClass="action-menu-item" text="Escape Grapple" />
+                                </items>
+                              </MenuButton>
+                              <Separator prefWidth="200.0" />
+                              <MenuButton mnemonicParsing="false" pickOnBounds="false" prefHeight="36.0" prefWidth="334.0" text="Move">
+                                <items>
+                                  <MenuItem fx:id="handleMove" mnemonicParsing="false" styleClass="action-menu-item" text="Move" />
+                                </items>
+                              </MenuButton>
+                              <Separator prefWidth="200.0" />
+                              <MenuButton mnemonicParsing="false" pickOnBounds="false" prefHeight="36.0" prefWidth="334.0" text="Full Round">
+                                 <items>
+                                    <MenuItem fx:id="handleCharge" mnemonicParsing="false" styleClass="action-menu-item" text="Charge" />
+                                    <MenuItem fx:id="handleEscape" mnemonicParsing="false" styleClass="action-menu-item" text="Escape a net" />
+                                 </items>
+                              </MenuButton>
+                              <Separator prefWidth="200.0" />
+                              <MenuButton mnemonicParsing="false" pickOnBounds="false" prefHeight="36.0" prefWidth="334.0" text="Swift">
+                                 <items>
+                                    <MenuItem fx:id="handleMove" mnemonicParsing="false" styleClass="action-menu-item" text="5 foot step" />
+                                 </items>
+                              </MenuButton>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
               </content>
@@ -371,11 +67,11 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </TitledPane>
-            <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneMediumBg" text="Combat Statistics" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+            <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" styleClass="titledPaneMediumBg" text="Combat Statistics" GridPane.halignment="LEFT" GridPane.valignment="TOP">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Accordion layoutX="63.0" layoutY="158.0" prefHeight="669.0" prefWidth="358.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Accordion layoutX="63.0" layoutY="158.0" pickOnBounds="false" prefHeight="645.0" prefWidth="340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <panes>
                             <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="combatSubTitlePane" text="Initiative">
                               <content>
@@ -998,7 +694,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneMediumBg" text="Selected Actions" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" styleClass="titledPaneMediumBg" text="Selected Actions" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -1068,7 +764,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TitledPane>
-                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneMediumBg" text="Combat Log" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" styleClass="titledPaneMediumBg" text="Combat Log" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -1087,7 +783,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TitledPane>
-                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titledPaneMediumBg" text="Notes" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" styleClass="titledPaneMediumBg" text="Notes" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>

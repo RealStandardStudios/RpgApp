@@ -10,14 +10,8 @@
   * Titled pane heading: #CCA41F (gold)
   * "Sub-titled Pane" heading: #DDDDDD (gray) */
  
- .windowBackground {
- 	-fx-background-color: #e9e9d5;
- }
- 
- .tab-pane:top > .tab-header-area > .tab-header-background {
- 	-fx-background-color: #e9e9d5;
- }
- 
+ .windowBackground,
+ .tab-pane:top > .tab-header-area > .tab-header-background,
  .tab-pane:top > .tab-content-area {
  	-fx-background-color: #e9e9d5;
  }
@@ -42,11 +36,6 @@
 .summary-label {
 	-fx-text-fill: WHITE;
 }
-/*
-.summary-grid-pane {
-	-fx-background-color: BLACK;
-}
-*/
 .summary-data-label {
 	-fx-padding: 5px;
 	-fx-background-color: White;
@@ -72,7 +61,11 @@
  * TitledPane                                                                  *
  *                                                                             *
  ******************************************************************************/
-.titled-pane, .table-view {
+.titled-pane,
+.table-view,
+.button,
+.item-slot-label,
+.titled-pane > .title {
 	-fx-border-color: rgb(76.0,60.0,11.0);
 }
 .titled-pane {
@@ -82,36 +75,25 @@
 	-fx-background-radius: 2.0;
 }
 .titled-pane > .title {
-    -fx-background-color: #7d4609;
     -fx-alignment: CENTER;
     -fx-padding: 0.0;
     -fx-background-radius: 0.0;
-    -fx-border-color: rgb(76.0,60.0,11.0);
     -fx-border-width: 0.0 0.0 2.0px 0.0;
 }
 .titled-pane > .title > .text {
 	-fx-font-size:20.0px;
 	-fx-font-weight: Bold;
 }
-.titledPaneMediumBg > .content {
-	-fx-background-color: #DBBC9A;
-}
-
-.titledPaneLightBg > .content {
-	-fx-background-color: #EDD4BA;
-}
-
-.combatSubTitlePane > .content {
+.titledPaneMediumBg > .content,
+.titledPaneLightBg > .content,
+.combatSubTitlePane > .content,
+.combatSubTitlePane .scroll-pane .viewport {
 	-fx-background-color: #EDD4BA;
 }
 
 .combatSubTitlePane > .title > .text {
 	-fx-fill: #DDDDDD;
 	-fx-font-style: italic;
-}
-
-.combatSubTitlePane .scroll-pane .viewport {
-	-fx-background-color: #EDD4BA;
 }
 
 .titledPanePageBg > .content {
@@ -130,10 +112,15 @@
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
  
+ .tab > .tab-container > .tab-label > .text,
+ .tab:selected > .tab-container > .tab-label > .text{
+ 	-fx-font-size:16.0px;
+	-fx-font-weight: Bold;
+ }
+ 
+ 
  .tab > .tab-container > .tab-label > .text {
 	-fx-fill: BLACK;
-	-fx-font-size:16.0px;
-	-fx-font-weight: Bold;
  }
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab:selected {
@@ -144,8 +131,6 @@
  
  .tab:selected > .tab-container > .tab-label > .text {
 	-fx-fill: #CCA41F;
-	-fx-font-size:16.0px;
-	-fx-font-weight: Bold;
  }
   
  
@@ -164,7 +149,6 @@
  .button {
  	-fx-effect: dropshadow( gaussian , #777777 , 0,0,2,2 );
  	-fx-border-width: 1.0px 1.5px 1.5 1.0px;
- 	-fx-border-color: rgb(76.0,60.0,11.0);
  }
  
  .button:hover .text {
@@ -205,7 +189,6 @@
  .item-slot-label {
  	-fx-background-color: #EDD4BA;
  	-fx-border-width: 2.0px 2.0px 2.0 2.0px;
- 	-fx-border-color: rgb(76.0,60.0,11.0);
  }
 
  .data-label {
@@ -234,7 +217,8 @@
  	-fx-font-weight: Bold;
  }
  
- .data-label-gold > .text {
+ .data-label-gold > .text,
+ .columnHeader > .text  {
  	-fx-font-size: 14.0px;
  }
  
@@ -242,28 +226,20 @@
  	/*-fx-background-color: BLACK;*/
  	-fx-halignment: right;
  }
- .header-label-18-gold > .text {
- 	-fx-font-size: 18.0px;
- 	-fx-font-style: italic;
- }
- 
- .header-label-16-gold > .text {
- 	-fx-font-style: italic;
- }
- 
+ .header-label-18-gold > .text,
+ .header-label-16-gold > .text, 
  .header-label-16-black-i > .text {
  	-fx-font-style: italic;
  }
+ .header-label-18-gold > .text {
+ 	-fx-font-size: 18.0px;
+}
  
  .columnHeader > .text,
  .header-label-16-black > .text,
  .header-label-16-black-i > .text  {
  	-fx-fill: BLACK;
  	-fx-font-weight: Bold;
- }
- 
- .columnHeader > .text {
- 	-fx-font-size: 14.0px;
  }
  
  /******************************************************************************
@@ -320,22 +296,39 @@
  
  /******************************************************************************
  *                                                                             *
- * ScrollPane, textArea, textField                                             *
- *                                                                             *
- ******************************************************************************/
- .scroll-pane > .viewport {
- 	/*-fx-background-color: #ABC123;*/
- } 
-
- 
-  /******************************************************************************
- *                                                                             *
  * Combo Box 						                                           *
  *                                                                             *
  ******************************************************************************/
- 
- .combo-box > .list-cell > .text {
+  .combo-box > .list-cell > .text {
  	-fx-fill: BLACK;
  	-fx-font-size: 14.0px;
  	-fx-font-style: italic;
- } 
+ }
+ /******************************************************************************
+ *                                                                             *
+ * Menu bar 						                                           *
+ *                                                                             *
+ ******************************************************************************/ 
+ 
+ .action-menu-bar,
+ .action-menu-bar .menu-button {
+ 	-fx-border-color: rgb(76.0,60.0,11.0);
+ 	-fx-border-width: 3.0px 3.0px 3.0 3.0px;
+ 	-fx-background-radius: 2px;
+ 	-fx-background-color: #7d4609;
+ }
+ .action-menu-bar .menu-button .label .text {
+	-fx-font-size: 18px;
+	-fx-font-weight: Bold;
+ 	-fx-fill: #DDDDDD;
+	-fx-font-style: italic;
+ }
+ /*
+ .action-menu-item {
+ 	-fx-background-color: rgb(76.0,60.0,11.0);
+ 	-fx-border-color: Black;
+ 	-fx-border-width: 2px;
+ }
+ .action-menu-item:hover {
+ 	-fx-background-color: rgb(96.0,70.0,11.0)
+ } */

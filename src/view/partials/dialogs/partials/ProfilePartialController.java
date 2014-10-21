@@ -1,7 +1,6 @@
 package view.partials.dialogs.partials;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import javafx.event.ActionEvent;
