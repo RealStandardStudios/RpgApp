@@ -17,7 +17,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@../Maintheme.css">
                      <children>
-                        <GridPane layoutX="111.0" layoutY="91.0" prefHeight="669.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <GridPane layoutX="111.0" layoutY="91.0" prefHeight="664.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <Label styleClass="header-label-18-gold" text="Name:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                                  <font>
@@ -27,7 +27,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Race:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Race:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -35,7 +35,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Homeland:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Homeland:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -43,7 +43,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Background:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Background:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -51,7 +51,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Gender:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Gender:" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -59,7 +59,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Age:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Age:" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -67,7 +67,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Appearance:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Appearance:" GridPane.halignment="RIGHT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -75,7 +75,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Personality:" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Personality:" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -83,7 +83,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Alignment:" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Alignment:" GridPane.halignment="RIGHT" GridPane.rowIndex="16" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -91,7 +91,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Height:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Height:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -99,7 +99,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Weight:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Weight:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -107,7 +107,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Deities:" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Deities:" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -115,7 +115,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label styleClass="header-label-18-gold" text="Languages:" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                              <Label styleClass="header-label-18-gold" text="Languages:" GridPane.halignment="RIGHT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -123,19 +123,29 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                              <Label fx:id="lblName" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblRace" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblHomeland" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblGender" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblAge" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblHeight" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblWeight" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblAlignment" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblDeity" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblLanguages" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-                              <Label fx:id="lblBackground" prefHeight="62.0" prefWidth="393.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
-                              <Label fx:id="lblApperance" prefHeight="17.0" prefWidth="392.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6" />
-                              <Label fx:id="lblPersonality" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
+                              <Label fx:id="lblName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblRace" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblHomeland" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblGender" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblAge" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblHeight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblWeight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblAlignment" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblDeity" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblLanguages" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblBackground" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="393.0" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="NEVER" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
+                              <Label fx:id="lblApperance" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+                              <Label fx:id="lblPersonality" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="Label Filler Text" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="14" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="1" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="3" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="5" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="7" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="9" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="11" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="13" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="15" />
+                              <Separator GridPane.columnSpan="4" GridPane.rowIndex="17" />
+                              <Separator prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="19" />
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
@@ -144,17 +154,27 @@
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
                            </columnConstraints>
                            <rowConstraints>
+                              <RowConstraints minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
                               <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
                               <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
                               <RowConstraints vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="244.0" minHeight="-Infinity" prefHeight="28.00000762939453" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="-Infinity" prefHeight="137.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="-Infinity" prefHeight="130.0" vgrow="SOMETIMES" />
-                              <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
-                              <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
-                              <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                         </GridPane>
                      </children>
@@ -187,9 +207,10 @@
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints maxHeight="-Infinity" minHeight="40.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="-Infinity" minHeight="40.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <Label styleClass="header-label-18-gold" text="Favored Class:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
@@ -202,12 +223,12 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblClass" styleClass="data-label" text="class" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                              <Label fx:id="lblClass" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="class" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblArchetype" disable="true" styleClass="data-label" text="archetype" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label fx:id="lblArchetype" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="archetype" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -222,17 +243,17 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblExp" styleClass="data-label" text="experience" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                              <Label fx:id="lblExp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="experience" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="lblLevel" styleClass="data-label" text="next level" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label fx:id="lblLevel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label" text="next level" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <TableView fx:id="tableClasses" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" GridPane.columnSpan="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                              <TableView fx:id="tableClasses" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" GridPane.columnSpan="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
                                 <columns>
                                   <TableColumn fx:id="columnClass" prefWidth="320.0" text="Class" />
                                   <TableColumn fx:id="columnLevels" prefWidth="200.0" text="Levels" />
@@ -241,6 +262,8 @@
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                  </columnResizePolicy>
                               </TableView>
+                              <Button mnemonicParsing="false" onAction="#addExp" prefHeight="38.0" prefWidth="86.0" text="Add Exp" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <Button fx:id="btnLevelUp" disable="true" mnemonicParsing="false" onAction="#handleLevelUp" prefHeight="38.0" prefWidth="100.0" text="Level Up" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </children></AnchorPane>
