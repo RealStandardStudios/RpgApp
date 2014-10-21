@@ -153,10 +153,12 @@ public class SummaryPartialController extends NewCharacterPartialController {
 	
 	private void setHPStats()
 	{
-		getCharacter().setMaxHP(1, getCharacter().getClasses()[0].getHitDice().getHitDiceAsInt(),
+		getCharacter().setLevel(1);
+		getCharacter().setMaxHP(getCharacter().getClasses()[0].getHitDice().getHitDiceAsInt(),
 				getCharacter().getConstitution().getModifier().get());
 		getCharacter().setCurrentHP(getCharacter().getMaxHP());
 		getCharacter().setNonLethalHP(0);
+		getCharacter().setExperienceTrack(0);
 	}
 
 	@Override

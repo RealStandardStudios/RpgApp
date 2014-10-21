@@ -433,7 +433,7 @@ public class CombatStatsController extends MainWindowController {
 			totalAC += 1;
 			totalFlatFootedAC += 1;
 		}
-		else if(character.getRace().getName().equals("Changelings"))
+		else if(character.getRace().getName().equals("Changeling"))
 		{
 			lblNaturalAC.setText("1");
 			lblNaturalFlatFootAC.setText("1");
