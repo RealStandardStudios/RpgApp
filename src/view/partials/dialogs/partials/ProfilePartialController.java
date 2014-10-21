@@ -144,7 +144,10 @@ public class ProfilePartialController extends NewCharacterPartialController {
 		fluff.put("Appearance", txtaCharAppearance.getText());
 		fluff.put("Personality", txtaCharPersonality.getText());
 		getCharacter().setFluff(fluff);
-		getCharacter().setLanguages(languageSelection.getData());
+		if(languageSelection!=null)
+			getCharacter().setLanguages(languageSelection.getData());
+		else
+			getCharacter().setLanguages(new String[]{lblLanguagesKnown.getText()});
 	}
 	
 	@FXML
