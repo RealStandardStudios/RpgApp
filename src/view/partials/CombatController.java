@@ -1,5 +1,8 @@
 package view.partials;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
 
 /**
  * The Controller for Combat
@@ -18,6 +21,11 @@ public class CombatController extends MainWindowController {
 	public void setData() {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@FXML
+	private void handleAttack(ActionEvent event) {
+	
 	}
 
 }

@@ -145,7 +145,7 @@ public class CharacterProfileController extends MainWindowController {
 		}
 	}
 	
-	/*
+	
 	@FXML
 	public void handleLevelUp()
 	{
@@ -169,7 +169,7 @@ public class CharacterProfileController extends MainWindowController {
 			LevelUpController controller = loader.getController();
 			controller.setDialogStage(dialogStage);
 			controller.setInterface(getInterface());
-			controller.loadPartials();
+			//controller.loadPartials();
 			dialogStage.onCloseRequestProperty().set(new EventHandler<WindowEvent>() {
 				
 				@Override
@@ -185,7 +185,6 @@ public class CharacterProfileController extends MainWindowController {
 			e.printStackTrace();
 		}
 	}
-	*/
 	
 	public void updateExp()
 	{
