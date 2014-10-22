@@ -34,8 +34,8 @@
                   </TableView>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <children>
-                        <Label fx:id="lblFeatName" alignment="TOP_LEFT" styleClass="columnHeader-gold" text="Feat name here" />
-                        <Label fx:id="lblFeatDescription" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label-centre" text="Benefit text here" wrapText="true" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="lblFeatName" alignment="TOP_LEFT" styleClass="columnHeader-gold" text="-" />
+                        <Label fx:id="lblFeatDescription" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="data-label-centre" text="-" wrapText="true" VBox.vgrow="ALWAYS" />
                      </children>
                      <GridPane.margin>
                         <Insets left="20.0" />
@@ -64,13 +64,14 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="lblFeatSelections" alignment="CENTER" styleClass="columnHeader" text="number" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Label fx:id="lblFeatSelections" alignment="CENTER" styleClass="columnHeader" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                         <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <children>
                               <Button fx:id="btnAddFeat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddFeat" prefHeight="40.0" prefWidth="200.0" text="Add to Character" />
                               <Button fx:id="btnRemoveFeat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleRemoveFeat" prefHeight="40.0" prefWidth="200.0" text="Remove from Character" />
                            </children>
                         </VBox>
+                        <Separator GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER" />
                      </children>
                   </GridPane>
                </children>
