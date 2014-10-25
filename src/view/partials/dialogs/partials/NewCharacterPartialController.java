@@ -1,14 +1,17 @@
 package view.partials.dialogs.partials;
 
+import java.io.File;
+
 import jefXif.interfaces.DataFileReader;
 import jefXif.view.WindowController;
 import pathfinder.data.Character.Character;
+import rpg.MainApp;
 import view.partials.dialogs.NewCharacterController;
 
 public abstract class NewCharacterPartialController extends WindowController implements DataFileReader {
 	private NewCharacterController parentWindow;
 	
-	public final String programRoot = "../../../../../../";
+	public final File DataFile = new File(MainApp.class.getResource("../").getPath()+"/data");
 	
 	/**
 	 * This is what you will use to set the data for the partial view

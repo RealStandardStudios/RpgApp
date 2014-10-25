@@ -225,10 +225,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
 
 	void readItems() {
-		File file = new File(this.getClass().getResource("").getPath() + programRoot + "PathfinderData/data");
-		File weaponsFile = new File(file.getPath() + "\\Weapons.idf");
-		File armorFile = new File(file.getPath() + "\\Armors.idf");
-		File goodsFile = new File(file.getPath() + "\\GoodsAndServices.idf");
+		File weaponsFile = new File(DataFile.getPath() +  "\\Weapons.idf");
+		File armorFile = new File(DataFile.getPath() +  "\\Armors.idf");
+		File goodsFile = new File(DataFile.getPath() +  "\\GoodsAndServices.idf");
 		try {
 			obsListWeapons = FXCollections.observableArrayList(readDataFile(weaponsFile, Weapon.class));
 			obsListArmor = FXCollections.observableArrayList(readDataFile(armorFile, Armor.class));

@@ -132,9 +132,9 @@ public class OtherCharacterController extends MainWindowController {
 	@Override
 	public void setData() {
 		//gets all the files in the folder /characters
-		File ogFile = new File(MainApp.class.getResource("../").getPath()+"../characters");
+		File ogFile = new File(MainApp.class.getResource("").getPath()+"../characters");
 		ogFile.mkdir();
-		File[] characterFiles = Tools.listFilesForFolder(new File(MainApp.class.getResource("../").getPath()+"../characters"));
+		File[] characterFiles = Tools.listFilesForFolder(ogFile);
 		for (int i=0;i<characterFiles.length;i++) {
 			File file = characterFiles[i];
 			//if they are .cdf files

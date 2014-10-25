@@ -27,6 +27,7 @@ import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Character.Character;
 import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Races.Traits.Trait;
+import rpg.MainApp;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
 /**
@@ -36,7 +37,6 @@ import view.partials.dialogs.partials.NewCharacterPartialController;
 @SuppressWarnings("deprecation")
 public class NewCharacterController extends DialogController implements jefXif.interfaces.PartialLoader {
 
-	public final String programRoot = "../../../../../";
 	String[] partialNames = new String[] { "AbilityScores", "Class", "Equipment", "Feat", "Profile", "Race", "Skills", "Summary" };
 
 	private HashMap<String, NewCharacterPartialController> partials;
@@ -191,8 +191,8 @@ public class NewCharacterController extends DialogController implements jefXif.i
 			try {
 				saveCharacter();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+//				e.printStackTrace();
+				Dialogs.create().title("ERROR").masthead("There was an Error saving the Character").message(e.getStackTrace().toString()).showWarning();
 			}
 		}
 	}
@@ -216,7 +216,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
 		DirectoryChooser directoryChooser = new DirectoryChooser();
 
 		directoryChooser.setTitle("Data Directory");
-		File defaultDirectory = new File(this.getClass().getResource("").getPath() + "\\..\\..\\..\\..\\characters");
+		File defaultDirectory = new File(MainApp.class.getResource("").getPath() + "\\..\\characters");
 		if (!defaultDirectory.exists())
 			defaultDirectory.mkdirs();
 		directoryChooser.setInitialDirectory(defaultDirectory);

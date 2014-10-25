@@ -23,6 +23,7 @@ import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelTable.LevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.MonkLevelTableRow;
 import pathfinder.data.Classes.Objects.LevelTable.SpellLevelTableRow;
+import rpg.MainApp;
 
 /**
  * the controller for the partial for Classes
@@ -443,11 +444,9 @@ public class ClassPartialController extends NewCharacterPartialController {
 	 * reads the classes in from a file
 	 */
 	private void readClasses() {
-		File file = new File(this.getClass().getResource("").getPath()
-				+ programRoot + "PathfinderData/data");
-		File featsFile = new File(file.getPath() + "\\Classes.cldf");
+		File classFile = new File(DataFile.getPath() + "\\Classes.cldf");
 		try {
-			classes.setAll(readDataFile(featsFile, Class.class));
+			classes.setAll(readDataFile(classFile, Class.class));
 		} catch (Exception e) {
 			Dialogs.create().masthead("Read Error")
 					.masthead("Couldn't read the Class File Properly")
