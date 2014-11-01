@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -19,5 +20,10 @@
       </font>
     </Button>
     <Button font="$x1" layoutX="228.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleNewCharacterAction" text="New Character" />
+      <ImageView fitHeight="150.0" fitWidth="563.0" layoutX="511.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/RealStandardStudios%20Logo.jpg" />
+         </image>
+      </ImageView>
   </children>
 </AnchorPane>
