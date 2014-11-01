@@ -47,7 +47,7 @@ public class FeatPartialController extends NewCharacterPartialController {
 	
 	void readFeats()
 	{
-		File featsFile = new File(DataFile.getPath() + "\\Feats.fdf");
+		File featsFile = new File(DataFile + "\\Feats.fdf");
 		try {
 			feats.setAll(readDataFile(featsFile, Feat.class));
 		} catch (Exception e) {

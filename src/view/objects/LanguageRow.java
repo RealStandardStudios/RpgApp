@@ -27,7 +27,7 @@ public class LanguageRow {
 	
 	/**
 	 * Creates a wrapper for the data stored in a row of the TableView on the SelectLanguagesDialog
-	 * @param Language
+	 * @param language
 	 */
 	public LanguageRow(String language) {
 		this.Language = new SimpleStringProperty(language);

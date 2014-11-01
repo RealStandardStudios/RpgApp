@@ -61,7 +61,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	private TableColumn<Goods, String> columnGoodsName;
 
 	// endregion Items available
-	
+
 	@FXML
 	Label lblWeightValue;
 	@FXML
@@ -126,19 +126,21 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		tableWeaponsAvailable.setRowFactory(tableView -> {
 			final TableRow<Weapon> row = new TableRow<>();
 
-			row.hoverProperty().addListener((observable) -> {
-				final Weapon weapon = row.getItem();
-				if (row.isHover() && weapon != null) {
-					weaponView.setItem(weapon);
-					Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth() + weaponView.getDialogStage().getWidth(), 0);
-					weaponView.getDialogStage().setX(bound.getX());
-					weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
+			row.hoverProperty().addListener(
+					(observable) -> {
+						final Weapon weapon = row.getItem();
+						if (row.isHover() && weapon != null) {
+							weaponView.setItem(weapon);
+							Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth()
+									+ weaponView.getDialogStage().getWidth(), 0);
+							weaponView.getDialogStage().setX(bound.getX());
+							weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
 
-					weaponView.show();
+							weaponView.show();
 
-					getParentWindow().getDialogStage().setFocused(true);
-				}
-			});
+							getParentWindow().getDialogStage().setFocused(true);
+						}
+					});
 
 			return row;
 		});
@@ -149,15 +151,17 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		tableArmorAvailable.setRowFactory(tableView -> {
 			final TableRow<Armor> row = new TableRow<>();
 
-			row.hoverProperty().addListener((observable) -> {
-				final Armor armor = row.getItem();
-				if (row.isHover() && armor != null) {
-					armorView.setItem(armor);
-					armorView.getDialogStage().setX(row.getLayoutX() + row.getWidth() + armorView.getDialogStage().getWidth());
-					armorView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
-					armorView.show();
-				}
-			});
+			row.hoverProperty().addListener(
+					(observable) -> {
+						final Armor armor = row.getItem();
+						if (row.isHover() && armor != null) {
+							armorView.setItem(armor);
+							armorView.getDialogStage().setX(
+									row.getLayoutX() + row.getWidth() + armorView.getDialogStage().getWidth());
+							armorView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
+							armorView.show();
+						}
+					});
 			return row;
 		});
 		columnArmorName.setCellValueFactory(cellData -> cellData.getValue().Name);
@@ -167,15 +171,17 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		tableGoodsAvailable.setRowFactory(tableView -> {
 			final TableRow<Goods> row = new TableRow<>();
 
-			row.hoverProperty().addListener((observable) -> {
-				final Goods good = row.getItem();
-				if (row.isHover() && good != null) {
-					goodsView.setItem(good);
-					goodsView.getDialogStage().setX(row.getLayoutX() + row.getWidth() + goodsView.getDialogStage().getWidth());
-					goodsView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
-					goodsView.show();
-				}
-			});
+			row.hoverProperty().addListener(
+					(observable) -> {
+						final Goods good = row.getItem();
+						if (row.isHover() && good != null) {
+							goodsView.setItem(good);
+							goodsView.getDialogStage().setX(
+									row.getLayoutX() + row.getWidth() + goodsView.getDialogStage().getWidth());
+							goodsView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
+							goodsView.show();
+						}
+					});
 			return row;
 		});
 		columnGoodsName.setCellValueFactory(cellData -> cellData.getValue().Name);
@@ -192,7 +198,7 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	 */
 	public void setData() {
 		inventoryPartial.setupScreen();
-		
+
 		lblWeightValue.setText(totalWeight + "");
 		if (getCharacter().getClasses()[0].getName() != classChosen) {
 			btnRollStartingWealth.setDisable(false);
@@ -225,17 +231,17 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	}
 
 	void readItems() {
-		File weaponsFile = new File(DataFile.getPath() +  "\\Weapons.idf");
-		File armorFile = new File(DataFile.getPath() +  "\\Armors.idf");
-		File goodsFile = new File(DataFile.getPath() +  "\\GoodsAndServices.idf");
+		File weaponsFile = new File(DataFile + "\\Weapons.idf");
+		File armorFile = new File(DataFile + "\\Armors.idf");
+		File goodsFile = new File(DataFile + "\\GoodsAndServices.idf");
 		try {
 			obsListWeapons = FXCollections.observableArrayList(readDataFile(weaponsFile, Weapon.class));
 			obsListArmor = FXCollections.observableArrayList(readDataFile(armorFile, Armor.class));
 			obsListGoods = FXCollections.observableArrayList(readDataFile(goodsFile, Goods.class));
 			loadInventory();
 		} catch (Exception e) {
-			Dialogs.create().masthead("Read Error").masthead("Couldn't read the one of the Equipment Files properly").message(e.getMessage())
-					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the one of the Equipment Files properly")
+					.message(e.getMessage()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			e.printStackTrace();
 		}
 	}
@@ -318,7 +324,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 				}
 				inventoryPartial.addItem(itemToAdd);
 			} else {
-				Dialogs.create().masthead("The item you have selected is too expensive").message(String.format("Cost:%s\nAvailable Gold:%.2f", itemToAdd.Cost.get(),goldRemaining)).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
+				Dialogs.create().masthead("The item you have selected is too expensive")
+						.message(String.format("Cost:%s\nAvailable Gold:%.2f", itemToAdd.Cost.get(), goldRemaining))
+						.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			}
 		}
 	}

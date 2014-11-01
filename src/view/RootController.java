@@ -113,7 +113,7 @@ public class RootController extends RootLayoutController {
 	}
 
 	/**
-	 * handler for the Other Character ecent
+	 * handler for the Other Character event
 	 * 
 	 * @param event
 	 */

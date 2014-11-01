@@ -68,7 +68,7 @@ public class RacePartialController extends NewCharacterPartialController {
 	}
 
 	private void readRaces() {
-		File raceFile = new File(DataFile.getPath() + "\\Races.rdf");
+		File raceFile = new File(DataFile + "\\Races.rdf");
 		try {
 			races.setAll(readDataFile(raceFile, Race.class));
 		} catch (Exception e) {

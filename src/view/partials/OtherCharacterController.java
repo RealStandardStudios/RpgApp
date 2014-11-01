@@ -106,13 +106,9 @@ public class OtherCharacterController extends MainWindowController {
 			controller.setDialogStage(dialogStage);
 			controller.setInterface(getInterface());
 			controller.loadPartials();
-			dialogStage.onCloseRequestProperty().set(new EventHandler<WindowEvent>() {
-				
-				@Override
-				public void handle(WindowEvent event) {
-					controller.handleCancel(null);
-				}
-			});
+			dialogStage.onCloseRequestProperty().set((EventHandler<WindowEvent>) (WindowEvent event) -> {
+                            controller.handleCancel(null);
+                        });
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
