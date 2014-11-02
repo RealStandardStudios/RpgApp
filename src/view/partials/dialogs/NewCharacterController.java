@@ -26,7 +26,6 @@ import org.controlsfx.dialog.Dialogs;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Character.Character;
-import rpg.MainApp;
 import view.partials.dialogs.partials.NewCharacterPartialController;
 
 /**
@@ -34,7 +33,7 @@ import view.partials.dialogs.partials.NewCharacterPartialController;
  * @author Real Standard Studios - Matthew Meehan
  */
 @SuppressWarnings("deprecation")
-public class NewCharacterController extends DialogController implements jefXif.interfaces.PartialLoader {
+public class NewCharacterController extends DialogController {
 
     String[] partialNames = new String[]{"AbilityScores", "Class", "Equipment", "Feat", "Profile", "Race", "Skills", "Summary"};
 
@@ -93,7 +92,6 @@ public class NewCharacterController extends DialogController implements jefXif.i
      * @return the window controller specified
      * @throws java.io.IOException
      */
-    @Override
     public WindowController loadPartial(String name, Gui ui) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(this.getClass().getResource("partials/" + name + "Partial.fxml"));
@@ -221,7 +219,7 @@ public class NewCharacterController extends DialogController implements jefXif.i
         DirectoryChooser directoryChooser = new DirectoryChooser();
 
         directoryChooser.setTitle("Data Directory");
-        File defaultDirectory = new File(MainApp.class.getResource("").getPath() + "\\..\\characters");
+        File defaultDirectory = new File(System.getProperty("user.dir")+ "\\characters");
         if (!defaultDirectory.exists()) {
             defaultDirectory.mkdirs();
         }

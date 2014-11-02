@@ -443,7 +443,6 @@ public class ClassPartialController extends NewCharacterPartialController {
     private void readClasses() {
         File classFile = new File(DataFile+"\\Classes.cldf");
         try {
-        	System.out.println(classFile.getAbsolutePath());
             classes.setAll(readDataFile(classFile, Class.class));
         } catch (Exception e) {
             Dialogs.create().masthead("Read Error")

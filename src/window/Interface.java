@@ -1,6 +1,7 @@
 package window;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import javafx.fxml.FXMLLoader;
@@ -34,8 +35,7 @@ public class Interface extends Gui {
 		try {
 			// Load root layout from fxml file
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(this.getClass().getResource(
-					"../view/RootLayout.fxml"));
+			loader.setLocation(RootController.class.getResource("RootLayout.fxml"));
 			BorderPane pane = loader.load();
 
 			// Show the scene containing the root layout
@@ -60,7 +60,7 @@ public class Interface extends Gui {
 				"Feats", "Inventory", "OtherCharacter",
 				"Skills", "Spells"};
 		for (String string : Windows) {
-			windowPartials.put(string, (MainWindowController) loadPartial(string, this));
+			windowPartials.put(string, (MainWindowController) loadPartial(string, this, MainWindowController.class));
 		}
 		((RootController) getRootLayout()).setWindowPartials(windowPartials);
 	}
@@ -76,7 +76,7 @@ public class Interface extends Gui {
 		try {
 			loadPartials();
 		} catch (IOException e) {
-			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString()).showWarning();
+			Dialogs.create().masthead(e.getMessage()).message(Arrays.toString(e.getStackTrace())).showWarning();
 		}
 	}
 

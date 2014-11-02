@@ -67,7 +67,7 @@ public class OtherCharacterController extends MainWindowController {
 		// Set extension filter
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("CDF files (*.cdf)", "*.cdf");
 		fileChooser.getExtensionFilters().add(extFilter);
-		File chosenFile = new File(MainApp.class.getResource("../").getPath()+"../characters");
+		File chosenFile = new File(System.getProperty("user.dir")+"/characters");
 		fileChooser.setInitialDirectory(chosenFile);
 
 		// Show open file dialog
@@ -128,7 +128,7 @@ public class OtherCharacterController extends MainWindowController {
 	@Override
 	public void setData() {
 		//gets all the files in the folder /characters
-		File ogFile = new File(MainApp.class.getResource("").getPath()+"../characters");
+		File ogFile = new File(System.getProperty("user.dir")+"/characters");
 		ogFile.mkdir();
 		File[] characterFiles = Tools.listFilesForFolder(ogFile);
 		for (int i=0;i<characterFiles.length;i++) {
