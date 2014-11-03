@@ -59,12 +59,12 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label styleClass="data-label-gold" text="Feat Selections Remaining:" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Label styleClass="data-label-gold" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="lblFeatSelections" alignment="CENTER" styleClass="columnHeader" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Label fx:id="lblFeatSelections" alignment="CENTER" styleClass="columnHeader" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                         <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <children>
                               <Button fx:id="btnAddFeat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddFeat" prefHeight="40.0" prefWidth="200.0" text="Add to Character" />

@@ -5,28 +5,50 @@
  ******************************************************************************/
  /* Light brown: #EDD4BA	alts #E0AE77 1st, #DBBC9A (2nd, paler)
   * Medium brown: #DBBC9A	alts #E09C51 1st, #E0AE77
-  * Dark brown: #7d4609
-  * Window background: #e9e9d5
+  * Dark brown: #7D4609
+  * Window background: #E9E9D5
   * Titled pane heading: #CCA41F (gold)
   * "Sub-titled Pane" heading: #DDDDDD (gray) */
  
  .windowBackground,
  .tab-pane:top > .tab-header-area > .tab-header-background,
- .tab-pane:top > .tab-content-area {
- 	-fx-background-color: #e9e9d5;
+ .tab-pane:top > .tab-content-area,
+ .gridPanePageBg,
+ .titledPanePageBg > .content {
+ 	-fx-background-color: #E9E9D5;
  }
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab,
 .button,
 .table-column > .label,
-.titled-pane > .title {
-    -fx-background-color: #7d4609;
+.titled-pane > .title,
+.tab-pane:top > .tab-header-area > .headers-region > .tab:selected,
+.action-menu-bar,
+.action-menu-bar .menu-button {
+    -fx-background-color: #7D4609;
 }
 
 .titled-pane > .title > .text, 
 .data-label,
-.table-column > .label > .text {
+.table-column > .label > .text,
+.tab:selected > .tab-container > .tab-label > .text,
+.button:hover .text {
 	-fx-fill: #CCA41F;
+}
+
+ .item-slot-label > .text, 
+ .data-label-gold > .text,
+ .header-label-16-gold > .text,
+ .header-label-18-gold > .text,
+ .columnHeader-gold > .text {
+ 	-fx-fill: #AB891A;
+}
+
+.combatSubTitlePane > .title > .text,
+.button > .text,
+.table-column > .label > .text,
+.action-menu-bar .menu-button .label .text {
+	-fx-fill: #DDDDDD;
 }
 
 .data-label,
@@ -48,12 +70,19 @@
 	-fx-background-color: WHITE;
 }
 
-.gridPaneLightBg {
-	-fx-background-color: #EDD4BA;
+.gridPaneLightBg,
+.titledPaneLightBg > .content,
+.combatSubTitlePane > .content,
+.combatSubTitlePane .scroll-pane .viewport,
+.placeholder,
+.item-slot-label,
+.table-column {
+	-fx-background-color: #EDD6BE;
 }
 
-.gridPanePageBg {
-	-fx-background-color: #e9e9d5;
+.titledPaneMediumBg > .content,
+.tab-pane:top > .tab-header-area > .headers-region > .tab {
+	-fx-background-color: #DBBC9A;
 }
 
 /*******************************************************************************
@@ -84,20 +113,9 @@
 	-fx-font-size:20.0px;
 	-fx-font-weight: Bold;
 }
-.titledPaneMediumBg > .content,
-.titledPaneLightBg > .content,
-.combatSubTitlePane > .content,
-.combatSubTitlePane .scroll-pane .viewport {
-	-fx-background-color: #EDD4BA;
-}
 
 .combatSubTitlePane > .title > .text {
-	-fx-fill: #DDDDDD;
 	-fx-font-style: italic;
-}
-
-.titledPanePageBg > .content {
-	-fx-background-color: #e9e9d5; 
 }
 
 /*******************************************************************************
@@ -108,7 +126,6 @@
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab {
 	-fx-pref-width:140.0px;
-	-fx-background-color: #DBBC9A;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
  }
  
@@ -125,12 +142,7 @@
  
 .tab-pane:top > .tab-header-area > .headers-region > .tab:selected {
 	-fx-pref-width:140.0px;
-	-fx-background-color: #7d4609;
 	-fx-background-radius: 5.0 5.0 0.0 0.0;
- }
- 
- .tab:selected > .tab-container > .tab-label > .text {
-	-fx-fill: #CCA41F;
  }
   
  
@@ -153,12 +165,10 @@
  
  .button:hover .text {
  	/* -fx-background-color: rgb(100.0,100.0,81.0); */
- 	-fx-fill: #CCA41F;
  	-fx-background-radius: 0.0 3.0 0.0 3.0;
  }
  
  .button > .text {
- 	-fx-fill: #DDDDDD;
 	-fx-font-weight: Bold;
  }
  
@@ -187,7 +197,6 @@
  	-fx-alignment: center-left;
  }
  .item-slot-label {
- 	-fx-background-color: #EDD4BA;
  	-fx-border-width: 2.0px 2.0px 2.0 2.0px;
  }
 
@@ -213,7 +222,6 @@
  .header-label-16-gold > .text,
  .header-label-18-gold > .text,
  .columnHeader-gold > .text {
- 	-fx-fill: #AB891A;
  	-fx-font-weight: Bold;
  }
  
@@ -253,18 +261,12 @@
  }
  .table-column {
  	-fx-padding: 0.0;
- 	-fx-background-color: #EDD4BA;
  	-fx-wrap-text: true;
  }
  
  .table-column > .label > .text {
  	-fx-font-size:18.0px;
- 	-fx-fill: #DDDDDD;
 	-fx-font-style: italic;
- }
- 
- .placeholder {
- 	-fx-background-color: #EDD4BA;
  }
  
  .placeholder > .label > .text {
@@ -315,12 +317,10 @@
  	-fx-border-color: rgb(76.0,60.0,11.0);
  	-fx-border-width: 3.0px 3.0px 3.0 3.0px;
  	-fx-background-radius: 2px;
- 	-fx-background-color: #7d4609;
  }
  .action-menu-bar .menu-button .label .text {
 	-fx-font-size: 18px;
 	-fx-font-weight: Bold;
- 	-fx-fill: #DDDDDD;
 	-fx-font-style: italic;
  }
  /*
