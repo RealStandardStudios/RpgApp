@@ -10,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
@@ -24,7 +26,6 @@ import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
 import pathfinder.data.Character.Character;
-import rpg.MainApp;
 import view.RootController;
 import view.objects.OtherCharacterRow;
 import view.partials.dialogs.NewCharacterController;
@@ -36,7 +37,8 @@ import view.partials.dialogs.NewCharacterController;
  */
 @SuppressWarnings("deprecation")
 public class OtherCharacterController extends MainWindowController {
-	
+	@FXML
+	ImageView imgLogo;
 	@FXML
 	AnchorPane apOtherCharacters;
 	@FXML
@@ -123,6 +125,7 @@ public class OtherCharacterController extends MainWindowController {
 	@Override
 	public void initialize() {
 		otherCharacterRows = new ArrayList<>();
+		imgLogo.setImage(new Image("file:resources/images/RSSLogo.png"));
 	}
 
 	@Override

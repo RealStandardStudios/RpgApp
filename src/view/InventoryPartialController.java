@@ -17,6 +17,8 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import jefXif.view.WindowController;
 
@@ -71,6 +73,8 @@ public class InventoryPartialController extends WindowController {
 	Label lblShield;
 	@FXML
 	AnchorPane mainPane;
+	@FXML
+	ImageView imgMan;
 	// endregion
 
 	HashMap<String, ItemSlot> itemSlots;
@@ -203,6 +207,7 @@ public class InventoryPartialController extends WindowController {
 			});
 
 		itemSlots = new HashMap<>();
+		imgMan.setImage(new Image("file:resources/images/mannequin.png"));
 	}
 
 	private void equipItem(final TableRow<Item> row, String caseString) {
