@@ -2,7 +2,7 @@ package view.partials;
 
 import java.io.IOException;
 
-import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,7 +19,7 @@ import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import pathfinder.data.Classes.Class;
 import view.RootController;
-import view.partials.dialogs.LevelUpController;
+
 
 /**
  * The Controller for the Character Controller
@@ -79,7 +79,9 @@ public class CharacterProfileController extends MainWindowController {
 	@Override
 	public void initialize() {
 		columnClass.setCellValueFactory(cellData->cellData.getValue().getNameProperty());
-		columnLevels.setCellValueFactory(cellData->new SimpleObjectProperty<Integer>(cellData.getValue().getLevel()));
+		columnLevels.setCellValueFactory(cellData->cellData.getValue().getLevelProp());
+		ObjectProperty<Integer> plz = ((RootController) getRoot()).getCharacter().getClasses()[0].getLevelProp();
+		int plzz = plz.get();
 	}
 	
 	/**
@@ -101,7 +103,7 @@ public class CharacterProfileController extends MainWindowController {
 		lblRace.setText(character.getRace().getName());
 		lblWeight.setText(character.getFluff().get("Weight"));
 		lblClass.setText(character.getClasses()[0].getName());
-		lblLevel.setText(""+character.getLevel());
+		lblLevel.setText(""+(character.getLevel() + 1));
 		lblExp.setText(""+character.getExperienceValue());
 		tableClasses.setItems(FXCollections.observableArrayList(character.getClasses()));
 	}
@@ -149,10 +151,10 @@ public class CharacterProfileController extends MainWindowController {
 	@FXML
 	public void handleLevelUp()
 	{
-		
+		/*
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(this.getClass().getResource("levelUpDialog/LevelUpDialog.fxml"));
+			loader.setLocation(this.getClass().getResource("dialogs/LevelUpDialog.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			// Create the dialog Stage.
@@ -184,6 +186,7 @@ public class CharacterProfileController extends MainWindowController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		*/
 	}
 	
 	public void updateExp()
@@ -197,8 +200,18 @@ public class CharacterProfileController extends MainWindowController {
 			btnLevelUp.setVisible(true);
 		}
 		
-		lblLevel.setText(""+character.getLevel());
+		if(character.getLevel() < 20)
+		{
+			lblLevel.setText(""+(character.getLevel() + 1));
+		}
+		else
+		{
+			lblLevel.setText("At Max Level");
+		}
 		lblExp.setText(""+character.getExperienceValue());
+		character.getClasses()[0].setLevel(character.getLevel());
+		tableClasses.setItems(null);
+		this.initialize();
 		tableClasses.setItems(FXCollections.observableArrayList(character.getClasses()));
 	}
 }

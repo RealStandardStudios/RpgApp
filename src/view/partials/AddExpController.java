@@ -26,6 +26,7 @@ public class AddExpController extends DialogController  {
 				int expToAdd = Integer.parseInt(lblExpToAdd.getText());
 				character.setExp(character.getExperienceValue()  + expToAdd);
 				lblExpToAdd.setText("Added Exp To Character");
+				handleCancel(null);
 			}
 			catch(Exception e)
 			{
