@@ -29,8 +29,7 @@ public class ArmorView extends ItemView {
 	 */
 	@Override
 	public void show() {
-		this.getDialogStage().show();
-//		getRoot().getInterface().getPrimaryStage().setFocused(true);
+		this.getDialogStage().setVisible(true);
 		this.itemName.setText(item.Name.get());
 		this.itemType.setText(((Armor) item).ArmorType.get());
 		this.itemCost.setText(item.Cost.get());

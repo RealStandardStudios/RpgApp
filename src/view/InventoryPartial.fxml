@@ -8,7 +8,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="468.0" prefWidth="738.0" styleClass="main-anchor-pane" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryPartialController">
+<AnchorPane fx:id="mainPane" prefHeight="468.0" prefWidth="738.0" styleClass="main-anchor-pane" stylesheets="@Maintheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryPartialController">
    <children>
       <GridPane prefHeight="510.0" prefWidth="738.0" styleClass="gridPanePageBg" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>

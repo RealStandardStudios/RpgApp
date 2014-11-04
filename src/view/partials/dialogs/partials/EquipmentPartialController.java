@@ -10,7 +10,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Point2D;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -69,6 +68,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 	@FXML
 	Accordion accItems;
 
+	@FXML
+	AnchorPane mainPane;
 	// region Labels and buttons
 	@FXML
 	Label lblStartingWealthValue;
@@ -131,10 +132,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 						final Weapon weapon = row.getItem();
 						if (row.isHover() && weapon != null) {
 							weaponView.setItem(weapon);
-							Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth()
-									+ weaponView.getDialogStage().getWidth(), 0);
-							weaponView.getDialogStage().setX(bound.getX());
-							weaponView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
+							weaponView.getDialogStage().setLayoutX(row.getLayoutX() + row.getWidth());
+							weaponView.getDialogStage().setLayoutY(
+									MouseInfo.getPointerInfo().getLocation().getY() - weaponView.getDialogStage().getHeight());
 
 							weaponView.show();
 
@@ -151,17 +151,15 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		tableArmorAvailable.setRowFactory(tableView -> {
 			final TableRow<Armor> row = new TableRow<>();
 
-			row.hoverProperty().addListener(
-					(observable) -> {
-						final Armor armor = row.getItem();
-						if (row.isHover() && armor != null) {
-							armorView.setItem(armor);
-							armorView.getDialogStage().setX(
-									row.getLayoutX() + row.getWidth() + armorView.getDialogStage().getWidth());
-							armorView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
-							armorView.show();
-						}
-					});
+			row.hoverProperty().addListener((observable) -> {
+				final Armor armor = row.getItem();
+				if (row.isHover() && armor != null) {
+					armorView.setItem(armor);
+					armorView.getDialogStage().setLayoutX(row.getLayoutX() + row.getWidth());
+					armorView.getDialogStage().setLayoutY(MouseInfo.getPointerInfo().getLocation().getY() - armorView.getDialogStage().getHeight());
+					armorView.show();
+				}
+			});
 			return row;
 		});
 		columnArmorName.setCellValueFactory(cellData -> cellData.getValue().Name);
@@ -171,17 +169,15 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		tableGoodsAvailable.setRowFactory(tableView -> {
 			final TableRow<Goods> row = new TableRow<>();
 
-			row.hoverProperty().addListener(
-					(observable) -> {
-						final Goods good = row.getItem();
-						if (row.isHover() && good != null) {
-							goodsView.setItem(good);
-							goodsView.getDialogStage().setX(
-									row.getLayoutX() + row.getWidth() + goodsView.getDialogStage().getWidth());
-							goodsView.getDialogStage().setY(MouseInfo.getPointerInfo().getLocation().getY());
-							goodsView.show();
-						}
-					});
+			row.hoverProperty().addListener((observable) -> {
+				final Goods good = row.getItem();
+				if (row.isHover() && good != null) {
+					goodsView.setItem(good);
+					goodsView.getDialogStage().setLayoutX(row.getLayoutX() + row.getWidth());
+					goodsView.getDialogStage().setLayoutY(MouseInfo.getPointerInfo().getLocation().getY() - armorView.getDialogStage().getHeight());
+					goodsView.show();
+				}
+			});
 			return row;
 		});
 		columnGoodsName.setCellValueFactory(cellData -> cellData.getValue().Name);
@@ -207,19 +203,30 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 		}
 
 		this.armorView = inventoryPartial.getArmorView();
+		if (!this.mainPane.getChildren().contains(this.armorView.getDialogStage()))
+			this.mainPane.getChildren().add(this.armorView.getDialogStage());
+		this.armorView.getDialogStage().setVisible(false);
+
 		this.weaponView = inventoryPartial.getWeaponView();
+		if (!this.mainPane.getChildren().contains(this.weaponView.getDialogStage()))
+			this.mainPane.getChildren().add(this.weaponView.getDialogStage());
+		this.weaponView.getDialogStage().setVisible(false);
+
 		this.goodsView = inventoryPartial.getGoodsView();
+		if (!this.mainPane.getChildren().contains(this.goodsView.getDialogStage()))
+			this.mainPane.getChildren().add(this.goodsView.getDialogStage());
+		this.goodsView.getDialogStage().setVisible(false);
 	}
 
+	/**
+	 * loads the Inventory partial
+	 * 
+	 * @throws IOException
+	 */
 	private void loadInventory() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(InventoryPartialController.class.getResource("InventoryPartial.fxml"));
 
-		/**
-		 * loads the Inventory partial
-		 * 
-		 * @throws IOException
-		 */
 		AnchorPane pane = loader.load();
 		inventoryPartial = loader.getController();
 		inventoryPartial.setNode(pane);
@@ -240,8 +247,8 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 			obsListGoods = FXCollections.observableArrayList(readDataFile(goodsFile, Goods.class));
 			loadInventory();
 		} catch (Exception e) {
-			Dialogs.create().masthead("Read Error").masthead("Couldn't read the one of the Equipment Files properly")
-					.message(e.getMessage()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
+			Dialogs.create().masthead("Read Error").masthead("Couldn't read the one of the Equipment Files properly").message(e.getMessage())
+					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showWarning();
 			e.printStackTrace();
 		}
 	}
@@ -257,9 +264,9 @@ public class EquipmentPartialController extends NewCharacterPartialController {
 
 	@FXML
 	private void handleMouseExited() {
-		weaponView.getDialogStage().close();
-		armorView.getDialogStage().close();
-		goodsView.getDialogStage().close();
+		weaponView.getDialogStage().setVisible(false);
+		armorView.getDialogStage().setVisible(false);
+		goodsView.getDialogStage().setVisible(false);
 	}
 
 	/**

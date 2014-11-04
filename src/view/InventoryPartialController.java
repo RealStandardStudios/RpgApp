@@ -11,9 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Bounds;
-import javafx.geometry.Point2D;
-import javafx.scene.Scene;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -21,9 +18,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import jefXif.view.WindowController;
 
 import org.controlsfx.dialog.Dialog;
@@ -75,6 +69,8 @@ public class InventoryPartialController extends WindowController {
 	Label lblRangedWeapon;
 	@FXML
 	Label lblShield;
+	@FXML
+	AnchorPane mainPane;
 	// endregion
 
 	HashMap<String, ItemSlot> itemSlots;
@@ -111,8 +107,8 @@ public class InventoryPartialController extends WindowController {
 			if (item instanceof Goods)
 				goods.add((Goods) item);
 		}
-		Inventory i = new Inventory(FXCollections.observableArrayList(weapons),
-				FXCollections.observableArrayList(armor), FXCollections.observableArrayList(goods), money);
+		Inventory i = new Inventory(FXCollections.observableArrayList(weapons), FXCollections.observableArrayList(armor),
+				FXCollections.observableArrayList(goods), money);
 		for (ItemSlot slot : itemSlots.values()) {
 			if (slot.getItem() instanceof Armor || slot.getItem() instanceof Shield)
 				i.getArmorWorn().add((Armor) slot.getItem());
@@ -145,27 +141,27 @@ public class InventoryPartialController extends WindowController {
 					(observable) -> {
 						final Item item = row.getItem();
 						if (row.isHover() && item != null) {
-							Point2D bound = row.localToScene(row.getLayoutX() + row.getWidth()
-									+ weaponView.getDialogStage().getWidth(), 0);
-							double xLoc = bound.getX(), yLoc = MouseInfo.getPointerInfo().getLocation().getY();
+							double xLoc = row.getLayoutX() + row.getWidth() / 2 + weaponView.getDialogStage().getWidth(), yLoc = MouseInfo
+									.getPointerInfo().getLocation().getY()
+									- weaponView.getDialogStage().getHeight();
 							if (item instanceof Weapon) {
 								weaponView.setItem(item);
-								weaponView.getDialogStage().setX(xLoc);
-								weaponView.getDialogStage().setY(yLoc);
+								weaponView.getDialogStage().setLayoutX(xLoc);
+								weaponView.getDialogStage().setLayoutY(yLoc);
 								weaponView.show();
-								// armorView.getDialogStage().hide();
-								// goodsView.getDialogStage().hide();
+								armorView.getDialogStage().setVisible(false);
+								goodsView.getDialogStage().setVisible(false);
 							} else if (item instanceof Armor) {
 								armorView.setItem(item);
-								armorView.getDialogStage().setX(xLoc);
-								armorView.getDialogStage().setY(yLoc);
+								armorView.getDialogStage().setLayoutX(xLoc);
+								armorView.getDialogStage().setLayoutY(yLoc);
 								armorView.show();
 								// weaponView.getDialogStage().hide();
 								// goodsView.getDialogStage().hide();
 							} else {
 								goodsView.setItem(item);
-								goodsView.getDialogStage().setX(xLoc);
-								goodsView.getDialogStage().setY(yLoc);
+								goodsView.getDialogStage().setLayoutX(xLoc);
+								goodsView.getDialogStage().setLayoutY(yLoc);
 								goodsView.show();
 								// armorView.getDialogStage().hide();
 								// weaponView.getDialogStage().hide();
@@ -193,12 +189,11 @@ public class InventoryPartialController extends WindowController {
 					@Override
 					public void handle(ActionEvent event) {
 						unequipItem(row, row.getItem().getSlotType().name());
-						System.out.println(String.format("%s Successfully removed from %s slot",
-								row.getItem().Name.get(), row.getItem().getSlotType().name()));
+						System.out.println(String.format("%s Successfully removed from %s slot", row.getItem().Name.get(), row.getItem()
+								.getSlotType().name()));
 					}
 				});
-				if (row.getItem() instanceof Armor || row.getItem() instanceof Shield
-						|| row.getItem() instanceof Weapon) {
+				if (row.getItem() instanceof Armor || row.getItem() instanceof Shield || row.getItem() instanceof Weapon) {
 					itemMenu.getItems().add(equip);
 					itemMenu.getItems().add(unequip);
 					row.setContextMenu(itemMenu);
@@ -232,8 +227,7 @@ public class InventoryPartialController extends WindowController {
 			if (weaponView == null)
 				readItemViews();
 		} catch (IOException e) {
-			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString())
-					.styleClass(Dialog.STYLE_CLASS_UNDECORATED).showError();
+			Dialogs.create().masthead(e.getMessage()).message(e.getStackTrace().toString()).styleClass(Dialog.STYLE_CLASS_UNDECORATED).showError();
 		}
 		if (itemSlots.size() == 0) {
 			itemSlots.put("Head", new ItemSlot(lblHead, SlotType.Head));
@@ -259,16 +253,26 @@ public class InventoryPartialController extends WindowController {
 		itemToRemove = item;
 	}
 
+	private void moveAndShowItemView(ItemView itemView, String itemSlot) {
+		itemView.setItem(itemSlots.get(itemSlot).getItem());
+		if (itemView.getItem() != null) {
+			itemView.getDialogStage().setLayoutX(
+					itemSlots.get(itemSlot).getLabel().getLayoutX() + itemView.getDialogStage().getWidth()
+							+ itemSlots.get(itemSlot).getLabel().getWidth() / 3);
+			if (itemView.getDialogStage().getLayoutX() > mainPane.getWidth())
+				itemView.getDialogStage().setLayoutX(
+						itemSlots.get(itemSlot).getLabel().getLayoutX() - itemSlots.get(itemSlot).getLabel().getWidth());
+			itemView.getDialogStage().setLayoutY(MouseInfo.getPointerInfo().getLocation().getY() - itemView.getDialogStage().getHeight());
+			itemView.show();
+		}
+	}
+
 	/**
 	 * Shows anything related to the Head slot
 	 */
 	@FXML
 	private void showHead() {
-		armorView.setItem(itemSlots.get("Head").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Head").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Head").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(this.armorView, "Head");
 	}
 
 	/**
@@ -276,11 +280,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showTorso() {
-		armorView.setItem(itemSlots.get("Torso").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Torso").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Torso").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "Torso");
 	}
 
 	/**
@@ -288,11 +288,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showHands() {
-		armorView.setItem(itemSlots.get("Hands").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Hands").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Hands").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "Hands");
 	}
 
 	/**
@@ -300,11 +296,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showRightRing() {
-		armorView.setItem(itemSlots.get("RightRing").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("RightRing").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("RightRing").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "RightRing");
 	}
 
 	/**
@@ -312,11 +304,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showLeftRing() {
-		armorView.setItem(itemSlots.get("LeftRing").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("LeftRing").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("LeftRing").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "LeftRing");
 	}
 
 	/**
@@ -324,11 +312,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showWaist() {
-		armorView.setItem(itemSlots.get("Waist").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Waist").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Waist").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "Waist");
 	}
 
 	/**
@@ -336,11 +320,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showLegs() {
-		armorView.setItem(itemSlots.get("Legs").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Legs").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Legs").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "Legs");
 	}
 
 	/**
@@ -348,11 +328,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showFeet() {
-		armorView.setItem(itemSlots.get("Feet").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Feet").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Feet").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "Feet");
 	}
 
 	/**
@@ -360,13 +336,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showWeapon() {
-		weaponView.setItem(itemSlots.get("Melee").getItem());
-		Bounds screenBounds = itemSlots.get("Melee").getLabel()
-				.localToScene(itemSlots.get("Melee").getLabel().getBoundsInLocal());
-		weaponView.getDialogStage().setX(screenBounds.getMaxX() + weaponView.getDialogStage().getWidth());
-		weaponView.getDialogStage().setY(screenBounds.getMinY());
-		if (weaponView.getItem() != null)
-			weaponView.show();
+		moveAndShowItemView(weaponView, "Melee");
 	}
 
 	/**
@@ -374,13 +344,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showRangedWeapon() {
-		weaponView.setItem(itemSlots.get("Ranged").getItem());
-		Bounds screenBounds = itemSlots.get("Ranged").getLabel()
-				.localToScene(itemSlots.get("Ranged").getLabel().getBoundsInLocal());
-		weaponView.getDialogStage().setX(screenBounds.getMaxX() + weaponView.getDialogStage().getWidth());
-		weaponView.getDialogStage().setY(screenBounds.getMinY());
-		if (weaponView.getItem() != null)
-			weaponView.show();
+		moveAndShowItemView(weaponView, "Ranged");
 	}
 
 	/**
@@ -388,11 +352,7 @@ public class InventoryPartialController extends WindowController {
 	 */
 	@FXML
 	private void showShield() {
-		armorView.setItem(itemSlots.get("Shield").getItem());
-		armorView.getDialogStage().setX(itemSlots.get("Shield").getLabel().getLayoutX());
-		armorView.getDialogStage().setY(itemSlots.get("Shield").getLabel().getLayoutY());
-		if (armorView.getItem() != null)
-			armorView.show();
+		moveAndShowItemView(armorView, "Shield");
 	}
 
 	public ItemView getWeaponView() {
@@ -414,24 +374,12 @@ public class InventoryPartialController extends WindowController {
 		// load the WeaponView
 		loader.setLocation(WeaponView.class.getResource("WeaponView.fxml"));
 		AnchorPane page = (AnchorPane) loader.load();
-
-		Stage weaponViewStage = new Stage();
-		weaponViewStage.setScene(new Scene(page));
-		// show no boarders on the WeaponView
-		weaponViewStage.initStyle(StageStyle.UNDECORATED);
-		// make the dialog owner the main window
-		if (getRoot() != null)
-			weaponViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
-		else
-			weaponViewStage.initOwner(getParentWindow().getInterface().getPrimaryStage());
-		// make it slightly transparent
-		weaponViewStage.setOpacity(0.9);
-		// make sure its not a modal window
-		weaponViewStage.initModality(Modality.NONE);
-		// set the WeapnView to the controller;
+		// add the WeaponView to the main pane
+		mainPane.getChildren().add(page);
+		// set the WeaponView to the controller;
 		weaponView = loader.getController();
 		// give the controller its stage
-		weaponView.setDialogStage(weaponViewStage);
+		weaponView.setDialogStage(page);
 		weaponView.setInterface(getInterface());
 		weaponView.setNode(page);
 		weaponView.setRoot(getRoot());
@@ -439,19 +387,9 @@ public class InventoryPartialController extends WindowController {
 		loader = new FXMLLoader();
 		loader.setLocation(ArmorView.class.getResource("ArmorView.fxml"));
 		page = (AnchorPane) loader.load();
-
-		Stage armorViewStage = new Stage();
-		armorViewStage.setScene(new Scene(page));
-		armorViewStage.initStyle(StageStyle.UNDECORATED);
-		// armorViewStage.setAlwaysOnTop(true);
-		if (getRoot() != null)
-			armorViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
-		else
-			armorViewStage.initOwner(getParentWindow().getInterface().getPrimaryStage());
-		armorViewStage.setOpacity(0.9);
-		armorViewStage.initModality(Modality.NONE);
+		mainPane.getChildren().add(page);
 		armorView = loader.getController();
-		armorView.setDialogStage(armorViewStage);
+		armorView.setDialogStage(page);
 		armorView.setInterface(getInterface());
 		armorView.setNode(page);
 		armorView.setRoot(getRoot());
@@ -459,19 +397,9 @@ public class InventoryPartialController extends WindowController {
 		loader = new FXMLLoader();
 		loader.setLocation(ArmorView.class.getResource("GoodsView.fxml"));
 		page = (AnchorPane) loader.load();
-
-		Stage goodsViewStage = new Stage();
-		goodsViewStage.setScene(new Scene(page));
-		goodsViewStage.initStyle(StageStyle.UNDECORATED);
-		// goodsViewStage.setAlwaysOnTop(true);
-		if (getRoot() != null)
-			goodsViewStage.initOwner(getRoot().getInterface().getPrimaryStage());
-		else
-			goodsViewStage.initOwner(getParentWindow().getInterface().getPrimaryStage());
-		goodsViewStage.setOpacity(0.9);
-		goodsViewStage.initModality(Modality.NONE);
+		mainPane.getChildren().add(page);
 		goodsView = loader.getController();
-		goodsView.setDialogStage(goodsViewStage);
+		goodsView.setDialogStage(page);
 		goodsView.setInterface(getInterface());
 		goodsView.setNode(page);
 		goodsView.setRoot(getRoot());
@@ -484,9 +412,9 @@ public class InventoryPartialController extends WindowController {
 
 	@FXML
 	private void handleMouseExited() {
-		weaponView.getDialogStage().close();
-		armorView.getDialogStage().close();
-		goodsView.getDialogStage().close();
+		weaponView.getDialogStage().setVisible(false);
+		armorView.getDialogStage().setVisible(false);
+		goodsView.getDialogStage().setVisible(false);
 	}
 
 	public void equipItem(Item itemToAdd, String slot) {

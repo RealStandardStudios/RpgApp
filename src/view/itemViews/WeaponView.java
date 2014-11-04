@@ -34,7 +34,7 @@ public class WeaponView extends ItemView {
 	 */
 	@Override
 	public void show() {
-		this.getDialogStage().show();
+		this.getDialogStage().setVisible(true);
 		this.itemName.setText(item.Name.get());
 		this.itemType.setText(((Weapon) item).WeaponType.get());
 		this.itemCost.setText(item.Cost.get());

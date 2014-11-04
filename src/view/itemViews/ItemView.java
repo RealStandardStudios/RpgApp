@@ -49,6 +49,6 @@ public abstract class ItemView extends HoverDialog {
 	 */
 	@FXML
 	private void handleClose() {
-		this.getDialogStage().close();
+		this.getDialogStage().setVisible(false);
 	}
 }
