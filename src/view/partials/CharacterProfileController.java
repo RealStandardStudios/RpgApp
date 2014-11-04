@@ -18,7 +18,7 @@ import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import pathfinder.data.Classes.Class;
 import view.RootController;
-
+import view.partials.dialogs.AddExpController;
 
 /**
  * The Controller for the Character Controller
@@ -26,7 +26,7 @@ import view.RootController;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class CharacterProfileController extends MainWindowController {
-	//region Profile Labels
+	// region Profile Labels
 	@FXML
 	Label lblName;
 	@FXML
@@ -53,9 +53,9 @@ public class CharacterProfileController extends MainWindowController {
 	Label lblDeity;
 	@FXML
 	Label lblLanguages;
-	//endregion
-	
-	//region Class labels
+	// endregion
+
+	// region Class labels
 	@FXML
 	Label lblClass;
 	@FXML
@@ -70,17 +70,17 @@ public class CharacterProfileController extends MainWindowController {
 	TableColumn<Class, String> columnClass;
 	@FXML
 	TableColumn<Class, Integer> columnLevels;
-	//endregion
-	
+	// endregion
+
 	@FXML
 	Button btnLevelUp;
-	
+
 	@Override
 	public void initialize() {
-		columnClass.setCellValueFactory(cellData->cellData.getValue().getNameProperty());
-		columnLevels.setCellValueFactory(cellData->cellData.getValue().getLevelProp());
+		columnClass.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
+		columnLevels.setCellValueFactory(cellData -> cellData.getValue().getLevelProp());
 	}
-	
+
 	/**
 	 * sets the data for the Character Profile
 	 */
@@ -100,112 +100,98 @@ public class CharacterProfileController extends MainWindowController {
 		lblRace.setText(character.getRace().getName());
 		lblWeight.setText(character.getFluff().get("Weight"));
 		lblClass.setText(character.getClasses()[0].getName());
-		lblLevel.setText(""+(character.getLevel() + 1));
-		lblExp.setText(""+character.getExperienceValue());
+		lblLevel.setText("" + (character.getLevel() + 1));
+		lblExp.setText("" + character.getExperienceValue());
 		tableClasses.setItems(FXCollections.observableArrayList(character.getClasses()));
 	}
-	
+
 	@FXML
-	public void addExp()
-	{
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(this.getClass().getResource("AddExpDialog.fxml"));
-			AnchorPane page = (AnchorPane) loader.load();
+	public void addExp() {
+		if (((RootController) getRoot()).getCharacter() != null) {
+			try {
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation(this.getClass().getResource("dialogs/AddExpDialog.fxml"));
+				AnchorPane page = (AnchorPane) loader.load();
 
-			// Create the dialog Stage.
-			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Add Exp To Character");
-			dialogStage.initModality(Modality.WINDOW_MODAL);
-			dialogStage.initStyle(StageStyle.UTILITY);
-			dialogStage.initOwner(this.getInterface().getPrimaryStage());
-			dialogStage.resizableProperty().set(false);
-			Scene scene = new Scene(page);
-			dialogStage.setScene(scene);
+				// Create the dialog Stage.
+				Stage dialogStage = new Stage();
+				dialogStage.setTitle("Add Exp To Character");
+				dialogStage.initModality(Modality.WINDOW_MODAL);
+				dialogStage.initStyle(StageStyle.UTILITY);
+				dialogStage.initOwner(this.getInterface().getPrimaryStage());
+				dialogStage.resizableProperty().set(false);
+				Scene scene = new Scene(page);
+				dialogStage.setScene(scene);
 
-			// Set the person into the controller.
-			AddExpController controller = loader.getController();
-			controller.setDialogStage(dialogStage);
-			controller.setInterface(getInterface());
-			controller.loadPartials(((RootController) getRoot()).getCharacter(), this);
-			dialogStage.onCloseRequestProperty().set(new EventHandler<WindowEvent>() {
-				
-				@Override
-				public void handle(WindowEvent event) {
-					controller.handleCancel(null);
-				}
-			});
+				// Set the person into the controller.
+				AddExpController controller = loader.getController();
+				controller.setDialogStage(dialogStage);
+				controller.setInterface(getInterface());
+				controller.loadPartials(((RootController) getRoot()).getCharacter(), this);
+				dialogStage.onCloseRequestProperty().set(new EventHandler<WindowEvent>() {
 
-			// Show the dialog and wait until the user closes it
-			dialogStage.showAndWait();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
+					@Override
+					public void handle(WindowEvent event) {
+						controller.handleCancel(null);
+					}
+				});
+
+				// Show the dialog and wait until the user closes it
+				dialogStage.showAndWait();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
-	
-	
+
 	@FXML
-	public void handleLevelUp()
-	{
+	public void handleLevelUp() {
 		/*
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(this.getClass().getResource("dialogs/LevelUpDialog.fxml"));
-			AnchorPane page = (AnchorPane) loader.load();
-
-			// Create the dialog Stage.
-			Stage dialogStage = new Stage();
-			dialogStage.setTitle("LEVEL UP!");
-			dialogStage.initModality(Modality.WINDOW_MODAL);
-			dialogStage.initStyle(StageStyle.UTILITY);
-			dialogStage.initOwner(this.getInterface().getPrimaryStage());
-			dialogStage.resizableProperty().set(false);
-			Scene scene = new Scene(page);
-			dialogStage.setScene(scene);
-
-			// Set the person into the controller.
-			LevelUpController controller = loader.getController();
-			controller.setDialogStage(dialogStage);
-			controller.setInterface(getInterface());
-			//controller.loadPartials();
-			dialogStage.onCloseRequestProperty().set(new EventHandler<WindowEvent>() {
-				
-				@Override
-				public void handle(WindowEvent event) {
-					controller.handleCancel(null);
-				}
-			});
-
-			// Show the dialog and wait until the user closes it
-			dialogStage.showAndWait();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		*/
+		 * try { FXMLLoader loader = new FXMLLoader();
+		 * loader.setLocation(this.getClass
+		 * ().getResource("dialogs/LevelUpDialog.fxml")); AnchorPane page =
+		 * (AnchorPane) loader.load();
+		 * 
+		 * // Create the dialog Stage. Stage dialogStage = new Stage();
+		 * dialogStage.setTitle("LEVEL UP!");
+		 * dialogStage.initModality(Modality.WINDOW_MODAL);
+		 * dialogStage.initStyle(StageStyle.UTILITY);
+		 * dialogStage.initOwner(this.getInterface().getPrimaryStage());
+		 * dialogStage.resizableProperty().set(false); Scene scene = new
+		 * Scene(page); dialogStage.setScene(scene);
+		 * 
+		 * // Set the person into the controller. LevelUpController controller =
+		 * loader.getController(); controller.setDialogStage(dialogStage);
+		 * controller.setInterface(getInterface()); //controller.loadPartials();
+		 * dialogStage.onCloseRequestProperty().set(new
+		 * EventHandler<WindowEvent>() {
+		 * 
+		 * @Override public void handle(WindowEvent event) {
+		 * controller.handleCancel(null); } });
+		 * 
+		 * // Show the dialog and wait until the user closes it
+		 * dialogStage.showAndWait();
+		 * 
+		 * } catch (IOException e) { e.printStackTrace(); }
+		 */
 	}
-	
-	public void updateExp()
-	{
+
+	public void updateExp() {
 		int oldLevel = Integer.parseInt(lblLevel.getText());
 		pathfinder.data.Character.Character character = ((RootController) getRoot()).getCharacter();
-		
-		if(oldLevel < character.getLevel())
-		{
+
+		if (oldLevel < character.getLevel()) {
 			btnLevelUp.setDisable(false);
 			btnLevelUp.setVisible(true);
 		}
-		
-		if(character.getLevel() < 20)
-		{
-			lblLevel.setText(""+(character.getLevel() + 1));
-		}
-		else
-		{
+
+		if (character.getLevel() < 20) {
+			lblLevel.setText("" + (character.getLevel() + 1));
+		} else {
 			lblLevel.setText("At Max Level");
 		}
-		lblExp.setText(""+character.getExperienceValue());
+		lblExp.setText("" + character.getExperienceValue());
 		character.getClasses()[0].setLevel(character.getLevel());
 		tableClasses.setItems(null);
 		this.initialize();

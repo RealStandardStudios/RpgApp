@@ -1,4 +1,4 @@
-package view.partials;
+package view.partials.dialogs;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,6 +6,8 @@ import javafx.scene.control.TextField;
 import jefXif.view.DialogController;
 
 import org.controlsfx.dialog.Dialogs;
+
+import view.partials.CharacterProfileController;
 
 @SuppressWarnings("deprecation")
 public class AddExpController extends DialogController  {

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="108.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.AddExpController">
+<AnchorPane prefHeight="108.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.partials.dialogs.AddExpController">
    <children>
       <Button layoutX="201.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleAddExp" text="Add" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="75.0" />
       <Button layoutX="255.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleCancel" text="Close" AnchorPane.bottomAnchor="14.0" />
