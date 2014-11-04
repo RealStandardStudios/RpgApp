@@ -3,11 +3,6 @@ package view.objects;
 import java.io.File;
 import java.io.IOException;
 
-import org.controlsfx.dialog.Dialog;
-import org.controlsfx.dialog.Dialogs;
-
-import pathfinder.data.Character.Character;
-import view.RootController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -17,6 +12,12 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import jefXif.io.Data;
 import jefXif.view.RootLayoutController;
+
+import org.controlsfx.dialog.Dialog;
+import org.controlsfx.dialog.Dialogs;
+
+import pathfinder.data.Character.Character;
+import view.RootController;
 
 /**
  * @author Matthew

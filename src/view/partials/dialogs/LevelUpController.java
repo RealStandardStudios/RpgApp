@@ -1,16 +1,5 @@
 package view.partials.dialogs;
 
-import java.util.ArrayList;
-
-import pathfinder.data.Effects.AbilityEffect;
-import pathfinder.data.Races.Traits.Trait;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.fxml.FXML;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.layout.AnchorPane;
-import jefXif.view.DialogController;
 /*
 public class LevelUpController extends DialogController implements jefXif.interfaces.PartialLoader
 {
@@ -78,3 +67,4 @@ public class LevelUpController extends DialogController implements jefXif.interf
 	
 }
 */
+

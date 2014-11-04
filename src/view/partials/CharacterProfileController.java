@@ -2,7 +2,6 @@ package view.partials;
 
 import java.io.IOException;
 
-import javafx.beans.property.ObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -80,8 +79,6 @@ public class CharacterProfileController extends MainWindowController {
 	public void initialize() {
 		columnClass.setCellValueFactory(cellData->cellData.getValue().getNameProperty());
 		columnLevels.setCellValueFactory(cellData->cellData.getValue().getLevelProp());
-		ObjectProperty<Integer> plz = ((RootController) getRoot()).getCharacter().getClasses()[0].getLevelProp();
-		int plzz = plz.get();
 	}
 	
 	/**
