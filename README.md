@@ -27,6 +27,8 @@ We aim to have a working replacement for all paper and books used by the average
 Targeting all Java-SE enabled desktop systems
 
 #What Works?
+Read [this document](https://drive.google.com/file/d/0B7VEqR5CsThseENUZFdsQjBDdU0/view?usp=sharing) if the app is incomprehensable
+
 - Most races are accounted for, Humans don't actually work as intended because having any stat rather than A stat is non-conformist
 - Most feats are in the system but do not check for pre-requisites correctly or give their effects to the character 100% of the time
 - Mish mash of classes functioning, magic classes are the least likley to work with the Fighter at about 90% working (class features do not have effects applied correctly)
