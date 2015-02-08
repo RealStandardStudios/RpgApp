@@ -9,6 +9,7 @@ We aim to have a working replacement for all paper and books used by the average
 ## Contents
 
  - [App Concept](#app-concept)
+ - [What works](#what-works)
  - [Future Goals](#future-goals)
 
 #App Concept
@@ -25,6 +26,35 @@ We aim to have a working replacement for all paper and books used by the average
 
 Targeting all Java-SE enabled desktop systems
 
+#What Works?
+- Most races are accounted for, Humans don't actually work as intended because having any stat rather than A stat is non-conformist
+- Most feats are in the system but do not check for pre-requisites correctly or give their effects to the character 100% of the time
+- Mish mash of classes functioning, magic classes are the least likley to work with the Fighter at about 90% working (class features do not have effects applied correctly)
+- You can't actually manage your inventory properly cause of bugs
+- No editing details outside of Character creator
+- The combat page does nothing yet
+- While you can look at spells they probably don't display correctly
+- Leveling up is probably tempramental
+- Prestige Classes: Nope
+- Multi Classing: Nope
+- Pathfinder Advanced Classes: Nope
+- Items: Magic Items 50%
+- Normal items: 90%
+- Spells: 100% of PRD spells are currently digitised
+
+- Pathfinder NPC Codex: Nope
+- Pathfinder Ultimate Campaign: Nope
+- Pathfinder Mythic Adventures: Nope
+- Pathfinder Advanced Classes: Nope
+- Pathfinder Beastiary 1: Nope
+- Pathfinder Beastiary 2: Nope
+- Pathfinder Beastiary 3: Nope
+- Pathfinder Beastiary 4: Nope
+- Pathfinder Bonus Beastiary Nope
+
+- Yes it is also brown, we aren't all designers
+
+
 #Future Goals
 - Link players with each other using bluetooth or similar wireless technology
 - Let data be pushed to GM for combat stats
@@ -38,4 +68,4 @@ Targeting all Java-SE enabled desktop systems
 - An android tablet version
   - Let Game masters schedule games and have these games pushed to users google calendars
 
-Targeting Android version 4.0.3 (API version 15) and higher, this allows us to use more modern features and reach 78.6 of all android users.
+-Targeting Android version 4.0.3 (API version 15) and higher, this allows us to use more modern features and reach 78.6 of all android users.
